@@ -1,0 +1,203 @@
+---
+author: "E. David Aja"
+footer:  "[Personal R Administration](https://github.com/rstats-wtf/wtf-personal-radmin-slides)"
+logo: "img/wtf-logo-square-transparent.png"
+format: 
+  revealjs: 
+    theme: [night, slides.scss]
+    highlight-style: a11y
+    transition: fade
+    slide-number: true
+    chalkboard: true
+    navigation-mode: linear
+    controls: false
+execute:
+  freeze: auto
+from: markdown+emoji
+---
+
+# personal R administration
+
+all in on the project based workflow
+
+## How do I...
+
+::: incremental
+-   upgrade the version of R I'm using for this project?
+-   know which package versions I'm using for this project?
+-   move this project from one machine to another?
+:::
+
+::: notes
+We're extending the lessons from Day 1 to think about what it means to work with R projects over time.
+That means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts.
+Working on an old project on a new computer is a lot like trying to put an app into production.
+:::
+
+## focus areas
+
+- installing R
+- starting R
+  - user and project-specific R configuration
+  - `.Renviron`, and `.Rprofile`
+-   installing R packages
+-   upgrading R
+
+# installing R
+
+## clickOps
+
+![](img/installing-R.png)
+
+## installr
+
+
+
+## rig
+
+https://github.com/r-lib/rig/
+
+## a lengthy aside
+
+package managers **install**  
+language managers **install**  
+language versions **install**  
+project isolators 
+
+:::{.notes}
+this pattern repeats itself across languages and operating systems and so is probably worth paying attention to:
+:::
+
+## package managers
+
+software whose job it is to install other software
+
+windows: scoop, chocolatey, winget  
+macOS: homebrew  
+linux: homebrew  
+
+:::{.callout-warning}
+Avoid installing your language with a package manager
+:::
+
+
+## language managers
+
+next, use your package manager to install a language manager:  
+rig  
+<small> 
+pyenv  
+nvm  
+rustup  
+</small>
+
+## language versions
+
+```
+$ rig add 4.2.1
+```
+
+## project libraries
+
+```r
+> install.packages("renv")
+> renv::init()
+```
+
+## activity
+
+- install rig
+- install an additional version of R
+
+# starting R
+
+## 
+
+![](img/R-startup.svg)
+::: {.notes}
+Scopes:
+- system: (usually suffixed by `.site`, per version of R)
+- use
+- project
+
+user scoped `.Rprofile` and `.Renviron` content is applied _last_
+
+:::
+
+## 
+
+::::{.columns}
+`.Renviron` and `.Rprofile` **must** end in a newline.
+::: {.column}
+:::
+
+::: {.column}
+![](img/insert-newline-end.png)
+:::
+
+::::
+
+::: {.notes}
+R will silently throw away the last line if you don't do this
+:::
+
+## `.Renviron`
+
+:white_check_mark: R-specific environment variables  
+:white_check_mark: API keys  
+:x: R code  
+
+## example `.Renviron`
+
+```bash
+R_HISTSIZE=100000
+GITHUB_PAT=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
+CONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3
+RETICULATE_PYTHON=.venv/bin/python
+```
+
+:::{.notes}
+the keys have already been burned, don't worry
+:::
+
+## `.Rprofile`
+
+interactive helpers that run in every session
+
+## what to put in `.Rprofile`
+
+- Set a default CRAN mirror 
+- Write a welcome message 
+- Customize R prompt 
+- Selectively change (but be careful) 
+  - Options, screen width, numeric display 
+  - Load frequently used interactive packages 
+  - Aliases / shortcuts for frequently used functions
+  
+## why shouldn't these go in `.Rprofile`?
+
+::: incremental
+- `options(stringsAsFactors = FALSE)`
+- `library(tidyverse)`
+- `library(ggplot2)`
+- `f <- dplyr::filter`
+- `theme_set(theme_bw())`
+:::
+
+## `devDependencies`
+
+If something appears in a script, it **should not** be in .Rprofile
+
+## why can these go in `.Rprofile`?
+
+```
+library(usethis)
+library(devtools)
+```
+
+
+# installing R packages
+
+## 
+
+# upgrading R
