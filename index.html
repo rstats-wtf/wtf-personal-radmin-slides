@@ -7,7 +7,7 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.653">
+  <meta name="generator" content="quarto-0.9.655">
 
   <meta name="author" content="E. David Aja">
   <title>index</title>
@@ -611,8 +611,79 @@ library(devtools)</code></pre>
 <h1>installing R packages</h1>
 
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+<section id="types-of-r-packages" class="slide level2">
+<h2>Types of R packages</h2>
+<ul>
+<li>Binary</li>
+<li>Source</li>
+</ul>
+</section>
+<section id="binary" class="slide level2">
+<h2>Binary</h2>
+<ul>
+<li>compiled ahead of time</li>
+<li>only R is needed to install</li>
+</ul>
+</section>
+<section id="where-to-get-binaries" class="slide level2">
+<h2>where to get binaries</h2>
+<table>
+<thead>
+<tr class="header">
+<th>os</th>
+<th>cran</th>
+<th><a href="https://packagemanager.rstudio.com/">ppm</a></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>windows</td>
+<td><span class="emoji" data-emoji="white_check_mark">✅</span></td>
+<td><span class="emoji" data-emoji="white_check_mark">✅</span></td>
+</tr>
+<tr class="even">
+<td>macos</td>
+<td><span class="emoji" data-emoji="white_check_mark">✅</span></td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td>linux</td>
+<td>❌</td>
+<td><span class="emoji" data-emoji="white_check_mark">✅</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="source" class="slide level2">
+<h2>Source</h2>
+<ul>
+<li>compiled in development environment</li>
+<li>requires extra tools when package uses C, C++, Fortan</li>
+</ul>
+</section>
+<section id="if-you-dont-have-tools" class="slide level2">
+<h2>if you don’t have tools</h2>
+<div class="sourceCode" id="cb5" data-code-line-numbers="11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>Running <span class="st">`</span><span class="at">R CMD build</span><span class="st">`</span>...</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="sc">*</span> checking <span class="cf">for</span> file <span class="st">'C:\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpkTUH61</span><span class="sc">\r</span><span class="st">emotes192027624804</span><span class="sc">\t</span><span class="st">idyverse-dplyr-36ef054/DESCRIPTION'</span> ... OK</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="sc">*</span> preparing <span class="st">'dplyr'</span><span class="sc">:</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="er">*</span> checking DESCRIPTION meta<span class="sc">-</span>information ... OK</span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="sc">*</span> cleaning src</span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="sc">*</span> installing the package to process help pages</span>
+<span id="cb5-7"><a href="#cb5-7"></a>      <span class="sc">-----------------------------------</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="er">*</span> installing <span class="sc">*</span>source<span class="sc">*</span> package <span class="st">'dplyr'</span> ...</span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="sc">**</span> using staged installation</span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="sc">**</span> libs</span>
+<span id="cb5-11"><a href="#cb5-11"></a>Warning <span class="cf">in</span> <span class="fu">system</span>(cmd) <span class="sc">:</span> <span class="st">'make'</span> not found</span>
+<span id="cb5-12"><a href="#cb5-12"></a>ERROR<span class="sc">:</span> compilation failed <span class="cf">for</span> package <span class="st">'dplyr'</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="sc">*</span> removing <span class="st">'C:/Users/WDAGUT~1/AppData/Local/Temp/Rtmp6hYuyV/Rinst1334d1a23d1/dplyr'</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a>      <span class="sc">-----------------------------------</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a>ERROR<span class="sc">:</span> package installation failed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="windows" class="slide level2">
+<h2>windows</h2>
+</section>
+<section id="macos" class="slide level2">
+<h2>macOS</h2>
 </section></section>
 <section id="upgrading-r" class="title-slide slide level1 center">
 <h1>upgrading R</h1>
