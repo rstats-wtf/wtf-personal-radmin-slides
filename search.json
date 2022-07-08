@@ -81,7 +81,7 @@
     "href": "index.html#section",
     "title": "",
     "section": "",
-    "text": "::: {.notes} Scopes: - system: (usually suffixed by .site, per version of R) - use - project\nuser scoped .Rprofile and .Renviron content is applied last\n:::"
+    "text": "Scopes: - system: (usually suffixed by .site, per version of R) - use - project\nuser scoped .Rprofile and .Renviron content is applied last"
   },
   {
     "objectID": "index.html#section-1",
@@ -187,5 +187,12 @@
     "title": "",
     "section": "macOS",
     "text": "macOS"
+  },
+  {
+    "objectID": "index.html#section-3",
+    "href": "index.html#section-3",
+    "title": "",
+    "section": "",
+    "text": "Personal R Administration"
   }
 ]
