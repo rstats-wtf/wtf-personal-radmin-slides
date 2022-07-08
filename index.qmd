@@ -114,6 +114,7 @@ $ rig add 4.2.1
 ## 
 
 ![](img/R-startup.svg)
+
 ::: {.notes}
 Scopes:
 - system: (usually suffixed by `.site`, per version of R)
@@ -246,6 +247,10 @@ ERROR: package installation failed
 ## macOS
 
 
+# Reproducible Environments
 
+##
 
 # upgrading R
+
+##
