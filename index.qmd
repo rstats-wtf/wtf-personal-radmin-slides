@@ -195,9 +195,57 @@ library(usethis)
 library(devtools)
 ```
 
-
 # installing R packages
 
-## 
+## Types of R packages
+
+- Binary
+- Source
+
+## Binary
+
+- compiled ahead of time
+- only R is needed to install
+
+## where to get binaries
+
+|os|cran|[ppm](https://packagemanager.rstudio.com/)|
+|-|-|-|
+|windows|:white_check_mark:|:white_check_mark: |
+|macos|:white_check_mark:|❌|
+|linux|❌|:white_check_mark:|
+
+
+## Source
+
+- compiled in development environment
+- requires extra tools when package uses C, C++, Fortan
+
+## if you don't have tools
+
+```{.r code-line-numbers="11"}
+Running `R CMD build`...
+* checking for file 'C:\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpkTUH61\remotes192027624804\tidyverse-dplyr-36ef054/DESCRIPTION' ... OK
+* preparing 'dplyr':
+* checking DESCRIPTION meta-information ... OK
+* cleaning src
+* installing the package to process help pages
+      -----------------------------------
+* installing *source* package 'dplyr' ...
+** using staged installation
+** libs
+Warning in system(cmd) : 'make' not found
+ERROR: compilation failed for package 'dplyr'
+* removing 'C:/Users/WDAGUT~1/AppData/Local/Temp/Rtmp6hYuyV/Rinst1334d1a23d1/dplyr'
+      -----------------------------------
+ERROR: package installation failed
+```
+
+## windows
+
+## macOS
+
+
+
 
 # upgrading R
