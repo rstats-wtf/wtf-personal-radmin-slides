@@ -307,8 +307,115 @@ ggplot() +
   )
 ```
 
+## renv
 
+![](img/renv.png)
+
+::: {.notes}
+renv has a number of tools that are helpful for adopting a project-based workflow:
+- lockfile records what packages you use and where you instaled them from
+- `renv::install()` can handle installation from remote sources, local sources, package versions, bioconductor, rspm
+- per-project library isolation with global package cache makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn't work out
+:::
+
+## `renv::init()`
+
+```{.r code-line-numbers="|2|4"}
+.libPaths()
+renv::init()
+.libPaths()
+renv::deactivate()
+.libPaths()
+```
+
+::: {.notes}
+run `.libPaths()` to see what your default package libraries are
+initialize an renv--you'll see that the environment is now local to the project
+note the .Rprofile that gets placed into your project, which runs an R script in `renv/activate.R`
+deactivate the environment and check libPaths() again--it should be back to normal
+:::
+
+## `renv.lock`
+
+```{.json}
+{
+  "R": {
+    "Version": "4.1.2",
+    "Repositories": [
+      {
+        "Name": "CRAN",
+        "URL": "https://cloud.r-project.org"
+      }
+    ]
+  },
+  "Packages": {
+    [...]
+    "knitr": {
+      "Package": "knitr",
+      "Version": "1.39",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "029ab7c4badd3cf8af69016b2ba27493",
+      "Requirements": [
+        "evaluate",
+        "highr",
+        "stringr",
+        "xfun",
+        "yaml"
+      ]
+    },
+    ...
+  }
+}
+
+```
+
+::: {.notes}
+created from `renv::snapshot()`
+by default, identifies dependencies of your code
+for example: usethis doesn't usually appear in my lockfiles, because I'm running it interactively, rather than making it a dependency of my projects
+:::
+
+
+## `renv::install()`
+
+or [`install.packages()`](https://rstudio.github.io/renv/articles/renv.html#shims) with shims enabled
+
+```
+renv::install("jsonlite")
+renv::install("jsonlite@1.2") # at version
+renv::install("jeroen/jsonlite") # latest
+renv::install("jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d") # at SHA
+renv::install() # local source
+```
+
+## the junk drawer
+
+for reprexes, tweets, and other ephemera:
+
+`~/Documents/scratch`
+
+:::{.notes}
+I use renv for everything, and have one junk project into which I install things without regard for stability or reproducibililty
+:::
+
+## rig
+
+launch rstudio from an renv lockfile:
+
+```
+rig rstudio path/to/renv.lock
+```
+
+
+## activity
+
+- install dev jsonlite, then roll back to released version
 
 # upgrading R
+ 
+## rig + renv
 
-##
+1. snapshot the project library with renv
+1. install a new version of R
+1. restore the project library in the new R version
