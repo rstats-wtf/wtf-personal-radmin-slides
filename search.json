@@ -81,7 +81,7 @@
     "href": "index.html#section-1",
     "title": "",
     "section": "",
-    "text": ".Renviron and .Rprofile must end in a newline. ::: {.column}\n\n\n\n\n::::\n\nR will silently throw away the last line if you don’t do this"
+    "text": ".Renviron and .Rprofile must end in a newline.\n\n\n\n\n\nR will silently throw away the last line if you don’t do this"
   },
   {
     "objectID": "index.html#renviron",
