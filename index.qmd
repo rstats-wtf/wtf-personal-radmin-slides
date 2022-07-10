@@ -49,10 +49,6 @@ Working on an old project on a new computer is a lot like trying to put an app i
 
 ![](img/installing-R.png)
 
-## installr
-
-
-
 ## rig
 
 https://github.com/r-lib/rig/
@@ -118,7 +114,7 @@ $ rig add 4.2.1
 ::: {.notes}
 Scopes:
 - system: (usually suffixed by `.site`, per version of R)
-- use
+- user
 - project
 
 user scoped `.Rprofile` and `.Renviron` content is applied _last_
@@ -244,12 +240,74 @@ ERROR: package installation failed
 
 ## windows
 
+[Rtools](https://cran.r-project.org/bin/windows/Rtools/)
+
+`rig add rtools`
+
 ## macOS
+
+XCode
+
+`xcode-select --install`
+
+or download from the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
+
+## activity
+
+- install a package from source
+
+```
+install.packages("jsonlite", type = "source")
+```
 
 
 # Reproducible Environments
 
 ##
+
+environments.rstudio.com
+
+## spectrum
+
+```{r spectrum, echo = FALSE, fig.height=5, fig.width=8}
+library(ggplot2)
+library(tibble)
+timeline <- tribble(
+  ~x, ~y, 
+  0, 1,
+  16, 1
+)
+labels <- tribble(
+  ~x, ~y, ~label,
+  0, 1.1, "No Strategy",
+  4, 1.1, "Awareness",
+  8, 1.1, "Shared Baseline",
+  12, 1.1, "Record & Restore",
+  16, 1.1, "Validated",
+)
+details <- tribble(
+  ~x, ~y, ~label,
+  0, 0.9, "scary upgrades \n no sharing \n old stuff is broken",
+  4, 0.9, "reprex \n sessioninfo() \n devtools::session_info()", 
+  8, 0.9, "site library \n frozen repo",
+  12, 0.9, "renv",
+  16, 0.9, "internal repo \ncustom tests"
+)
+ggplot() + 
+  geom_path(data = timeline, aes(x,y),  color = "black") + 
+  geom_label(data = labels, aes(x,y,label=label)) + 
+  geom_text(data = details, aes(x,y,label=label)) + 
+  theme_minimal() + 
+  scale_x_continuous(breaks = NULL, limits = c(-2,17)) + 
+  scale_y_continuous(breaks = NULL, limits = c(0.5, 1.5)) + 
+  labs(
+    title = NULL,
+    x = NULL,
+    y = NULL
+  )
+```
+
+
 
 # upgrading R
 
