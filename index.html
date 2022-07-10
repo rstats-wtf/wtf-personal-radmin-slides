@@ -7,7 +7,7 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.655">
+  <meta name="generator" content="quarto-1.0.7">
 
   <meta name="author" content="E. David Aja">
   <title>index</title>
@@ -435,9 +435,6 @@
 <h2>clickOps</h2>
 
 <img data-src="img/installing-R.png" class="r-stretch"></section>
-<section id="installr" class="slide level2">
-<h2>installr</h2>
-</section>
 <section id="rig" class="slide level2">
 <h2>rig</h2>
 <p>https://github.com/r-lib/rig/</p>
@@ -516,7 +513,7 @@ rustup<br>
 <h2></h2>
 <p><img data-src="img/R-startup.svg"></p>
 <aside class="notes">
-<p>Scopes: - system: (usually suffixed by <code>.site</code>, per version of R) - use - project</p>
+<p>Scopes: - system: (usually suffixed by <code>.site</code>, per version of R) - user - project</p>
 <p>user scoped <code>.Rprofile</code> and <code>.Renviron</code> content is applied <em>last</em></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -693,9 +690,21 @@ library(devtools)</code></pre>
 </section>
 <section id="windows" class="slide level2">
 <h2>windows</h2>
+<p><a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a></p>
+<p><code>rig add rtools</code></p>
 </section>
 <section id="macos" class="slide level2">
 <h2>macOS</h2>
+<p>XCode</p>
+<p><code>xcode-select --install</code></p>
+<p>or download from the <a href="https://apps.apple.com/us/app/xcode/id497799835?mt=12">Mac App Store</a></p>
+</section>
+<section id="activity-1" class="slide level2">
+<h2>activity</h2>
+<ul>
+<li>install a package from source</li>
+</ul>
+<pre><code>install.packages("jsonlite", type = "source")</code></pre>
 </section></section>
 <section>
 <section id="reproducible-environments" class="title-slide slide level1 center">
@@ -704,7 +713,12 @@ library(devtools)</code></pre>
 </section>
 <section id="section-2" class="slide level2">
 <h2></h2>
-</section></section>
+<p>environments.rstudio.com</p>
+</section>
+<section id="spectrum" class="slide level2">
+<h2>spectrum</h2>
+
+<img data-src="index_files/figure-revealjs/spectrum-1.png" width="768" class="r-stretch"></section></section>
 <section>
 <section id="upgrading-r" class="title-slide slide level1 center">
 <h1>upgrading R</h1>
@@ -931,6 +945,48 @@ library(devtools)</code></pre>
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

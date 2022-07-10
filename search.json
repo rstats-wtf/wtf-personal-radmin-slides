@@ -21,13 +21,6 @@
     "text": "clickOps"
   },
   {
-    "objectID": "index.html#installr",
-    "href": "index.html#installr",
-    "title": "",
-    "section": "installr",
-    "text": "installr"
-  },
-  {
     "objectID": "index.html#rig",
     "href": "index.html#rig",
     "title": "",
@@ -81,7 +74,7 @@
     "href": "index.html#section",
     "title": "",
     "section": "",
-    "text": "Scopes: - system: (usually suffixed by .site, per version of R) - use - project\nuser scoped .Rprofile and .Renviron content is applied last"
+    "text": "Scopes: - system: (usually suffixed by .site, per version of R) - user - project\nuser scoped .Rprofile and .Renviron content is applied last"
   },
   {
     "objectID": "index.html#section-1",
@@ -179,14 +172,35 @@
     "href": "index.html#windows",
     "title": "",
     "section": "windows",
-    "text": "windows"
+    "text": "windows\nRtools\nrig add rtools"
   },
   {
     "objectID": "index.html#macos",
     "href": "index.html#macos",
     "title": "",
     "section": "macOS",
-    "text": "macOS"
+    "text": "macOS\nXCode\nxcode-select --install\nor download from the Mac App Store"
+  },
+  {
+    "objectID": "index.html#activity-1",
+    "href": "index.html#activity-1",
+    "title": "",
+    "section": "activity",
+    "text": "activity\n\ninstall a package from source\n\ninstall.packages(\"jsonlite\", type = \"source\")"
+  },
+  {
+    "objectID": "index.html#section-2",
+    "href": "index.html#section-2",
+    "title": "",
+    "section": "",
+    "text": "environments.rstudio.com"
+  },
+  {
+    "objectID": "index.html#spectrum",
+    "href": "index.html#spectrum",
+    "title": "",
+    "section": "spectrum",
+    "text": "spectrum"
   },
   {
     "objectID": "index.html#section-3",
