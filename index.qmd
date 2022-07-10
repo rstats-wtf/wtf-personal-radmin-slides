@@ -102,7 +102,7 @@ $ rig add 4.2.1
 
 ## activity
 
-- install rig
+- [install rig](https://github.com/r-lib/rig/releases/)
 - install an additional version of R
 
 # starting R
@@ -124,8 +124,9 @@ user scoped `.Rprofile` and `.Renviron` content is applied _last_
 ## 
 
 ::::{.columns}
-`.Renviron` and `.Rprofile` **must** end in a newline.
+
 ::: {.column}
+`.Renviron` and `.Rprofile` **must** end in a newline.
 :::
 
 ::: {.column}
