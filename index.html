@@ -7,7 +7,7 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.7">
+  <meta name="generator" content="quarto-1.0.8">
 
   <meta name="author" content="E. David Aja">
   <title>index</title>
@@ -718,14 +718,140 @@ library(devtools)</code></pre>
 <section id="spectrum" class="slide level2">
 <h2>spectrum</h2>
 
-<img data-src="index_files/figure-revealjs/spectrum-1.png" width="768" class="r-stretch"></section></section>
+<img data-src="index_files/figure-revealjs/spectrum-1.png" width="768" class="r-stretch"></section>
+<section id="renv" class="slide level2">
+<h2>renv</h2>
+<p><img data-src="img/renv.png"></p>
+<aside class="notes">
+<p>renv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - <code>renv::install()</code> can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="renvinit" class="slide level2">
+<h2><code>renv::init()</code></h2>
+<div class="sourceCode" id="cb7" data-code-line-numbers="|2|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">.libPaths</span>()</span>
+<span id="cb7-2"><a href="#cb7-2"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">.libPaths</span>()</span>
+<span id="cb7-4"><a href="#cb7-4"></a>renv<span class="sc">::</span><span class="fu">deactivate</span>()</span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="fu">.libPaths</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<aside class="notes">
+<p>run <code>.libPaths()</code> to see what your default package libraries are initialize an renv–you’ll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in <code>renv/activate.R</code> deactivate the environment and check libPaths() again–it should be back to normal</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="renv.lock" class="slide level2">
+<h2><code>renv.lock</code></h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">{</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="dt">"R"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>    <span class="dt">"Version"</span><span class="fu">:</span> <span class="st">"4.1.2"</span><span class="fu">,</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>    <span class="dt">"Repositories"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a>      <span class="fu">{</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a>        <span class="dt">"Name"</span><span class="fu">:</span> <span class="st">"CRAN"</span><span class="fu">,</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a>        <span class="dt">"URL"</span><span class="fu">:</span> <span class="st">"https://cloud.r-project.org"</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>      <span class="fu">}</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a>    <span class="ot">]</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a>  <span class="fu">},</span></span>
+<span id="cb8-11"><a href="#cb8-11"></a>  <span class="dt">"Packages"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb8-12"><a href="#cb8-12"></a>    <span class="er">[...]</span></span>
+<span id="cb8-13"><a href="#cb8-13"></a>    <span class="dt">"knitr"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb8-14"><a href="#cb8-14"></a>      <span class="dt">"Package"</span><span class="fu">:</span> <span class="st">"knitr"</span><span class="fu">,</span></span>
+<span id="cb8-15"><a href="#cb8-15"></a>      <span class="dt">"Version"</span><span class="fu">:</span> <span class="st">"1.39"</span><span class="fu">,</span></span>
+<span id="cb8-16"><a href="#cb8-16"></a>      <span class="dt">"Source"</span><span class="fu">:</span> <span class="st">"Repository"</span><span class="fu">,</span></span>
+<span id="cb8-17"><a href="#cb8-17"></a>      <span class="dt">"Repository"</span><span class="fu">:</span> <span class="st">"CRAN"</span><span class="fu">,</span></span>
+<span id="cb8-18"><a href="#cb8-18"></a>      <span class="dt">"Hash"</span><span class="fu">:</span> <span class="st">"029ab7c4badd3cf8af69016b2ba27493"</span><span class="fu">,</span></span>
+<span id="cb8-19"><a href="#cb8-19"></a>      <span class="dt">"Requirements"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb8-20"><a href="#cb8-20"></a>        <span class="st">"evaluate"</span><span class="ot">,</span></span>
+<span id="cb8-21"><a href="#cb8-21"></a>        <span class="st">"highr"</span><span class="ot">,</span></span>
+<span id="cb8-22"><a href="#cb8-22"></a>        <span class="st">"stringr"</span><span class="ot">,</span></span>
+<span id="cb8-23"><a href="#cb8-23"></a>        <span class="st">"xfun"</span><span class="ot">,</span></span>
+<span id="cb8-24"><a href="#cb8-24"></a>        <span class="st">"yaml"</span></span>
+<span id="cb8-25"><a href="#cb8-25"></a>      <span class="ot">]</span></span>
+<span id="cb8-26"><a href="#cb8-26"></a>    <span class="fu">},</span></span>
+<span id="cb8-27"><a href="#cb8-27"></a>    <span class="er">...</span></span>
+<span id="cb8-28"><a href="#cb8-28"></a>  <span class="fu">}</span></span>
+<span id="cb8-29"><a href="#cb8-29"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<aside class="notes">
+<p>created from <code>renv::snapshot()</code> by default, identifies dependencies of your code for example: usethis doesn’t usually appear in my lockfiles, because I’m running it interactively, rather than making it a dependency of my projects</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="renvinstall" class="slide level2">
+<h2><code>renv::install()</code></h2>
+<p>or <a href="https://rstudio.github.io/renv/articles/renv.html#shims"><code>install.packages()</code></a> with shims enabled</p>
+<pre><code>renv::install("jsonlite")
+renv::install("jsonlite@1.2") # at version
+renv::install("jeroen/jsonlite") # latest
+renv::install("jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d") # at SHA
+renv::install() # local source</code></pre>
+</section>
+<section id="the-junk-drawer" class="slide level2">
+<h2>the junk drawer</h2>
+<p>for reprexes, tweets, and other ephemera:</p>
+<p><code>~/Documents/scratch</code></p>
+<aside class="notes">
+<p>I use renv for everything, and have one junk project into which I install things without regard for stability or reproducibililty</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="rig-1" class="slide level2">
+<h2>rig</h2>
+<p>launch rstudio from an renv lockfile:</p>
+<pre><code>rig rstudio path/to/renv.lock</code></pre>
+</section>
+<section id="activity-2" class="slide level2">
+<h2>activity</h2>
+<ul>
+<li>install dev jsonlite, then roll back to released version</li>
+</ul>
+</section></section>
 <section>
 <section id="upgrading-r" class="title-slide slide level1 center">
 <h1>upgrading R</h1>
 
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
+<section id="rig-renv" class="slide level2">
+<h2>rig + renv</h2>
+<ol type="1">
+<li>snapshot the project library with renv</li>
+<li>install a new version of R</li>
+<li>restore the project library in the new R version</li>
+</ol>
 
 
 <img src="img/wtf-logo-square-transparent.png" class="slide-logo r-stretch"><div class="footer footer-default">
