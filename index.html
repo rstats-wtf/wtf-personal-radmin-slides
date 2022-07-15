@@ -5,9 +5,9 @@
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.8">
+  <meta name="generator" content="quarto-1.0.27">
 
   <meta name="author" content="E. David Aja">
   <title>index</title>
@@ -380,7 +380,7 @@
     }
   </style>
 </head>
-<body>
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
@@ -439,12 +439,17 @@
 <h2>rig</h2>
 <p>https://github.com/r-lib/rig/</p>
 </section>
-<section id="a-lengthy-aside" class="slide level2">
-<h2>a lengthy aside</h2>
-<p>package managers <strong>install</strong><br>
-language managers <strong>install</strong><br>
-language versions <strong>install</strong><br>
-project isolators</p>
+<section id="mental-model" class="slide level2">
+<h2>mental model</h2>
+<p>package managers<br>
+<em>install</em><br>
+language managers<br>
+<em>install</em><br>
+language versions<br>
+<em>install</em><br>
+environment managers<br>
+<em>install</em><br>
+projects</p>
 <aside class="notes">
 <p>this pattern repeats itself across languages and operating systems and so is probably worth paying attention to:</p>
 <style type="text/css">
@@ -462,9 +467,9 @@ project isolators</p>
 <section id="package-managers" class="slide level2">
 <h2>package managers</h2>
 <p>software whose job it is to install other software</p>
-<p>windows: scoop, chocolatey, winget<br>
-macOS: homebrew<br>
-linux: homebrew</p>
+<p>windows: <strong>scoop</strong>, chocolatey, winget<br>
+macOS: <strong>homebrew</strong><br>
+linux: <strong>homebrew</strong>, apt, yum, zypper</p>
 <div class="callout callout-warning callout-captioned callout-style-default">
 <div class="callout-body">
 <div class="callout-caption">
@@ -481,12 +486,36 @@ linux: homebrew</p>
 </section>
 <section id="language-managers" class="slide level2">
 <h2>language managers</h2>
-<p>next, use your package manager to install a language manager:<br>
-rig<br>
-<small> pyenv<br>
+<p>using your package manager, install a language manager</p>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">windows</a></li><li><a href="#tabset-1-2">*nix</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<p><code>scoop install rig</code></p>
+</div>
+<div id="tabset-1-2">
+<p><code>brew install rig</code></p>
+</div>
+</div>
+</div>
+<p><small> pyenv<br>
 nvm<br>
-rustup<br>
 </small></p>
+<aside class="notes">
+<ul>
+<li>many language managers are often written in some language other than the one they are responsible for managing</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="language-versions" class="slide level2">
 <h2>language versions</h2>
@@ -494,8 +523,8 @@ rustup<br>
 </section>
 <section id="project-libraries" class="slide level2">
 <h2>project libraries</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="sc">&gt;</span> renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="activity" class="slide level2">
 <h2>activity</h2>
@@ -688,7 +717,7 @@ library(devtools)</code></pre>
 <span id="cb5-14"><a href="#cb5-14"></a>      <span class="sc">-----------------------------------</span></span>
 <span id="cb5-15"><a href="#cb5-15"></a>ERROR<span class="sc">:</span> package installation failed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="windows" class="slide level2">
+<section id="windows-1" class="slide level2">
 <h2>windows</h2>
 <p><a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a></p>
 <p><code>rig add rtools</code></p>
@@ -1115,6 +1144,24 @@ renv::install() # local source</code></pre>
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
       const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
       tabsets.forEach(function(tabset) {
         const tabby = new Tabby('#' + tabset.id);
