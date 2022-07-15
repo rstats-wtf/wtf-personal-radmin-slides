@@ -53,12 +53,17 @@ Working on an old project on a new computer is a lot like trying to put an app i
 
 https://github.com/r-lib/rig/
 
-## a lengthy aside
+## mental model
 
-package managers **install**  
-language managers **install**  
-language versions **install**  
-project isolators 
+package managers  
+*install*  
+language managers   
+*install*  
+language versions  
+*install*  
+environment managers  
+*install*  
+projects
 
 :::{.notes}
 this pattern repeats itself across languages and operating systems and so is probably worth paying attention to:
@@ -68,9 +73,9 @@ this pattern repeats itself across languages and operating systems and so is pro
 
 software whose job it is to install other software
 
-windows: scoop, chocolatey, winget  
-macOS: homebrew  
-linux: homebrew  
+windows: **scoop**, chocolatey, winget  
+macOS: **homebrew**  
+linux: **homebrew**, apt, yum, zypper  
 
 :::{.callout-warning}
 Avoid installing your language with a package manager
@@ -79,13 +84,29 @@ Avoid installing your language with a package manager
 
 ## language managers
 
-next, use your package manager to install a language manager:  
-rig  
+using your package manager, install a language manager
+
+
+::: {.panel-tabset}
+
+### windows
+
+`scoop install rig`
+
+### *nix
+
+`brew install rig`
+
+:::
+
 <small> 
 pyenv  
 nvm  
-rustup  
 </small>
+
+::: {.notes}
+- many language managers are often written in some language other than the one they are responsible for managing
+:::
 
 ## language versions
 
@@ -96,8 +117,8 @@ $ rig add 4.2.1
 ## project libraries
 
 ```r
-> install.packages("renv")
-> renv::init()
+install.packages("renv")
+renv::init()
 ```
 
 ## activity
