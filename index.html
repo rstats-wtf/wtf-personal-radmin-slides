@@ -7,7 +7,7 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.27">
+  <meta name="generator" content="quarto-1.0.28">
 
   <meta name="author" content="E. David Aja">
   <title>index</title>
@@ -441,17 +441,14 @@
 </section>
 <section id="mental-model" class="slide level2">
 <h2>mental model</h2>
-<p>package managers<br>
+<p>package managers (scoop)<br>
 <em>install</em><br>
-language managers<br>
+language managers (rig)<br>
 <em>install</em><br>
-language versions<br>
-<em>install</em><br>
-environment managers<br>
-<em>install</em><br>
+language versions (R-4.2 -e “install.packages(‘renv’)<code>)   *install*   environment managers</code>renv::install()` <em>install</em><br>
 projects</p>
 <aside class="notes">
-<p>this pattern repeats itself across languages and operating systems and so is probably worth paying attention to:</p>
+<p>needs a diagram ? vertical arrow of generality</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -470,19 +467,23 @@ projects</p>
 <p>windows: <strong>scoop</strong>, chocolatey, winget<br>
 macOS: <strong>homebrew</strong><br>
 linux: <strong>homebrew</strong>, apt, yum, zypper</p>
-<div class="callout callout-warning callout-captioned callout-style-default">
-<div class="callout-body">
-<div class="callout-caption">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Warning</strong></p>
-</div>
-<div class="callout-content">
+</section>
+<section id="section" class="slide level2">
+<h2>⚠️</h2>
 <p>Avoid installing your language with a package manager</p>
-</div>
-</div>
-</div>
+<aside class="notes">
+<p>You want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are, in general, pretty bad Other software that you install with your package manager may Idiosyncracies of your language will be better understood by a dedicated tool</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="language-managers" class="slide level2">
 <h2>language managers</h2>
@@ -519,18 +520,67 @@ nvm<br>
 </section>
 <section id="language-versions" class="slide level2">
 <h2>language versions</h2>
-<pre><code>$ rig add 4.2.1</code></pre>
+<p>using your language manager, install a language version:</p>
+<pre><code>❯ rig install --help
+rig-add
+
+DESCRIPTION:
+    Download and install an R version, from the official sources.
+    It keeps the already installed R versions, except versions within the
+    same minor branch, see below.
+
+EXAMPLES:
+    # Add the latest release
+    rig add release
+
+    # Install specific version
+    rig add 4.1.2
+
+    # Install latest version within a minor branch
+    rig add 4.1
+</code></pre>
+<aside class="notes">
+<p>if you’re running a distribution of linux that rig doesn’t support: - https://docs.rstudio.com/resources/install-r/</p>
+<p>if no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="project-libraries" class="slide level2">
-<h2>project libraries</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="environment-managers" class="slide level2">
+<h2>environment managers</h2>
+<p>using your desired version of the language, install an environment manager:</p>
+<div class="r-fit-text">
+<p><code>install.packages("renv")</code></p>
+</div>
+</section>
+<section id="project" class="slide level2">
+<h2>project</h2>
+<p>using your environment manager, install your project’s dependencies:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="new">new</h3>
+<p><code>renv::init()</code></p>
+</div><div class="column" style="width:50%;">
+<h3 id="existing">existing</h3>
+<p><code>renv::restore()</code></p>
+</div>
+</div>
 </section>
 <section id="activity" class="slide level2">
 <h2>activity</h2>
 <ul>
 <li><a href="https://github.com/r-lib/rig/releases/">install rig</a></li>
+<li>add image</li>
 <li>install an additional version of R</li>
+<li>rig add <code>version</code></li>
 </ul>
 </section></section>
 <section>
@@ -538,7 +588,7 @@ nvm<br>
 <h1>starting R</h1>
 
 </section>
-<section id="section" class="slide level2">
+<section id="section-1" class="slide level2">
 <h2></h2>
 <p><img data-src="img/R-startup.svg"></p>
 <aside class="notes">
@@ -556,13 +606,15 @@ nvm<br>
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-1" class="slide level2">
+<section id="section-2" class="slide level2">
 <h2></h2>
 <div class="columns">
 <div class="column">
 <p><code>.Renviron</code> and <code>.Rprofile</code> <strong>must</strong> end in a newline.</p>
 </div><div class="column">
-<p><img data-src="img/insert-newline-end.png"></p>
+<ul>
+<li>add highlight <img data-src="img/insert-newline-end.png"></li>
+</ul>
 </div>
 </div>
 <aside class="notes">
@@ -587,10 +639,10 @@ nvm<br>
 </section>
 <section id="example-.renviron" class="slide level2">
 <h2>example <code>.Renviron</code></h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="va">R_HISTSIZE</span><span class="op">=</span>100000</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="va">GITHUB_PAT</span><span class="op">=</span>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</span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="va">CONNECT_API_KEY</span><span class="op">=</span>DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3</span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="va">RETICULATE_PYTHON</span><span class="op">=</span>.venv/bin/python</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="va">R_HISTSIZE</span><span class="op">=</span>100000</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="va">GITHUB_PAT</span><span class="op">=</span>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</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="va">CONNECT_API_KEY</span><span class="op">=</span>DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3</span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="va">RETICULATE_PYTHON</span><span class="op">=</span>.venv/bin/python</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
 <p>the keys have already been burned, don’t worry</p>
 <style type="text/css">
@@ -643,6 +695,9 @@ nvm<br>
 <h2>why can these go in <code>.Rprofile</code>?</h2>
 <pre><code>library(usethis)
 library(devtools)</code></pre>
+</section>
+<section id="andries-rprofile" class="slide level2">
+<h2>andrie’s Rprofile</h2>
 </section></section>
 <section>
 <section id="installing-r-packages" class="title-slide slide level1 center">
@@ -701,21 +756,21 @@ library(devtools)</code></pre>
 </section>
 <section id="if-you-dont-have-tools" class="slide level2">
 <h2>if you don’t have tools</h2>
-<div class="sourceCode" id="cb5" data-code-line-numbers="11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>Running <span class="st">`</span><span class="at">R CMD build</span><span class="st">`</span>...</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="sc">*</span> checking <span class="cf">for</span> file <span class="st">'C:\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpkTUH61</span><span class="sc">\r</span><span class="st">emotes192027624804</span><span class="sc">\t</span><span class="st">idyverse-dplyr-36ef054/DESCRIPTION'</span> ... OK</span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="sc">*</span> preparing <span class="st">'dplyr'</span><span class="sc">:</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="er">*</span> checking DESCRIPTION meta<span class="sc">-</span>information ... OK</span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="sc">*</span> cleaning src</span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="sc">*</span> installing the package to process help pages</span>
-<span id="cb5-7"><a href="#cb5-7"></a>      <span class="sc">-----------------------------------</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a><span class="er">*</span> installing <span class="sc">*</span>source<span class="sc">*</span> package <span class="st">'dplyr'</span> ...</span>
-<span id="cb5-9"><a href="#cb5-9"></a><span class="sc">**</span> using staged installation</span>
-<span id="cb5-10"><a href="#cb5-10"></a><span class="sc">**</span> libs</span>
-<span id="cb5-11"><a href="#cb5-11"></a>Warning <span class="cf">in</span> <span class="fu">system</span>(cmd) <span class="sc">:</span> <span class="st">'make'</span> not found</span>
-<span id="cb5-12"><a href="#cb5-12"></a>ERROR<span class="sc">:</span> compilation failed <span class="cf">for</span> package <span class="st">'dplyr'</span></span>
-<span id="cb5-13"><a href="#cb5-13"></a><span class="sc">*</span> removing <span class="st">'C:/Users/WDAGUT~1/AppData/Local/Temp/Rtmp6hYuyV/Rinst1334d1a23d1/dplyr'</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a>      <span class="sc">-----------------------------------</span></span>
-<span id="cb5-15"><a href="#cb5-15"></a>ERROR<span class="sc">:</span> package installation failed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4" data-code-line-numbers="11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>Running <span class="st">`</span><span class="at">R CMD build</span><span class="st">`</span>...</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="sc">*</span> checking <span class="cf">for</span> file <span class="st">'C:\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpkTUH61</span><span class="sc">\r</span><span class="st">emotes192027624804</span><span class="sc">\t</span><span class="st">idyverse-dplyr-36ef054/DESCRIPTION'</span> ... OK</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="sc">*</span> preparing <span class="st">'dplyr'</span><span class="sc">:</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="er">*</span> checking DESCRIPTION meta<span class="sc">-</span>information ... OK</span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="sc">*</span> cleaning src</span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="sc">*</span> installing the package to process help pages</span>
+<span id="cb4-7"><a href="#cb4-7"></a>      <span class="sc">-----------------------------------</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="er">*</span> installing <span class="sc">*</span>source<span class="sc">*</span> package <span class="st">'dplyr'</span> ...</span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="sc">**</span> using staged installation</span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="sc">**</span> libs</span>
+<span id="cb4-11"><a href="#cb4-11"></a>Warning <span class="cf">in</span> <span class="fu">system</span>(cmd) <span class="sc">:</span> <span class="st">'make'</span> not found</span>
+<span id="cb4-12"><a href="#cb4-12"></a>ERROR<span class="sc">:</span> compilation failed <span class="cf">for</span> package <span class="st">'dplyr'</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="sc">*</span> removing <span class="st">'C:/Users/WDAGUT~1/AppData/Local/Temp/Rtmp6hYuyV/Rinst1334d1a23d1/dplyr'</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a>      <span class="sc">-----------------------------------</span></span>
+<span id="cb4-15"><a href="#cb4-15"></a>ERROR<span class="sc">:</span> package installation failed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="windows-1" class="slide level2">
 <h2>windows</h2>
@@ -740,7 +795,7 @@ library(devtools)</code></pre>
 <h1>Reproducible Environments</h1>
 
 </section>
-<section id="section-2" class="slide level2">
+<section id="section-3" class="slide level2">
 <h2></h2>
 <p>environments.rstudio.com</p>
 </section>
@@ -767,11 +822,11 @@ library(devtools)</code></pre>
 </section>
 <section id="renvinit" class="slide level2">
 <h2><code>renv::init()</code></h2>
-<div class="sourceCode" id="cb7" data-code-line-numbers="|2|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">.libPaths</span>()</span>
-<span id="cb7-2"><a href="#cb7-2"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">.libPaths</span>()</span>
-<span id="cb7-4"><a href="#cb7-4"></a>renv<span class="sc">::</span><span class="fu">deactivate</span>()</span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="fu">.libPaths</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6" data-code-line-numbers="|2|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">.libPaths</span>()</span>
+<span id="cb6-2"><a href="#cb6-2"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">.libPaths</span>()</span>
+<span id="cb6-4"><a href="#cb6-4"></a>renv<span class="sc">::</span><span class="fu">deactivate</span>()</span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="fu">.libPaths</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
 <p>run <code>.libPaths()</code> to see what your default package libraries are initialize an renv–you’ll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in <code>renv/activate.R</code> deactivate the environment and check libPaths() again–it should be back to normal</p>
 <style type="text/css">
@@ -788,35 +843,35 @@ library(devtools)</code></pre>
 </section>
 <section id="renv.lock" class="slide level2">
 <h2><code>renv.lock</code></h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">{</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>  <span class="dt">"R"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a>    <span class="dt">"Version"</span><span class="fu">:</span> <span class="st">"4.1.2"</span><span class="fu">,</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a>    <span class="dt">"Repositories"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a>      <span class="fu">{</span></span>
-<span id="cb8-6"><a href="#cb8-6"></a>        <span class="dt">"Name"</span><span class="fu">:</span> <span class="st">"CRAN"</span><span class="fu">,</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a>        <span class="dt">"URL"</span><span class="fu">:</span> <span class="st">"https://cloud.r-project.org"</span></span>
-<span id="cb8-8"><a href="#cb8-8"></a>      <span class="fu">}</span></span>
-<span id="cb8-9"><a href="#cb8-9"></a>    <span class="ot">]</span></span>
-<span id="cb8-10"><a href="#cb8-10"></a>  <span class="fu">},</span></span>
-<span id="cb8-11"><a href="#cb8-11"></a>  <span class="dt">"Packages"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb8-12"><a href="#cb8-12"></a>    <span class="er">[...]</span></span>
-<span id="cb8-13"><a href="#cb8-13"></a>    <span class="dt">"knitr"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb8-14"><a href="#cb8-14"></a>      <span class="dt">"Package"</span><span class="fu">:</span> <span class="st">"knitr"</span><span class="fu">,</span></span>
-<span id="cb8-15"><a href="#cb8-15"></a>      <span class="dt">"Version"</span><span class="fu">:</span> <span class="st">"1.39"</span><span class="fu">,</span></span>
-<span id="cb8-16"><a href="#cb8-16"></a>      <span class="dt">"Source"</span><span class="fu">:</span> <span class="st">"Repository"</span><span class="fu">,</span></span>
-<span id="cb8-17"><a href="#cb8-17"></a>      <span class="dt">"Repository"</span><span class="fu">:</span> <span class="st">"CRAN"</span><span class="fu">,</span></span>
-<span id="cb8-18"><a href="#cb8-18"></a>      <span class="dt">"Hash"</span><span class="fu">:</span> <span class="st">"029ab7c4badd3cf8af69016b2ba27493"</span><span class="fu">,</span></span>
-<span id="cb8-19"><a href="#cb8-19"></a>      <span class="dt">"Requirements"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb8-20"><a href="#cb8-20"></a>        <span class="st">"evaluate"</span><span class="ot">,</span></span>
-<span id="cb8-21"><a href="#cb8-21"></a>        <span class="st">"highr"</span><span class="ot">,</span></span>
-<span id="cb8-22"><a href="#cb8-22"></a>        <span class="st">"stringr"</span><span class="ot">,</span></span>
-<span id="cb8-23"><a href="#cb8-23"></a>        <span class="st">"xfun"</span><span class="ot">,</span></span>
-<span id="cb8-24"><a href="#cb8-24"></a>        <span class="st">"yaml"</span></span>
-<span id="cb8-25"><a href="#cb8-25"></a>      <span class="ot">]</span></span>
-<span id="cb8-26"><a href="#cb8-26"></a>    <span class="fu">},</span></span>
-<span id="cb8-27"><a href="#cb8-27"></a>    <span class="er">...</span></span>
-<span id="cb8-28"><a href="#cb8-28"></a>  <span class="fu">}</span></span>
-<span id="cb8-29"><a href="#cb8-29"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">{</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="dt">"R"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>    <span class="dt">"Version"</span><span class="fu">:</span> <span class="st">"4.1.2"</span><span class="fu">,</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>    <span class="dt">"Repositories"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>      <span class="fu">{</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>        <span class="dt">"Name"</span><span class="fu">:</span> <span class="st">"CRAN"</span><span class="fu">,</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a>        <span class="dt">"URL"</span><span class="fu">:</span> <span class="st">"https://cloud.r-project.org"</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a>      <span class="fu">}</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a>    <span class="ot">]</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a>  <span class="fu">},</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a>  <span class="dt">"Packages"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb7-12"><a href="#cb7-12"></a>    <span class="er">[...]</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a>    <span class="dt">"knitr"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb7-14"><a href="#cb7-14"></a>      <span class="dt">"Package"</span><span class="fu">:</span> <span class="st">"knitr"</span><span class="fu">,</span></span>
+<span id="cb7-15"><a href="#cb7-15"></a>      <span class="dt">"Version"</span><span class="fu">:</span> <span class="st">"1.39"</span><span class="fu">,</span></span>
+<span id="cb7-16"><a href="#cb7-16"></a>      <span class="dt">"Source"</span><span class="fu">:</span> <span class="st">"Repository"</span><span class="fu">,</span></span>
+<span id="cb7-17"><a href="#cb7-17"></a>      <span class="dt">"Repository"</span><span class="fu">:</span> <span class="st">"CRAN"</span><span class="fu">,</span></span>
+<span id="cb7-18"><a href="#cb7-18"></a>      <span class="dt">"Hash"</span><span class="fu">:</span> <span class="st">"029ab7c4badd3cf8af69016b2ba27493"</span><span class="fu">,</span></span>
+<span id="cb7-19"><a href="#cb7-19"></a>      <span class="dt">"Requirements"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb7-20"><a href="#cb7-20"></a>        <span class="st">"evaluate"</span><span class="ot">,</span></span>
+<span id="cb7-21"><a href="#cb7-21"></a>        <span class="st">"highr"</span><span class="ot">,</span></span>
+<span id="cb7-22"><a href="#cb7-22"></a>        <span class="st">"stringr"</span><span class="ot">,</span></span>
+<span id="cb7-23"><a href="#cb7-23"></a>        <span class="st">"xfun"</span><span class="ot">,</span></span>
+<span id="cb7-24"><a href="#cb7-24"></a>        <span class="st">"yaml"</span></span>
+<span id="cb7-25"><a href="#cb7-25"></a>      <span class="ot">]</span></span>
+<span id="cb7-26"><a href="#cb7-26"></a>    <span class="fu">},</span></span>
+<span id="cb7-27"><a href="#cb7-27"></a>    <span class="er">...</span></span>
+<span id="cb7-28"><a href="#cb7-28"></a>  <span class="fu">}</span></span>
+<span id="cb7-29"><a href="#cb7-29"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
 <p>created from <code>renv::snapshot()</code> by default, identifies dependencies of your code for example: usethis doesn’t usually appear in my lockfiles, because I’m running it interactively, rather than making it a dependency of my projects</p>
 <style type="text/css">

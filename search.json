@@ -32,14 +32,21 @@
     "href": "index.html#mental-model",
     "title": "",
     "section": "mental model",
-    "text": "mental model\npackage managers\ninstall\nlanguage managers\ninstall\nlanguage versions\ninstall\nenvironment managers\ninstall\nprojects\n\nthis pattern repeats itself across languages and operating systems and so is probably worth paying attention to:"
+    "text": "mental model\npackage managers (scoop)\ninstall\nlanguage managers (rig)\ninstall\nlanguage versions (R-4.2 -e “install.packages(‘renv’))   *install*   environment managersrenv::install()` install\nprojects\n\nneeds a diagram ? vertical arrow of generality"
   },
   {
     "objectID": "index.html#package-managers",
     "href": "index.html#package-managers",
     "title": "",
     "section": "package managers",
-    "text": "package managers\nsoftware whose job it is to install other software\nwindows: scoop, chocolatey, winget\nmacOS: homebrew\nlinux: homebrew, apt, yum, zypper\n\n\n\n\n\n\nWarning\n\n\nAvoid installing your language with a package manager"
+    "text": "package managers\nsoftware whose job it is to install other software\nwindows: scoop, chocolatey, winget\nmacOS: homebrew\nlinux: homebrew, apt, yum, zypper"
+  },
+  {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "",
+    "section": "⚠️",
+    "text": "⚠️\nAvoid installing your language with a package manager\n\nYou want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are, in general, pretty bad Other software that you install with your package manager may Idiosyncracies of your language will be better understood by a dedicated tool"
   },
   {
     "objectID": "index.html#language-managers",
@@ -53,35 +60,42 @@
     "href": "index.html#language-versions",
     "title": "",
     "section": "language versions",
-    "text": "language versions\n$ rig add 4.2.1"
+    "text": "language versions\nusing your language manager, install a language version:\n❯ rig install --help\nrig-add\n\nDESCRIPTION:\n    Download and install an R version, from the official sources.\n    It keeps the already installed R versions, except versions within the\n    same minor branch, see below.\n\nEXAMPLES:\n    # Add the latest release\n    rig add release\n\n    # Install specific version\n    rig add 4.1.2\n\n    # Install latest version within a minor branch\n    rig add 4.1\n\n\nif you’re running a distribution of linux that rig doesn’t support: - https://docs.rstudio.com/resources/install-r/\nif no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/"
   },
   {
-    "objectID": "index.html#project-libraries",
-    "href": "index.html#project-libraries",
+    "objectID": "index.html#environment-managers",
+    "href": "index.html#environment-managers",
     "title": "",
-    "section": "project libraries",
-    "text": "project libraries\ninstall.packages(\"renv\")\nrenv::init()"
+    "section": "environment managers",
+    "text": "environment managers\nusing your desired version of the language, install an environment manager:\n\ninstall.packages(\"renv\")"
+  },
+  {
+    "objectID": "index.html#project",
+    "href": "index.html#project",
+    "title": "",
+    "section": "project",
+    "text": "project\nusing your environment manager, install your project’s dependencies:\n\n\nnew\nrenv::init()\n\nexisting\nrenv::restore()"
   },
   {
     "objectID": "index.html#activity",
     "href": "index.html#activity",
     "title": "",
     "section": "activity",
-    "text": "activity\n\ninstall rig\ninstall an additional version of R"
-  },
-  {
-    "objectID": "index.html#section",
-    "href": "index.html#section",
-    "title": "",
-    "section": "",
-    "text": "Scopes: - system: (usually suffixed by .site, per version of R) - user - project\nuser scoped .Rprofile and .Renviron content is applied last"
+    "text": "activity\n\ninstall rig\nadd image\ninstall an additional version of R\nrig add version"
   },
   {
     "objectID": "index.html#section-1",
     "href": "index.html#section-1",
     "title": "",
     "section": "",
-    "text": ".Renviron and .Rprofile must end in a newline.\n\n\n\n\n\nR will silently throw away the last line if you don’t do this"
+    "text": "Scopes: - system: (usually suffixed by .site, per version of R) - user - project\nuser scoped .Rprofile and .Renviron content is applied last"
+  },
+  {
+    "objectID": "index.html#section-2",
+    "href": "index.html#section-2",
+    "title": "",
+    "section": "",
+    "text": ".Renviron and .Rprofile must end in a newline.\n\n\nadd highlight \n\n\n\n\nR will silently throw away the last line if you don’t do this"
   },
   {
     "objectID": "index.html#renviron",
@@ -131,6 +145,13 @@
     "title": "",
     "section": "why can these go in .Rprofile?",
     "text": "why can these go in .Rprofile?\nlibrary(usethis)\nlibrary(devtools)"
+  },
+  {
+    "objectID": "index.html#andries-rprofile",
+    "href": "index.html#andries-rprofile",
+    "title": "",
+    "section": "andrie’s Rprofile",
+    "text": "andrie’s Rprofile"
   },
   {
     "objectID": "index.html#types-of-r-packages",
@@ -189,8 +210,8 @@
     "text": "activity\n\ninstall a package from source\n\ninstall.packages(\"jsonlite\", type = \"source\")"
   },
   {
-    "objectID": "index.html#section-2",
-    "href": "index.html#section-2",
+    "objectID": "index.html#section-3",
+    "href": "index.html#section-3",
     "title": "",
     "section": "",
     "text": "environments.rstudio.com"
