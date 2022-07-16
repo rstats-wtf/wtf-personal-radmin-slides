@@ -55,18 +55,19 @@ https://github.com/r-lib/rig/
 
 ## mental model
 
-package managers  
+package managers (scoop)  
 *install*  
-language managers   
+language managers (rig)  
 *install*  
-language versions  
+language versions  (R-4.2 -e "install.packages('renv')`)  
 *install*  
-environment managers  
+environment managers  `renv::install()`
 *install*  
-projects
+projects  
 
 :::{.notes}
-this pattern repeats itself across languages and operating systems and so is probably worth paying attention to:
+needs a diagram
+? vertical arrow of generality
 :::
 
 ## package managers
@@ -77,10 +78,16 @@ windows: **scoop**, chocolatey, winget
 macOS: **homebrew**  
 linux: **homebrew**, apt, yum, zypper  
 
-:::{.callout-warning}
-Avoid installing your language with a package manager
-:::
+## ⚠️
 
+Avoid installing your language with a package manager
+
+:::{.notes}
+You want to avoid having the language version your projects are using changed out from you unexpectedly
+Tools for freezing installations with your package manager are, in general, pretty bad
+Other software that you install with your package manager may 
+Idiosyncracies of your language will be better understood by a dedicated tool
+:::
 
 ## language managers
 
@@ -110,21 +117,77 @@ nvm
 
 ## language versions
 
+using your language manager, install a language version:
+
 ```
-$ rig add 4.2.1
+❯ rig install --help
+rig-add
+
+DESCRIPTION:
+    Download and install an R version, from the official sources.
+    It keeps the already installed R versions, except versions within the
+    same minor branch, see below.
+
+EXAMPLES:
+    # Add the latest release
+    rig add release
+
+    # Install specific version
+    rig add 4.1.2
+
+    # Install latest version within a minor branch
+    rig add 4.1
+
 ```
 
-## project libraries
+::: {.notes}
+if you're running a distribution of linux that rig doesn't support:
+- https://docs.rstudio.com/resources/install-r/
 
-```r
-install.packages("renv")
-renv::init()
-```
+if no pre-compiled binary of rig is available:
+- https://docs.rstudio.com/resources/install-r-source/
+:::
+
+## environment managers
+
+using your desired version of the language, install an environment manager:
+
+:::{.r-fit-text}
+`install.packages("renv")`
+:::
+
+## project
+
+using your environment manager, install your project's dependencies:
+
+:::: {.columns}
+
+:::{.column width="50%"}
+
+### new
+
+`renv::init()`
+
+:::
+
+::: {.column width="50%"}
+
+### existing
+
+`renv::restore()`
+
+:::
+
+::::
+
+
 
 ## activity
 
 - [install rig](https://github.com/r-lib/rig/releases/)
+- add image
 - install an additional version of R
+- rig add `version`
 
 # starting R
 
@@ -151,6 +214,7 @@ user scoped `.Rprofile` and `.Renviron` content is applied _last_
 :::
 
 ::: {.column}
+- add highlight
 ![](img/insert-newline-end.png)
 :::
 
@@ -213,6 +277,8 @@ If something appears in a script, it **should not** be in .Rprofile
 library(usethis)
 library(devtools)
 ```
+
+## andrie's Rprofile
 
 # installing R packages
 
