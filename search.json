@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "",
+    "section": "",
+    "text": "rstd.io/wtf-2022-rsc"
+  },
+  {
+    "objectID": "index.html#a-brief-personal-history",
+    "href": "index.html#a-brief-personal-history",
+    "title": "",
+    "section": "a brief personal history:",
+    "text": "a brief personal history:\n\n\n\nAuditor\n\npersonal laptop (windows)\nRStudio in Citrix (windows)\nairgapped RStudio Server Pro (linux)\nairgapped Shiny Server Pro (linux)\nSpecial Issue Individual Laptop (dual boot)\nSpecial Issue Individual Desktop (windows)\nSpecial Issue Team Desktop (windows)\n\n\n\nData Scientist\n\npersonal laptop (windows)\nwork laptop (windows)\nRStudio in Citrix (windows)\nRStudio Server (linux)\n\n\n\nSolutions Engineer\n\npersonal laptop (windows)\nWork laptop (macos)\nRStudio Workbench Demo Server (linux)\nRStudio Workbench Internal Server (linux)\n\n\n\n\nthis is intended to provide context on my priorities / habits of thought: - it needs to work across operating systems - You can’t depend on having pro features - avoid admin where possible - as portable as practical - audit context means I need to be able to reproduce exactly - “run this command” preferable to a confluence page of screenshots"
+  },
+  {
     "objectID": "index.html#how-do-i",
     "href": "index.html#how-do-i",
     "title": "",
@@ -11,7 +25,28 @@
     "href": "index.html#focus-areas",
     "title": "",
     "section": "focus areas",
-    "text": "focus areas\n\ninstalling R\nstarting R\n\nuser and project-specific R configuration\n.Renviron, and .Rprofile\n\ninstalling R packages\nupgrading R"
+    "text": "focus areas\n\ninstalling R\nstarting R\ninstalling R packages\nupgrading R"
+  },
+  {
+    "objectID": "index.html#practice-makes-perfect",
+    "href": "index.html#practice-makes-perfect",
+    "title": "",
+    "section": "practice makes perfect",
+    "text": "practice makes perfect\n\nWindows 10+macOSLinux\n\n\nWindows Sandbox\n\n\n🤷\n\n\nMultipass\nDigital Ocean\nLinode\n\n\n\n\nThe best way to become more comfortable with installing things is to practice in an environment you can throw away - the windows sandbox lets you test in an environment on your machine that won’t affect your computer - enabling it is outside the scope of this course - for linux users, the easiest thing to do is stand up a small VPS - I don’t know of a good safe way to test mac environments"
+  },
+  {
+    "objectID": "index.html#software-managers",
+    "href": "index.html#software-managers",
+    "title": "",
+    "section": "“software managers”",
+    "text": "“software managers”\npackage managers\nsoftware whose job it is to install other software\nwindows: scoop, chocolatey, winget\nmacOS: homebrew\nlinux: homebrew, apt, yum, zypper"
+  },
+  {
+    "objectID": "index.html#section-1",
+    "href": "index.html#section-1",
+    "title": "",
+    "section": "⚠️",
+    "text": "⚠️\nAvoid installing your language with a package manager\n\nYou want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are not consistently effective Other software that you install with your package manager may expect that package manager to be running the latest Idiosyncracies of your language will be better understood by a dedicated tool"
   },
   {
     "objectID": "index.html#clickops",
@@ -26,27 +61,6 @@
     "title": "",
     "section": "rig",
     "text": "rig\nhttps://github.com/r-lib/rig/"
-  },
-  {
-    "objectID": "index.html#mental-model",
-    "href": "index.html#mental-model",
-    "title": "",
-    "section": "mental model",
-    "text": "mental model\npackage managers (scoop)\ninstall\nlanguage managers (rig)\ninstall\nlanguage versions (R-4.2 -e “install.packages(‘renv’))   *install*   environment managersrenv::install()` install\nprojects\n\nneeds a diagram ? vertical arrow of generality"
-  },
-  {
-    "objectID": "index.html#package-managers",
-    "href": "index.html#package-managers",
-    "title": "",
-    "section": "package managers",
-    "text": "package managers\nsoftware whose job it is to install other software\nwindows: scoop, chocolatey, winget\nmacOS: homebrew\nlinux: homebrew, apt, yum, zypper"
-  },
-  {
-    "objectID": "index.html#section",
-    "href": "index.html#section",
-    "title": "",
-    "section": "⚠️",
-    "text": "⚠️\nAvoid installing your language with a package manager\n\nYou want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are, in general, pretty bad Other software that you install with your package manager may Idiosyncracies of your language will be better understood by a dedicated tool"
   },
   {
     "objectID": "index.html#language-managers",
@@ -81,21 +95,28 @@
     "href": "index.html#activity",
     "title": "",
     "section": "activity",
-    "text": "activity\n\ninstall rig\nadd image\ninstall an additional version of R\nrig add version"
+    "text": "activity\n\nread the rig FAQ, or the rswitch guide\ninstall a different major/minor version of R\n\nhttps://cran.r-project.org/bin/macosx/ https://cran.r-project.org/bin/windows/base/old/\n\ninstall rig, and then use rig to install a different major or minor version of R\n\nthen open RStudio with that newly installed R version"
   },
   {
-    "objectID": "index.html#section-1",
-    "href": "index.html#section-1",
+    "objectID": "index.html#renviron-.rprofile",
+    "href": "index.html#renviron-.rprofile",
     "title": "",
-    "section": "",
-    "text": "Scopes: - system: (usually suffixed by .site, per version of R) - user - project\nuser scoped .Rprofile and .Renviron content is applied last"
+    "section": ".Renviron & .Rprofile",
+    "text": ".Renviron & .Rprofile\nusethis::edit_r_profile()"
   },
   {
     "objectID": "index.html#section-2",
     "href": "index.html#section-2",
     "title": "",
     "section": "",
-    "text": ".Renviron and .Rprofile must end in a newline.\n\n\nadd highlight \n\n\n\n\nR will silently throw away the last line if you don’t do this"
+    "text": "Scopes: - system: (usually suffixed by .site, per version of R) - user - project\nuser scoped .Rprofile and .Renviron content is applied last"
+  },
+  {
+    "objectID": "index.html#section-3",
+    "href": "index.html#section-3",
+    "title": "",
+    "section": "",
+    "text": ".Renviron and .Rprofile must end in a newline.\n\n\n\n\n\nR will silently throw away the last line if you don’t do this"
   },
   {
     "objectID": "index.html#renviron",
@@ -109,7 +130,7 @@
     "href": "index.html#example-.renviron",
     "title": "",
     "section": "example .Renviron",
-    "text": "example .Renviron\nR_HISTSIZE=100000\nGITHUB_PAT=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\nCONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3\nRETICULATE_PYTHON=.venv/bin/python\n\nthe keys have already been burned, don’t worry"
+    "text": "example .Renviron\n\nproject short circuits home?\n\nR_HISTSIZE=100000\nGITHUB_PAT=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\nCONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3\nRETICULATE_PYTHON=.venv/bin/python\n\naccessing things once they’re in the R environ\n\nSys.getenv()\n\nthe keys have already been burned, don’t worry"
   },
   {
     "objectID": "index.html#rprofile",
@@ -123,7 +144,7 @@
     "href": "index.html#what-to-put-in-.rprofile",
     "title": "",
     "section": "what to put in .Rprofile",
-    "text": "what to put in .Rprofile\n\nSet a default CRAN mirror\nWrite a welcome message\nCustomize R prompt\nSelectively change (but be careful)\n\nOptions, screen width, numeric display\nLoad frequently used interactive packages\nAliases / shortcuts for frequently used functions"
+    "text": "what to put in .Rprofile\n\nSet a default CRAN mirror\nWrite a welcome message\nCustomize R prompt\nSelectively change (but be careful)\n\nOptions, screen width, numeric display\nLoad frequently used interactive packages\nAliases / shortcuts for frequently used functions\n\nyou don’t typically share rprofiles\n\n\nrlrang::entrace so base errors get better context?"
   },
   {
     "objectID": "index.html#why-shouldnt-these-go-in-.rprofile",
@@ -152,6 +173,20 @@
     "title": "",
     "section": "andrie’s Rprofile",
     "text": "andrie’s Rprofile"
+  },
+  {
+    "objectID": "index.html#renviron-vs-rprofile",
+    "href": "index.html#renviron-vs-rprofile",
+    "title": "",
+    "section": "renviron vs rprofile",
+    "text": "renviron vs rprofile"
+  },
+  {
+    "objectID": "index.html#activity-1",
+    "href": "index.html#activity-1",
+    "title": "",
+    "section": "activity",
+    "text": "activity\nfind rprofiles on github and add something to yours"
   },
   {
     "objectID": "index.html#types-of-r-packages",
@@ -196,22 +231,22 @@
     "text": "windows\nRtools\nrig add rtools"
   },
   {
-    "objectID": "index.html#macos",
-    "href": "index.html#macos",
+    "objectID": "index.html#macos-1",
+    "href": "index.html#macos-1",
     "title": "",
     "section": "macOS",
     "text": "macOS\nXCode\nxcode-select --install\nor download from the Mac App Store"
   },
   {
-    "objectID": "index.html#activity-1",
-    "href": "index.html#activity-1",
+    "objectID": "index.html#activity-2",
+    "href": "index.html#activity-2",
     "title": "",
     "section": "activity",
     "text": "activity\n\ninstall a package from source\n\ninstall.packages(\"jsonlite\", type = \"source\")"
   },
   {
-    "objectID": "index.html#section-3",
-    "href": "index.html#section-3",
+    "objectID": "index.html#section-4",
+    "href": "index.html#section-4",
     "title": "",
     "section": "",
     "text": "environments.rstudio.com"
@@ -266,8 +301,8 @@
     "text": "rig\nlaunch rstudio from an renv lockfile:\nrig rstudio path/to/renv.lock"
   },
   {
-    "objectID": "index.html#activity-2",
-    "href": "index.html#activity-2",
+    "objectID": "index.html#activity-3",
+    "href": "index.html#activity-3",
     "title": "",
     "section": "activity",
     "text": "activity\n\ninstall dev jsonlite, then roll back to released version"
