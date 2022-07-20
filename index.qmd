@@ -78,7 +78,7 @@ this is intended to provide context on my priorities / habits of thought:
 - "run this command" preferable to a confluence page of screenshots
 :::
 
-## How do I...
+## How do I... {background-color="#333399"}
 
 ::: incremental
 -   upgrade the version of R I'm using for this project?
@@ -131,7 +131,8 @@ The best way to become more comfortable with installing things is to practice in
 
 ![](img/project-oyster.svg)
 
-# installing R
+
+# installing R {background-color="#333399"}
 
 ## "software managers"
 
@@ -272,13 +273,13 @@ c) install rig, and then use rig to install a different major or minor version o
 then open RStudio with that newly installed R version
 
 
-# starting R
+# starting R {background-color="#333399"}
 
-## `.Renviron` & `.Rprofile`
+## `.Renviron` and `.Rprofile`
 
 usethis::edit_r_profile()
 
-## 
+## R startup sequence (detail) {.smaller background-color="#cccccc"}
 
 ![](img/R-startup.svg)
 
@@ -390,7 +391,7 @@ find rprofiles on github and add something to yours
 
 ```
 
-# installing R packages
+# installing R packages {background-color="#333399"}
 
 ## Types of R packages
 
@@ -459,7 +460,7 @@ install.packages("jsonlite", type = "source")
 ```
 
 
-# Reproducible Environments
+# Reproducible Environments {background-color="#333399"}
 
 ##
 
@@ -610,7 +611,7 @@ rig rstudio path/to/renv.lock
 
 - install dev jsonlite, then roll back to released version
 
-# upgrading R
+# upgrading R {background-color="#333399"}
  
 ## rig + renv
 
