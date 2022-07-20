@@ -283,20 +283,26 @@ using your environment manager, install your project's dependencies:
 
 
 
-## activity
+## activity {.smaller}
 
-a) read the [rig FAQ](https://github.com/r-lib/rig#-faq), or the [rswitch guide](https://rud.is/rswitch/guide/)
-
-
-b) install a different major/minor version of R
-
-https://cran.r-project.org/bin/macosx/
-https://cran.r-project.org/bin/windows/base/old/
+::: question
 
 
-c) install rig, and then use rig to install a different major or minor version of R
+1. read the [rig FAQ](https://github.com/r-lib/rig#-faq), or the [rswitch guide](https://rud.is/rswitch/guide/)
 
-then open RStudio with that newly installed R version
+
+1. install a different major/minor version of R
+
+    - <https://cran.r-project.org/bin/macosx/>
+    
+    - <https://cran.r-project.org/bin/windows/base/old/>
+
+
+1. install rig
+
+    - use rig to install a different major or minor version of R
+  
+    - open RStudio with that newly installed R version
 
 :::
 
@@ -398,11 +404,16 @@ rlrang::entrace so base errors get better context?
 - `theme_set(theme_bw())`
 :::
 
-## `devDependencies`
+## dev dependencies
 
 If something appears in a script, it **should not** be in .Rprofile
 
-## why can these go in `.Rprofile`?
+## activity
+
+::: question
+
+why can these go in `.Rprofile`?
+:::
 
 ```
 library(usethis)
