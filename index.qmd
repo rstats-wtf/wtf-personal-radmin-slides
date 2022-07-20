@@ -16,6 +16,32 @@ execute:
 from: markdown+emoji
 ---
 
+
+```{r setup}
+library(countdown)
+countdown_timer <- function(
+    minutes = 1, 
+    play_sound = TRUE, 
+    font_size = "2em", 
+    ...
+) {
+  countdown(
+    minutes = minutes,
+    # Fanfare when it's over
+    play_sound = play_sound,
+    # Set timer theme to match solarized colors
+    color_border              = "#FFFFFF",
+    color_text                = "#7aa81e",
+    color_running_background  = "#7aa81e",
+    color_running_text        = "#FFFFFF",
+    color_finished_background = "#ffa07a",
+    color_finished_text       = "#FFFFFF",
+    font_size = font_size,
+    ...
+  )
+}
+```
+
 # personal R administration
 
 throw your computer into the ocean with confidence
@@ -29,31 +55,41 @@ throw your computer into the ocean with confidence
 ## a brief personal history:
 
 :::: {.columns .scrollable}
+
 ::: {.column width="33%" .fragment}
 ### Auditor
 
-- personal laptop (windows)
-- RStudio in Citrix (windows)
-- airgapped RStudio Server Pro (linux)
-- airgapped Shiny Server Pro (linux)
-- Special Issue Individual Laptop (dual boot)
-- Special Issue Individual Desktop (windows)
-- Special Issue Team Desktop (windows)
+::: r-fit-text
+- personal laptop {{< fa brands windows >}}
+- RStudio in Citrix {{< fa brands windows >}}
+- airgapped RStudio Server Pro {{< fa brands linux >}}
+- airgapped Shiny Server Pro {{< fa brands linux >}}
+- Special Issue Individual Laptop {{< fa brands windows >}} {{< fa brands linux >}}
+- Special Issue Individual Desktop {{< fa brands windows >}}
+- Special Issue Team Desktop {{< fa brands windows >}}
 :::
+:::
+
 ::: {.column width="33%" .fragment}
 ### Data Scientist
-- personal laptop (windows)
-- work laptop (windows)
-- RStudio in Citrix (windows)
-- RStudio Server (linux)
+
+::: r-fit-text
+- personal laptop {{< fa brands windows >}}
+- work laptop {{< fa brands windows >}}
+- RStudio in Citrix {{< fa brands windows >}}
+- RStudio Server {{< fa brands linux >}}
+:::
 :::
 
 ::: {.column width="33%" .fragment}
 ### Solutions Engineer
-- personal laptop (windows)
-- Work laptop (macos)
-- RStudio Workbench Demo Server (linux)
-- RStudio Workbench Internal Server (linux)
+
+::: r-fit-text
+- personal laptop {{< fa brands windows >}}
+- Work laptop {{< fa brands apple >}}
+- RStudio Workbench Demo Server {{< fa brands linux >}}
+- RStudio Workbench Internal Server {{< fa brands linux >}}
+:::
 :::
 
 ::::
@@ -68,7 +104,7 @@ this is intended to provide context on my priorities / habits of thought:
 - "run this command" preferable to a confluence page of screenshots
 :::
 
-## How do I...
+## How do I... {background-color="#333399"}
 
 ::: incremental
 -   upgrade the version of R I'm using for this project?
@@ -121,7 +157,8 @@ The best way to become more comfortable with installing things is to practice in
 
 ![](img/project-oyster.svg)
 
-# installing R
+
+# installing R {background-color="#333399"}
 
 ## "software managers"
 
@@ -246,29 +283,40 @@ using your environment manager, install your project's dependencies:
 
 
 
-## activity
+## activity {.smaller}
 
-a) read the [rig FAQ](https://github.com/r-lib/rig#-faq), or the [rswitch guide](https://rud.is/rswitch/guide/)
-
-
-b) install a different major/minor version of R
-
-https://cran.r-project.org/bin/macosx/
-https://cran.r-project.org/bin/windows/base/old/
+::: question
 
 
-c) install rig, and then use rig to install a different major or minor version of R
-
-then open RStudio with that newly installed R version
+1. read the [rig FAQ](https://github.com/r-lib/rig#-faq), or the [rswitch guide](https://rud.is/rswitch/guide/)
 
 
-# starting R
+1. install a different major/minor version of R
 
-## `.Renviron` & `.Rprofile`
+    - <https://cran.r-project.org/bin/macosx/>
+    
+    - <https://cran.r-project.org/bin/windows/base/old/>
+
+
+1. install rig
+
+    - use rig to install a different major or minor version of R
+  
+    - open RStudio with that newly installed R version
+
+:::
+
+```{r}
+countdown(minutes = 1)
+```
+
+# starting R {background-color="#333399"}
+
+## `.Renviron` and `.Rprofile`
 
 usethis::edit_r_profile()
 
-## 
+## R startup sequence (detail) {.smaller background-color="#cccccc"}
 
 ![](img/R-startup.svg)
 
@@ -282,7 +330,7 @@ user scoped `.Rprofile` and `.Renviron` content is applied _last_
 
 :::
 
-## 
+## ⚠️ Remember to use a newline
 
 ::::{.columns}
 
@@ -356,16 +404,26 @@ rlrang::entrace so base errors get better context?
 - `theme_set(theme_bw())`
 :::
 
-## `devDependencies`
+## dev dependencies
 
 If something appears in a script, it **should not** be in .Rprofile
 
-## why can these go in `.Rprofile`?
+## activity
+
+::: question
+
+why can these go in `.Rprofile`?
+:::
 
 ```
 library(usethis)
 library(devtools)
 ```
+
+```{R}
+countdown_timer(minutes = 1, bottom = 0)
+```
+
 
 ## andrie's Rprofile
 
@@ -380,7 +438,7 @@ find rprofiles on github and add something to yours
 
 ```
 
-# installing R packages
+# installing R packages {background-color="#333399"}
 
 ## Types of R packages
 
@@ -449,11 +507,9 @@ install.packages("jsonlite", type = "source")
 ```
 
 
-# Reproducible Environments
+# Reproducible Environments {background-color="#333399"}
 
-##
-
-environments.rstudio.com
+## environments.rstudio.com
 
 ## spectrum
 
@@ -600,7 +656,7 @@ rig rstudio path/to/renv.lock
 
 - install dev jsonlite, then roll back to released version
 
-# upgrading R
+# upgrading R {background-color="#333399"}
  
 ## rig + renv
 
