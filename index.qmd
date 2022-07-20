@@ -29,31 +29,41 @@ throw your computer into the ocean with confidence
 ## a brief personal history:
 
 :::: {.columns .scrollable}
+
 ::: {.column width="33%" .fragment}
 ### Auditor
 
-- personal laptop (windows)
-- RStudio in Citrix (windows)
-- airgapped RStudio Server Pro (linux)
-- airgapped Shiny Server Pro (linux)
-- Special Issue Individual Laptop (dual boot)
-- Special Issue Individual Desktop (windows)
-- Special Issue Team Desktop (windows)
+::: r-fit-text
+- personal laptop {{< fa brands windows >}}
+- RStudio in Citrix {{< fa brands windows >}}
+- airgapped RStudio Server Pro {{< fa brands linux >}}
+- airgapped Shiny Server Pro {{< fa brands linux >}}
+- Special Issue Individual Laptop {{< fa brands windows >}} {{< fa brands linux >}}
+- Special Issue Individual Desktop {{< fa brands windows >}}
+- Special Issue Team Desktop {{< fa brands windows >}}
 :::
+:::
+
 ::: {.column width="33%" .fragment}
 ### Data Scientist
-- personal laptop (windows)
-- work laptop (windows)
-- RStudio in Citrix (windows)
-- RStudio Server (linux)
+
+::: r-fit-text
+- personal laptop {{< fa brands windows >}}
+- work laptop {{< fa brands windows >}}
+- RStudio in Citrix {{< fa brands windows >}}
+- RStudio Server {{< fa brands linux >}}
+:::
 :::
 
 ::: {.column width="33%" .fragment}
 ### Solutions Engineer
-- personal laptop (windows)
-- Work laptop (macos)
-- RStudio Workbench Demo Server (linux)
-- RStudio Workbench Internal Server (linux)
+
+::: r-fit-text
+- personal laptop {{< fa brands windows >}}
+- Work laptop {{< fa brands apple >}}
+- RStudio Workbench Demo Server {{< fa brands linux >}}
+- RStudio Workbench Internal Server {{< fa brands linux >}}
+:::
 :::
 
 ::::
