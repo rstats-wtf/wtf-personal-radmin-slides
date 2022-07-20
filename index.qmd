@@ -330,7 +330,7 @@ user scoped `.Rprofile` and `.Renviron` content is applied _last_
 
 :::
 
-## 
+## ⚠️ Remember to use a newline
 
 ::::{.columns}
 
@@ -424,6 +424,7 @@ library(devtools)
 countdown_timer(minutes = 1, bottom = 0)
 ```
 
+
 ## andrie's Rprofile
 
 ## renviron vs rprofile
@@ -508,9 +509,7 @@ install.packages("jsonlite", type = "source")
 
 # Reproducible Environments {background-color="#333399"}
 
-##
-
-environments.rstudio.com
+## environments.rstudio.com
 
 ## spectrum
 
