@@ -11,7 +11,7 @@
     "href": "index.html#a-brief-personal-history",
     "title": "",
     "section": "a brief personal history:",
-    "text": "a brief personal history:\n\n\n\nAuditor\n\npersonal laptop (windows)\nRStudio in Citrix (windows)\nairgapped RStudio Server Pro (linux)\nairgapped Shiny Server Pro (linux)\nSpecial Issue Individual Laptop (dual boot)\nSpecial Issue Individual Desktop (windows)\nSpecial Issue Team Desktop (windows)\n\n\n\nData Scientist\n\npersonal laptop (windows)\nwork laptop (windows)\nRStudio in Citrix (windows)\nRStudio Server (linux)\n\n\n\nSolutions Engineer\n\npersonal laptop (windows)\nWork laptop (macos)\nRStudio Workbench Demo Server (linux)\nRStudio Workbench Internal Server (linux)\n\n\n\n\nthis is intended to provide context on my priorities / habits of thought: - it needs to work across operating systems - You can’t depend on having pro features - avoid admin where possible - as portable as practical - audit context means I need to be able to reproduce exactly - “run this command” preferable to a confluence page of screenshots"
+    "text": "a brief personal history:\n\n\n\nAuditor\n\n\npersonal laptop \nRStudio in Citrix \nairgapped RStudio Server Pro \nairgapped Shiny Server Pro \nSpecial Issue Individual Laptop  \nSpecial Issue Individual Desktop \nSpecial Issue Team Desktop \n\n\n\n\nData Scientist\n\n\npersonal laptop \nwork laptop \nRStudio in Citrix \nRStudio Server \n\n\n\n\nSolutions Engineer\n\n\npersonal laptop \nWork laptop \nRStudio Workbench Demo Server \nRStudio Workbench Internal Server \n\n\n\n\n\nthis is intended to provide context on my priorities / habits of thought: - it needs to work across operating systems - You can’t depend on having pro features - avoid admin where possible - as portable as practical - audit context means I need to be able to reproduce exactly - “run this command” preferable to a confluence page of screenshots"
   },
   {
     "objectID": "index.html#how-do-i",
@@ -95,28 +95,28 @@
     "href": "index.html#activity",
     "title": "",
     "section": "activity",
-    "text": "activity\n\nread the rig FAQ, or the rswitch guide\ninstall a different major/minor version of R\n\nhttps://cran.r-project.org/bin/macosx/ https://cran.r-project.org/bin/windows/base/old/\n\ninstall rig, and then use rig to install a different major or minor version of R\n\nthen open RStudio with that newly installed R version"
+    "text": "activity\n\n\nread the rig FAQ, or the rswitch guide\ninstall a different major/minor version of R\n\nhttps://cran.r-project.org/bin/macosx/\nhttps://cran.r-project.org/bin/windows/base/old/\n\ninstall rig\n\nuse rig to install a different major or minor version of R\nopen RStudio with that newly installed R version\n\n\n\n\n\n\n01:00"
   },
   {
-    "objectID": "index.html#renviron-.rprofile",
-    "href": "index.html#renviron-.rprofile",
+    "objectID": "index.html#renviron-and-.rprofile",
+    "href": "index.html#renviron-and-.rprofile",
     "title": "",
-    "section": ".Renviron & .Rprofile",
-    "text": ".Renviron & .Rprofile\nusethis::edit_r_profile()"
+    "section": ".Renviron and .Rprofile",
+    "text": ".Renviron and .Rprofile\nusethis::edit_r_profile()"
   },
   {
-    "objectID": "index.html#section-2",
-    "href": "index.html#section-2",
+    "objectID": "index.html#r-startup-sequence-detail",
+    "href": "index.html#r-startup-sequence-detail",
     "title": "",
-    "section": "",
-    "text": "Scopes: - system: (usually suffixed by .site, per version of R) - user - project\nuser scoped .Rprofile and .Renviron content is applied last"
+    "section": "R startup sequence (detail)",
+    "text": "R startup sequence (detail)\n\n\nScopes: - system: (usually suffixed by .site, per version of R) - user - project\nuser scoped .Rprofile and .Renviron content is applied last"
   },
   {
-    "objectID": "index.html#section-3",
-    "href": "index.html#section-3",
+    "objectID": "index.html#remember-to-use-a-newline",
+    "href": "index.html#remember-to-use-a-newline",
     "title": "",
-    "section": "",
-    "text": ".Renviron and .Rprofile must end in a newline.\n\n\n\n\n\nR will silently throw away the last line if you don’t do this"
+    "section": "⚠️ Remember to use a newline",
+    "text": "⚠️ Remember to use a newline\n\n\n.Renviron and .Rprofile must end in a newline.\n\n\n\n\n\nR will silently throw away the last line if you don’t do this"
   },
   {
     "objectID": "index.html#renviron",
@@ -154,18 +154,18 @@
     "text": "why shouldn’t these go in .Rprofile?\n\n\noptions(stringsAsFactors = FALSE)\nlibrary(tidyverse)\nlibrary(ggplot2)\nf <- dplyr::filter\ntheme_set(theme_bw())"
   },
   {
-    "objectID": "index.html#devdependencies",
-    "href": "index.html#devdependencies",
+    "objectID": "index.html#dev-dependencies",
+    "href": "index.html#dev-dependencies",
     "title": "",
-    "section": "devDependencies",
-    "text": "devDependencies\nIf something appears in a script, it should not be in .Rprofile"
+    "section": "dev dependencies",
+    "text": "dev dependencies\nIf something appears in a script, it should not be in .Rprofile"
   },
   {
-    "objectID": "index.html#why-can-these-go-in-.rprofile",
-    "href": "index.html#why-can-these-go-in-.rprofile",
+    "objectID": "index.html#activity-1",
+    "href": "index.html#activity-1",
     "title": "",
-    "section": "why can these go in .Rprofile?",
-    "text": "why can these go in .Rprofile?\nlibrary(usethis)\nlibrary(devtools)"
+    "section": "activity",
+    "text": "activity\n\nwhy can these go in .Rprofile?\n\nlibrary(usethis)\nlibrary(devtools)\n\n\n\n01:00"
   },
   {
     "objectID": "index.html#andries-rprofile",
@@ -182,8 +182,8 @@
     "text": "renviron vs rprofile"
   },
   {
-    "objectID": "index.html#activity-1",
-    "href": "index.html#activity-1",
+    "objectID": "index.html#activity-2",
+    "href": "index.html#activity-2",
     "title": "",
     "section": "activity",
     "text": "activity\nfind rprofiles on github and add something to yours"
@@ -238,17 +238,17 @@
     "text": "macOS\nXCode\nxcode-select --install\nor download from the Mac App Store"
   },
   {
-    "objectID": "index.html#activity-2",
-    "href": "index.html#activity-2",
+    "objectID": "index.html#activity-3",
+    "href": "index.html#activity-3",
     "title": "",
     "section": "activity",
     "text": "activity\n\ninstall a package from source\n\ninstall.packages(\"jsonlite\", type = \"source\")"
   },
   {
-    "objectID": "index.html#section-4",
-    "href": "index.html#section-4",
+    "objectID": "index.html#environments.rstudio.com",
+    "href": "index.html#environments.rstudio.com",
     "title": "",
-    "section": "",
+    "section": "environments.rstudio.com",
     "text": "environments.rstudio.com"
   },
   {
@@ -301,8 +301,8 @@
     "text": "rig\nlaunch rstudio from an renv lockfile:\nrig rstudio path/to/renv.lock"
   },
   {
-    "objectID": "index.html#activity-3",
-    "href": "index.html#activity-3",
+    "objectID": "index.html#activity-4",
+    "href": "index.html#activity-4",
     "title": "",
     "section": "activity",
     "text": "activity\n\ninstall dev jsonlite, then roll back to released version"

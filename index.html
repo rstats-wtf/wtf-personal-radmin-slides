@@ -6,7 +6,8 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.32">
 
   <meta name="author" content="E. David Aja">
@@ -379,12 +380,20 @@
       margin-right: 0; 
     }
   </style>
+  <link href="site_libs/countdown-0.3.5/countdown.css" rel="stylesheet">
+  <script src="site_libs/countdown-0.3.5/countdown.js"></script>
 </head>
 <body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 
+<section class="slide level2">
+
+<div class="cell">
+
+</div>
+</section>
 <section>
 <section id="personal-r-administration" class="title-slide slide level1 center">
 <h1>personal R administration</h1>
@@ -402,33 +411,39 @@
 <div class="column fragment" style="width:33%;">
 <!-- -->
 <h3 id="auditor">Auditor</h3>
+<div class="r-fit-text">
 <ul>
-<li>personal laptop (windows)</li>
-<li>RStudio in Citrix (windows)</li>
-<li>airgapped RStudio Server Pro (linux)</li>
-<li>airgapped Shiny Server Pro (linux)</li>
-<li>Special Issue Individual Laptop (dual boot)</li>
-<li>Special Issue Individual Desktop (windows)</li>
-<li>Special Issue Team Desktop (windows)</li>
+<li>personal laptop <i class="fa-brands fa-windows"></i></li>
+<li>RStudio in Citrix <i class="fa-brands fa-windows"></i></li>
+<li>airgapped RStudio Server Pro <i class="fa-brands fa-linux"></i></li>
+<li>airgapped Shiny Server Pro <i class="fa-brands fa-linux"></i></li>
+<li>Special Issue Individual Laptop <i class="fa-brands fa-windows"></i> <i class="fa-brands fa-linux"></i></li>
+<li>Special Issue Individual Desktop <i class="fa-brands fa-windows"></i></li>
+<li>Special Issue Team Desktop <i class="fa-brands fa-windows"></i></li>
 </ul>
+</div>
 </div><div class="column fragment" style="width:33%;">
 <!-- -->
 <h3 id="data-scientist">Data Scientist</h3>
+<div class="r-fit-text">
 <ul>
-<li>personal laptop (windows)</li>
-<li>work laptop (windows)</li>
-<li>RStudio in Citrix (windows)</li>
-<li>RStudio Server (linux)</li>
+<li>personal laptop <i class="fa-brands fa-windows"></i></li>
+<li>work laptop <i class="fa-brands fa-windows"></i></li>
+<li>RStudio in Citrix <i class="fa-brands fa-windows"></i></li>
+<li>RStudio Server <i class="fa-brands fa-linux"></i></li>
 </ul>
+</div>
 </div><div class="column fragment" style="width:33%;">
 <!-- -->
 <h3 id="solutions-engineer">Solutions Engineer</h3>
+<div class="r-fit-text">
 <ul>
-<li>personal laptop (windows)</li>
-<li>Work laptop (macos)</li>
-<li>RStudio Workbench Demo Server (linux)</li>
-<li>RStudio Workbench Internal Server (linux)</li>
+<li>personal laptop <i class="fa-brands fa-windows"></i></li>
+<li>Work laptop <i class="fa-brands fa-apple"></i></li>
+<li>RStudio Workbench Demo Server <i class="fa-brands fa-linux"></i></li>
+<li>RStudio Workbench Internal Server <i class="fa-brands fa-linux"></i></li>
 </ul>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -445,7 +460,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="how-do-i" class="slide level2">
+<section id="how-do-i" class="slide level2" data-background-color="#333399">
 <h2>How do I…</h2>
 <div>
 <ul>
@@ -515,7 +530,7 @@
 <img data-src="img/project-oyster.svg" class="r-stretch"></section>
 
 <section>
-<section id="installing-r" class="title-slide slide level1 center">
+<section id="installing-r" class="title-slide slide level1 center" data-background-color="#333399">
 <h1>installing R</h1>
 
 </section>
@@ -641,29 +656,42 @@ EXAMPLES:
 </div>
 </div>
 </section>
-<section id="activity" class="slide level2">
+<section id="activity" class="slide level2 smaller">
 <h2>activity</h2>
-<ol type="a">
+<div class="question">
+<ol type="1">
 <li><p>read the <a href="https://github.com/r-lib/rig#-faq">rig FAQ</a>, or the <a href="https://rud.is/rswitch/guide/">rswitch guide</a></p></li>
-<li><p>install a different major/minor version of R</p></li>
+<li><p>install a different major/minor version of R</p>
+<ul>
+<li><p><a href="https://cran.r-project.org/bin/macosx/" class="uri">https://cran.r-project.org/bin/macosx/</a></p></li>
+<li><p><a href="https://cran.r-project.org/bin/windows/base/old/" class="uri">https://cran.r-project.org/bin/windows/base/old/</a></p></li>
+</ul></li>
+<li><p>install rig</p>
+<ul>
+<li><p>use rig to install a different major or minor version of R</p></li>
+<li><p>open RStudio with that newly installed R version</p></li>
+</ul></li>
 </ol>
-<p>https://cran.r-project.org/bin/macosx/ https://cran.r-project.org/bin/windows/base/old/</p>
-<ol start="3" type="a">
-<li>install rig, and then use rig to install a different major or minor version of R</li>
-</ol>
-<p>then open RStudio with that newly installed R version</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62d7fd85" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section></section>
 <section>
-<section id="starting-r" class="title-slide slide level1 center">
+<section id="starting-r" class="title-slide slide level1 center" data-background-color="#333399">
 <h1>starting R</h1>
 
 </section>
-<section id="renviron-.rprofile" class="slide level2">
-<h2><code>.Renviron</code> &amp; <code>.Rprofile</code></h2>
+<section id="renviron-and-.rprofile" class="slide level2">
+<h2><code>.Renviron</code> and <code>.Rprofile</code></h2>
 <p>usethis::edit_r_profile()</p>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+<section id="r-startup-sequence-detail" class="slide level2 smaller" data-background-color="#cccccc">
+<h2>R startup sequence (detail)</h2>
 <p><img data-src="img/R-startup.svg"></p>
 <aside class="notes">
 <p>Scopes: - system: (usually suffixed by <code>.site</code>, per version of R) - user - project</p>
@@ -680,8 +708,8 @@ EXAMPLES:
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
+<section id="remember-to-use-a-newline" class="slide level2">
+<h2>⚠️ Remember to use a newline</h2>
 <div class="columns">
 <div class="column">
 <p><code>.Renviron</code> and <code>.Rprofile</code> <strong>must</strong> end in a newline.</p>
@@ -780,14 +808,24 @@ EXAMPLES:
 </ul>
 </div>
 </section>
-<section id="devdependencies" class="slide level2">
-<h2><code>devDependencies</code></h2>
+<section id="dev-dependencies" class="slide level2">
+<h2>dev dependencies</h2>
 <p>If something appears in a script, it <strong>should not</strong> be in .Rprofile</p>
 </section>
-<section id="why-can-these-go-in-.rprofile" class="slide level2">
-<h2>why can these go in <code>.Rprofile</code>?</h2>
+<section id="activity-1" class="slide level2">
+<h2>activity</h2>
+<div class="question">
+<p>why can these go in <code>.Rprofile</code>?</p>
+</div>
 <pre><code>library(usethis)
 library(devtools)</code></pre>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62d7fc42" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section>
 <section id="andries-rprofile" class="slide level2">
 <h2>andrie’s Rprofile</h2>
@@ -795,13 +833,13 @@ library(devtools)</code></pre>
 <section id="renviron-vs-rprofile" class="slide level2">
 <h2>renviron vs rprofile</h2>
 </section>
-<section id="activity-1" class="slide level2">
+<section id="activity-2" class="slide level2">
 <h2>activity</h2>
 <p>find rprofiles on github and add something to yours</p>
 <pre><code></code></pre>
 </section></section>
 <section>
-<section id="installing-r-packages" class="title-slide slide level1 center">
+<section id="installing-r-packages" class="title-slide slide level1 center" data-background-color="#333399">
 <h1>installing R packages</h1>
 
 </section>
@@ -884,7 +922,7 @@ library(devtools)</code></pre>
 <p><code>xcode-select --install</code></p>
 <p>or download from the <a href="https://apps.apple.com/us/app/xcode/id497799835?mt=12">Mac App Store</a></p>
 </section>
-<section id="activity-2" class="slide level2">
+<section id="activity-3" class="slide level2">
 <h2>activity</h2>
 <ul>
 <li>install a package from source</li>
@@ -892,13 +930,12 @@ library(devtools)</code></pre>
 <pre><code>install.packages("jsonlite", type = "source")</code></pre>
 </section></section>
 <section>
-<section id="reproducible-environments" class="title-slide slide level1 center">
+<section id="reproducible-environments" class="title-slide slide level1 center" data-background-color="#333399">
 <h1>Reproducible Environments</h1>
 
 </section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<p>environments.rstudio.com</p>
+<section id="environments.rstudio.com" class="slide level2">
+<h2>environments.rstudio.com</h2>
 </section>
 <section id="spectrum" class="slide level2">
 <h2>spectrum</h2>
@@ -1019,14 +1056,14 @@ renv::install() # local source</code></pre>
 <p>launch rstudio from an renv lockfile:</p>
 <pre><code>rig rstudio path/to/renv.lock</code></pre>
 </section>
-<section id="activity-3" class="slide level2">
+<section id="activity-4" class="slide level2">
 <h2>activity</h2>
 <ul>
 <li>install dev jsonlite, then roll back to released version</li>
 </ul>
 </section></section>
 <section>
-<section id="upgrading-r" class="title-slide slide level1 center">
+<section id="upgrading-r" class="title-slide slide level1 center" data-background-color="#333399">
 <h1>upgrading R</h1>
 
 </section>
