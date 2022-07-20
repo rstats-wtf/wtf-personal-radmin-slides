@@ -16,6 +16,32 @@ execute:
 from: markdown+emoji
 ---
 
+
+```{r setup}
+library(countdown)
+countdown_timer <- function(
+    minutes = 1, 
+    play_sound = TRUE, 
+    font_size = "2em", 
+    ...
+) {
+  countdown(
+    minutes = minutes,
+    # Fanfare when it's over
+    play_sound = play_sound,
+    # Set timer theme to match solarized colors
+    color_border              = "#FFFFFF",
+    color_text                = "#7aa81e",
+    color_running_background  = "#7aa81e",
+    color_running_text        = "#FFFFFF",
+    color_finished_background = "#ffa07a",
+    color_finished_text       = "#FFFFFF",
+    font_size = font_size,
+    ...
+  )
+}
+```
+
 # personal R administration
 
 throw your computer into the ocean with confidence
@@ -272,6 +298,11 @@ c) install rig, and then use rig to install a different major or minor version o
 
 then open RStudio with that newly installed R version
 
+:::
+
+```{r}
+countdown(minutes = 1)
+```
 
 # starting R {background-color="#333399"}
 
@@ -376,6 +407,10 @@ If something appears in a script, it **should not** be in .Rprofile
 ```
 library(usethis)
 library(devtools)
+```
+
+```{R}
+countdown_timer(minutes = 1, bottom = 0)
 ```
 
 ## andrie's Rprofile
