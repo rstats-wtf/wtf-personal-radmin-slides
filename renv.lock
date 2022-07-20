@@ -1,10 +1,10 @@
 {
   "R": {
-    "Version": "4.2.1",
+    "Version": "4.1.2",
     "Repositories": [
       {
         "Name": "CRAN",
-        "URL": "https://cloud.r-project.org"
+        "URL": "https://cran.rstudio.com"
       }
     ]
   },
@@ -67,15 +67,6 @@
         "sass"
       ]
     },
-    "callr": {
-      "Package": "callr",
-      "Version": "3.7.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "2fda237f24bc56508f31394beaa56877",
-      "Requirements": [
-        "R6",
-        "processx"
     "cachem": {
       "Package": "cachem",
       "Version": "1.0.6",
@@ -85,6 +76,17 @@
       "Requirements": [
         "fastmap",
         "rlang"
+      ]
+    },
+    "callr": {
+      "Package": "callr",
+      "Version": "3.7.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "2fda237f24bc56508f31394beaa56877",
+      "Requirements": [
+        "R6",
+        "processx"
       ]
     },
     "cli": {
@@ -121,14 +123,6 @@
         "htmltools",
         "whisker"
       ]
-    },
-    "crayon": {
-      "Package": "crayon",
-      "Version": "1.5.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "8dc45fd8a1ee067a92b85ef274e66d6a",
-      "Requirements": []
     },
     "digest": {
       "Package": "digest",
@@ -418,7 +412,7 @@
       "Package": "renv",
       "Version": "0.15.5",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Hash": "6a38294e7d12f5d8e656b08c5bd8ae34",
       "Requirements": []
     },
