@@ -645,7 +645,8 @@ ggplot() +
 
 ## renv
 
-![](img/renv.png)
+![](img/renv.png){.img600}
+
 
 ::: {.notes}
 renv has a number of tools that are helpful for adopting a project-based workflow:
