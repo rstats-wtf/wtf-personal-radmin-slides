@@ -16,6 +16,9 @@ execute:
 from: markdown+emoji
 ---
 
+# personal R administration
+
+throw your computer into the ocean with confidence
 
 ```{r setup}
 library(countdown)
@@ -42,11 +45,8 @@ countdown_timer <- function(
 }
 ```
 
-# personal R administration
 
-throw your computer into the ocean with confidence
-
-## 
+## Course material
 
 ::: r-fit-text
 [rstd.io/wtf-2022-rsc](https://github.com/rstudio-conf-2022/wtf-rstats)
