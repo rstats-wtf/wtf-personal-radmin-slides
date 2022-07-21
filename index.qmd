@@ -515,15 +515,20 @@ find rprofiles on github and add something to yours
 
 |os|cran|[ppm](https://packagemanager.rstudio.com/)|
 |-|-|-|
-|windows|:white_check_mark:|:white_check_mark: |
-|macos|:white_check_mark:|❌|
-|linux|❌|:white_check_mark:|
+|{{< fa brands windows >}}|:white_check_mark:|:white_check_mark: |
+|{{< fa brands apple >}}|:white_check_mark:|❌|
+|{{< fa brands linux >}}|❌|:white_check_mark:|
 
 
 ## Source
 
 - compiled in development environment
-- requires extra tools when package uses C, C++, Fortan
+- requires extra tools when package uses C, C++, Fortran
+
+::: notes
+One additional complication for *nix users: generally on windows can install and load packages that depend on other lower level libraries quite easily.
+Explain installing sf, for example.
+:::
 
 ## if you don't have tools
 
@@ -567,6 +572,19 @@ xcode-select --install
 
 or download from the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
 :::
+
+### Linux
+
+install tools via "software manager"
+
+:::
+
+## got tools?
+
+```
+> devtools::has_devel()
+Your system is ready to build packages!
+```
 
 ## activity
 
@@ -648,8 +666,7 @@ ggplot() +
 
 ## renv
 
-![](img/renv.png){.img600}
-
+![](img/renv.png){.r-stretch}
 
 ::: {.notes}
 renv has a number of tools that are helpful for adopting a project-based workflow:
@@ -726,8 +743,20 @@ renv::install("jsonlite")
 renv::install("jsonlite@1.2") # at version
 renv::install("jeroen/jsonlite") # latest
 renv::install("jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d") # at SHA
-renv::install() # local source
+renv::install("path/to/package") # local source
 ```
+
+<hr>
+
+::: {.fragment}
+```
+devtools::install()
+devtools::install_version()
+devtools::install_github()
+devtools::install_github()
+devtools::install("path/to/package")
+```
+:::
 
 ## the junk drawer
 
