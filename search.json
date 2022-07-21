@@ -214,7 +214,7 @@
     "href": "index.html#source",
     "title": "",
     "section": "Source",
-    "text": "Source\n\ncompiled in development environment\nrequires extra tools when package uses C, C++, Fortan"
+    "text": "Source\n\ncompiled in development environment\nrequires extra tools when package uses C, C++, Fortran\n\n\nOne additional complication for *nix users: generally on windows can install and load packages that depend on other lower level libraries quite easily. Explain installing sf, for example."
   },
   {
     "objectID": "index.html#if-you-dont-have-tools",
@@ -229,6 +229,13 @@
     "title": "",
     "section": "get the tools",
     "text": "get the tools\n\nwindowsmacOSLinux\n\n\nRtools\nrig add rtools\n\n\nXCode\nxcode-select --install\nor download from the Mac App Store\n\n\ninstall tools via “software manager”"
+  },
+  {
+    "objectID": "index.html#got-tools",
+    "href": "index.html#got-tools",
+    "title": "",
+    "section": "got tools?",
+    "text": "got tools?\n> devtools::has_devel()\nYour system is ready to build packages!"
   },
   {
     "objectID": "index.html#activity-3",
