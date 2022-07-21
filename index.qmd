@@ -458,7 +458,9 @@ If something appears in a script, it **should not** be in .Rprofile
 why can these go in `.Rprofile`?
 :::
 
-```
+<br>
+
+``` R
 library(usethis)
 library(devtools)
 ```
@@ -477,6 +479,7 @@ countdown_timer(minutes = 1, bottom = 0)
 ## activity
 
 find rprofiles on github and add something to yours
+
 ```
 
 ```
