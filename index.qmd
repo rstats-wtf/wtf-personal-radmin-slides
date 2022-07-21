@@ -104,7 +104,7 @@ this is intended to provide context on my priorities / habits of thought:
 - "run this command" preferable to a confluence page of screenshots
 :::
 
-## How do I... {background-color="#333399"}
+## How do I... 
 
 ::: incremental
 -   upgrade the version of R I'm using for this project?
@@ -118,12 +118,24 @@ That means that in addition to wanting our individual projects to flow smoothly,
 Working on an old project on a new computer is a lot like trying to put an app into production.
 :::
 
+
+
 ## focus areas
 
+::: agenda
+
 - installing R
+
 - starting R
+
+::: agenda-active
 - installing R packages
+:::
+
+- reproducible environments
+
 - upgrading R
+:::
 
 ## practice makes perfect
 
@@ -158,7 +170,23 @@ The best way to become more comfortable with installing things is to practice in
 ![](img/project-oyster.svg)
 
 
-# installing R {background-color="#333399"}
+# installing R
+
+::: agenda
+
+::: agenda-active
+- installing R
+:::
+
+- starting R
+
+- installing R packages
+
+- reproducible environments
+
+- upgrading R
+:::
+
 
 ## "software managers"
 
@@ -310,7 +338,22 @@ using your environment manager, install your project's dependencies:
 countdown(minutes = 1)
 ```
 
-# starting R {background-color="#333399"}
+# starting R
+
+::: agenda
+
+- installing R
+
+::: agenda-active
+- starting R
+:::
+
+- installing R packages
+
+- reproducible environments
+
+- upgrading R
+:::
 
 ## `.Renviron` and `.Rprofile`
 
@@ -438,7 +481,22 @@ find rprofiles on github and add something to yours
 
 ```
 
-# installing R packages {background-color="#333399"}
+# installing R packages
+
+::: agenda
+
+- installing R
+
+- starting R
+
+::: agenda-active
+- installing R packages
+:::
+
+- reproducible environments
+
+- upgrading R
+:::
 
 ## Types of R packages
 
@@ -511,7 +569,23 @@ install.packages("jsonlite", type = "source")
 ```
 
 
-# Reproducible Environments {background-color="#333399"}
+
+# reproducible environments
+
+::: agenda
+
+- installing R
+
+- starting R
+
+- installing R packages
+
+::: agenda-active
+- reproducible environments
+:::
+
+- upgrading R
+:::
 
 ## environments.rstudio.com
 
@@ -660,8 +734,24 @@ rig rstudio path/to/renv.lock
 
 - install dev jsonlite, then roll back to released version
 
-# upgrading R {background-color="#333399"}
+# upgrading R
  
+::: agenda
+
+- installing R
+
+- starting R
+
+- installing R packages
+
+- reproducible environments
+
+::: agenda-active
+- upgrading R
+:::
+
+:::
+
 ## rig + renv
 
 1. snapshot the project library with renv
