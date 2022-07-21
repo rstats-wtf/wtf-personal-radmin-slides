@@ -462,7 +462,12 @@ find rprofiles on github and add something to yours
 ## Source
 
 - compiled in development environment
-- requires extra tools when package uses C, C++, Fortan
+- requires extra tools when package uses C, C++, Fortran
+
+::: notes
+One additional complication for *nix users: generally on windows can install and load packages that depend on other lower level libraries quite easily.
+Explain installing sf, for example.
+:::
 
 ## if you don't have tools
 
@@ -508,6 +513,12 @@ install tools via "software manager"
 
 :::
 
+## got tools?
+
+```
+> devtools::has_devel()
+Your system is ready to build packages!
+```
 
 ## activity
 
