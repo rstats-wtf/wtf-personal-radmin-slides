@@ -248,7 +248,7 @@ nvm
 
 using your language manager, install a language version:
 
-```
+``` shell
 ❯ rig install --help
 rig-add
 
@@ -402,7 +402,7 @@ R will silently throw away the last line if you don't do this
 
 - project short circuits home?
 
-```bash
+``` shell
 R_HISTSIZE=100000
 GITHUB_PAT=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
 CONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3
@@ -550,23 +550,37 @@ ERROR: package installation failed
 
 [Rtools](https://cran.r-project.org/bin/windows/Rtools/)
 
-`rig add rtools`
+``` shell
+rig add rtools
+```
 
 ### macOS
 
 XCode
 
-`xcode-select --install`
+``` shell
+xcode-select --install
+```
 
 or download from the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
+:::
 
 ## activity
 
-- install a package from source
+::: question
+install a package from source
+:::
 
-```
+<br>
+
+``` R
 install.packages("jsonlite", type = "source")
 ```
+
+```{R}
+countdown_timer(minutes = 3, bottom = 0)
+```
+
 
 
 
@@ -703,7 +717,7 @@ for example: usethis doesn't usually appear in my lockfiles, because I'm running
 
 or [`install.packages()`](https://rstudio.github.io/renv/articles/renv.html#shims) with shims enabled
 
-```
+``` R
 renv::install("jsonlite")
 renv::install("jsonlite@1.2") # at version
 renv::install("jeroen/jsonlite") # latest
@@ -725,7 +739,7 @@ I use renv for everything, and have one junk project into which I install things
 
 launch rstudio from an renv lockfile:
 
-```
+``` shell
 rig rstudio path/to/renv.lock
 ```
 
