@@ -16,6 +16,9 @@ execute:
 from: markdown+emoji
 ---
 
+# personal R administration
+
+throw your computer into the ocean with confidence
 
 ```{r setup}
 library(countdown)
@@ -42,11 +45,8 @@ countdown_timer <- function(
 }
 ```
 
-# personal R administration
 
-throw your computer into the ocean with confidence
-
-## 
+## Course material
 
 ::: r-fit-text
 [rstd.io/wtf-2022-rsc](https://github.com/rstudio-conf-2022/wtf-rstats)
@@ -104,7 +104,7 @@ this is intended to provide context on my priorities / habits of thought:
 - "run this command" preferable to a confluence page of screenshots
 :::
 
-## How do I... {background-color="#333399"}
+## How do I... 
 
 ::: incremental
 -   upgrade the version of R I'm using for this project?
@@ -118,12 +118,24 @@ That means that in addition to wanting our individual projects to flow smoothly,
 Working on an old project on a new computer is a lot like trying to put an app into production.
 :::
 
+
+
 ## focus areas
 
+::: agenda
+
 - installing R
+
 - starting R
+
+::: agenda-active
 - installing R packages
+:::
+
+- reproducible environments
+
 - upgrading R
+:::
 
 ## practice makes perfect
 
@@ -158,7 +170,23 @@ The best way to become more comfortable with installing things is to practice in
 ![](img/project-oyster.svg)
 
 
-# installing R {background-color="#333399"}
+# installing R
+
+::: agenda
+
+::: agenda-active
+- installing R
+:::
+
+- starting R
+
+- installing R packages
+
+- reproducible environments
+
+- upgrading R
+:::
+
 
 ## "software managers"
 
@@ -220,7 +248,7 @@ nvm
 
 using your language manager, install a language version:
 
-```
+``` shell
 ❯ rig install --help
 rig-add
 
@@ -310,7 +338,22 @@ using your environment manager, install your project's dependencies:
 countdown(minutes = 1)
 ```
 
-# starting R {background-color="#333399"}
+# starting R
+
+::: agenda
+
+- installing R
+
+::: agenda-active
+- starting R
+:::
+
+- installing R packages
+
+- reproducible environments
+
+- upgrading R
+:::
 
 ## `.Renviron` and `.Rprofile`
 
@@ -359,7 +402,7 @@ R will silently throw away the last line if you don't do this
 
 - project short circuits home?
 
-```bash
+``` shell
 R_HISTSIZE=100000
 GITHUB_PAT=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
 CONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3
@@ -415,7 +458,9 @@ If something appears in a script, it **should not** be in .Rprofile
 why can these go in `.Rprofile`?
 :::
 
-```
+<br>
+
+``` R
 library(usethis)
 library(devtools)
 ```
@@ -434,11 +479,27 @@ countdown_timer(minutes = 1, bottom = 0)
 ## activity
 
 find rprofiles on github and add something to yours
-```
 
 ```
 
-# installing R packages {background-color="#333399"}
+```
+
+# installing R packages
+
+::: agenda
+
+- installing R
+
+- starting R
+
+::: agenda-active
+- installing R packages
+:::
+
+- reproducible environments
+
+- upgrading R
+:::
 
 ## Types of R packages
 
@@ -514,7 +575,9 @@ ERROR: package installation failed
 
 [Rtools](https://cran.r-project.org/bin/windows/Rtools/)
 
-`rig add rtools`
+``` shell
+rig add rtools
+```
 
 ### macOS
 
@@ -522,9 +585,12 @@ XCode
 
 "maybe don't run this right this second"
 
-`xcode-select --install`
+``` shell
+xcode-select --install
+```
 
 or download from the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
+
 
 ### Linux
 
@@ -541,13 +607,39 @@ Your system is ready to build packages!
 
 ## activity
 
-- install a package from source
+::: question
+install a package from source
+:::
 
-```
+
+```{.r}
 devtools::install_github("jeroen/jsonlite")
 ```
 
-# Reproducible Environments {background-color="#333399"}
+```{R}
+countdown_timer(minutes = 3, bottom = 0)
+```
+
+
+
+
+# reproducible environments {background-color="#333399"}
+
+::: agenda
+
+- installing R
+
+- starting R
+
+- installing R packages
+
+::: agenda-active
+- reproducible environments
+:::
+
+- upgrading R
+:::
+
 
 ## environments.rstudio.com
 
@@ -672,7 +764,7 @@ for example: usethis doesn't usually appear in my lockfiles, because I'm running
 
 or [`install.packages()`](https://rstudio.github.io/renv/articles/renv.html#shims) with shims enabled
 
-```
+``` R
 renv::install("jsonlite")
 renv::install("jsonlite@1.2") # at version
 renv::install("jeroen/jsonlite") # latest
@@ -706,7 +798,7 @@ I use renv for everything, and have one junk project into which I install things
 
 launch rstudio from an renv lockfile:
 
-```
+``` shell
 rig rstudio path/to/renv.lock
 ```
 
@@ -736,8 +828,24 @@ b) restore the environment from an existing project
 
 dtplyr renv example where across isn't implementeed
 
-# upgrading R {background-color="#333399"}
+# upgrading R
  
+::: agenda
+
+- installing R
+
+- starting R
+
+- installing R packages
+
+- reproducible environments
+
+::: agenda-active
+- upgrading R
+:::
+
+:::
+
 ## rig + renv
 
 1. snapshot the project library with renv
