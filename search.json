@@ -207,7 +207,7 @@
     "href": "index.html#where-to-get-binaries",
     "title": "",
     "section": "where to get binaries",
-    "text": "where to get binaries\n\n\n\nos\ncran\nppm\n\n\n\n\nwindows\n✅\n✅\n\n\nmacos\n✅\n❌\n\n\nlinux\n❌\n✅"
+    "text": "where to get binaries\n\n\n\nos\ncran\nppm\n\n\n\n\n\n✅\n✅\n\n\n\n✅\n❌\n\n\n\n❌\n✅"
   },
   {
     "objectID": "index.html#source",
@@ -228,7 +228,7 @@
     "href": "index.html#get-the-tools",
     "title": "",
     "section": "get the tools",
-    "text": "get the tools\n::: panel-tabset\nwindows\nRtools\nrig add rtools\nmacOS\nXCode\nxcode-select --install\nor download from the Mac App Store"
+    "text": "get the tools\n\nwindowsmacOSLinux\n\n\nRtools\nrig add rtools\n\n\nXCode\nxcode-select --install\nor download from the Mac App Store\n\n\ninstall tools via “software manager”"
   },
   {
     "objectID": "index.html#activity-3",
@@ -277,7 +277,7 @@
     "href": "index.html#renvinstall",
     "title": "",
     "section": "renv::install()",
-    "text": "renv::install()\nor install.packages() with shims enabled\nrenv::install(\"jsonlite\")\nrenv::install(\"jsonlite@1.2\") # at version\nrenv::install(\"jeroen/jsonlite\") # latest\nrenv::install(\"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d\") # at SHA\nrenv::install() # local source"
+    "text": "renv::install()\nor install.packages() with shims enabled\nrenv::install(\"jsonlite\")\nrenv::install(\"jsonlite@1.2\") # at version\nrenv::install(\"jeroen/jsonlite\") # latest\nrenv::install(\"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d\") # at SHA\nrenv::install(\"path/to/package\") # local source\n\n\ndevtools::install()\ndevtools::install_version()\ndevtools::install_github()\ndevtools::install_github()\ndevtools::install(\"path/to/package\")"
   },
   {
     "objectID": "index.html#the-junk-drawer",
