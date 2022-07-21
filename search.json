@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "index.html#section",
-    "href": "index.html#section",
+    "objectID": "index.html#course-material",
+    "href": "index.html#course-material",
     "title": "",
-    "section": "",
-    "text": "rstd.io/wtf-2022-rsc"
+    "section": "Course material",
+    "text": "Course material\n\nrstd.io/wtf-2022-rsc"
   },
   {
     "objectID": "index.html#a-brief-personal-history",
@@ -25,7 +25,7 @@
     "href": "index.html#focus-areas",
     "title": "",
     "section": "focus areas",
-    "text": "focus areas\n\ninstalling R\nstarting R\ninstalling R packages\nupgrading R"
+    "text": "focus areas\n\n\ninstalling R\nstarting R\n\n\n\ninstalling R packages\n\n\n\nreproducible environments\nupgrading R"
   },
   {
     "objectID": "index.html#practice-makes-perfect",
@@ -42,8 +42,8 @@
     "text": "“software managers”\npackage managers\nsoftware whose job it is to install other software\nwindows: scoop, chocolatey, winget\nmacOS: homebrew\nlinux: homebrew, apt, yum, zypper"
   },
   {
-    "objectID": "index.html#section-1",
-    "href": "index.html#section-1",
+    "objectID": "index.html#section",
+    "href": "index.html#section",
     "title": "",
     "section": "⚠️",
     "text": "⚠️\nAvoid installing your language with a package manager\n\nYou want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are not consistently effective Other software that you install with your package manager may expect that package manager to be running the latest Idiosyncracies of your language will be better understood by a dedicated tool"
@@ -74,7 +74,7 @@
     "href": "index.html#language-versions",
     "title": "",
     "section": "language versions",
-    "text": "language versions\nusing your language manager, install a language version:\n❯ rig install --help\nrig-add\n\nDESCRIPTION:\n    Download and install an R version, from the official sources.\n    It keeps the already installed R versions, except versions within the\n    same minor branch, see below.\n\nEXAMPLES:\n    # Add the latest release\n    rig add release\n\n    # Install specific version\n    rig add 4.1.2\n\n    # Install latest version within a minor branch\n    rig add 4.1\n\n\nif you’re running a distribution of linux that rig doesn’t support: - https://docs.rstudio.com/resources/install-r/\nif no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/"
+    "text": "language versions\nusing your language manager, install a language version:\n❯ rig install --help\nrig-add\n\nDESCRIPTION:\n    Download and install an R version, from the official sources.\n    It keeps the already installed R versions, except versions within the\n    same minor branch, see below.\n\nEXAMPLES:\n    # Add the latest release\n    rig add release\n\n    # Install specific version\n    rig add 4.1.2\n\n    # Install latest version within a minor branch\n    rig add 4.1\n\nif you’re running a distribution of linux that rig doesn’t support: - https://docs.rstudio.com/resources/install-r/\nif no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/"
   },
   {
     "objectID": "index.html#environment-managers",
@@ -165,7 +165,7 @@
     "href": "index.html#activity-1",
     "title": "",
     "section": "activity",
-    "text": "activity\n\nwhy can these go in .Rprofile?\n\nlibrary(usethis)\nlibrary(devtools)\n\n\n\n01:00"
+    "text": "activity\n\nwhy can these go in .Rprofile?\n\n\nlibrary(usethis)\nlibrary(devtools)\n\n\n\n01:00"
   },
   {
     "objectID": "index.html#andries-rprofile",
@@ -228,7 +228,7 @@
     "href": "index.html#get-the-tools",
     "title": "",
     "section": "get the tools",
-    "text": "get the tools\n\nwindowsmacOSLinux\n\n\nRtools\nrig add rtools\n\n\nXCode\nxcode-select --install\nor download from the Mac App Store\n\n\ninstall tools via “software manager”"
+    "text": "get the tools\n\nwindowsmacOS\n\n\nRtools\nrig add rtools\n\n\nXCode\nxcode-select --install\nor download from the Mac App Store\n\n\n\nLinux\ninstall tools via “software manager”\n:::"
   },
   {
     "objectID": "index.html#got-tools",
@@ -242,7 +242,7 @@
     "href": "index.html#activity-3",
     "title": "",
     "section": "activity",
-    "text": "activity\n\ninstall a package from source\n\ninstall.packages(\"jsonlite\", type = \"source\")"
+    "text": "activity\n\ninstall a package from source\n\n\ninstall.packages(\"jsonlite\", type = \"source\")\n\n\n\n03:00"
   },
   {
     "objectID": "index.html#environments.rstudio.com",
