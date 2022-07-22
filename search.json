@@ -154,6 +154,13 @@
     "text": "wrapping up\n\n\n.Renviron\n\nsecrets\nenvironment information\n\n\n.Rprofile\n\ndevelopment dependencies"
   },
   {
+    "objectID": "index.html#why-1",
+    "href": "index.html#why-1",
+    "title": "",
+    "section": "why",
+    "text": "why"
+  },
+  {
     "objectID": "index.html#types-of-r-packages",
     "href": "index.html#types-of-r-packages",
     "title": "",
@@ -189,18 +196,18 @@
     "text": "if you don’t have tools\n\nset context about installing from github\n\nRunning `R CMD build`...\n* checking for file 'C:\\Users\\WDAGUtilityAccount\\AppData\\Local\\Temp\\RtmpkTUH61\\remotes192027624804\\tidyverse-dplyr-36ef054/DESCRIPTION' ... OK\n* preparing 'dplyr':\n* checking DESCRIPTION meta-information ... OK\n* cleaning src\n* installing the package to process help pages\n      -----------------------------------\n* installing *source* package 'dplyr' ...\n** using staged installation\n** libs\nWarning in system(cmd) : 'make' not found\nERROR: compilation failed for package 'dplyr'\n* removing 'C:/Users/WDAGUT~1/AppData/Local/Temp/Rtmp6hYuyV/Rinst1334d1a23d1/dplyr'\n      -----------------------------------\nERROR: package installation failed"
   },
   {
-    "objectID": "index.html#get-the-tools",
-    "href": "index.html#get-the-tools",
+    "objectID": "index.html#how-to-get-the-tools",
+    "href": "index.html#how-to-get-the-tools",
     "title": "",
-    "section": "get the tools",
-    "text": "get the tools\n\nwindowsmacOSlinux\n\n\nRtools\nrig add rtools\n\n\nXCode\n“maybe don’t run this right this second”\nxcode-select --install\nor download from the Mac App Store\n\n\ninstall tools via “software manager”\napt install ...\nyum install ..."
+    "section": "how to get the tools",
+    "text": "how to get the tools\n\nwindowsmacOSlinux\n\n\nRtools\n\n\nXCode\n⚠️ don’t run right now\nxcode-select --install\nor download from the Mac App Store\n\n\ninstall tools via package manager, e.g.\napt install make"
   },
   {
     "objectID": "index.html#got-tools",
     "href": "index.html#got-tools",
     "title": "",
     "section": "got tools?",
-    "text": "got tools?\ndevtools::has_devel()\n## Your system is ready to build packages!"
+    "text": "got tools?\n\ndevtools::has_devel()\n\n\n## Your system is ready to build packages!"
   },
   {
     "objectID": "index.html#activity-2",
