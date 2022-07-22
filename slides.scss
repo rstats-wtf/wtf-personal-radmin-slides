@@ -33,6 +33,14 @@ $h3-font-size: 1.15em !default;
   background: #97c71d;
 }
 
+.question a {
+  color: #8d1dc7
+}
+
+.question a:hover {
+  color: #142ac9
+}
+
 .reveal .slide .poll {
   border-left: 3px solid #FFD166;
   padding-left: 0.5em;
