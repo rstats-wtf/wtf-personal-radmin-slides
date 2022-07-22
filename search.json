@@ -32,14 +32,7 @@
     "href": "index.html#why",
     "title": "",
     "section": "why?",
-    "text": "why?"
-  },
-  {
-    "objectID": "index.html#sometimes-we-want-to-change-the-way-our-code-behaves-without-having-to-change-the-code.",
-    "href": "index.html#sometimes-we-want-to-change-the-way-our-code-behaves-without-having-to-change-the-code.",
-    "title": "",
-    "section": "Sometimes we want to change the way our code behaves without having to change the code.",
-    "text": "Sometimes we want to change the way our code behaves without having to change the code."
+    "text": "why?\nSometimes we want to change the way our code behaves without having to change the code."
   },
   {
     "objectID": "index.html#r-startup-sequence",
@@ -59,8 +52,8 @@
     "objectID": "index.html#use-a-newline",
     "href": "index.html#use-a-newline",
     "title": "",
-    "section": "Use a newline",
-    "text": "Use a newline\n\n\n.Renviron and .Rprofile must end in a newline.\nR will silently throw away the last line if you don’t do this"
+    "section": "⚠️ Use a newline",
+    "text": "⚠️ Use a newline\n\n\n.Renviron and .Rprofile must end in a newline.  \nR may silently throw away the last line if you don’t do this"
   },
   {
     "objectID": "index.html#editing-.renviron",
@@ -81,35 +74,42 @@
     "href": "index.html#example-.renviron",
     "title": "",
     "section": "example .Renviron",
-    "text": "example .Renviron\nuser\nPATH=\"${RTOOLS40_HOME}\\usr\\bin;${PATH}\" # windows users\nGITHUB_PAT=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\nCONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3\nR_HISTSIZE=100000\n\nproject\nRETICULATE_PYTHON=.venv/bin/python\nDB_USER=elephant\nDB_PASS=p0stgr3s\nuser and project scopres are additive if values clash, project wins"
+    "text": "example .Renviron\nuser\nPATH=\"${RTOOLS40_HOME}\\usr\\bin;${PATH}\" # windows users\nGITHUB_PAT=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\nCONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3\nR_HISTSIZE=100000\n\nproject\nRETICULATE_PYTHON=.venv/bin/python\nDB_USER=elephant\nDB_PASS=p0stgr3s\nuser and project scopes are additive\nif values clash, project wins"
   },
   {
     "objectID": "index.html#read-environment-variables",
     "href": "index.html#read-environment-variables",
     "title": "",
     "section": "read environment variables",
-    "text": "read environment variables\n\nSys.getenv()\n\n\nthe keys have already been burned, don’t worry additive project scope wins if there’s a clash"
+    "text": "read environment variables\n\nSys.getenv()"
   },
   {
     "objectID": "index.html#activity",
     "href": "index.html#activity",
     "title": "",
     "section": "activity",
-    "text": "activity\n\nedit your user Renvironedit your project Renvironhandle a collision\n\n\n\nusethis::edit_r_environ()\nadd WTF_USER=<your name>\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_USER Sys.getenv(“WTF_USER”)\n\n\n\n\nusethis::edit_r_environ(\"project\")\nadd WTF_PROJECT=<your name>\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_USER Sys.getenv(“WTF_PROJECT”)\n\n\n\n\nusethis::edit_r_environ()\nadd WTF_DAVID=user\nusethis::edit_r_environ(\"project\")\nadd WTF_DAVID=project\nrestart your R session\nretrieve the value of WTF_DAVID"
+    "text": "activity\n\nedit your user .Renvironedit your project .Renvironhandle a collision\n\n\n\nusethis::edit_r_environ()\nadd WTF_USER=<your name>\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_USER Sys.getenv(“WTF_USER”)\n\n\n\n\nusethis::edit_r_environ(\"project\")\nadd WTF_PROJECT=<your name>\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_USER Sys.getenv(“WTF_PROJECT”)\n\n\n\n\nusethis::edit_r_environ()\nadd WTF_DAVID=user\nusethis::edit_r_environ(\"project\")\nadd WTF_DAVID=project\nrestart your R session\nretrieve the value of WTF_DAVID\n\n\n\n\n\n\n\n10:00"
   },
   {
     "objectID": "index.html#rprofile",
     "href": "index.html#rprofile",
     "title": "",
     "section": ".Rprofile",
-    "text": ".Rprofile\ninteractive helpers that run in every session"
+    "text": ".Rprofile\nR code that runs at the start of each session"
+  },
+  {
+    "objectID": "index.html#interactive",
+    "href": "index.html#interactive",
+    "title": "",
+    "section": "?interactive()",
+    "text": "?interactive()\n\n\nTRUE\n🧑‍💻 \n\nsending individual lines of code to the console\n\n \n\n☝️ most .Rprofile customization\n\n\nFALSE\n🤖 \n\nknitting an RMarkdown document\n\nR -e script.R"
   },
   {
     "objectID": "index.html#what-to-put-in-.rprofile",
     "href": "index.html#what-to-put-in-.rprofile",
     "title": "",
     "section": "what to put in .Rprofile",
-    "text": "what to put in .Rprofile\n\nset a default CRAN mirror\nwrite a welcome message\ncustomize R prompt\nselectively change (but be careful)\n\noptions, screen width, numeric display\nload frequently used interactive packages\naliases / shortcuts for frequently used functions\n\nyou don’t typically share .Rprofiles\n\n\nrlrang::entrace() so base errors get better context?"
+    "text": "what to put in .Rprofile\n\nset a default CRAN mirror\ncustomize R prompt\nselectively change (but be careful)\n\noptions, screen width, numeric display\nload frequently used interactive packages\naliases / shortcuts for frequently used functions"
   },
   {
     "objectID": "index.html#why-shouldnt-these-go-in-.rprofile",
@@ -123,14 +123,14 @@
     "href": "index.html#dev-dependencies",
     "title": "",
     "section": "dev dependencies",
-    "text": "dev dependencies\nIf something appears in a script, it should not be in .Rprofile"
+    "text": "dev dependencies\nIf it matters for code you share, it should not be in .Rprofile"
   },
   {
-    "objectID": "index.html#activity-1",
-    "href": "index.html#activity-1",
+    "objectID": "index.html#discuss-with-your-neighbor",
+    "href": "index.html#discuss-with-your-neighbor",
     "title": "",
-    "section": "activity",
-    "text": "activity\n\nwhy can these go in .Rprofile?\n\n\nlibrary(usethis)\nlibrary(devtools)\n\n\n\n01:00"
+    "section": "discuss with your neighbor",
+    "text": "discuss with your neighbor\n\nWhy might these be safe to put in .Rprofile?\n\n\nlibrary(usethis)\nlibrary(devtools)\n\n\n\n02:00"
   },
   {
     "objectID": "index.html#andries-.rprofile",
@@ -140,18 +140,18 @@
     "text": "andrie’s .Rprofile\n# Set CRAN mirror\nif (R.version$status == \"Under development (unstable)\") {\n  options(repos = c(CRAN = \"https://cloud.r-project.org/\"))\n} else {\n  options(repos = c(CRAN = \"https://packagemanager.rstudio.com/all/latest\"))\n}\n\n# Set the executable for GhostScript\nif (.Platform$OS.type == \"windows\") {\n  Sys.setenv(R_GSCMD = Sys.which(\"gswin64c\"))\n}"
   },
   {
-    "objectID": "index.html#comparing-.renviron-to-.rprofile",
-    "href": "index.html#comparing-.renviron-to-.rprofile",
-    "title": "",
-    "section": "comparing .Renviron to .Rprofile",
-    "text": "comparing .Renviron to .Rprofile\n\ndon’t set env vars in rprofile"
-  },
-  {
-    "objectID": "index.html#activity-2",
-    "href": "index.html#activity-2",
+    "objectID": "index.html#activity-1",
+    "href": "index.html#activity-1",
     "title": "",
     "section": "activity",
-    "text": "activity\n\nadd usethis and devtools to your R profile or search for public Rprofiles on github, if you see something you like, add it to yours\n\n\n\n\n03:00"
+    "text": "activity\n\nedit your user .Rprofileedit your project Renviron\n\n\n\nusethis::edit_r_profile()\nadd print(\"from my user Rprofile\")\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nwhat value is printed when you restart?\n\n\n\n\nusethis::edit_r_environ(\"project\")\nadd print(\"from my project Rprofile\")\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nwhat value is printed when you restart?\n\n\n\n\n\n\n\n05:00\n\n\n\n\nproject .Rprofile “short-circuits”\nif it exists, your user .Rprofile will not be evaluated"
+  },
+  {
+    "objectID": "index.html#wrapping-up",
+    "href": "index.html#wrapping-up",
+    "title": "",
+    "section": "wrapping up",
+    "text": "wrapping up\n\n\n.Renviron\n\nsecrets\nenvironment information\n\n\n.Rprofile\n\ndevelopment dependencies"
   },
   {
     "objectID": "index.html#types-of-r-packages",
@@ -203,8 +203,8 @@
     "text": "got tools?\ndevtools::has_devel()\n## Your system is ready to build packages!"
   },
   {
-    "objectID": "index.html#activity-3",
-    "href": "index.html#activity-3",
+    "objectID": "index.html#activity-2",
+    "href": "index.html#activity-2",
     "title": "",
     "section": "activity",
     "text": "activity\n\ninstall a package from source\n\ndevtools::install_github(\"jeroen/jsonlite\")\n\n\n\n03:00"
@@ -273,15 +273,15 @@
     "text": "using publiic package manager"
   },
   {
-    "objectID": "index.html#activity-4",
-    "href": "index.html#activity-4",
+    "objectID": "index.html#activity-3",
+    "href": "index.html#activity-3",
     "title": "",
     "section": "activity",
     "text": "activity\n\ncreate two projects\n\njust use status messages rather than showing people lockfile\n\nusing renv, install.packages(“renv”) install(“jeroen/jsonlite”) install jsonlite from github then install from CRAN to roll back\n\nmore explanation of global cache\nthen roll back to released version\n\nrestore the environment from an existing project\n\n\nan old one of yours from github\ncreate an environment for a tidyverse package\n\ndtplyr renv example where across isn’t implementeed"
   },
   {
-    "objectID": "index.html#activity-5",
-    "href": "index.html#activity-5",
+    "objectID": "index.html#activity-4",
+    "href": "index.html#activity-4",
     "title": "",
     "section": "activity",
     "text": "activity\n\n\ninstall dev jsonlite, then roll back to released version\n\n\n\n\n\n01:00"
@@ -350,8 +350,8 @@
     "text": "project\nusing your environment manager, install your project’s dependencies:\n\ncreate a new environment\nrenv::init()\nrestore a pre-defined environment\nrenv::restore()"
   },
   {
-    "objectID": "index.html#activity-6",
-    "href": "index.html#activity-6",
+    "objectID": "index.html#activity-5",
+    "href": "index.html#activity-5",
     "title": "",
     "section": "activity",
     "text": "activity\n\n\nread the rig FAQ, or the rswitch guide\ninstall a different major/minor version of R\n\nhttps://cran.r-project.org/bin/macosx/\nhttps://cran.r-project.org/bin/windows/base/old/\n\ninstall rig\n\nuse `rig to install a different major or minor version of R\nopen RStudio with that newly installed R version\n\n\n\n\n\n\n01:00"
