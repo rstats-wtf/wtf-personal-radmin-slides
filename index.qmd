@@ -167,13 +167,14 @@ The best way to become more comfortable with installing things is to practice in
 
 ## "software managers"
 
-package managers
-
 software whose job it is to install other software
 
-windows: **scoop**, chocolatey, winget\
-macOS: **homebrew**\
-linux: **homebrew**, apt, yum, zypper
+
+| Operating system | Recommended |
+|------------------|-------------------------------|
+| {{< fa brands windows >}} windows          | **scoop**, chocolatey, winget |
+| {{< fa brands apple >}} macOS            | **homebrew**                  |
+| {{< fa brands linux >}} linux            | apt, yum, zypper              |
 
 ## :warning:
 
@@ -189,7 +190,7 @@ You want to avoid having the language version your projects are using changed ou
 
 ## rig
 
-https://github.com/r-lib/rig/
+<https://github.com/r-lib/rig/>
 
 ## language managers
 
@@ -198,11 +199,15 @@ using your package manager, install a language manager
 ::: panel-tabset
 ### windows
 
-`scoop install rig`
+``` powershell
+scoop install rig
+```
 
 ### \*nix
 
-`brew install rig`
+``` bash
+brew install rig
+```
 :::
 
 <small> pyenv\
@@ -247,27 +252,25 @@ if no pre-compiled binary of rig is available: - https://docs.rstudio.com/resour
 
 using your desired version of the language, install an environment manager:
 
-::: r-fit-text
-`install.packages("renv")`
-:::
+``` r
+install.packages("renv")
+```
 
 ## project
 
 using your environment manager, install your project's dependencies:
 
-::: columns
-::: {.column width="50%"}
-### new
+-   create a new environment
 
-`renv::init()`
-:::
+    ``` r
+    renv::init()
+    ```
 
-::: {.column width="50%"}
-### existing
+-   restore a pre-defined environment
 
-`renv::restore()`
-:::
-:::
+    ``` r
+    renv::restore()
+    ```
 
 ## activity {.smaller}
 
@@ -280,9 +283,9 @@ using your environment manager, install your project's dependencies:
 
     -   <https://cran.r-project.org/bin/windows/base/old/>
 
-3.  install rig
+3.  install `rig`
 
-    -   use rig to install a different major or minor version of R
+    -   use \`rig to install a different major or minor version of R
 
     -   open RStudio with that newly installed R version
 :::
@@ -307,9 +310,14 @@ countdown(minutes = 1)
 -   upgrading R
 :::
 
-## `.Renviron` and `.Rprofile`
+## Editing `.Renviron` and `.Rprofile`
 
-usethis::edit_r\_profile()
+Tip: Use the `usethis` package for easy shortcuts to edit your profile and environment files:
+
+``` r
+usethis::edit_r_profile()
+usethis::edit_r_environ()
+```
 
 ## R startup sequence (detail) {.smaller background-color="#cccccc"}
 
@@ -347,7 +355,7 @@ R will silently throw away the last line if you don't do this
 
 -   project short circuits home?
 
-``` shell
+``` bash
 R_HISTSIZE=100000
 GITHUB_PAT=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
 CONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3
@@ -368,17 +376,17 @@ interactive helpers that run in every session
 
 ## what to put in `.Rprofile`
 
--   Set a default CRAN mirror
--   Write a welcome message
--   Customize R prompt
--   Selectively change (but be careful)
-    -   Options, screen width, numeric display
-    -   Load frequently used interactive packages
-    -   Aliases / shortcuts for frequently used functions
--   you don't typically share rprofiles
+-   set a default CRAN mirror
+-   write a welcome message
+-   customize R prompt
+-   selectively change (but be careful)
+    -   options, screen width, numeric display
+    -   load frequently used interactive packages
+    -   aliases / shortcuts for frequently used functions
+-   you don't typically share `.Rprofiles`
 
 ::: notes
-rlrang::entrace so base errors get better context?
+\``rlrang::entrace()` so base errors get better context?
 :::
 
 ## why shouldn't these go in `.Rprofile`?
@@ -393,7 +401,7 @@ rlrang::entrace so base errors get better context?
 
 ## dev dependencies
 
-If something appears in a script, it **should not** be in .Rprofile
+If something appears in a script, it **should not** be in `.Rprofile`
 
 ## activity
 
@@ -414,7 +422,7 @@ countdown_timer(minutes = 1, bottom = 0)
 
 ## andrie's `.Rprofile`
 
-``` R
+``` r
 # Set CRAN mirror
 if (R.version$status == "Under development (unstable)") {
   options(repos = c(CRAN = "https://cloud.r-project.org/"))
@@ -423,7 +431,9 @@ if (R.version$status == "Under development (unstable)") {
 }
 
 # Set the executable for GhostScript
-if (.Platform$OS.type == "windows") Sys.setenv(R_GSCMD = Sys.which("gswin64c"))
+if (.Platform$OS.type == "windows") {
+  Sys.setenv(R_GSCMD = Sys.which("gswin64c"))
+}
 ```
 
 ## comparing `.Renviron` to `.Rprofile`
@@ -431,16 +441,12 @@ if (.Platform$OS.type == "windows") Sys.setenv(R_GSCMD = Sys.which("gswin64c"))
 ## activity
 
 ::: question
-
 find `.Rprofile` examples on github and add something to yours
-
 :::
-
 
 ```{R}
 countdown_timer(minutes = 3, bottom = 0)
 ```
-
 
 # installing R packages
 
