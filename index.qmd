@@ -417,6 +417,11 @@ if it exists, your user `.Rprofile` will not be evaluated
 
 :::
 
+
+## why
+
+![](img/slacking-tidyverse.png)
+
 ## types of R packages
 
 -   Binary
@@ -481,46 +486,42 @@ ERROR: compilation failed for package 'dplyr'
 ERROR: package installation failed
 ```
 
-## get the tools
+## how to get the tools
 
 ::: panel-tabset
+
 ### windows
 
 [Rtools](https://cran.r-project.org/bin/windows/Rtools/)
 
-``` shell
-rig add rtools
-```
 
 ### macOS
 
 XCode
 
-"maybe don't run this right this second"
+:warning: don't run right now
 
-``` shell
-xcode-select --install
-```
+`xcode-select --install`
 
 or download from the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
 
-
 ### linux
 
-install tools via "software manager"
+install tools via package manager, e.g.
 
 ``` shell
-apt install ...
-yum install ...
+apt install make
 ```
 :::
 
 ## got tools?
 
-``` r
+:::{.r .r-fit-text}
 devtools::has_devel()
-## Your system is ready to build packages!
-```
+:::
+
+> `## Your system is ready to build packages! `
+
 
 ## activity
 
