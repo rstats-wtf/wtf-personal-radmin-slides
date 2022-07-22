@@ -11,7 +11,7 @@
     "href": "index.html#a-brief-personal-history",
     "title": "",
     "section": "a brief personal history:",
-    "text": "a brief personal history:\n\n\n\nAuditor\n\n\npersonal laptop \nRStudio in Citrix \nairgapped RStudio Server Pro \nairgapped Shiny Server Pro \nSpecial Issue Individual Laptop  \nSpecial Issue Individual Desktop \nSpecial Issue Team Desktop \n\n\n\n\nData Scientist\n\n\npersonal laptop \nwork laptop \nRStudio in Citrix \nRStudio Server \n\n\n\n\nSolutions Engineer\n\n\npersonal laptop \nWork laptop \nRStudio Workbench Demo Server \nRStudio Workbench Internal Server \n\n\n\n\n\nthis is intended to provide context on my priorities / habits of thought: - it needs to work across operating systems - You can’t depend on having pro features - avoid admin where possible - as portable as practical - audit context means I need to be able to reproduce exactly - “run this command” preferable to a confluence page of screenshots"
+    "text": "a brief personal history:\n\n\n\nAuditor\n\n\npersonal laptop \nRStudio in Citrix \nairgapped RStudio Workbench \nairgapped Shiny Server Pro \nSpecial Issue Individual Laptop  \nSpecial Issue Individual Desktop \nSpecial Issue Team Desktop \n\n\n\n\nData Scientist\n\n\npersonal laptop \nwork laptop \nRStudio in Citrix \nRStudio Server \n\n\n\n\nSolutions Engineer\n\n\npersonal laptop \nWork laptop \nRStudio Workbench Demo Server \nRStudio Workbench Internal Server \n\n\n\n\n\nthis is intended to provide context on my priorities / habits of thought: - it needs to work across operating systems - You can’t depend on having pro features - avoid admin where possible - as portable as practical - audit context means I need to be able to reproduce exactly - “run this command” preferable to a confluence page of screenshots"
   },
   {
     "objectID": "index.html#how-do-i",
@@ -25,98 +25,49 @@
     "href": "index.html#focus-areas",
     "title": "",
     "section": "focus areas",
-    "text": "focus areas\n\n\ninstalling R\nstarting R\n\n\n\ninstalling R packages\n\n\n\nreproducible environments\nupgrading R"
+    "text": "focus areas\n\n\nstarting R\ninstalling R packages\nreproducible environments\ninstalling / upgrading R"
   },
   {
-    "objectID": "index.html#practice-makes-perfect",
-    "href": "index.html#practice-makes-perfect",
+    "objectID": "index.html#why",
+    "href": "index.html#why",
     "title": "",
-    "section": "practice makes perfect",
-    "text": "practice makes perfect\n\nWindows 10+macOSLinux\n\n\nWindows Sandbox\n\n\n🤷\n\n\nMultipass\nDigital Ocean\nLinode\n\n\n\n\nThe best way to become more comfortable with installing things is to practice in an environment you can throw away - the windows sandbox lets you test in an environment on your machine that won’t affect your computer - enabling it is outside the scope of this course - for linux users, the easiest thing to do is stand up a small VPS - I don’t know of a good safe way to test mac environments"
+    "section": "why?",
+    "text": "why?"
   },
   {
-    "objectID": "index.html#software-managers",
-    "href": "index.html#software-managers",
+    "objectID": "index.html#sometimes-we-want-to-change-the-way-our-code-behaves-without-having-to-change-the-code.",
+    "href": "index.html#sometimes-we-want-to-change-the-way-our-code-behaves-without-having-to-change-the-code.",
     "title": "",
-    "section": "“software managers”",
-    "text": "“software managers”\nsoftware whose job it is to install other software\n\n\n\n\n\n\n\nOperating system\nRecommended\n\n\n\n\n windows\nscoop, chocolatey, winget\n\n\n macOS\nhomebrew\n\n\n linux\napt, yum, zypper"
+    "section": "Sometimes we want to change the way our code behaves without having to change the code.",
+    "text": "Sometimes we want to change the way our code behaves without having to change the code."
   },
   {
-    "objectID": "index.html#section",
-    "href": "index.html#section",
+    "objectID": "index.html#r-startup-sequence",
+    "href": "index.html#r-startup-sequence",
     "title": "",
-    "section": "⚠️",
-    "text": "⚠️\nAvoid installing your language with a package manager\n\nYou want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are not consistently effective Other software that you install with your package manager may expect that package manager to be running the latest Idiosyncracies of your language will be better understood by a dedicated tool"
+    "section": "R startup sequence",
+    "text": "R startup sequence"
   },
   {
-    "objectID": "index.html#clickops",
-    "href": "index.html#clickops",
+    "objectID": "index.html#r-startup-sequence-our-focus",
+    "href": "index.html#r-startup-sequence-our-focus",
     "title": "",
-    "section": "clickOps",
-    "text": "clickOps"
+    "section": "R startup sequence (our focus)",
+    "text": "R startup sequence (our focus)"
   },
   {
-    "objectID": "index.html#rig",
-    "href": "index.html#rig",
+    "objectID": "index.html#use-a-newline",
+    "href": "index.html#use-a-newline",
     "title": "",
-    "section": "rig",
-    "text": "rig\nhttps://github.com/r-lib/rig/"
+    "section": "Use a newline",
+    "text": "Use a newline\n\n\n.Renviron and .Rprofile must end in a newline.\nR will silently throw away the last line if you don’t do this"
   },
   {
-    "objectID": "index.html#language-managers",
-    "href": "index.html#language-managers",
+    "objectID": "index.html#editing-.renviron",
+    "href": "index.html#editing-.renviron",
     "title": "",
-    "section": "language managers",
-    "text": "language managers\nusing your package manager, install a language manager\n\nwindows*nix\n\n\nscoop install rig\n\n\nbrew install rig\n\n\n\n pyenv\nnvm\n\n\n\nmany language managers are often written in some language other than the one they are responsible for managing"
-  },
-  {
-    "objectID": "index.html#language-versions",
-    "href": "index.html#language-versions",
-    "title": "",
-    "section": "language versions",
-    "text": "language versions\nusing your language manager, install a language version:\n❯ rig install --help\nrig-add\n\nDESCRIPTION:\n    Download and install an R version, from the official sources.\n    It keeps the already installed R versions, except versions within the\n    same minor branch, see below.\n\nEXAMPLES:\n    # Add the latest release\n    rig add release\n\n    # Install specific version\n    rig add 4.1.2\n\n    # Install latest version within a minor branch\n    rig add 4.1\n\nif you’re running a distribution of linux that rig doesn’t support: - https://docs.rstudio.com/resources/install-r/\nif no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/"
-  },
-  {
-    "objectID": "index.html#environment-managers",
-    "href": "index.html#environment-managers",
-    "title": "",
-    "section": "environment managers",
-    "text": "environment managers\nusing your desired version of the language, install an environment manager:\ninstall.packages(\"renv\")"
-  },
-  {
-    "objectID": "index.html#project",
-    "href": "index.html#project",
-    "title": "",
-    "section": "project",
-    "text": "project\nusing your environment manager, install your project’s dependencies:\n\ncreate a new environment\nrenv::init()\nrestore a pre-defined environment\nrenv::restore()"
-  },
-  {
-    "objectID": "index.html#activity",
-    "href": "index.html#activity",
-    "title": "",
-    "section": "activity",
-    "text": "activity\n\n\nread the rig FAQ, or the rswitch guide\ninstall a different major/minor version of R\n\nhttps://cran.r-project.org/bin/macosx/\nhttps://cran.r-project.org/bin/windows/base/old/\n\ninstall rig\n\nuse `rig to install a different major or minor version of R\nopen RStudio with that newly installed R version\n\n\n\n\n\n\n01:00"
-  },
-  {
-    "objectID": "index.html#editing-.renviron-and-.rprofile",
-    "href": "index.html#editing-.renviron-and-.rprofile",
-    "title": "",
-    "section": "Editing .Renviron and .Rprofile",
-    "text": "Editing .Renviron and .Rprofile\nTip: Use the usethis package for easy shortcuts to edit your profile and environment files:\nusethis::edit_r_profile()\nusethis::edit_r_environ()"
-  },
-  {
-    "objectID": "index.html#r-startup-sequence-detail",
-    "href": "index.html#r-startup-sequence-detail",
-    "title": "",
-    "section": "R startup sequence (detail)",
-    "text": "R startup sequence (detail)\n\n\nScopes: - system: (usually suffixed by .site, per version of R) - user - project\nuser scoped .Rprofile and .Renviron content is applied last"
-  },
-  {
-    "objectID": "index.html#remember-to-use-a-newline",
-    "href": "index.html#remember-to-use-a-newline",
-    "title": "",
-    "section": "⚠️ Remember to use a newline",
-    "text": "⚠️ Remember to use a newline\n\n\n.Renviron and .Rprofile must end in a newline.\n\n\n\n\n\nR will silently throw away the last line if you don’t do this"
+    "section": "Editing .Renviron",
+    "text": "Editing .Renviron\n\nusethis::edit_r_environ(scope = ?)\n\n\n\nuser\n~/.Renviron\n\nproject\npath/to/your/project/.Renviron"
   },
   {
     "objectID": "index.html#renviron",
@@ -130,7 +81,21 @@
     "href": "index.html#example-.renviron",
     "title": "",
     "section": "example .Renviron",
-    "text": "example .Renviron\n\nproject short circuits home?\n\nR_HISTSIZE=100000\nGITHUB_PAT=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\nCONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3\nRETICULATE_PYTHON=.venv/bin/python\n\naccessing things once they’re in the R environ\n\nSys.getenv()\n\nthe keys have already been burned, don’t worry"
+    "text": "example .Renviron\nuser\nPATH=\"${RTOOLS40_HOME}\\usr\\bin;${PATH}\" # windows users\nGITHUB_PAT=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\nCONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3\nR_HISTSIZE=100000\n\nproject\nRETICULATE_PYTHON=.venv/bin/python\nDB_USER=elephant\nDB_PASS=p0stgr3s\nuser and project scopres are additive if values clash, project wins"
+  },
+  {
+    "objectID": "index.html#read-environment-variables",
+    "href": "index.html#read-environment-variables",
+    "title": "",
+    "section": "read environment variables",
+    "text": "read environment variables\n\nSys.getenv()\n\n\nthe keys have already been burned, don’t worry additive project scope wins if there’s a clash"
+  },
+  {
+    "objectID": "index.html#activity",
+    "href": "index.html#activity",
+    "title": "",
+    "section": "activity",
+    "text": "activity\n\nedit your user Renvironedit your project Renvironhandle a collision\n\n\n\nusethis::edit_r_environ()\nadd WTF_USER=<your name>\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_USER Sys.getenv(“WTF_USER”)\n\n\n\n\nusethis::edit_r_environ(\"project\")\nadd WTF_PROJECT=<your name>\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_USER Sys.getenv(“WTF_PROJECT”)\n\n\n\n\nusethis::edit_r_environ()\nadd WTF_DAVID=user\nusethis::edit_r_environ(\"project\")\nadd WTF_DAVID=project\nrestart your R session\nretrieve the value of WTF_DAVID"
   },
   {
     "objectID": "index.html#rprofile",
@@ -144,14 +109,14 @@
     "href": "index.html#what-to-put-in-.rprofile",
     "title": "",
     "section": "what to put in .Rprofile",
-    "text": "what to put in .Rprofile\n\nset a default CRAN mirror\nwrite a welcome message\ncustomize R prompt\nselectively change (but be careful)\n\noptions, screen width, numeric display\nload frequently used interactive packages\naliases / shortcuts for frequently used functions\n\nyou don’t typically share .Rprofiles\n\n\n`rlrang::entrace() so base errors get better context?"
+    "text": "what to put in .Rprofile\n\nset a default CRAN mirror\nwrite a welcome message\ncustomize R prompt\nselectively change (but be careful)\n\noptions, screen width, numeric display\nload frequently used interactive packages\naliases / shortcuts for frequently used functions\n\nyou don’t typically share .Rprofiles\n\n\nrlrang::entrace() so base errors get better context?"
   },
   {
     "objectID": "index.html#why-shouldnt-these-go-in-.rprofile",
     "href": "index.html#why-shouldnt-these-go-in-.rprofile",
     "title": "",
     "section": "why shouldn’t these go in .Rprofile?",
-    "text": "why shouldn’t these go in .Rprofile?\n\n\noptions(stringsAsFactors = FALSE)\nlibrary(tidyverse)\nlibrary(ggplot2)\nf <- dplyr::filter\ntheme_set(theme_bw())"
+    "text": "why shouldn’t these go in .Rprofile?\n\n\noptions(stringsAsFactors = FALSE)\nlibrary(tidyverse)\nf <- dplyr::filter\ntheme_set(theme_bw())"
   },
   {
     "objectID": "index.html#dev-dependencies",
@@ -179,56 +144,56 @@
     "href": "index.html#comparing-.renviron-to-.rprofile",
     "title": "",
     "section": "comparing .Renviron to .Rprofile",
-    "text": "comparing .Renviron to .Rprofile"
+    "text": "comparing .Renviron to .Rprofile\n\ndon’t set env vars in rprofile"
   },
   {
     "objectID": "index.html#activity-2",
     "href": "index.html#activity-2",
     "title": "",
     "section": "activity",
-    "text": "activity\n\nfind .Rprofile examples on github and add something to yours\n\n\n\n\n03:00"
+    "text": "activity\n\nadd usethis and devtools to your R profile or search for public Rprofiles on github, if you see something you like, add it to yours\n\n\n\n\n03:00"
   },
   {
     "objectID": "index.html#types-of-r-packages",
     "href": "index.html#types-of-r-packages",
     "title": "",
     "section": "types of R packages",
-    "text": "types of R packages\n\nBinary\nSource"
+    "text": "types of R packages\n\nBinary\nSource\n\n“packages have to be compiled to run” the question is when - show how to set options for different environment managers - what does this look like in CI - insufficiently motivated? - you need the dev version of something\n\n?Workflows break w/ current CRAN package, need to go back to older package\nInstall package from github\nDevelop your own packages under: Make it explicit why we care about installing from source\nbinaries are probably faster\nCRAN doesn’t always have binaries available but you may not need them"
   },
   {
     "objectID": "index.html#binary",
     "href": "index.html#binary",
     "title": "",
-    "section": "binary",
-    "text": "binary\n\ncompiled ahead of time\nonly R is needed to install"
+    "section": "Binary",
+    "text": "Binary\n\ncompiled ahead of time\nonly R is needed to install"
   },
   {
     "objectID": "index.html#where-to-get-binaries",
     "href": "index.html#where-to-get-binaries",
     "title": "",
     "section": "where to get binaries",
-    "text": "where to get binaries\n\n\n\n\n\n\n\n\n\nCRAN\nRStudio Package Manager*\n\n\n\n\n windows\n✅\n✅\n\n\n mac OS\n✅\n❌\n\n\n linux\n❌\n✅\n\n\n\n\n* RStudio Package Manager"
+    "text": "where to get binaries\n\n\n\n\n\n\n\n\n\nCRAN\nRStudio Package Manager*\n\n\n\n\n windows\n✅\n✅\n\n\n mac OS\n✅\n❌\n\n\n linux\n❌\n✅"
   },
   {
     "objectID": "index.html#source",
     "href": "index.html#source",
     "title": "",
-    "section": "source",
-    "text": "source\n\ncompiled in development environment\nrequires extra tools when package uses C, C++ or Fortran\n\n\nOne additional complication for *nix users: generally on windows can install and load packages that depend on other lower level libraries quite easily. Explain installing sf, for example."
+    "section": "Source",
+    "text": "Source\n\ncompiled in development environment\nrequires extra tools when package uses C, C++ or Fortran\n\n\nOne additional complication for *nix users: generally on windows can install and load packages that depend on other lower level libraries quite easily. Explain installing sf, for example."
   },
   {
     "objectID": "index.html#if-you-dont-have-tools",
     "href": "index.html#if-you-dont-have-tools",
     "title": "",
     "section": "if you don’t have tools",
-    "text": "if you don’t have tools\nRunning `R CMD build`...\n* checking for file 'C:\\Users\\WDAGUtilityAccount\\AppData\\Local\\Temp\\RtmpkTUH61\\remotes192027624804\\tidyverse-dplyr-36ef054/DESCRIPTION' ... OK\n* preparing 'dplyr':\n* checking DESCRIPTION meta-information ... OK\n* cleaning src\n* installing the package to process help pages\n      -----------------------------------\n* installing *source* package 'dplyr' ...\n** using staged installation\n** libs\nWarning in system(cmd) : 'make' not found\nERROR: compilation failed for package 'dplyr'\n* removing 'C:/Users/WDAGUT~1/AppData/Local/Temp/Rtmp6hYuyV/Rinst1334d1a23d1/dplyr'\n      -----------------------------------\nERROR: package installation failed"
+    "text": "if you don’t have tools\n\nset context about installing from github\n\nRunning `R CMD build`...\n* checking for file 'C:\\Users\\WDAGUtilityAccount\\AppData\\Local\\Temp\\RtmpkTUH61\\remotes192027624804\\tidyverse-dplyr-36ef054/DESCRIPTION' ... OK\n* preparing 'dplyr':\n* checking DESCRIPTION meta-information ... OK\n* cleaning src\n* installing the package to process help pages\n      -----------------------------------\n* installing *source* package 'dplyr' ...\n** using staged installation\n** libs\nWarning in system(cmd) : 'make' not found\nERROR: compilation failed for package 'dplyr'\n* removing 'C:/Users/WDAGUT~1/AppData/Local/Temp/Rtmp6hYuyV/Rinst1334d1a23d1/dplyr'\n      -----------------------------------\nERROR: package installation failed"
   },
   {
     "objectID": "index.html#get-the-tools",
     "href": "index.html#get-the-tools",
     "title": "",
     "section": "get the tools",
-    "text": "get the tools\n\nwindowsmacOSlinux\n\n\nRtools\nrig add rtools\n\n\nXCode\nxcode-select --install\nor download from the Mac App Store\n\n\ninstall tools via “software manager”\napt install ...\nyum install ..."
+    "text": "get the tools\n\nwindowsmacOSlinux\n\n\nRtools\nrig add rtools\n\n\nXCode\n“maybe don’t run this right this second”\nxcode-select --install\nor download from the Mac App Store\n\n\ninstall tools via “software manager”\napt install ...\nyum install ..."
   },
   {
     "objectID": "index.html#got-tools",
@@ -242,14 +207,14 @@
     "href": "index.html#activity-3",
     "title": "",
     "section": "activity",
-    "text": "activity\n\ninstall a package from source\n\n\ninstall.packages(\"jsonlite\", type = \"source\")\n\n\n\n03:00"
+    "text": "activity\n\ninstall a package from source\n\ndevtools::install_github(\"jeroen/jsonlite\")\n\n\n\n03:00"
   },
   {
-    "objectID": "index.html#environments",
-    "href": "index.html#environments",
+    "objectID": "index.html#environments.rstudio.com",
+    "href": "index.html#environments.rstudio.com",
     "title": "",
-    "section": "environments",
-    "text": "environments\nhttps://environments.rstudio.com"
+    "section": "environments.rstudio.com",
+    "text": "environments.rstudio.com"
   },
   {
     "objectID": "index.html#spectrum",
@@ -270,7 +235,7 @@
     "href": "index.html#renvinit",
     "title": "",
     "section": "renv::init()",
-    "text": "renv::init()\n.libPaths()\nrenv::init()\n.libPaths()\nrenv::deactivate()\n.libPaths()\n\nrun .libPaths() to see what your default package libraries are initialize an renv–you’ll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in renv/activate.R deactivate the environment and check libPaths() again–it should be back to normal"
+    "text": "renv::init()\n.libPaths()\nrenv::init()\n.libPaths()\nrenv::deactivate()\n.libPaths()\nwhy are we doing this? - don’t break your old dashboards - where is this actually going - talk more explicitly about the behavior of renv - steal kevin’s graphics on renv\n\nrun .libPaths() to see what your default package libraries are initialize an renv–you’ll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in renv/activate.R deactivate the environment and check libPaths() again–it should be back to normal"
   },
   {
     "objectID": "index.html#renv.lock",
@@ -294,18 +259,102 @@
     "text": "the junk drawer\nfor reprexes, tweets, and other ephemera:\n~/Documents/scratch\n\nI use renv for everything, and have one junk project into which I install things without regard for stability or reproducibility"
   },
   {
-    "objectID": "index.html#rig-1",
-    "href": "index.html#rig-1",
+    "objectID": "index.html#rig",
+    "href": "index.html#rig",
     "title": "",
     "section": "rig",
     "text": "rig\nlaunch rstudio from an renv lockfile:\nrig rstudio path/to/renv.lock"
+  },
+  {
+    "objectID": "index.html#using-publiic-package-manager",
+    "href": "index.html#using-publiic-package-manager",
+    "title": "",
+    "section": "using publiic package manager",
+    "text": "using publiic package manager"
   },
   {
     "objectID": "index.html#activity-4",
     "href": "index.html#activity-4",
     "title": "",
     "section": "activity",
+    "text": "activity\n\ncreate two projects\n\njust use status messages rather than showing people lockfile\n\nusing renv, install.packages(“renv”) install(“jeroen/jsonlite”) install jsonlite from github then install from CRAN to roll back\n\nmore explanation of global cache\nthen roll back to released version\n\nrestore the environment from an existing project\n\n\nan old one of yours from github\ncreate an environment for a tidyverse package\n\ndtplyr renv example where across isn’t implementeed"
+  },
+  {
+    "objectID": "index.html#activity-5",
+    "href": "index.html#activity-5",
+    "title": "",
+    "section": "activity",
     "text": "activity\n\n\ninstall dev jsonlite, then roll back to released version\n\n\n\n\n\n01:00"
+  },
+  {
+    "objectID": "index.html#practice-makes-perfect",
+    "href": "index.html#practice-makes-perfect",
+    "title": "",
+    "section": "practice makes perfect",
+    "text": "practice makes perfect\n\nWindows 10+macOSLinux\n\n\nWindows Sandbox\n\n\n🤷\n\n\nMultipass\nDigital Ocean\nLinode\n\n\n\n\nThe best way to become more comfortable with installing things is to practice in an environment you can throw away\n- the windows sandbox lets you test in an environment on your machine that won’t affect your computer - enabling it is outside the scope of this course - for linux users, the easiest thing to do is stand up a small VPS - I don’t know of a good safe way to test mac environments"
+  },
+  {
+    "objectID": "index.html#package-managers",
+    "href": "index.html#package-managers",
+    "title": "",
+    "section": "package managers",
+    "text": "package managers\nsoftware whose job it is to install other software\n\n\n\n\n\n\n\nOperating system\nRecommended\n\n\n\n\n windows\nscoop, chocolatey, winget\n\n\n macOS\nhomebrew\n\n\n linux\nhomebrew, apt, yum, zypper"
+  },
+  {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "",
+    "section": "⚠️",
+    "text": "⚠️\nAvoid installing your language with a package manager\n\nYou want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are not consistently effective Other software that you install with your package manager may expect that package manager to be running the latest Idiosyncracies of your language will be better understood by a dedicated tool"
+  },
+  {
+    "objectID": "index.html#clickops",
+    "href": "index.html#clickops",
+    "title": "",
+    "section": "clickOps",
+    "text": "clickOps"
+  },
+  {
+    "objectID": "index.html#rig-1",
+    "href": "index.html#rig-1",
+    "title": "",
+    "section": "rig",
+    "text": "rig\nhttps://github.com/r-lib/rig/"
+  },
+  {
+    "objectID": "index.html#language-managers",
+    "href": "index.html#language-managers",
+    "title": "",
+    "section": "language managers",
+    "text": "language managers\nusing your package manager, install a language manager\n\nwindows*nix\n\n\nscoop install rig\n\n\nbrew install rig\n\n\n\n pyenv\nnvm\n\n\n\nmany language managers are often written in some language other than the one they are responsible for managing"
+  },
+  {
+    "objectID": "index.html#language-versions",
+    "href": "index.html#language-versions",
+    "title": "",
+    "section": "language versions",
+    "text": "language versions\nusing your language manager, install a language version:\n❯ rig install --help\nrig-add\n\nDESCRIPTION:\n    Download and install an R version, from the official sources.\n    It keeps the already installed R versions, except versions within the\n    same minor branch, see below.\n\nEXAMPLES:\n    # Add the latest release\n    rig add release\n\n    # Install specific version\n    rig add 4.1.2\n\n    # Install latest version within a minor branch\n    rig add 4.1\n\nif you’re running a distribution of linux that rig doesn’t support: - https://docs.rstudio.com/resources/install-r/\nif no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/"
+  },
+  {
+    "objectID": "index.html#environment-managers",
+    "href": "index.html#environment-managers",
+    "title": "",
+    "section": "environment managers",
+    "text": "environment managers\nusing your desired version of the language, install an environment manager:\ninstall.packages(\"renv\")"
+  },
+  {
+    "objectID": "index.html#project-2",
+    "href": "index.html#project-2",
+    "title": "",
+    "section": "project",
+    "text": "project\nusing your environment manager, install your project’s dependencies:\n\ncreate a new environment\nrenv::init()\nrestore a pre-defined environment\nrenv::restore()"
+  },
+  {
+    "objectID": "index.html#activity-6",
+    "href": "index.html#activity-6",
+    "title": "",
+    "section": "activity",
+    "text": "activity\n\n\nread the rig FAQ, or the rswitch guide\ninstall a different major/minor version of R\n\nhttps://cran.r-project.org/bin/macosx/\nhttps://cran.r-project.org/bin/windows/base/old/\n\ninstall rig\n\nuse `rig to install a different major or minor version of R\nopen RStudio with that newly installed R version\n\n\n\n\n\n\n01:00"
   },
   {
     "objectID": "index.html#rig-renv",
