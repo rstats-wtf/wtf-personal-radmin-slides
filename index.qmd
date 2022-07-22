@@ -123,7 +123,7 @@ We're extending the lessons from Day 1 to think about what it means to work with
 :::
 
 
-# starting R
+# focus areas
 
 ::: agenda
 
@@ -139,23 +139,24 @@ We're extending the lessons from Day 1 to think about what it means to work with
 ## why?
 
 Sometimes we want to change the way our code behaves _without_ having to change the code.
-- 
-
 
 ## R startup sequence {.smaller background-color="#cccccc"}
 
-![](img/r-startup.svg)
+![](img/R-startup.svg)
 
 ## R startup sequence (our focus) {.smaller background-color="#cccccc"}
 
 ![](img/r-startup-focus.svg)
 
-## Use a newline
+## :warning: Use a newline
 
 ::: columns
 ::: column
-`.Renviron` and `.Rprofile` **must** end in a newline.  
-R will silently throw away the last line if you don't do this
+`.Renviron` and `.Rprofile` **must** end in a newline.
+<br/>
+<br/>
+
+R may silently throw away the last line if you don't do this
 :::
 
 ::: column
@@ -207,27 +208,20 @@ DB_USER=elephant
 DB_PASS=p0stgr3s
 ```
 
-user and project scopres are _additive_
+user and project scopes are _additive_  
 if values clash, _project_ wins
 
 ## read environment variables
 
-::: .r-fit-text
-```{.r}
-Sys.getenv()
-```
-:::
-::: notes
-the keys have already been burned, don't worry
-additive
-project scope wins if there's a clash
+::: {.r .r-fit-text}
+`Sys.getenv()`
 :::
 
 ## activity
 
 ::: panel-tabset
 
-### edit your user Renviron {.smaller}
+### edit your user `.Renviron` {.smaller}
 
 1. `usethis::edit_r_environ()`
 1. add `WTF_USER=<your name>`
@@ -236,7 +230,7 @@ project scope wins if there's a clash
   `CMD  + SHIFT + 0 `
 1. Retrieve the value of WTF_USER Sys.getenv("WTF_USER")
 
-### edit your project Renviron {.smaller}
+### edit your project `.Renviron` {.smaller}
 
 1. `usethis::edit_r_environ("project")`
 1. add `WTF_PROJECT=<your name>`
@@ -256,24 +250,57 @@ project scope wins if there's a clash
 
 :::
 
+```{R}
+countdown_timer(minutes = 10, bottom = 0)
+```
+
 ## `.Rprofile`
 
-interactive helpers that run in every session
+R code that runs at the start of each session
+
+## ?interactive()
+
+:::: columns
+::: column
+
+### `TRUE`
+
+:technologist:
+<br/>
+
+- sending individual lines of code to the console
+
+<br/>
+<br/>
+
+::: fragment
+:point_up: most `.Rprofile` customization
+:::
+
+:::
+
+::: column
+
+### `FALSE`
+
+:robot: 
+<br/>
+
+- knitting an RMarkdown document  
+- `R -e script.R`
+
+:::
+::::
+
 
 ## what to put in `.Rprofile`
 
 -   set a default CRAN mirror
--   write a welcome message
--   customize R prompt
+-   customize [R prompt](https://github.com/gaborcsardi/prompt/)
 -   selectively change (but be careful)
     -   options, screen width, numeric display
     -   load frequently used interactive packages
     -   aliases / shortcuts for frequently used functions
--   you don't typically share `.Rprofiles`
-
-::: notes
-`rlrang::entrace()` so base errors get better context?
-:::
 
 ## why shouldn't these go in `.Rprofile`?
 
@@ -286,12 +313,12 @@ interactive helpers that run in every session
 
 ## dev dependencies
 
-If something appears in a script, it **should not** be in `.Rprofile`
+If it matters for code you share, it **should not** be in `.Rprofile`
 
-## activity
+## discuss with your neighbor
 
 ::: question
-why can these go in `.Rprofile`?
+Why might these be safe to put in `.Rprofile`?
 :::
 
 <br>
@@ -302,7 +329,7 @@ library(devtools)
 ```
 
 ```{R}
-countdown_timer(minutes = 1, bottom = 0)
+countdown_timer(minutes = 2, bottom = 0)
 ```
 
 ## andrie's `.Rprofile`
@@ -321,27 +348,63 @@ if (.Platform$OS.type == "windows") {
 }
 ```
 
-## comparing `.Renviron` to `.Rprofile`
-
-- don't set env vars in rprofile
-
-
 ## activity
 
-::: question
-add usethis and devtools to your R profile
-or
-search for public Rprofiles on github, if you see something you like, add it to yours
+::: panel-tabset
+
+### edit your user `.Rprofile` {.smaller}
+
+1. `usethis::edit_r_profile()`
+1. add `print("from my user Rprofile")`
+1. restart your R session  
+  `CTRL + SHIFT + F10`  
+  `CMD  + SHIFT + 0 `
+1. what value is printed when you restart?
+
+### edit your project Renviron {.smaller}
+
+1. `usethis::edit_r_environ("project")`
+1. add `print("from my project Rprofile")`
+1. restart your R session  
+  `CTRL + SHIFT + F10`  
+  `CMD  + SHIFT + 0 `
+1. what value is printed when you restart?
+
 :::
 
 ```{R}
-countdown_timer(minutes = 3, bottom = 0)
+countdown_timer(minutes = 5, bottom = 0)
 ```
 
-# installing R packages
+::: fragment
+project `.Rprofile` "short-circuits"  
+if it exists, your user `.Rprofile` will not be evaluated
+:::
+
+## wrapping up
+
+:::: columns
+::: column
+
+### `.Renviron`
+
+- secrets
+- environment information
+
+:::
+
+::: column
+
+### `.Rprofile`
+
+- development dependencies
+
+:::
+::::
+
+# focus areas
 
 ::: agenda
--   installing R
 
 -   starting R
 
@@ -350,8 +413,8 @@ countdown_timer(minutes = 3, bottom = 0)
 :::
 
 -   reproducible environments
+-   installing / upgrading R
 
--   upgrading R
 :::
 
 ## types of R packages
@@ -373,7 +436,6 @@ under: Make it explicit  why we care about installing from source
 
 - binaries are probably faster 
 - CRAN doesn't always have binaries available but you may not need them
-- 
 
 ## Binary
 
@@ -478,20 +540,18 @@ countdown_timer(minutes = 3, bottom = 0)
 
 
 
-# reproducible environments {background-color="#333399"}
+# focus areas {background-color="#333399"}
 
 ::: agenda
--   installing R
 
 -   starting R
-
 -   installing R packages
 
 ::: agenda-active
 -   reproducible environments
 :::
 
--   upgrading R
+- installing / upgrading R
 :::
 
 
