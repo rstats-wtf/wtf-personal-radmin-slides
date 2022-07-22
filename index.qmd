@@ -60,7 +60,7 @@ countdown_timer <- function(
 ::: r-fit-text
 -   personal laptop {{< fa brands windows >}}
 -   RStudio in Citrix {{< fa brands windows >}}
--   airgapped RStudio Server Pro {{< fa brands linux >}}
+-   airgapped RStudio Workbench {{< fa brands linux >}}
 -   airgapped Shiny Server Pro {{< fa brands linux >}}
 -   Special Issue Individual Laptop {{< fa brands windows >}} {{< fa brands linux >}}
 -   Special Issue Individual Desktop {{< fa brands windows >}}
@@ -92,7 +92,13 @@ countdown_timer <- function(
 :::
 
 ::: notes
-this is intended to provide context on my priorities / habits of thought: - it needs to work across operating systems - You can't depend on having pro features - avoid admin where possible - as portable as practical - audit context means I need to be able to reproduce exactly - "run this command" preferable to a confluence page of screenshots
+this is intended to provide context on my priorities / habits of thought: 
+- it needs to work across operating systems
+- You can't depend on having pro features 
+- avoid admin where possible 
+- as portable as practical 
+- audit context means I need to be able to reproduce exactly 
+- "run this command" preferable to a confluence page of screenshots
 :::
 
 ## How do I...
@@ -110,240 +116,70 @@ We're extending the lessons from Day 1 to think about what it means to work with
 ## focus areas
 
 ::: agenda
--   installing R
-
 -   starting R
-
-::: agenda-active
 -   installing R packages
-:::
-
 -   reproducible environments
-
--   upgrading R
+-   installing / upgrading R
 :::
 
-## practice makes perfect
-
-::: panel-tabset
-### Windows 10+
-
-[Windows Sandbox](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview)
-
-### macOS
-
-:shrug:
-
-### Linux
-
-[Multipass](https://multipass.run/)\
-[Digital Ocean](https://www.digitalocean.com/)\
-[Linode](https://www.linode.com/)
-:::
-
-::: notes
-The best way to become more comfortable with installing things is to practice in an environment you can throw away - the windows sandbox lets you test in an environment on your machine that won't affect your computer - enabling it is outside the scope of this course - for linux users, the easiest thing to do is stand up a small VPS - I don't know of a good safe way to test mac environments
-:::
-
-# mental model
-
-![](img/project-oyster.svg)
-
-# installing R
-
-::: agenda
-::: agenda-active
--   installing R
-:::
-
--   starting R
-
--   installing R packages
-
--   reproducible environments
-
--   upgrading R
-:::
-
-## "software managers"
-
-software whose job it is to install other software
-
-
-| Operating system | Recommended |
-|------------------|-------------------------------|
-| {{< fa brands windows >}} windows          | **scoop**, chocolatey, winget |
-| {{< fa brands apple >}} macOS            | **homebrew**                  |
-| {{< fa brands linux >}} linux            | apt, yum, zypper              |
-
-## :warning:
-
-Avoid installing your language with a package manager
-
-::: notes
-You want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are not consistently effective Other software that you install with your package manager may expect that package manager to be running the latest Idiosyncracies of your language will be better understood by a dedicated tool
-:::
-
-## clickOps
-
-![](img/installing-R.png)
-
-## rig
-
-<https://github.com/r-lib/rig/>
-
-## language managers
-
-using your package manager, install a language manager
-
-::: panel-tabset
-### windows
-
-``` powershell
-scoop install rig
-```
-
-### \*nix
-
-``` bash
-brew install rig
-```
-:::
-
-<small> pyenv\
-nvm\
-</small>
-
-::: notes
--   many language managers are often written in some language other than the one they are responsible for managing
-:::
-
-## language versions
-
-using your language manager, install a language version:
-
-``` shell
-❯ rig install --help
-rig-add
-
-DESCRIPTION:
-    Download and install an R version, from the official sources.
-    It keeps the already installed R versions, except versions within the
-    same minor branch, see below.
-
-EXAMPLES:
-    # Add the latest release
-    rig add release
-
-    # Install specific version
-    rig add 4.1.2
-
-    # Install latest version within a minor branch
-    rig add 4.1
-```
-
-::: notes
-if you're running a distribution of linux that rig doesn't support: - https://docs.rstudio.com/resources/install-r/
-
-if no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/
-:::
-
-## environment managers
-
-using your desired version of the language, install an environment manager:
-
-``` r
-install.packages("renv")
-```
-
-## project
-
-using your environment manager, install your project's dependencies:
-
--   create a new environment
-
-    ``` r
-    renv::init()
-    ```
-
--   restore a pre-defined environment
-
-    ``` r
-    renv::restore()
-    ```
-
-## activity {.smaller}
-
-::: question
-1.  read the [rig FAQ](https://github.com/r-lib/rig#-faq), or the [rswitch guide](https://rud.is/rswitch/guide/)
-
-2.  install a different major/minor version of R
-
-    -   <https://cran.r-project.org/bin/macosx/>
-
-    -   <https://cran.r-project.org/bin/windows/base/old/>
-
-3.  install `rig`
-
-    -   use \`rig to install a different major or minor version of R
-
-    -   open RStudio with that newly installed R version
-:::
-
-```{r}
-countdown(minutes = 1)
-```
 
 # starting R
 
 ::: agenda
--   installing R
 
 ::: agenda-active
 -   starting R
 :::
 
 -   installing R packages
-
 -   reproducible environments
-
--   upgrading R
+-   installing / upgrading R
 :::
 
-## Editing `.Renviron` and `.Rprofile`
+## why?
 
-Tip: Use the `usethis` package for easy shortcuts to edit your profile and environment files:
+Sometimes we want to change the way our code behaves _without_ having to change the code.
+- 
 
-``` r
-usethis::edit_r_profile()
-usethis::edit_r_environ()
-```
 
-## R startup sequence (detail) {.smaller background-color="#cccccc"}
+## R startup sequence {.smaller background-color="#cccccc"}
 
-![](img/R-startup.svg)
+![](img/r-startup.svg)
 
-::: notes
-Scopes: - system: (usually suffixed by `.site`, per version of R) - user - project
+## R startup sequence (our focus) {.smaller background-color="#cccccc"}
 
-user scoped `.Rprofile` and `.Renviron` content is applied *last*
-:::
+![](img/r-startup-focus.svg)
 
-## :warning: Remember to use a newline
+## Use a newline
 
 ::: columns
 ::: column
-`.Renviron` and `.Rprofile` **must** end in a newline.
+`.Renviron` and `.Rprofile` **must** end in a newline.  
+R will silently throw away the last line if you don't do this
 :::
 
 ::: column
-![](img/insert-newline-end.png)
+![](img/insert-newline-end-highlight.png)
 :::
 :::
 
-::: notes
-R will silently throw away the last line if you don't do this
+## Editing `.Renviron`
+
+::: {.r .r-fit-text}
+`usethis::edit_r_environ(scope = ?)`
 :::
+
+:::: columns
+::: {.column width="40%"}
+### user
+`~/.Renviron`
+:::
+
+::: {.column width="60%"} 
+### project
+`path/to/your/project/.Renviron`
+:::
+::::
 
 ## `.Renviron`
 
@@ -353,21 +189,71 @@ R will silently throw away the last line if you don't do this
 
 ## example `.Renviron`
 
--   project short circuits home?
+### user
 
-``` bash
-R_HISTSIZE=100000
+```bash
+PATH="${RTOOLS40_HOME}\usr\bin;${PATH}" # windows users
 GITHUB_PAT=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
 CONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3
+R_HISTSIZE=100000
+```
+<br/>
+
+### project
+
+```bash
 RETICULATE_PYTHON=.venv/bin/python
+DB_USER=elephant
+DB_PASS=p0stgr3s
 ```
 
--   accessing things once they're in the R environ
+user and project scopres are _additive_
+if values clash, _project_ wins
 
-`Sys.getenv()`
+## read environment variables
 
+::: .r-fit-text
+```{.r}
+Sys.getenv()
+```
+:::
 ::: notes
 the keys have already been burned, don't worry
+additive
+project scope wins if there's a clash
+:::
+
+## activity
+
+::: panel-tabset
+
+### edit your user Renviron {.smaller}
+
+1. `usethis::edit_r_environ()`
+1. add `WTF_USER=<your name>`
+1. restart your R session  
+  `CTRL + SHIFT + F10`  
+  `CMD  + SHIFT + 0 `
+1. Retrieve the value of WTF_USER Sys.getenv("WTF_USER")
+
+### edit your project Renviron {.smaller}
+
+1. `usethis::edit_r_environ("project")`
+1. add `WTF_PROJECT=<your name>`
+1. restart your R session  
+  `CTRL + SHIFT + F10`  
+  `CMD  + SHIFT + 0 `
+1. Retrieve the value of WTF_USER Sys.getenv("WTF_PROJECT")
+
+### handle a collision {.smaller}
+
+1. `usethis::edit_r_environ()`
+1. add `WTF_DAVID=user`
+1. `usethis::edit_r_environ("project")`
+1. add `WTF_DAVID=project`
+1. restart your R session
+1. retrieve the value of WTF_DAVID 
+
 :::
 
 ## `.Rprofile`
@@ -386,7 +272,7 @@ interactive helpers that run in every session
 -   you don't typically share `.Rprofiles`
 
 ::: notes
-\``rlrang::entrace()` so base errors get better context?
+`rlrang::entrace()` so base errors get better context?
 :::
 
 ## why shouldn't these go in `.Rprofile`?
@@ -394,7 +280,6 @@ interactive helpers that run in every session
 ::: incremental
 -   `options(stringsAsFactors = FALSE)`
 -   `library(tidyverse)`
--   `library(ggplot2)`
 -   `f <- dplyr::filter`
 -   `theme_set(theme_bw())`
 :::
@@ -438,10 +323,15 @@ if (.Platform$OS.type == "windows") {
 
 ## comparing `.Renviron` to `.Rprofile`
 
+- don't set env vars in rprofile
+
+
 ## activity
 
 ::: question
-find `.Rprofile` examples on github and add something to yours
+add usethis and devtools to your R profile
+or
+search for public Rprofiles on github, if you see something you like, add it to yours
 :::
 
 ```{R}
@@ -810,6 +700,178 @@ countdown_timer(minutes = 1, bottom = 0)
 -   upgrading R
 :::
 :::
+
+# installing / upgrading R 
+
+::: agenda
+-   starting R
+
+-   installing R packages
+
+-   reproducible environments
+::: agenda-active
+-   installing / upgrading R
+:::
+
+:::
+
+## practice makes perfect
+
+::: panel-tabset
+### Windows 10+
+
+[Windows Sandbox](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview)
+
+### macOS
+
+:shrug:
+
+### Linux
+
+[Multipass](https://multipass.run/)\
+[Digital Ocean](https://www.digitalocean.com/)\
+[Linode](https://www.linode.com/)
+:::
+
+::: notes
+The best way to become more comfortable with installing things is to practice in an environment you can throw away  
+- the windows sandbox lets you test in an environment on your machine that won't affect your computer 
+- enabling it is outside the scope of this course 
+- for linux users, the easiest thing to do is stand up a small VPS 
+- I don't know of a good safe way to test mac environments
+:::
+
+## package managers
+
+software whose job it is to install other software
+
+
+| Operating system | Recommended |
+|------------------|-------------------------------|
+| {{< fa brands windows >}} windows        | **scoop**, chocolatey, winget |
+| {{< fa brands apple >}} macOS            | **homebrew**                  |
+| {{< fa brands linux >}} linux            | **homebrew**, apt, yum, zypper|
+
+## :warning:
+
+Avoid installing your language with a package manager
+
+::: notes
+You want to avoid having the language version your projects are using changed out from you unexpectedly
+Tools for freezing installations with your package manager are not consistently effective
+Other software that you install with your package manager may expect that package manager to be running the latest
+Idiosyncracies of your language will be better understood by a dedicated tool
+:::
+
+## clickOps
+
+![](img/installing-R.png)
+
+## rig
+
+<https://github.com/r-lib/rig/>
+
+## language managers
+
+using your package manager, install a language manager
+
+::: panel-tabset
+### windows
+
+``` powershell
+scoop install rig
+```
+
+### \*nix
+
+``` bash
+brew install rig
+```
+:::
+
+<small> pyenv\
+nvm\
+</small>
+
+::: notes
+-   many language managers are often written in some language other than the one they are responsible for managing
+:::
+
+## language versions
+
+using your language manager, install a language version:
+
+``` shell
+❯ rig install --help
+rig-add
+
+DESCRIPTION:
+    Download and install an R version, from the official sources.
+    It keeps the already installed R versions, except versions within the
+    same minor branch, see below.
+
+EXAMPLES:
+    # Add the latest release
+    rig add release
+
+    # Install specific version
+    rig add 4.1.2
+
+    # Install latest version within a minor branch
+    rig add 4.1
+```
+
+::: notes
+if you're running a distribution of linux that rig doesn't support: - https://docs.rstudio.com/resources/install-r/
+
+if no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/
+:::
+
+## environment managers
+
+using your desired version of the language, install an environment manager:
+
+``` r
+install.packages("renv")
+```
+
+## project
+
+using your environment manager, install your project's dependencies:
+
+-   create a new environment
+
+    ``` r
+    renv::init()
+    ```
+
+-   restore a pre-defined environment
+
+    ``` r
+    renv::restore()
+    ```
+
+## activity {.smaller}
+
+::: question
+1.  read the [rig FAQ](https://github.com/r-lib/rig#-faq), or the [rswitch guide](https://rud.is/rswitch/guide/)
+
+2.  install a different major/minor version of R
+
+    -   <https://cran.r-project.org/bin/macosx/>
+
+    -   <https://cran.r-project.org/bin/windows/base/old/>
+
+3.  install `rig`
+
+    -   use \`rig to install a different major or minor version of R
+
+    -   open RStudio with that newly installed R version
+:::
+
+```{r}
+countdown(minutes = 1)
+```
 
 ## rig + renv
 
