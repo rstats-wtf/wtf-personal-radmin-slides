@@ -39,7 +39,7 @@
     "href": "index.html#software-managers",
     "title": "",
     "section": "“software managers”",
-    "text": "“software managers”\npackage managers\nsoftware whose job it is to install other software\nwindows: scoop, chocolatey, winget\nmacOS: homebrew\nlinux: homebrew, apt, yum, zypper"
+    "text": "“software managers”\nsoftware whose job it is to install other software\n\n\n\n\n\n\n\nOperating system\nRecommended\n\n\n\n\n windows\nscoop, chocolatey, winget\n\n\n macOS\nhomebrew\n\n\n linux\napt, yum, zypper"
   },
   {
     "objectID": "index.html#section",
@@ -81,28 +81,28 @@
     "href": "index.html#environment-managers",
     "title": "",
     "section": "environment managers",
-    "text": "environment managers\nusing your desired version of the language, install an environment manager:\n\ninstall.packages(\"renv\")"
+    "text": "environment managers\nusing your desired version of the language, install an environment manager:\ninstall.packages(\"renv\")"
   },
   {
     "objectID": "index.html#project",
     "href": "index.html#project",
     "title": "",
     "section": "project",
-    "text": "project\nusing your environment manager, install your project’s dependencies:\n\n\nnew\nrenv::init()\n\nexisting\nrenv::restore()"
+    "text": "project\nusing your environment manager, install your project’s dependencies:\n\ncreate a new environment\nrenv::init()\nrestore a pre-defined environment\nrenv::restore()"
   },
   {
     "objectID": "index.html#activity",
     "href": "index.html#activity",
     "title": "",
     "section": "activity",
-    "text": "activity\n\n\nread the rig FAQ, or the rswitch guide\ninstall a different major/minor version of R\n\nhttps://cran.r-project.org/bin/macosx/\nhttps://cran.r-project.org/bin/windows/base/old/\n\ninstall rig\n\nuse rig to install a different major or minor version of R\nopen RStudio with that newly installed R version\n\n\n\n\n\n\n01:00"
+    "text": "activity\n\n\nread the rig FAQ, or the rswitch guide\ninstall a different major/minor version of R\n\nhttps://cran.r-project.org/bin/macosx/\nhttps://cran.r-project.org/bin/windows/base/old/\n\ninstall rig\n\nuse `rig to install a different major or minor version of R\nopen RStudio with that newly installed R version\n\n\n\n\n\n\n01:00"
   },
   {
-    "objectID": "index.html#renviron-and-.rprofile",
-    "href": "index.html#renviron-and-.rprofile",
+    "objectID": "index.html#editing-.renviron-and-.rprofile",
+    "href": "index.html#editing-.renviron-and-.rprofile",
     "title": "",
-    "section": ".Renviron and .Rprofile",
-    "text": ".Renviron and .Rprofile\nusethis::edit_r_profile()"
+    "section": "Editing .Renviron and .Rprofile",
+    "text": "Editing .Renviron and .Rprofile\nTip: Use the usethis package for easy shortcuts to edit your profile and environment files:\nusethis::edit_r_profile()\nusethis::edit_r_environ()"
   },
   {
     "objectID": "index.html#r-startup-sequence-detail",
@@ -144,7 +144,7 @@
     "href": "index.html#what-to-put-in-.rprofile",
     "title": "",
     "section": "what to put in .Rprofile",
-    "text": "what to put in .Rprofile\n\nSet a default CRAN mirror\nWrite a welcome message\nCustomize R prompt\nSelectively change (but be careful)\n\nOptions, screen width, numeric display\nLoad frequently used interactive packages\nAliases / shortcuts for frequently used functions\n\nyou don’t typically share rprofiles\n\n\nrlrang::entrace so base errors get better context?"
+    "text": "what to put in .Rprofile\n\nset a default CRAN mirror\nwrite a welcome message\ncustomize R prompt\nselectively change (but be careful)\n\noptions, screen width, numeric display\nload frequently used interactive packages\naliases / shortcuts for frequently used functions\n\nyou don’t typically share .Rprofiles\n\n\n`rlrang::entrace() so base errors get better context?"
   },
   {
     "objectID": "index.html#why-shouldnt-these-go-in-.rprofile",
@@ -168,53 +168,53 @@
     "text": "activity\n\nwhy can these go in .Rprofile?\n\n\nlibrary(usethis)\nlibrary(devtools)\n\n\n\n01:00"
   },
   {
-    "objectID": "index.html#andries-rprofile",
-    "href": "index.html#andries-rprofile",
+    "objectID": "index.html#andries-.rprofile",
+    "href": "index.html#andries-.rprofile",
     "title": "",
-    "section": "andrie’s Rprofile",
-    "text": "andrie’s Rprofile"
+    "section": "andrie’s .Rprofile",
+    "text": "andrie’s .Rprofile\n# Set CRAN mirror\nif (R.version$status == \"Under development (unstable)\") {\n  options(repos = c(CRAN = \"https://cloud.r-project.org/\"))\n} else {\n  options(repos = c(CRAN = \"https://packagemanager.rstudio.com/all/latest\"))\n}\n\n# Set the executable for GhostScript\nif (.Platform$OS.type == \"windows\") {\n  Sys.setenv(R_GSCMD = Sys.which(\"gswin64c\"))\n}"
   },
   {
-    "objectID": "index.html#renviron-vs-rprofile",
-    "href": "index.html#renviron-vs-rprofile",
+    "objectID": "index.html#comparing-.renviron-to-.rprofile",
+    "href": "index.html#comparing-.renviron-to-.rprofile",
     "title": "",
-    "section": "renviron vs rprofile",
-    "text": "renviron vs rprofile"
+    "section": "comparing .Renviron to .Rprofile",
+    "text": "comparing .Renviron to .Rprofile"
   },
   {
     "objectID": "index.html#activity-2",
     "href": "index.html#activity-2",
     "title": "",
     "section": "activity",
-    "text": "activity\nfind rprofiles on github and add something to yours"
+    "text": "activity\n\nfind .Rprofile examples on github and add something to yours\n\n\n\n\n03:00"
   },
   {
     "objectID": "index.html#types-of-r-packages",
     "href": "index.html#types-of-r-packages",
     "title": "",
-    "section": "Types of R packages",
-    "text": "Types of R packages\n\nBinary\nSource"
+    "section": "types of R packages",
+    "text": "types of R packages\n\nBinary\nSource"
   },
   {
     "objectID": "index.html#binary",
     "href": "index.html#binary",
     "title": "",
-    "section": "Binary",
-    "text": "Binary\n\ncompiled ahead of time\nonly R is needed to install"
+    "section": "binary",
+    "text": "binary\n\ncompiled ahead of time\nonly R is needed to install"
   },
   {
     "objectID": "index.html#where-to-get-binaries",
     "href": "index.html#where-to-get-binaries",
     "title": "",
     "section": "where to get binaries",
-    "text": "where to get binaries\n\n\n\nos\ncran\nppm\n\n\n\n\n\n✅\n✅\n\n\n\n✅\n❌\n\n\n\n❌\n✅"
+    "text": "where to get binaries\n\n\n\n\n\n\n\n\n\nCRAN\nRStudio Package Manager*\n\n\n\n\n windows\n✅\n✅\n\n\n mac OS\n✅\n❌\n\n\n linux\n❌\n✅\n\n\n\n\n* RStudio Package Manager"
   },
   {
     "objectID": "index.html#source",
     "href": "index.html#source",
     "title": "",
-    "section": "Source",
-    "text": "Source\n\ncompiled in development environment\nrequires extra tools when package uses C, C++, Fortran\n\n\nOne additional complication for *nix users: generally on windows can install and load packages that depend on other lower level libraries quite easily. Explain installing sf, for example."
+    "section": "source",
+    "text": "source\n\ncompiled in development environment\nrequires extra tools when package uses C, C++ or Fortran\n\n\nOne additional complication for *nix users: generally on windows can install and load packages that depend on other lower level libraries quite easily. Explain installing sf, for example."
   },
   {
     "objectID": "index.html#if-you-dont-have-tools",
@@ -228,14 +228,14 @@
     "href": "index.html#get-the-tools",
     "title": "",
     "section": "get the tools",
-    "text": "get the tools\n\nwindowsmacOS\n\n\nRtools\nrig add rtools\n\n\nXCode\nxcode-select --install\nor download from the Mac App Store\n\n\n\nLinux\ninstall tools via “software manager”\n:::"
+    "text": "get the tools\n\nwindowsmacOSlinux\n\n\nRtools\nrig add rtools\n\n\nXCode\nxcode-select --install\nor download from the Mac App Store\n\n\ninstall tools via “software manager”\napt install ...\nyum install ..."
   },
   {
     "objectID": "index.html#got-tools",
     "href": "index.html#got-tools",
     "title": "",
     "section": "got tools?",
-    "text": "got tools?\n> devtools::has_devel()\nYour system is ready to build packages!"
+    "text": "got tools?\ndevtools::has_devel()\n## Your system is ready to build packages!"
   },
   {
     "objectID": "index.html#activity-3",
@@ -245,11 +245,11 @@
     "text": "activity\n\ninstall a package from source\n\n\ninstall.packages(\"jsonlite\", type = \"source\")\n\n\n\n03:00"
   },
   {
-    "objectID": "index.html#environments.rstudio.com",
-    "href": "index.html#environments.rstudio.com",
+    "objectID": "index.html#environments",
+    "href": "index.html#environments",
     "title": "",
-    "section": "environments.rstudio.com",
-    "text": "environments.rstudio.com"
+    "section": "environments",
+    "text": "environments\nhttps://environments.rstudio.com"
   },
   {
     "objectID": "index.html#spectrum",
@@ -291,7 +291,7 @@
     "href": "index.html#the-junk-drawer",
     "title": "",
     "section": "the junk drawer",
-    "text": "the junk drawer\nfor reprexes, tweets, and other ephemera:\n~/Documents/scratch\n\nI use renv for everything, and have one junk project into which I install things without regard for stability or reproducibililty"
+    "text": "the junk drawer\nfor reprexes, tweets, and other ephemera:\n~/Documents/scratch\n\nI use renv for everything, and have one junk project into which I install things without regard for stability or reproducibility"
   },
   {
     "objectID": "index.html#rig-1",
@@ -305,7 +305,7 @@
     "href": "index.html#activity-4",
     "title": "",
     "section": "activity",
-    "text": "activity\n\ninstall dev jsonlite, then roll back to released version"
+    "text": "activity\n\n\ninstall dev jsonlite, then roll back to released version\n\n\n\n\n\n01:00"
   },
   {
     "objectID": "index.html#rig-renv",
