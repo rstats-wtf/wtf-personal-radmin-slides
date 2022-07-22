@@ -45,7 +45,6 @@ countdown_timer <- function(
 }
 ```
 
-
 ## Course material
 
 ::: r-fit-text
@@ -54,57 +53,49 @@ countdown_timer <- function(
 
 ## a brief personal history:
 
-:::: {.columns .scrollable}
-
-::: {.column width="33%" .fragment}
+::: {.columns .scrollable}
+::: {.column .fragment width="33%"}
 ### Auditor
 
 ::: r-fit-text
-- personal laptop {{< fa brands windows >}}
-- RStudio in Citrix {{< fa brands windows >}}
-- airgapped RStudio Server Pro {{< fa brands linux >}}
-- airgapped Shiny Server Pro {{< fa brands linux >}}
-- Special Issue Individual Laptop {{< fa brands windows >}} {{< fa brands linux >}}
-- Special Issue Individual Desktop {{< fa brands windows >}}
-- Special Issue Team Desktop {{< fa brands windows >}}
+-   personal laptop {{< fa brands windows >}}
+-   RStudio in Citrix {{< fa brands windows >}}
+-   airgapped RStudio Server Pro {{< fa brands linux >}}
+-   airgapped Shiny Server Pro {{< fa brands linux >}}
+-   Special Issue Individual Laptop {{< fa brands windows >}} {{< fa brands linux >}}
+-   Special Issue Individual Desktop {{< fa brands windows >}}
+-   Special Issue Team Desktop {{< fa brands windows >}}
 :::
 :::
 
-::: {.column width="33%" .fragment}
+::: {.column .fragment width="33%"}
 ### Data Scientist
 
 ::: r-fit-text
-- personal laptop {{< fa brands windows >}}
-- work laptop {{< fa brands windows >}}
-- RStudio in Citrix {{< fa brands windows >}}
-- RStudio Server {{< fa brands linux >}}
+-   personal laptop {{< fa brands windows >}}
+-   work laptop {{< fa brands windows >}}
+-   RStudio in Citrix {{< fa brands windows >}}
+-   RStudio Server {{< fa brands linux >}}
 :::
 :::
 
-::: {.column width="33%" .fragment}
+::: {.column .fragment width="33%"}
 ### Solutions Engineer
 
 ::: r-fit-text
-- personal laptop {{< fa brands windows >}}
-- Work laptop {{< fa brands apple >}}
-- RStudio Workbench Demo Server {{< fa brands linux >}}
-- RStudio Workbench Internal Server {{< fa brands linux >}}
+-   personal laptop {{< fa brands windows >}}
+-   Work laptop {{< fa brands apple >}}
+-   RStudio Workbench Demo Server {{< fa brands linux >}}
+-   RStudio Workbench Internal Server {{< fa brands linux >}}
 :::
 :::
-
-::::
+:::
 
 ::: notes
-this is intended to provide context on my priorities / habits of thought:
-- it needs to work across operating systems
-- You can't depend on having pro features
-- avoid admin where possible
-- as portable as practical
-- audit context means I need to be able to reproduce exactly
-- "run this command" preferable to a confluence page of screenshots
+this is intended to provide context on my priorities / habits of thought: - it needs to work across operating systems - You can't depend on having pro features - avoid admin where possible - as portable as practical - audit context means I need to be able to reproduce exactly - "run this command" preferable to a confluence page of screenshots
 :::
 
-## How do I... 
+## How do I...
 
 ::: incremental
 -   upgrade the version of R I'm using for this project?
@@ -113,34 +104,28 @@ this is intended to provide context on my priorities / habits of thought:
 :::
 
 ::: notes
-We're extending the lessons from Day 1 to think about what it means to work with R projects over time.
-That means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts.
-Working on an old project on a new computer is a lot like trying to put an app into production.
+We're extending the lessons from Day 1 to think about what it means to work with R projects over time. That means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts. Working on an old project on a new computer is a lot like trying to put an app into production.
 :::
-
-
 
 ## focus areas
 
 ::: agenda
+-   installing R
 
-- installing R
-
-- starting R
+-   starting R
 
 ::: agenda-active
-- installing R packages
+-   installing R packages
 :::
 
-- reproducible environments
+-   reproducible environments
 
-- upgrading R
+-   upgrading R
 :::
 
 ## practice makes perfect
 
 ::: panel-tabset
-
 ### Windows 10+
 
 [Windows Sandbox](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview)
@@ -151,42 +136,34 @@ Working on an old project on a new computer is a lot like trying to put an app i
 
 ### Linux
 
-[Multipass](https://multipass.run/)  
-[Digital Ocean](https://www.digitalocean.com/)  
-[Linode](https://www.linode.com/)  
-
+[Multipass](https://multipass.run/)\
+[Digital Ocean](https://www.digitalocean.com/)\
+[Linode](https://www.linode.com/)
 :::
 
 ::: notes
-The best way to become more comfortable with installing things is to practice in an environment you can throw away
-- the windows sandbox lets you test in an environment on your machine that won't affect your computer
-  - enabling it is outside the scope of this course
-- for linux users, the easiest thing to do is stand up a small VPS
-- I don't know of a good safe way to test mac environments
+The best way to become more comfortable with installing things is to practice in an environment you can throw away - the windows sandbox lets you test in an environment on your machine that won't affect your computer - enabling it is outside the scope of this course - for linux users, the easiest thing to do is stand up a small VPS - I don't know of a good safe way to test mac environments
 :::
 
 # mental model
 
 ![](img/project-oyster.svg)
 
-
 # installing R
 
 ::: agenda
-
 ::: agenda-active
-- installing R
+-   installing R
 :::
 
-- starting R
+-   starting R
 
-- installing R packages
+-   installing R packages
 
-- reproducible environments
+-   reproducible environments
 
-- upgrading R
+-   upgrading R
 :::
-
 
 ## "software managers"
 
@@ -194,21 +171,17 @@ package managers
 
 software whose job it is to install other software
 
-windows: **scoop**, chocolatey, winget  
-macOS: **homebrew**  
-linux: **homebrew**, apt, yum, zypper  
+windows: **scoop**, chocolatey, winget\
+macOS: **homebrew**\
+linux: **homebrew**, apt, yum, zypper
 
-## ⚠️
+## :warning:
 
 Avoid installing your language with a package manager
 
-:::{.notes}
-You want to avoid having the language version your projects are using changed out from you unexpectedly
-Tools for freezing installations with your package manager are not consistently effective
-Other software that you install with your package manager may expect that package manager to be running the latest
-Idiosyncracies of your language will be better understood by a dedicated tool
+::: notes
+You want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are not consistently effective Other software that you install with your package manager may expect that package manager to be running the latest Idiosyncracies of your language will be better understood by a dedicated tool
 :::
-
 
 ## clickOps
 
@@ -222,26 +195,22 @@ https://github.com/r-lib/rig/
 
 using your package manager, install a language manager
 
-
-::: {.panel-tabset}
-
+::: panel-tabset
 ### windows
 
 `scoop install rig`
 
-### *nix
+### \*nix
 
 `brew install rig`
-
 :::
 
-<small> 
-pyenv  
-nvm  
+<small> pyenv\
+nvm\
 </small>
 
-::: {.notes}
-- many language managers are often written in some language other than the one they are responsible for managing
+::: notes
+-   many language managers are often written in some language other than the one they are responsible for managing
 :::
 
 ## language versions
@@ -266,22 +235,19 @@ EXAMPLES:
 
     # Install latest version within a minor branch
     rig add 4.1
-
 ```
 
-::: {.notes}
-if you're running a distribution of linux that rig doesn't support:
-- https://docs.rstudio.com/resources/install-r/
+::: notes
+if you're running a distribution of linux that rig doesn't support: - https://docs.rstudio.com/resources/install-r/
 
-if no pre-compiled binary of rig is available:
-- https://docs.rstudio.com/resources/install-r-source/
+if no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/
 :::
 
 ## environment managers
 
 using your desired version of the language, install an environment manager:
 
-:::{.r-fit-text}
+::: r-fit-text
 `install.packages("renv")`
 :::
 
@@ -289,49 +255,36 @@ using your desired version of the language, install an environment manager:
 
 using your environment manager, install your project's dependencies:
 
-:::: {.columns}
-
-:::{.column width="50%"}
-
+::: columns
+::: {.column width="50%"}
 ### new
 
 `renv::init()`
-
 :::
 
 ::: {.column width="50%"}
-
 ### existing
 
 `renv::restore()`
-
 :::
-
-::::
-
-
+:::
 
 ## activity {.smaller}
 
 ::: question
+1.  read the [rig FAQ](https://github.com/r-lib/rig#-faq), or the [rswitch guide](https://rud.is/rswitch/guide/)
 
+2.  install a different major/minor version of R
 
-1. read the [rig FAQ](https://github.com/r-lib/rig#-faq), or the [rswitch guide](https://rud.is/rswitch/guide/)
+    -   <https://cran.r-project.org/bin/macosx/>
 
+    -   <https://cran.r-project.org/bin/windows/base/old/>
 
-1. install a different major/minor version of R
+3.  install rig
 
-    - <https://cran.r-project.org/bin/macosx/>
-    
-    - <https://cran.r-project.org/bin/windows/base/old/>
+    -   use rig to install a different major or minor version of R
 
-
-1. install rig
-
-    - use rig to install a different major or minor version of R
-  
-    - open RStudio with that newly installed R version
-
+    -   open RStudio with that newly installed R version
 :::
 
 ```{r}
@@ -341,66 +294,58 @@ countdown(minutes = 1)
 # starting R
 
 ::: agenda
-
-- installing R
+-   installing R
 
 ::: agenda-active
-- starting R
+-   starting R
 :::
 
-- installing R packages
+-   installing R packages
 
-- reproducible environments
+-   reproducible environments
 
-- upgrading R
+-   upgrading R
 :::
 
 ## `.Renviron` and `.Rprofile`
 
-usethis::edit_r_profile()
+usethis::edit_r\_profile()
 
 ## R startup sequence (detail) {.smaller background-color="#cccccc"}
 
 ![](img/R-startup.svg)
 
-::: {.notes}
-Scopes:
-- system: (usually suffixed by `.site`, per version of R)
-- user
-- project
+::: notes
+Scopes: - system: (usually suffixed by `.site`, per version of R) - user - project
 
-user scoped `.Rprofile` and `.Renviron` content is applied _last_
-
+user scoped `.Rprofile` and `.Renviron` content is applied *last*
 :::
 
-## ⚠️ Remember to use a newline
+## :warning: Remember to use a newline
 
-::::{.columns}
-
-::: {.column}
+::: columns
+::: column
 `.Renviron` and `.Rprofile` **must** end in a newline.
 :::
 
-::: {.column}
-
+::: column
 ![](img/insert-newline-end.png)
 :::
+:::
 
-::::
-
-::: {.notes}
+::: notes
 R will silently throw away the last line if you don't do this
 :::
 
 ## `.Renviron`
 
-:white_check_mark: R-specific environment variables  
-:white_check_mark: API keys  
-:x: R code  
+:white_check_mark: R-specific environment variables\
+:white_check_mark: API keys\
+:x: R code
 
 ## example `.Renviron`
 
-- project short circuits home?
+-   project short circuits home?
 
 ``` shell
 R_HISTSIZE=100000
@@ -409,11 +354,11 @@ CONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3
 RETICULATE_PYTHON=.venv/bin/python
 ```
 
-- accessing things once they're in the R environ
+-   accessing things once they're in the R environ
 
 `Sys.getenv()`
 
-:::{.notes}
+::: notes
 the keys have already been burned, don't worry
 :::
 
@@ -423,28 +368,27 @@ interactive helpers that run in every session
 
 ## what to put in `.Rprofile`
 
-- Set a default CRAN mirror 
-- Write a welcome message 
-- Customize R prompt 
-- Selectively change (but be careful) 
-  - Options, screen width, numeric display 
-  - Load frequently used interactive packages 
-  - Aliases / shortcuts for frequently used functions
-  
-- you don't typically share rprofiles
-  
-::: {.notes}
+-   Set a default CRAN mirror
+-   Write a welcome message
+-   Customize R prompt
+-   Selectively change (but be careful)
+    -   Options, screen width, numeric display
+    -   Load frequently used interactive packages
+    -   Aliases / shortcuts for frequently used functions
+-   you don't typically share rprofiles
+
+::: notes
 rlrang::entrace so base errors get better context?
 :::
-  
+
 ## why shouldn't these go in `.Rprofile`?
 
 ::: incremental
-- `options(stringsAsFactors = FALSE)`
-- `library(tidyverse)`
-- `library(ggplot2)`
-- `f <- dplyr::filter`
-- `theme_set(theme_bw())`
+-   `options(stringsAsFactors = FALSE)`
+-   `library(tidyverse)`
+-   `library(ggplot2)`
+-   `f <- dplyr::filter`
+-   `theme_set(theme_bw())`
 :::
 
 ## dev dependencies
@@ -454,13 +398,12 @@ If something appears in a script, it **should not** be in .Rprofile
 ## activity
 
 ::: question
-
 why can these go in `.Rprofile`?
 :::
 
 <br>
 
-``` R
+``` r
 library(usethis)
 library(devtools)
 ```
@@ -469,70 +412,86 @@ library(devtools)
 countdown_timer(minutes = 1, bottom = 0)
 ```
 
+## andrie's `.Rprofile`
 
-## andrie's Rprofile
+``` R
+# Set CRAN mirror
+if (R.version$status == "Under development (unstable)") {
+  options(repos = c(CRAN = "https://cloud.r-project.org/"))
+} else {
+  options(repos = c(CRAN = "https://packagemanager.rstudio.com/all/latest"))
+}
 
-## renviron vs rprofile
+# Set the executable for GhostScript
+if (.Platform$OS.type == "windows") Sys.setenv(R_GSCMD = Sys.which("gswin64c"))
+```
 
-
+## comparing `.Renviron` to `.Rprofile`
 
 ## activity
 
-find rprofiles on github and add something to yours
+::: question
 
+find `.Rprofile` examples on github and add something to yours
+
+:::
+
+
+```{R}
+countdown_timer(minutes = 3, bottom = 0)
 ```
 
-```
 
 # installing R packages
 
 ::: agenda
+-   installing R
 
-- installing R
-
-- starting R
+-   starting R
 
 ::: agenda-active
-- installing R packages
+-   installing R packages
 :::
 
-- reproducible environments
+-   reproducible environments
 
-- upgrading R
+-   upgrading R
 :::
 
-## Types of R packages
+## types of R packages
 
-- Binary
-- Source
+-   Binary
+-   Source
 
-## Binary
+## binary
 
-- compiled ahead of time
-- only R is needed to install
+-   compiled ahead of time
+-   only R is needed to install
 
 ## where to get binaries
 
-|os|cran|[ppm](https://packagemanager.rstudio.com/)|
-|-|-|-|
-|{{< fa brands windows >}}|:white_check_mark:|:white_check_mark: |
-|{{< fa brands apple >}}|:white_check_mark:|❌|
-|{{< fa brands linux >}}|❌|:white_check_mark:|
+|                                   |        CRAN        | RStudio Package Manager\* |
+|------------------------|:----------------------:|:----------------------:|
+| {{< fa brands windows >}} windows | :white_check_mark: |    :white_check_mark:     |
+| {{< fa brands apple >}} mac OS    | :white_check_mark: |            :x:            |
+| {{< fa brands linux >}} linux     |        :x:         |    :white_check_mark:     |
 
+<br>
 
-## Source
+\* [RStudio Package Manager](https://packagemanager.rstudio.com/)
 
-- compiled in development environment
-- requires extra tools when package uses C, C++, Fortran
+## source
+
+-   compiled in development environment
+-   requires extra tools when package uses C, C++ or Fortran
 
 ::: notes
-One additional complication for *nix users: generally on windows can install and load packages that depend on other lower level libraries quite easily.
-Explain installing sf, for example.
+One additional complication for \*nix users: generally on windows can install and load packages that depend on other lower level libraries quite easily. Explain installing `sf`, for example.
 :::
 
 ## if you don't have tools
 
-```{.r code-line-numbers="11"}
+``` {.r code-line-numbers="11"}
 Running `R CMD build`...
 * checking for file 'C:\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpkTUH61\remotes192027624804\tidyverse-dplyr-36ef054/DESCRIPTION' ... OK
 * preparing 'dplyr':
@@ -553,7 +512,6 @@ ERROR: package installation failed
 ## get the tools
 
 ::: panel-tabset
-
 ### windows
 
 [Rtools](https://cran.r-project.org/bin/windows/Rtools/)
@@ -571,19 +529,22 @@ xcode-select --install
 ```
 
 or download from the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
-:::
 
-### Linux
+### linux
 
 install tools via "software manager"
 
+``` shell
+apt install ...
+yum install ...
+```
 :::
 
 ## got tools?
 
-```
-> devtools::has_devel()
-Your system is ready to build packages!
+``` r
+devtools::has_devel()
+## Your system is ready to build packages!
 ```
 
 ## activity
@@ -594,7 +555,7 @@ install a package from source
 
 <br>
 
-``` R
+``` r
 install.packages("jsonlite", type = "source")
 ```
 
@@ -602,27 +563,25 @@ install.packages("jsonlite", type = "source")
 countdown_timer(minutes = 3, bottom = 0)
 ```
 
-
-
-
 # reproducible environments
 
 ::: agenda
+-   installing R
 
-- installing R
+-   starting R
 
-- starting R
-
-- installing R packages
+-   installing R packages
 
 ::: agenda-active
-- reproducible environments
+-   reproducible environments
 :::
 
-- upgrading R
+-   upgrading R
 :::
 
-## environments.rstudio.com
+## environments
+
+<https://environments.rstudio.com>
 
 ## spectrum
 
@@ -668,16 +627,13 @@ ggplot() +
 
 ![](img/renv.png){.r-stretch}
 
-::: {.notes}
-renv has a number of tools that are helpful for adopting a project-based workflow:
-- lockfile records what packages you use and where you instaled them from
-- `renv::install()` can handle installation from remote sources, local sources, package versions, bioconductor, rspm
-- per-project library isolation with global package cache makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn't work out
+::: notes
+renv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - `renv::install()` can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn't work out
 :::
 
 ## `renv::init()`
 
-```{.r code-line-numbers="|2|4"}
+``` {.r code-line-numbers="|2|4"}
 .libPaths()
 renv::init()
 .libPaths()
@@ -685,16 +641,13 @@ renv::deactivate()
 .libPaths()
 ```
 
-::: {.notes}
-run `.libPaths()` to see what your default package libraries are
-initialize an renv--you'll see that the environment is now local to the project
-note the .Rprofile that gets placed into your project, which runs an R script in `renv/activate.R`
-deactivate the environment and check libPaths() again--it should be back to normal
+::: notes
+run `.libPaths()` to see what your default package libraries are initialize an renv--you'll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in `renv/activate.R` deactivate the environment and check libPaths() again--it should be back to normal
 :::
 
 ## `renv.lock`
 
-```{.json}
+``` json
 {
   "R": {
     "Version": "4.1.2",
@@ -724,21 +677,17 @@ deactivate the environment and check libPaths() again--it should be back to norm
     ...
   }
 }
-
 ```
 
-::: {.notes}
-created from `renv::snapshot()`
-by default, identifies dependencies of your code
-for example: usethis doesn't usually appear in my lockfiles, because I'm running it interactively, rather than making it a dependency of my projects
+::: notes
+created from `renv::snapshot()` by default, identifies dependencies of your code for example: usethis doesn't usually appear in my lockfiles, because I'm running it interactively, rather than making it a dependency of my projects
 :::
-
 
 ## `renv::install()`
 
 or [`install.packages()`](https://rstudio.github.io/renv/articles/renv.html#shims) with shims enabled
 
-``` R
+``` r
 renv::install("jsonlite")
 renv::install("jsonlite@1.2") # at version
 renv::install("jeroen/jsonlite") # latest
@@ -748,8 +697,8 @@ renv::install("path/to/package") # local source
 
 <hr>
 
-::: {.fragment}
-```
+::: fragment
+``` r
 devtools::install()
 devtools::install_version()
 devtools::install_github()
@@ -764,43 +713,46 @@ for reprexes, tweets, and other ephemera:
 
 `~/Documents/scratch`
 
-:::{.notes}
-I use renv for everything, and have one junk project into which I install things without regard for stability or reproducibililty
+::: notes
+I use `renv` for everything, and have one junk project into which I install things without regard for stability or reproducibility
 :::
 
 ## rig
 
-launch rstudio from an renv lockfile:
+launch rstudio from an `renv` lockfile:
 
 ``` shell
 rig rstudio path/to/renv.lock
 ```
 
-
 ## activity
 
-- install dev jsonlite, then roll back to released version
-
-# upgrading R
- 
-::: agenda
-
-- installing R
-
-- starting R
-
-- installing R packages
-
-- reproducible environments
-
-::: agenda-active
-- upgrading R
+::: question
+-   install dev `jsonlite`, then roll back to released version
 :::
 
+```{R}
+countdown_timer(minutes = 1, bottom = 0)
+```
+
+# upgrading R
+
+::: agenda
+-   installing R
+
+-   starting R
+
+-   installing R packages
+
+-   reproducible environments
+
+::: agenda-active
+-   upgrading R
+:::
 :::
 
 ## rig + renv
 
-1. snapshot the project library with renv
-1. install a new version of R
-1. restore the project library in the new R version
+1.  snapshot the project library with `renv`
+2.  install a new version of R
+3.  restore the project library in the new R version
