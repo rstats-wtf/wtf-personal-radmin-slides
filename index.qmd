@@ -469,7 +469,23 @@ countdown_timer(minutes = 3, bottom = 0)
 -   Binary
 -   Source
 
-## binary
+"packages have to be compiled to run"
+the question is when
+- show how to set options for different environment managers
+- what does this look like in CI
+- insufficiently motivated?
+- you need the dev version of something
+
+- ?Workflows break w/ current CRAN package, need to go back to older package
+- Install package from github
+- Develop your own packages
+under: Make it explicit  why we care about installing from source
+
+- binaries are probably faster 
+- CRAN doesn't always have binaries available but you may not need them
+- 
+
+## Binary
 
 -   compiled ahead of time
 -   only R is needed to install
@@ -482,11 +498,7 @@ countdown_timer(minutes = 3, bottom = 0)
 | {{< fa brands apple >}} mac OS    | :white_check_mark: |            :x:            |
 | {{< fa brands linux >}} linux     |        :x:         |    :white_check_mark:     |
 
-<br>
-
-\* [RStudio Package Manager](https://packagemanager.rstudio.com/)
-
-## source
+## Source
 
 -   compiled in development environment
 -   requires extra tools when package uses C, C++ or Fortran
@@ -496,6 +508,8 @@ One additional complication for \*nix users: generally on windows can install an
 :::
 
 ## if you don't have tools
+
+- set context about installing from github
 
 ``` {.r code-line-numbers="11"}
 Running `R CMD build`...
@@ -530,11 +544,14 @@ rig add rtools
 
 XCode
 
+"maybe don't run this right this second"
+
 ``` shell
 xcode-select --install
 ```
 
 or download from the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
+
 
 ### linux
 
@@ -559,17 +576,19 @@ devtools::has_devel()
 install a package from source
 :::
 
-<br>
 
-``` r
-install.packages("jsonlite", type = "source")
+```{.r}
+devtools::install_github("jeroen/jsonlite")
 ```
 
 ```{R}
 countdown_timer(minutes = 3, bottom = 0)
 ```
 
-# reproducible environments
+
+
+
+# reproducible environments {background-color="#333399"}
 
 ::: agenda
 -   installing R
@@ -585,9 +604,8 @@ countdown_timer(minutes = 3, bottom = 0)
 -   upgrading R
 :::
 
-## environments
 
-<https://environments.rstudio.com>
+## environments.rstudio.com
 
 ## spectrum
 
@@ -647,9 +665,19 @@ renv::deactivate()
 .libPaths()
 ```
 
-::: notes
-run `.libPaths()` to see what your default package libraries are initialize an renv--you'll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in `renv/activate.R` deactivate the environment and check libPaths() again--it should be back to normal
+why are we doing this?
+- don't break your old dashboards
+- where is this actually going
+- talk more explicitly about the behavior of renv
+- steal kevin's graphics on renv
+
+::: {.notes}
+run `.libPaths()` to see what your default package libraries are
+initialize an renv--you'll see that the environment is now local to the project
+note the .Rprofile that gets placed into your project, which runs an R script in `renv/activate.R`
+deactivate the environment and check libPaths() again--it should be back to normal
 :::
+
 
 ## `renv.lock`
 
@@ -730,6 +758,32 @@ launch rstudio from an `renv` lockfile:
 ``` shell
 rig rstudio path/to/renv.lock
 ```
+
+## using publiic package manager
+
+
+## activity
+
+a) create two projects
+
+just use status messages rather than showing people lockfile
+
+a) using renv, 
+install.packages("renv")
+install("jeroen/jsonlite")
+install jsonlite from github
+then install from CRAN to roll back
+
+more explanation of global cache
+
+
+then roll back to released version
+
+b) restore the environment from an existing project
+- an old one of yours from github
+- create an environment for a tidyverse package
+
+dtplyr renv example where across isn't implementeed
 
 ## activity
 
