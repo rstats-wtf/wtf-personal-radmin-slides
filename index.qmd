@@ -856,6 +856,60 @@ what version of dplyr did you install?
 countdown_timer(minutes = 5, bottom = 0)
 ```
 
+## shared project environment
+
+```{mermaid}
+graph
+L --- P1
+L --- P2
+L --- P3
+L(library)
+P1(project1)
+P2(project2)
+P3(project3)
+```
+
+## isolated project environments
+
+```{mermaid}
+graph
+L1 --- P1
+L2 --- P2
+L3 --- P3
+L1(library)
+L2(library)
+L3(library)
+P1(project1)
+P2(project2)
+P3(project3)
+```
+
+## global package cache
+
+```{mermaid}
+graph
+C --- L1
+C --- L2
+C --- L3
+L1 --- P1
+L2 --- P2
+L3 --- P3
+L1(library1)
+L2(library2)
+L3(library3)
+P1(project1)
+P2(project2)
+P3(project3)
+C(global cache)
+```
+
+## isolated project environments
+
+- experiment with new packages without breaking other projects
+- share exactly which versions you're using with your team or future you
+- re-use packages you've already installed
+
+
 ## `renv::init()`
 
 ``` {.r code-line-numbers="|2|4"}
