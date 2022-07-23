@@ -144,7 +144,7 @@
     "href": "index.html#activity-1",
     "title": "",
     "section": "activity",
-    "text": "activity\n\nedit your user .Rprofileedit your project Renviron\n\n\n\nusethis::edit_r_profile()\nadd print(\"from my user Rprofile\")\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nwhat value is printed when you restart?\n\n\n\n\nusethis::edit_r_environ(\"project\")\nadd print(\"from my project Rprofile\")\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nwhat value is printed when you restart?\n\n\n\n\n\n\n\n05:00\n\n\n\n\nproject .Rprofile “short-circuits”\nif it exists, your user .Rprofile will not be evaluated"
+    "text": "activity\n\nedit your user .Rprofileedit your project .Rprofile\n\n\n\nusethis::edit_r_profile()\nadd print(\"from my user Rprofile\")\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nwhat value is printed when you restart?\n\n\n\n\nusethis::edit_r_profile(\"project\")\nadd print(\"from my project Rprofile\")\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nwhat value is printed when you restart?\n\n\n\n\n\n\n\n05:00\n\n\n\n\nproject .Rprofile “short-circuits”\nif it exists, your user .Rprofile will not be evaluated"
   },
   {
     "objectID": "index.html#wrapping-up",
@@ -158,28 +158,98 @@
     "href": "index.html#why-1",
     "title": "",
     "section": "why",
-    "text": "why"
+    "text": "why\n\n\nhaving a reason to slack off is fun but being able to get your work done quickly is more fun"
   },
   {
-    "objectID": "index.html#types-of-r-packages",
-    "href": "index.html#types-of-r-packages",
+    "objectID": "index.html#states-of-r-packages",
+    "href": "index.html#states-of-r-packages",
     "title": "",
-    "section": "types of R packages",
-    "text": "types of R packages\n\nBinary\nSource\n\n“packages have to be compiled to run” the question is when - show how to set options for different environment managers - what does this look like in CI - insufficiently motivated? - you need the dev version of something\n\n?Workflows break w/ current CRAN package, need to go back to older package\nInstall package from github\nDevelop your own packages under: Make it explicit why we care about installing from source\nbinaries are probably faster\nCRAN doesn’t always have binaries available but you may not need them"
+    "section": "states of R packages",
+    "text": "states of R packages\n\n\n\n\nstateDiagram-v2\nstate theWholeGame {\n[*] --> Source\nSource --> Bundled: devtools#58;#58;build()\nBundled --> Binary: devtools#58;#58;build(binary = TRUE)\nBinary --> Installed: install.packages()\nInstalled --> Loaded: library()\nLoaded --> [*]\n}"
+  },
+  {
+    "objectID": "index.html#states-of-r-packages-1",
+    "href": "index.html#states-of-r-packages-1",
+    "title": "",
+    "section": "states of R packages",
+    "text": "states of R packages\n\n\n\n\nstateDiagram-v2\ndirection LR\n[*] --> Dev\nDev --> Use\nstate Dev {\n  [*] --> Source\n  Source --> Bundled: devtools#58;#58;build()\n  Bundled --> Binary: devtools#58;#58;build(binary = TRUE)\n}\nstate Use {\n  binary --> Installed: install.packages()\n  Installed --> Loaded: library()\n  Loaded --> [*]\n}"
+  },
+  {
+    "objectID": "index.html#r-pkgs.org",
+    "href": "index.html#r-pkgs.org",
+    "title": "",
+    "section": "r-pkgs.org",
+    "text": "r-pkgs.org\nhttps://r-pkgs.org/Structure.html\n\n“packages have to be compiled to run” the question is when - show how to set options for different environment managers - what does this look like in CI - insufficiently motivated? - you need the dev version of something\n\n?Workflows break w/ current CRAN package, need to go back to older package\nInstall package from github\nDevelop your own packages under: Make it explicit why we care about installing from source\nbinaries are probably faster\nCRAN doesn’t always have binaries available but you may not need them"
   },
   {
     "objectID": "index.html#binary",
     "href": "index.html#binary",
     "title": "",
     "section": "Binary",
-    "text": "Binary\n\ncompiled ahead of time\nonly R is needed to install"
+    "text": "Binary\n\ncompiled ahead of time\neasiest to install"
   },
   {
     "objectID": "index.html#where-to-get-binaries",
     "href": "index.html#where-to-get-binaries",
     "title": "",
     "section": "where to get binaries",
-    "text": "where to get binaries\n\n\n\n\n\n\n\n\n\nCRAN\nRStudio Package Manager*\n\n\n\n\n windows\n✅\n✅\n\n\n mac OS\n✅\n❌\n\n\n linux\n❌\n✅"
+    "text": "where to get binaries\n\n\n\n\n\n\n\n\n\nCRAN\nPublic RStudio Package Manager\n\n\n\n\n windows\n✅\n✅\n\n\n mac OS\n✅\n❌\n\n\n linux\n❌\n✅"
+  },
+  {
+    "objectID": "index.html#are-binaries-available",
+    "href": "index.html#are-binaries-available",
+    "title": "",
+    "section": "are binaries available?",
+    "text": "are binaries available?"
+  },
+  {
+    "objectID": "index.html#cran",
+    "href": "index.html#cran",
+    "title": "",
+    "section": "CRAN",
+    "text": "CRAN"
+  },
+  {
+    "objectID": "index.html#may-not-be-the-latest",
+    "href": "index.html#may-not-be-the-latest",
+    "title": "",
+    "section": "may not be the latest",
+    "text": "may not be the latest"
+  },
+  {
+    "objectID": "index.html#may-not-be-the-latest-1",
+    "href": "index.html#may-not-be-the-latest-1",
+    "title": "",
+    "section": "may not be the latest",
+    "text": "may not be the latest\n> install.packages(\"parallelly\", repos = \"https://cran.rstudio.com\")\n\nInstalling package into ‘C:/Users/WDAGUtilityAccount/Documents/R/win-library/4.0’\n(as ‘lib’ is unspecified)\n\n  There is a binary version available but the source version is later:\n           binary source needs_compilation\nparallelly 1.31.0 1.32.1             FALSE\n\ninstalling the source package ‘parallelly’\n\ntrying URL 'https://cran.rstudio.com/src/contrib/parallelly_1.32.1.tar.gz'\nContent type 'application/x-gzip' length 124853 bytes (121 KB)\ndownloaded 121 KB\n\n* installing *source* package 'parallelly' ...\n** package 'parallelly' successfully unpacked and MD5 sums checked\n** using staged installation\n** R\n** inst\n** byte-compile and prepare package for lazy loading\n** help\n*** installing help indices\n  converting help for package 'parallelly'\n    finding HTML links ... done\n    as.cluster                              html  \n    autoStopCluster                         html  \n    availableConnections                    html  \n    availableCores                          html  \n    availableWorkers                        html  \n    canPortBeUsed                           html  \n    cpuLoad                                 html  \n    find_rshcmd                             html  \n    freeCores                               html  \n    freePort                                html  \n    getOption2                              html  \n    isConnectionValid                       html  \n    isForkedChild                           html  \n    isForkedNode                            html  \n    isLocalhostNode                         html  \n    isNodeAlive                             html  \n    makeClusterMPI                          html  \n    makeClusterPSOCK                        html  \n    parallelly.options                      html  \n    pid_exists                              html  \n    supportsMulticore                       html  \n*** copying figures\n** building package indices\n** testing if installed package can be loaded from temporary location\n*** arch - i386\n*** arch - x64\n** testing if installed package can be loaded from final location\n*** arch - i386\n*** arch - x64\n** testing if installed package keeps a record of temporary installation path\n* DONE (parallelly)"
+  },
+  {
+    "objectID": "index.html#rstudio-package-manager",
+    "href": "index.html#rstudio-package-manager",
+    "title": "",
+    "section": "RStudio Package Manager",
+    "text": "RStudio Package Manager"
+  },
+  {
+    "objectID": "index.html#rspm",
+    "href": "index.html#rspm",
+    "title": "",
+    "section": "RSPM",
+    "text": "RSPM"
+  },
+  {
+    "objectID": "index.html#how-do-i-know-i-got-a-binary-package",
+    "href": "index.html#how-do-i-know-i-got-a-binary-package",
+    "title": "",
+    "section": "how do I know I got a binary package?",
+    "text": "how do I know I got a binary package?\n\nbaserenv\n\n\n> install.packages(\"remotes\")\nhttps://cran.rstudio.com/bin/windows/Rtools/\nInstalling package into ‘C:/Users/WDAGUtilityAccount/AppData/Local/R/win-library/4.2’\n(as ‘lib’ is unspecified)\ntrying URL 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/remotes_2.4.2.zip'\nContent type 'binary/octet-stream' length 399930 bytes (390 KB)\ndownloaded 390 KB\n\npackage ‘remotes’ successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n  C:\\Users\\WDAGUtilityAccount\\AppData\\Local\\Temp\\RtmpA1edRi\\downloaded_packages\n\n\n> renv::install(\"fs\")\nRetrieving 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/fs_1.5.2.zip' ...\n  OK [downloaded 380.9 Kb in 0.5 secs]\nInstalling fs [1.5.2] ...\n  OK [installed binary]\nMoving fs [1.5.2] into the cache ...\n  OK [moved to cache in 7.4 milliseconds]"
+  },
+  {
+    "objectID": "index.html#pop-quiz-hotshot",
+    "href": "index.html#pop-quiz-hotshot",
+    "title": "",
+    "section": "pop quiz, hotshot",
+    "text": "pop quiz, hotshot\n\nDoes RStudio Package Manager serve a binary of dplyr for R 3.4?\n\n\n\n\n02:00"
   },
   {
     "objectID": "index.html#source",
@@ -214,7 +284,7 @@
     "href": "index.html#activity-2",
     "title": "",
     "section": "activity",
-    "text": "activity\n\ninstall a package from source\n\ndevtools::install_github(\"jeroen/jsonlite\")\n\n\n\n03:00"
+    "text": "activity\n\ninstall a package from source\n\ndevtools::install_github(\"jeroen/jsonlite\")\n\n\n\n05:00"
   },
   {
     "objectID": "index.html#environments.rstudio.com",
@@ -231,8 +301,8 @@
     "text": "spectrum"
   },
   {
-    "objectID": "index.html#renv",
-    "href": "index.html#renv",
+    "objectID": "index.html#renv-1",
+    "href": "index.html#renv-1",
     "title": "",
     "section": "renv",
     "text": "renv\n\n\nrenv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - renv::install() can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out"
