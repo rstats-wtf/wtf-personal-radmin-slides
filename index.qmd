@@ -361,9 +361,9 @@ if (.Platform$OS.type == "windows") {
   `CMD  + SHIFT + 0 `
 1. what value is printed when you restart?
 
-### edit your project Renviron {.smaller}
+### edit your project `.Rprofile` {.smaller}
 
-1. `usethis::edit_r_environ("project")`
+1. `usethis::edit_r_profile("project")`
 1. add `print("from my project Rprofile")`
 1. restart your R session  
   `CTRL + SHIFT + F10`  
@@ -422,10 +422,49 @@ if it exists, your user `.Rprofile` will not be evaluated
 
 ![](img/slacking-tidyverse.png)
 
-## types of R packages
+::: notes
+having a reason to slack off is fun but being able to get your work done quickly is more fun
+:::
 
--   Binary
--   Source
+## states of R packages
+
+```{mermaid}
+stateDiagram-v2
+state theWholeGame {
+[*] --> Source
+Source --> Bundled: devtools#58;#58;build()
+Bundled --> Binary: devtools#58;#58;build(binary = TRUE)
+Binary --> Installed: install.packages()
+Installed --> Loaded: library()
+Loaded --> [*]
+}
+```
+
+## states of R packages
+
+```{mermaid}
+stateDiagram-v2
+direction LR
+[*] --> Dev
+Dev --> Use
+state Dev {
+  [*] --> Source
+  Source --> Bundled: devtools#58;#58;build()
+  Bundled --> Binary: devtools#58;#58;build(binary = TRUE)
+}
+state Use {
+  binary --> Installed: install.packages()
+  Installed --> Loaded: library()
+  Loaded --> [*]
+}
+```
+
+## r-pkgs.org
+
+https://r-pkgs.org/Structure.html
+
+
+::: notes
 
 "packages have to be compiled to run"
 the question is when
@@ -441,19 +480,144 @@ under: Make it explicit  why we care about installing from source
 
 - binaries are probably faster 
 - CRAN doesn't always have binaries available but you may not need them
+:::
 
 ## Binary
 
 -   compiled ahead of time
--   only R is needed to install
+-   easiest to install
 
 ## where to get binaries
 
-|                                   |        CRAN        | RStudio Package Manager\* |
-|------------------------|:----------------------:|:----------------------:|
+|                                   |        CRAN        | Public RStudio \n Package Manager   |
+|-----------------------------------|:------------------:|:-------------------------:|
 | {{< fa brands windows >}} windows | :white_check_mark: |    :white_check_mark:     |
 | {{< fa brands apple >}} mac OS    | :white_check_mark: |            :x:            |
 | {{< fa brands linux >}} linux     |        :x:         |    :white_check_mark:     |
+
+## are binaries available?
+
+## CRAN
+
+![](img/connectapi-cran-binary-highlight.png)
+
+## may not be the latest
+
+![](img/parallely-versions-highlight.png)
+
+## may not be the latest
+
+```{.r code-line-numbers="6-8"}
+> install.packages("parallelly", repos = "https://cran.rstudio.com")
+
+Installing package into ‘C:/Users/WDAGUtilityAccount/Documents/R/win-library/4.0’
+(as ‘lib’ is unspecified)
+
+  There is a binary version available but the source version is later:
+           binary source needs_compilation
+parallelly 1.31.0 1.32.1             FALSE
+
+installing the source package ‘parallelly’
+
+trying URL 'https://cran.rstudio.com/src/contrib/parallelly_1.32.1.tar.gz'
+Content type 'application/x-gzip' length 124853 bytes (121 KB)
+downloaded 121 KB
+
+* installing *source* package 'parallelly' ...
+** package 'parallelly' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+  converting help for package 'parallelly'
+    finding HTML links ... done
+    as.cluster                              html  
+    autoStopCluster                         html  
+    availableConnections                    html  
+    availableCores                          html  
+    availableWorkers                        html  
+    canPortBeUsed                           html  
+    cpuLoad                                 html  
+    find_rshcmd                             html  
+    freeCores                               html  
+    freePort                                html  
+    getOption2                              html  
+    isConnectionValid                       html  
+    isForkedChild                           html  
+    isForkedNode                            html  
+    isLocalhostNode                         html  
+    isNodeAlive                             html  
+    makeClusterMPI                          html  
+    makeClusterPSOCK                        html  
+    parallelly.options                      html  
+    pid_exists                              html  
+    supportsMulticore                       html  
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+*** arch - i386
+*** arch - x64
+** testing if installed package can be loaded from final location
+*** arch - i386
+*** arch - x64
+** testing if installed package keeps a record of temporary installation path
+* DONE (parallelly)
+```
+
+## [RStudio Package Manager](https://packagemanager.rstudio.com)
+
+![](img/rspm-binaries.png)
+
+## RSPM
+
+![](img/rspm-binaries-zoom-highlight.png)
+
+## how do I know I got a binary package?
+
+::: panel-tabset
+
+### base
+
+``` {.r code-line-numbers="6"}
+> install.packages("remotes")
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/WDAGUtilityAccount/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/remotes_2.4.2.zip'
+Content type 'binary/octet-stream' length 399930 bytes (390 KB)
+downloaded 390 KB
+
+package ‘remotes’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+  C:\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpA1edRi\downloaded_packages
+```
+
+### renv
+
+```{.r code-line-numbers="5"}
+> renv::install("fs")
+Retrieving 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/fs_1.5.2.zip' ...
+  OK [downloaded 380.9 Kb in 0.5 secs]
+Installing fs [1.5.2] ...
+  OK [installed binary]
+Moving fs [1.5.2] into the cache ...
+  OK [moved to cache in 7.4 milliseconds]
+```
+:::
+
+## pop quiz, hotshot
+
+::: question
+Does RStudio Package Manager serve a binary of `dplyr` for R 3.4?
+:::
+
+```{R}
+countdown_timer(minutes = 2, bottom = 0)
+```
+
 
 ## Source
 
@@ -535,11 +699,8 @@ devtools::install_github("jeroen/jsonlite")
 ```
 
 ```{R}
-countdown_timer(minutes = 3, bottom = 0)
+countdown_timer(minutes = 5, bottom = 0)
 ```
-
-
-
 
 # focus areas {background-color="#333399"}
 
