@@ -690,8 +690,12 @@ devtools::has_devel()
 install a package from r-universe
 :::
 
+::: {.small}
+
+1. open the `XXX` project
 1. `install.packages("gitcellar")` # not on cran!
 1. update your project `.Rprofile`:
+`usethis::edit_r_profile(scope = "project")`
 
     ```{.r code-line-numbers="false"}
     options(repos = c(
@@ -701,11 +705,13 @@ install a package from r-universe
     ))
     ```
 
-1. restart R
+1. save `.Rprofile`, restart R
 1. `install.packages("gitcellar")`
 
+:::
+
 ```{R}
-countdown_timer(minutes = 10, bottom = 0)
+countdown_timer(minutes = 5, bottom = 0)
 ```
 
 ## discussion
