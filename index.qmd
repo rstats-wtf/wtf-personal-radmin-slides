@@ -731,47 +731,79 @@ binaries are usually preferred, but for development versions of packages, you ma
 - installing / upgrading R
 :::
 
+## why?
 
-## environments.rstudio.com
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The quick and dirty approach you took then comes right back at you as a boomerang. <br><br>Therefore, ban the concept of one-off altogether. No matter what the asker says, it will have to be done again, always!<br><br>3/9</p>&mdash; Edwin Thoen (@edwin_thoen) <a href="https://twitter.com/edwin_thoen/status/1526261181631152129?ref_src=twsrc%5Etfw">May 16, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-## spectrum
+## reproducibility strategies
 
-```{r spectrum, echo = FALSE, fig.height=5, fig.width=8}
+```{r}
 library(ggplot2)
 library(tibble)
-timeline <- tribble(
-  ~x, ~y, 
-  0, 1,
-  16, 1
+library(ggrepel)
+library(plotly)
+mm <- tribble(
+  ~x, ~y, ~label, ~Description, ~status,
+  0.1, 0.1, 'Validated', 'Admins test and approve \n a subset of CRAN', TRUE,
+  0.5, 0.5, 'Shared Baseline', 'All or most of CRAN, \n updated with R versions, \n tied to a system library', TRUE,
+  0.5, 0.75, 'Wild West', 'Open access, \n not reproducible, \n how we learn', FALSE,
+  0.8,0.8, 'Snapshot', 'Open access, user or system \n records per-project dependencies', TRUE,
+  0.75, 0.2, 'Blocked', 'Backdoor package access, \n offline systems without a strategy', FALSE,
+  0.2, 0.8, 'Ticket System', 'Admins involved, \n no testing, \n slow updates, \n high risk of breakage', FALSE
 )
-labels <- tribble(
-  ~x, ~y, ~label,
-  0, 1.1, "No Strategy",
-  4, 1.1, "Awareness",
-  8, 1.1, "Shared Baseline",
-  12, 1.1, "Record & Restore",
-  16, 1.1, "Validated",
+bad1 <- tribble(
+  ~x, ~y, ~label, ~Description, ~status,
+  0, 0.2, NA, NA, NA,
+  0, 1,NA, NA, NA,
+  0.8, 1, NA, NA, NA
 )
-details <- tribble(
-  ~x, ~y, ~label,
-  0, 0.9, "scary upgrades \n no sharing \n old stuff is broken",
-  4, 0.9, "reprex \n sessioninfo() \n devtools::session_info()", 
-  8, 0.9, "site library \n frozen repo",
-  12, 0.9, "renv",
-  16, 0.9, "internal repo \ncustom tests"
+bad2 <- tribble(
+  ~x, ~y, ~label, ~Description, ~status,
+  0.2, 0, NA, NA, NA,
+  1, 0,NA, NA, NA,
+  1, 0.8, NA, NA, NA
 )
-ggplot() + 
-  geom_path(data = timeline, aes(x,y),  color = "black") + 
-  geom_label(data = labels, aes(x,y,label=label)) + 
-  geom_text(data = details, aes(x,y,label=label)) + 
+good <- tribble(
+  ~x, ~y, ~label, ~Description, ~status,
+  0, -0.2,NA, NA, NA,
+  1, 0.8, NA, NA, NA,
+  0.8, 1, NA, NA, NA,
+  0, 0.2, NA, NA, NA
+)
+good2 <- tribble(
+  ~x, ~y, ~label, ~Description, ~status,
+  0, 0,NA, NA, NA,
+  0, 0.2, NA, NA, NA,
+  1, 0.8, NA, NA, NA,
+  0.2, 0, NA, NA, NA
+)
+p <- ggplot(mm, aes(x, y)) + 
+  geom_abline(slope = 1, intercept = 0.2, alpha = 0.2) + 
+  geom_polygon(aes(x,y, text = Description), fill = "red", data=bad1, alpha = 0.1) + 
+  geom_polygon(aes(x,y, text = Description), fill = "green", data=good, alpha = 0.1) + 
+  geom_polygon(aes(x,y, text = NULL), fill = "green", data=good2, alpha = 0.1) + 
+  geom_polygon(aes(x,y, text = Description), fill = "red", data=bad2, alpha = 0.1) +
+  geom_abline(slope = 1, intercept = -0.2, alpha = 0.2) + 
+  geom_point(aes(x, y, color = status, text = Description)) + 
+  geom_text(aes(x, y, label = label), nudge_y = 0.025, nudge_x  = 0.025) + 
+  scale_x_continuous(limits = c(0,1), breaks = seq(0,1,0.25), labels = c("Admins","", "", "", "Users")) +
+  scale_y_continuous(limits = c(0,1), breaks = seq(0,1,0.25), labels =  c("Locked Down","", "", "", "Open")) +
   theme_minimal() + 
-  scale_x_continuous(breaks = NULL, limits = c(-2,17)) + 
-  scale_y_continuous(breaks = NULL, limits = c(0.5, 1.5)) + 
+  scale_color_manual(breaks = NULL, values = c("#ff0000","#a3c586")) + 
+  
   labs(
-    title = NULL,
-    x = NULL,
-    y = NULL
+    x = "Who is Responsible for Reproducing the Environment?",
+    y = "Package Access",
+    color = NULL,
+    title = "Reproducing Environments: Strategies and Danger Zones"
   )
+p
+```
+
+## reproducibility strategies {transition="none"}
+
+```{r}
+p + annotate("rect", xmin = .75, xmax = .95, ymin = .75, ymax = .95, alpha = .2)
 ```
 
 ## renv
@@ -779,7 +811,11 @@ ggplot() +
 ![](img/renv.png){.r-stretch}
 
 ::: notes
-renv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - `renv::install()` can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn't work out
+renv has a number of tools that are helpful for adopting a project-based workflow: 
+- lockfile records what packages you use and where you instaled them from 
+- `renv::install()` can handle installation from remote sources, local sources, package versions, bioconductor, rspm 
+- per-project library isolation with global package cache 
+  -makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn't work out
 :::
 
 ## `renv::init()`
@@ -877,14 +913,6 @@ for reprexes, tweets, and other ephemera:
 ::: notes
 I use `renv` for everything, and have one junk project into which I install things without regard for stability or reproducibility
 :::
-
-## rig
-
-launch rstudio from an `renv` lockfile:
-
-``` shell
-rig rstudio path/to/renv.lock
-```
 
 ## using publiic package manager
 
