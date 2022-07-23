@@ -630,8 +630,6 @@ One additional complication for \*nix users: generally on windows can install an
 
 ## if you don't have tools
 
-- set context about installing from github
-
 ``` {.r code-line-numbers="11"}
 Running `R CMD build`...
 * checking for file 'C:\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpkTUH61\remotes192027624804\tidyverse-dplyr-36ef054/DESCRIPTION' ... OK
@@ -657,7 +655,6 @@ ERROR: package installation failed
 ### windows
 
 [Rtools](https://cran.r-project.org/bin/windows/Rtools/)
-
 
 ### macOS
 
@@ -690,17 +687,35 @@ devtools::has_devel()
 ## activity
 
 ::: question
-install a package from source
+install a package from r-universe
 :::
 
+1. `install.packages("gitcellar")` # not on cran!
+1. update your project `.Rprofile`:
 
-```{.r}
-devtools::install_github("jeroen/jsonlite")
-```
+    ```{.r code-line-numbers="false"}
+    options(repos = c(
+      ropensci = "https://ropensci.r-universe.dev",
+      CRAN = "https://cloud.r-project.org", # macOS
+      RSPM = "https://packagemanager.rstudio.com/cran/latest" # windows
+    ))
+    ```
+
+1. restart R
+1. `install.packages("gitcellar")`
 
 ```{R}
-countdown_timer(minutes = 5, bottom = 0)
+countdown_timer(minutes = 10, bottom = 0)
 ```
+
+## discussion
+
+- did you install `gitcellar` from binary or source?
+  - How do you know?
+
+## wrapping up
+
+binaries are usually preferred, but for development versions of packages, you may need to install from source.
 
 # focus areas {background-color="#333399"}
 
