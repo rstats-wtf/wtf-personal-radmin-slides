@@ -301,25 +301,32 @@
     "text": "wrapping up\nbinaries are usually preferred, but for development versions of packages, you may need to install from source."
   },
   {
-    "objectID": "index.html#environments.rstudio.com",
-    "href": "index.html#environments.rstudio.com",
+    "objectID": "index.html#why-2",
+    "href": "index.html#why-2",
     "title": "",
-    "section": "environments.rstudio.com",
-    "text": "environments.rstudio.com"
+    "section": "why?",
+    "text": "why?\n\n\nThe quick and dirty approach you took then comes right back at you as a boomerang. Therefore, ban the concept of one-off altogether. No matter what the asker says, it will have to be done again, always!3/9\n\n— Edwin Thoen (@edwin_thoen) May 16, 2022"
   },
   {
-    "objectID": "index.html#spectrum",
-    "href": "index.html#spectrum",
+    "objectID": "index.html#reproducibility-strategies",
+    "href": "index.html#reproducibility-strategies",
     "title": "",
-    "section": "spectrum",
-    "text": "spectrum"
+    "section": "reproducibility strategies",
+    "text": "reproducibility strategies"
+  },
+  {
+    "objectID": "index.html#reproducibility-strategies-1",
+    "href": "index.html#reproducibility-strategies-1",
+    "title": "",
+    "section": "reproducibility strategies",
+    "text": "reproducibility strategies"
   },
   {
     "objectID": "index.html#renv-1",
     "href": "index.html#renv-1",
     "title": "",
     "section": "renv",
-    "text": "renv\n\n\nrenv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - renv::install() can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out"
+    "text": "renv\n\n\nrenv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - renv::install() can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache -makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out"
   },
   {
     "objectID": "index.html#renvinit",
@@ -348,13 +355,6 @@
     "title": "",
     "section": "the junk drawer",
     "text": "the junk drawer\nfor reprexes, tweets, and other ephemera:\n~/Documents/scratch\n\nI use renv for everything, and have one junk project into which I install things without regard for stability or reproducibility"
-  },
-  {
-    "objectID": "index.html#rig",
-    "href": "index.html#rig",
-    "title": "",
-    "section": "rig",
-    "text": "rig\nlaunch rstudio from an renv lockfile:\nrig rstudio path/to/renv.lock"
   },
   {
     "objectID": "index.html#using-publiic-package-manager",
@@ -406,8 +406,8 @@
     "text": "clickOps"
   },
   {
-    "objectID": "index.html#rig-1",
-    "href": "index.html#rig-1",
+    "objectID": "index.html#rig",
+    "href": "index.html#rig",
     "title": "",
     "section": "rig",
     "text": "rig\nhttps://github.com/r-lib/rig/"
