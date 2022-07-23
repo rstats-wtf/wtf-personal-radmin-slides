@@ -806,9 +806,19 @@ p
 p + annotate("rect", xmin = .75, xmax = .95, ymin = .75, ymax = .95, alpha = .2)
 ```
 
-## renv
+## tools
 
-![](img/renv.png){.r-stretch}
+:::: columns
+::: column
+### rspm
+![](img/icon-rspm.png){.r-stretch}
+:::
+
+::: column
+### renv
+![](img/renv-small.png){.r-stretch}
+:::
+::::
 
 ::: notes
 renv has a number of tools that are helpful for adopting a project-based workflow: 
@@ -817,6 +827,34 @@ renv has a number of tools that are helpful for adopting a project-based workflo
 - per-project library isolation with global package cache 
   -makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn't work out
 :::
+
+## rspm: latest
+
+![](img/rspm-latest.png)
+
+## rspm: date-based snapshots
+
+![](img/rspm-2021-03-31-highlight.png)
+
+## activity
+
+::: question
+time travel!
+:::
+
+1. update your project `.Rprofile` with a date-based snapshot of CRAN
+
+    ```{.r code-line-numbers="false"}
+    options(repos = c(RSPM = "https://packagemanager.rstudio.com/cran/2021-03-31"))
+    ```
+1. Restart R
+1. `install.packages("dplyr")`  
+
+what version of dplyr did you install?
+
+```{R}
+countdown_timer(minutes = 5, bottom = 0)
+```
 
 ## `renv::init()`
 
