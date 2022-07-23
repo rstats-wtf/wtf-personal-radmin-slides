@@ -11,6 +11,7 @@ format:
     chalkboard: true
     navigation-mode: linear
     controls: false
+    mermaid-format: svg
 execute:
   freeze: auto
 from: markdown+emoji
@@ -113,7 +114,7 @@ this is intended to provide context on my priorities / habits of thought:
 We're extending the lessons from Day 1 to think about what it means to work with R projects over time. That means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts. Working on an old project on a new computer is a lot like trying to put an app into production.
 :::
 
-## focus areas
+## focus areas {background-color="#333399"}
 
 ::: agenda
 -   starting R
@@ -123,7 +124,7 @@ We're extending the lessons from Day 1 to think about what it means to work with
 :::
 
 
-# focus areas
+# focus areas {background-color="#333399"}
 
 ::: agenda
 
@@ -402,7 +403,7 @@ if it exists, your user `.Rprofile` will not be evaluated
 :::
 ::::
 
-# focus areas
+# focus areas {background-color="#333399"}
 
 ::: agenda
 
@@ -868,23 +869,16 @@ P1(project1)
 P2(project2)
 P3(project3)
 ```
+<br/>
 
-## isolated project environments
+### `.libPaths()`
 
-```{mermaid}
-graph
-L1 --- P1
-L2 --- P2
-L3 --- P3
-L1(library)
-L2(library)
-L3(library)
-P1(project1)
-P2(project2)
-P3(project3)
+```{.r code-line-numbers="false"}
+[1] "C:/Users/edavi/Documents/R/win-library/3.6" # user
+[2] "C:/Program Files/R/R-3.6.3/library" # system
 ```
 
-## global package cache
+## renv: isolated project environments
 
 ```{mermaid}
 graph
@@ -901,6 +895,15 @@ P1(project1)
 P2(project2)
 P3(project3)
 C(global cache)
+```
+
+### `.libPaths()`
+
+```{.r code-line-numbers="false"}
+* Project '~/projects/sample-project' loaded. [renv 0.15.5]
+> .libPaths()
+[1] "C:/Users/edavi/Documents/projects/sample-project/renv/library/R-3.6/x86_64-w64-mingw32"
+[2] "C:/Program Files/R/R-3.6.3/library"
 ```
 
 ## isolated project environments
