@@ -614,7 +614,7 @@ if values clash, <em>project</em> wins</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc445d" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc5c8f" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -686,7 +686,7 @@ if values clash, <em>project</em> wins</p>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="fu">library</span>(devtools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc4401" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc5ce9" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -735,7 +735,7 @@ if values clash, <em>project</em> wins</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc44ed" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc5d50" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1031,7 +1031,7 @@ state Use {
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc440a" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc5c45" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1123,7 +1123,7 @@ state Use {
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc44bf" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc5bb7" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1225,11 +1225,96 @@ The quick and dirty approach you took then comes right back at you as a boomeran
 <p>what version of dplyr did you install?</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc4519" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc5db8" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
+</section>
+<section id="shared-project-environment" class="slide level2">
+<h2>shared project environment</h2>
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-3">graph
+L --- P1
+L --- P2
+L --- P3
+L(library)
+P1(project1)
+P2(project2)
+P3(project3)
+</pre>
+<div id="mermaid-tooltip-3" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="isolated-project-environments" class="slide level2">
+<h2>isolated project environments</h2>
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-4">graph
+L1 --- P1
+L2 --- P2
+L3 --- P3
+L1(library)
+L2(library)
+L3(library)
+P1(project1)
+P2(project2)
+P3(project3)
+</pre>
+<div id="mermaid-tooltip-4" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="global-package-cache" class="slide level2">
+<h2>global package cache</h2>
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-5">graph
+C --- L1
+C --- L2
+C --- L3
+L1 --- P1
+L2 --- P2
+L3 --- P3
+L1(library1)
+L2(library2)
+L3(library3)
+P1(project1)
+P2(project2)
+P3(project3)
+C(global cache)
+</pre>
+<div id="mermaid-tooltip-5" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="isolated-project-environments-1" class="slide level2">
+<h2>isolated project environments</h2>
+<ul>
+<li>experiment with new packages without breaking other projects</li>
+<li>share exactly which versions you’re using with your team or future you</li>
+<li>re-use packages you’ve already installed</li>
+</ul>
 </section>
 <section id="renvinit" class="slide level2">
 <h2><code>renv::init()</code></h2>
@@ -1365,7 +1450,7 @@ The quick and dirty approach you took then comes right back at you as a boomeran
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc44a9" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc5de1" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1591,7 +1676,7 @@ nvm<br>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc4520" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62dc5bab" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>

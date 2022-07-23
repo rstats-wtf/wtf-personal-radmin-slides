@@ -350,6 +350,34 @@
     "text": "activity\n\ntime travel!\n\n\nupdate your project .Rprofile with a date-based snapshot of CRAN\noptions(repos = c(RSPM = \"https://packagemanager.rstudio.com/cran/2021-03-31\"))\nRestart R\ninstall.packages(\"dplyr\")\n\nwhat version of dplyr did you install?\n\n\n\n05:00"
   },
   {
+    "objectID": "index.html#shared-project-environment",
+    "href": "index.html#shared-project-environment",
+    "title": "",
+    "section": "shared project environment",
+    "text": "shared project environment\n\n\n\n\ngraph\nL --- P1\nL --- P2\nL --- P3\nL(library)\nP1(project1)\nP2(project2)\nP3(project3)"
+  },
+  {
+    "objectID": "index.html#isolated-project-environments",
+    "href": "index.html#isolated-project-environments",
+    "title": "",
+    "section": "isolated project environments",
+    "text": "isolated project environments\n\n\n\n\ngraph\nL1 --- P1\nL2 --- P2\nL3 --- P3\nL1(library)\nL2(library)\nL3(library)\nP1(project1)\nP2(project2)\nP3(project3)"
+  },
+  {
+    "objectID": "index.html#global-package-cache",
+    "href": "index.html#global-package-cache",
+    "title": "",
+    "section": "global package cache",
+    "text": "global package cache\n\n\n\n\ngraph\nC --- L1\nC --- L2\nC --- L3\nL1 --- P1\nL2 --- P2\nL3 --- P3\nL1(library1)\nL2(library2)\nL3(library3)\nP1(project1)\nP2(project2)\nP3(project3)\nC(global cache)"
+  },
+  {
+    "objectID": "index.html#isolated-project-environments-1",
+    "href": "index.html#isolated-project-environments-1",
+    "title": "",
+    "section": "isolated project environments",
+    "text": "isolated project environments\n\nexperiment with new packages without breaking other projects\nshare exactly which versions you’re using with your team or future you\nre-use packages you’ve already installed"
+  },
+  {
     "objectID": "index.html#renvinit",
     "href": "index.html#renvinit",
     "title": "",
