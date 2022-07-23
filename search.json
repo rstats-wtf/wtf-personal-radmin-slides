@@ -322,11 +322,32 @@
     "text": "reproducibility strategies"
   },
   {
-    "objectID": "index.html#renv-1",
-    "href": "index.html#renv-1",
+    "objectID": "index.html#tools",
+    "href": "index.html#tools",
     "title": "",
-    "section": "renv",
-    "text": "renv\n\n\nrenv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - renv::install() can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache -makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out"
+    "section": "tools",
+    "text": "tools\n\n\nrspm\n\n\nrenv\n\n\n\n\nrenv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - renv::install() can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache -makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out"
+  },
+  {
+    "objectID": "index.html#rspm-latest",
+    "href": "index.html#rspm-latest",
+    "title": "",
+    "section": "rspm: latest",
+    "text": "rspm: latest"
+  },
+  {
+    "objectID": "index.html#rspm-date-based-snapshots",
+    "href": "index.html#rspm-date-based-snapshots",
+    "title": "",
+    "section": "rspm: date-based snapshots",
+    "text": "rspm: date-based snapshots"
+  },
+  {
+    "objectID": "index.html#activity-3",
+    "href": "index.html#activity-3",
+    "title": "",
+    "section": "activity",
+    "text": "activity\n\ntime travel!\n\n\nupdate your project .Rprofile with a date-based snapshot of CRAN\noptions(repos = c(RSPM = \"https://packagemanager.rstudio.com/cran/2021-03-31\"))\nRestart R\ninstall.packages(\"dplyr\")\n\nwhat version of dplyr did you install?\n\n\n\n05:00"
   },
   {
     "objectID": "index.html#renvinit",
@@ -364,15 +385,15 @@
     "text": "using publiic package manager"
   },
   {
-    "objectID": "index.html#activity-3",
-    "href": "index.html#activity-3",
+    "objectID": "index.html#activity-4",
+    "href": "index.html#activity-4",
     "title": "",
     "section": "activity",
     "text": "activity\n\ncreate two projects\n\njust use status messages rather than showing people lockfile\n\nusing renv, install.packages(“renv”) install(“jeroen/jsonlite”) install jsonlite from github then install from CRAN to roll back\n\nmore explanation of global cache\nthen roll back to released version\n\nrestore the environment from an existing project\n\n\nan old one of yours from github\ncreate an environment for a tidyverse package\n\ndtplyr renv example where across isn’t implementeed"
   },
   {
-    "objectID": "index.html#activity-4",
-    "href": "index.html#activity-4",
+    "objectID": "index.html#activity-5",
+    "href": "index.html#activity-5",
     "title": "",
     "section": "activity",
     "text": "activity\n\n\ninstall dev jsonlite, then roll back to released version\n\n\n\n\n\n01:00"
@@ -441,8 +462,8 @@
     "text": "project\nusing your environment manager, install your project’s dependencies:\n\ncreate a new environment\nrenv::init()\nrestore a pre-defined environment\nrenv::restore()"
   },
   {
-    "objectID": "index.html#activity-5",
-    "href": "index.html#activity-5",
+    "objectID": "index.html#activity-6",
+    "href": "index.html#activity-6",
     "title": "",
     "section": "activity",
     "text": "activity\n\n\nread the rig FAQ, or the rswitch guide\ninstall a different major/minor version of R\n\nhttps://cran.r-project.org/bin/macosx/\nhttps://cran.r-project.org/bin/windows/base/old/\n\ninstall rig\n\nuse `rig to install a different major or minor version of R\nopen RStudio with that newly installed R version\n\n\n\n\n\n\n01:00"
