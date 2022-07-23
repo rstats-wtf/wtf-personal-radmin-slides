@@ -614,7 +614,7 @@ if values clash, <em>project</em> wins</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc0c16" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc1b57" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -686,7 +686,7 @@ if values clash, <em>project</em> wins</p>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="fu">library</span>(devtools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc0acd" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc1c5b" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -735,7 +735,7 @@ if values clash, <em>project</em> wins</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc0c3d" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc18c9" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1031,7 +1031,7 @@ state Use {
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc0b60" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc1c34" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1059,9 +1059,6 @@ state Use {
 </section>
 <section id="if-you-dont-have-tools" class="slide level2">
 <h2>if you don’t have tools</h2>
-<ul>
-<li>set context about installing from github</li>
-</ul>
 <div class="sourceCode" id="cb8" data-code-line-numbers="11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>Running <span class="st">`</span><span class="at">R CMD build</span><span class="st">`</span>...</span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="sc">*</span> checking <span class="cf">for</span> file <span class="st">'C:\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpkTUH61</span><span class="sc">\r</span><span class="st">emotes192027624804</span><span class="sc">\t</span><span class="st">idyverse-dplyr-36ef054/DESCRIPTION'</span> ... OK</span>
 <span id="cb8-3"><a href="#cb8-3"></a><span class="sc">*</span> preparing <span class="st">'dplyr'</span><span class="sc">:</span></span>
@@ -1111,16 +1108,39 @@ state Use {
 <section id="activity-2" class="slide level2">
 <h2>activity</h2>
 <div class="question">
-<p>install a package from source</p>
+<p>install a package from r-universe</p>
 </div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"jeroen/jsonlite"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol type="1">
+<li><p><code>install.packages("gitcellar")</code> # not on cran!</p></li>
+<li><p>update your project <code>.Rprofile</code>:</p>
+<div class="sourceCode" id="cb10" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ropensci =</span> <span class="st">"https://ropensci.r-universe.dev"</span>,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>, <span class="co"># macOS</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">RSPM =</span> <span class="st">"https://packagemanager.rstudio.com/cran/latest"</span> <span class="co"># windows</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>restart R</p></li>
+<li><p><code>install.packages("gitcellar")</code></p></li>
+</ol>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc0d68" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<div class="countdown" id="timer_62dc195d" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
+</section>
+<section id="discussion" class="slide level2">
+<h2>discussion</h2>
+<ul>
+<li>did you install <code>gitcellar</code> from binary or source?
+<ul>
+<li>How do you know?</li>
+</ul></li>
+</ul>
+</section>
+<section id="wrapping-up-1" class="slide level2">
+<h2>wrapping up</h2>
+<p>binaries are usually preferred, but for development versions of packages, you may need to install from source.</p>
 </section></section>
 <section>
 <section id="focus-areas-3" class="title-slide slide level1 center" data-background-color="#333399">
@@ -1303,7 +1323,7 @@ state Use {
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc0b23" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc1a33" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1529,7 +1549,7 @@ nvm<br>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc09f2" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62dc1c7c" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
