@@ -52,6 +52,12 @@ countdown_timer <- function(
 [rstd.io/wtf-2022-rsc](https://github.com/rstudio-conf-2022/wtf-rstats)
 :::
 
+## create a project
+
+::: {.r .r-fit-text}
+`usethis::create_project("~/personal-radmin")`
+:::
+
 ## a brief personal history:
 
 ::: {.columns .scrollable}
@@ -693,10 +699,10 @@ install a package from r-universe
 
 ::: {.small}
 
-1. open the `XXX` project
+1. open the `personal-radmin` project
 1. `install.packages("gitcellar")` # not on cran!
-1. update your project `.Rprofile`:
-`usethis::edit_r_profile(scope = "project")`
+1. update your project `.Rprofile`:  
+    `usethis::edit_r_profile(scope = "project")`
 
     ```{.r code-line-numbers="false"}
     options(repos = c(
@@ -706,7 +712,7 @@ install a package from r-universe
     ))
     ```
 
-1. save `.Rprofile`, restart R
+1. save `.Rprofile` and restart R
 1. `install.packages("gitcellar")`
 
 :::
@@ -849,6 +855,7 @@ renv has a number of tools that are helpful for adopting a project-based workflo
 time travel!
 :::
 
+1. open the `personal-radmin` project
 1. update your project `.Rprofile` with a date-based snapshot of CRAN
 
     ```{.r code-line-numbers="false"}
@@ -919,21 +926,30 @@ C(global cache)
 - re-use packages you've already installed
 
 
-## `renv::init()`
+## activity
 
-``` {.r code-line-numbers="|2|4"}
-.libPaths()
-renv::init()
-.libPaths()
-renv::deactivate()
-.libPaths()
+::: question
+create an isolated project library
+:::
+
+::: small
+1. open your `wtf-fix-paths` project
+1. `install.packages("renv")`
+1. `renv::init()`
+1. `renv::status()`
+1. add `library(parallelly)` to any file in the `R` directory
+1. `renv::status()`
+1. `install.packages("parallelly")`
+1. `renv::status()`
+1. `renv::snapshot()`
+1. remove `library(parallelly)` from the file you added it to
+1. `renv::status()`
+:::
+
+
+```{R}
+countdown_timer(minutes = 10, bottom = 0)
 ```
-
-why are we doing this?
-- don't break your old dashboards
-- where is this actually going
-- talk more explicitly about the behavior of renv
-- steal kevin's graphics on renv
 
 ::: {.notes}
 run `.libPaths()` to see what your default package libraries are
@@ -943,7 +959,7 @@ deactivate the environment and check libPaths() again--it should be back to norm
 :::
 
 
-## `renv.lock`
+## `renv.lock` {visibility="hidden"}
 
 ``` json
 {
@@ -988,8 +1004,8 @@ or [`install.packages()`](https://rstudio.github.io/renv/articles/renv.html#shim
 ``` r
 renv::install("jsonlite")
 renv::install("jsonlite@1.2") # at version
-renv::install("jeroen/jsonlite") # latest
-renv::install("jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d") # at SHA
+renv::install"jeroen/jsonlite") # latest
+renv::install"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d") # at SHA
 renv::install("path/to/package") # local source
 ```
 
@@ -997,11 +1013,11 @@ renv::install("path/to/package") # local source
 
 ::: fragment
 ``` r
-devtools::install()
-devtools::install_version()
-devtools::install_github()
-devtools::install_github()
-devtools::install("path/to/package")
+devtools::install("jsonlite")
+devtools::install_version("jsonlite@1.2") # at version
+devtools::install_github("jeroen/jsonlite") # latest
+devtools::install_github("jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d") # at SHA
+devtools::install("path/to/package") # local source
 ```
 :::
 
@@ -1015,59 +1031,8 @@ for reprexes, tweets, and other ephemera:
 I use `renv` for everything, and have one junk project into which I install things without regard for stability or reproducibility
 :::
 
-## using publiic package manager
 
-
-## activity
-
-a) create two projects
-
-just use status messages rather than showing people lockfile
-
-a) using renv, 
-install.packages("renv")
-install("jeroen/jsonlite")
-install jsonlite from github
-then install from CRAN to roll back
-
-more explanation of global cache
-
-
-then roll back to released version
-
-b) restore the environment from an existing project
-- an old one of yours from github
-- create an environment for a tidyverse package
-
-dtplyr renv example where across isn't implementeed
-
-## activity
-
-::: question
--   install dev `jsonlite`, then roll back to released version
-:::
-
-```{R}
-countdown_timer(minutes = 1, bottom = 0)
-```
-
-# upgrading R
-
-::: agenda
--   installing R
-
--   starting R
-
--   installing R packages
-
--   reproducible environments
-
-::: agenda-active
--   upgrading R
-:::
-:::
-
-# installing / upgrading R 
+# focus areas {background-color="#333399"}
 
 ::: agenda
 -   starting R
@@ -1106,6 +1071,10 @@ The best way to become more comfortable with installing things is to practice in
 - for linux users, the easiest thing to do is stand up a small VPS 
 - I don't know of a good safe way to test mac environments
 :::
+
+## where we've been
+
+![](img/project-oyster.svg){.r-stretch}
 
 ## package managers
 
