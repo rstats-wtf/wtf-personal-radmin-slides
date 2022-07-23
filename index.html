@@ -382,9 +382,6 @@
   </style>
   <link href="site_libs/countdown-0.3.5/countdown.css" rel="stylesheet">
   <script src="site_libs/countdown-0.3.5/countdown.js"></script>
-  <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -403,6 +400,12 @@
 <h2>Course material</h2>
 <div class="r-fit-text">
 <p><a href="https://github.com/rstudio-conf-2022/wtf-rstats">rstd.io/wtf-2022-rsc</a></p>
+</div>
+</section>
+<section id="create-a-project" class="slide level2">
+<h2>create a project</h2>
+<div class="r r-fit-text">
+<p><code>usethis::create_project("~/personal-radmin")</code></p>
 </div>
 </section>
 <section id="a-brief-personal-history" class="slide level2">
@@ -483,7 +486,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="focus-areas" class="slide level2">
+<section id="focus-areas" class="slide level2" data-background-color="#333399">
 <h2>focus areas</h2>
 <div class="agenda">
 <ul>
@@ -495,7 +498,7 @@
 </div>
 </section></section>
 <section>
-<section id="focus-areas-1" class="title-slide slide level1 center">
+<section id="focus-areas-1" class="title-slide slide level1 center" data-background-color="#333399">
 <h1>focus areas</h1>
 <div class="agenda">
 <div class="agenda-active">
@@ -614,7 +617,7 @@ if values clash, <em>project</em> wins</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc5c8f" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc74d3" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -686,7 +689,7 @@ if values clash, <em>project</em> wins</p>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="fu">library</span>(devtools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc5ce9" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc76f7" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -735,7 +738,7 @@ if values clash, <em>project</em> wins</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc5d50" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc75f3" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -763,7 +766,7 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 </div>
 </section></section>
 <section>
-<section id="focus-areas-2" class="title-slide slide level1 center">
+<section id="focus-areas-2" class="title-slide slide level1 center" data-background-color="#333399">
 <h1>focus areas</h1>
 <div class="agenda">
 <ul>
@@ -799,53 +802,148 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 </section>
 <section id="states-of-r-packages" class="slide level2">
 <h2>states of R packages</h2>
-<div class="cell" data-reveal="true">
+<div class="cell">
 <div class="cell-output-display">
 <div>
 <p>
-</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-1">stateDiagram-v2
-state theWholeGame {
-[*] --&gt; Source
-Source --&gt; Bundled: devtools#58;#58;build()
-Bundled --&gt; Binary: devtools#58;#58;build(binary = TRUE)
-Binary --&gt; Installed: install.packages()
-Installed --&gt; Loaded: library()
-Loaded --&gt; [*]
-}
-</pre>
-<div id="mermaid-tooltip-1" class="mermaidTooltip">
-
+<svg aria-labelledby="chart-title-mermaid-1658614987785 chart-desc-mermaid-1658614987785" role="img" viewbox="0.5 0 485.203125 631" height="631" class="statediagram" xmlns="http://www.w3.org/2000/svg" width="485" id="mermaid-figure-1" style=" display: block; margin: auto auto auto auto">
+<title id="chart-title-mermaid-1658614987785">
+</title>
+<desc id="chart-desc-mermaid-1658614987785"></desc>
+<style>#mermaid-figure-1 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-figure-1 .error-icon{fill:#552222;}#mermaid-figure-1 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-1 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-1 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-1 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-1 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-1 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-1 .marker{fill:#333333;stroke:#333333;}#mermaid-figure-1 .marker.cross{stroke:#333333;}#mermaid-figure-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-1 defs #mermaid-figure-1-statediagram-barbEnd{fill:#333333;stroke:#333333;}#mermaid-figure-1 g.stateGroup text{fill:#9370DB;stroke:none;font-size:10px;}#mermaid-figure-1 g.stateGroup text{fill:#333;stroke:none;font-size:10px;}#mermaid-figure-1 g.stateGroup .state-title{font-weight:bolder;fill:#131300;}#mermaid-figure-1 g.stateGroup rect{fill:#ECECFF;stroke:#9370DB;}#mermaid-figure-1 g.stateGroup line{stroke:#333333;stroke-width:1;}#mermaid-figure-1 .transition{stroke:#333333;stroke-width:1;fill:none;}#mermaid-figure-1 .stateGroup .composit{fill:white;border-bottom:1px;}#mermaid-figure-1 .stateGroup .alt-composit{fill:#e0e0e0;border-bottom:1px;}#mermaid-figure-1 .state-note{stroke:#aaaa33;fill:#fff5ad;}#mermaid-figure-1 .state-note text{fill:black;stroke:none;font-size:10px;}#mermaid-figure-1 .stateLabel .box{stroke:none;stroke-width:0;fill:#ECECFF;opacity:0.5;}#mermaid-figure-1 .edgeLabel .label rect{fill:#ECECFF;opacity:0.5;}#mermaid-figure-1 .edgeLabel .label text{fill:#333;}#mermaid-figure-1 .label div .edgeLabel{color:#333;}#mermaid-figure-1 .stateLabel text{fill:#131300;font-size:10px;font-weight:bold;}#mermaid-figure-1 .node circle.state-start{fill:#333333;stroke:#333333;}#mermaid-figure-1 .node .fork-join{fill:#333333;stroke:#333333;}#mermaid-figure-1 .node circle.state-end{fill:#9370DB;stroke:white;stroke-width:1.5;}#mermaid-figure-1 .end-state-inner{fill:white;stroke-width:1.5;}#mermaid-figure-1 .node rect{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-figure-1 .node polygon{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-figure-1 #mermaid-figure-1-statediagram-barbEnd{fill:#333333;}#mermaid-figure-1 .statediagram-cluster rect{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-figure-1 .cluster-label,#mermaid-figure-1 .nodeLabel{color:#131300;}#mermaid-figure-1 .statediagram-cluster rect.outer{rx:5px;ry:5px;}#mermaid-figure-1 .statediagram-state .divider{stroke:#9370DB;}#mermaid-figure-1 .statediagram-state .title-state{rx:5px;ry:5px;}#mermaid-figure-1 .statediagram-cluster.statediagram-cluster .inner{fill:white;}#mermaid-figure-1 .statediagram-cluster.statediagram-cluster-alt .inner{fill:#f0f0f0;}#mermaid-figure-1 .statediagram-cluster .inner{rx:0;ry:0;}#mermaid-figure-1 .statediagram-state rect.basic{rx:5px;ry:5px;}#mermaid-figure-1 .statediagram-state rect.divider{stroke-dasharray:10,10;fill:#f0f0f0;}#mermaid-figure-1 .note-edge{stroke-dasharray:5;}#mermaid-figure-1 .statediagram-note rect{fill:#fff5ad;stroke:#aaaa33;stroke-width:1px;rx:0;ry:0;}#mermaid-figure-1 .statediagram-note rect{fill:#fff5ad;stroke:#aaaa33;stroke-width:1px;rx:0;ry:0;}#mermaid-figure-1 .statediagram-note text{fill:black;}#mermaid-figure-1 .statediagram-note .nodeLabel{color:black;}#mermaid-figure-1 .statediagram .edgeLabel{color:red;}#mermaid-figure-1 #dependencyStart,#mermaid-figure-1 #dependencyEnd{fill:#333333;stroke:#333333;stroke-width:1;}#mermaid-figure-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><defs><marker orient="auto" markerunits="strokeWidth" markerheight="14" markerwidth="20" refy="7" refx="19" id="mermaid-figure-1-statediagram-barbEnd"><path d="M 19,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><g class="root"><g class="clusters"></g><g class="edgePaths"></g><g class="edgeLabels"></g><g class="nodes"><g transform="translate(0.5, 0)" class="root"><g class="clusters"><g id="theWholeGame" class="statediagram-state statediagram-cluster"><rect height="615" width="469.203125" y="8" x="8" class="outer"></rect><g transform="translate(187.015625, 8)" class="cluster-label"><foreignobject height="18" width="111.171875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">theWholeGame</span>
 </div>
-<p></p>
+</foreignobject></g><rect height="594" width="469.203125" y="25" x="8" class="inner"></rect></g></g><g class="edgePaths"><path marker-end="url(#mermaid-figure-1-statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge0" d="M242.6015625,47L242.6015625,51.166666666666664C242.6015625,55.333333333333336,242.6015625,63.666666666666664,242.6015625,72C242.6015625,80.33333333333333,242.6015625,88.66666666666667,242.6015625,92.83333333333333L242.6015625,97"></path><path marker-end="url(#mermaid-figure-1-statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge1" d="M242.6015625,130L242.6015625,135.66666666666666C242.6015625,141.33333333333334,242.6015625,152.66666666666666,242.6015625,164C242.6015625,175.33333333333334,242.6015625,186.66666666666666,242.6015625,192.33333333333334L242.6015625,198"></path><path marker-end="url(#mermaid-figure-1-statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge2" d="M242.6015625,231L242.6015625,236.66666666666666C242.6015625,242.33333333333334,242.6015625,253.66666666666666,242.6015625,265C242.6015625,276.3333333333333,242.6015625,287.6666666666667,242.6015625,293.3333333333333L242.6015625,299"></path><path marker-end="url(#mermaid-figure-1-statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge3" d="M242.6015625,332L242.6015625,337.6666666666667C242.6015625,343.3333333333333,242.6015625,354.6666666666667,242.6015625,366C242.6015625,377.3333333333333,242.6015625,388.6666666666667,242.6015625,394.3333333333333L242.6015625,400"></path><path marker-end="url(#mermaid-figure-1-statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge4" d="M242.6015625,433L242.6015625,438.6666666666667C242.6015625,444.3333333333333,242.6015625,455.6666666666667,242.6015625,467C242.6015625,478.3333333333333,242.6015625,489.6666666666667,242.6015625,495.3333333333333L242.6015625,501"></path><path marker-end="url(#mermaid-figure-1-statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge5" d="M242.6015625,534L242.6015625,538.1666666666666C242.6015625,542.3333333333334,242.6015625,550.6666666666666,242.6015625,559C242.6015625,567.3333333333334,242.6015625,575.6666666666666,242.6015625,579.8333333333334L242.6015625,584"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g transform="translate(242.6015625, 164)" class="edgeLabel"><g transform="translate(-161.921875, -9)" class="label"><rect height="18" width="323.84375" ry="0" rx="0"></rect><foreignobject height="18" width="323.84375">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel">devtools::build()</span>
+</div>
+</foreignobject></g></g><g transform="translate(242.6015625, 265)" class="edgeLabel"><g transform="translate(-214.6015625, -9)" class="label"><rect height="18" width="429.203125" ry="0" rx="0"></rect><foreignobject height="18" width="429.203125">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel">devtools::build(binary = TRUE)</span>
+</div>
+</foreignobject></g></g><g transform="translate(242.6015625, 366)" class="edgeLabel"><g transform="translate(-62.25, -9)" class="label"><rect height="18" width="124.5" ry="0" rx="0"></rect><foreignobject height="18" width="124.5">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel">install.packages()</span>
+</div>
+</foreignobject></g></g><g transform="translate(242.6015625, 467)" class="edgeLabel"><g transform="translate(-27.109375, -9)" class="label"><rect height="18" width="54.21875" ry="0" rx="0"></rect><foreignobject height="18" width="54.21875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel">library()</span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g></g><g class="nodes"><g transform="translate(242.6015625, 40)" id="state-theWholeGame_start-0" class="node default"><circle height="14" width="14" r="7" class="state-start"></circle></g><g transform="translate(242.6015625, 113.5)" id="state-Source-1" class="node statediagram-state"><rect height="33" width="65.703125" y="-16.5" x="-32.8515625" style="" class="basic label-container"></rect><g transform="translate(-25.3515625, -9)" style="" class="label"><foreignobject height="18" width="50.703125">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Source</span>
+</div>
+</foreignobject></g></g><g transform="translate(242.6015625, 214.5)" id="state-Bundled-2" class="node statediagram-state"><rect height="33" width="73.71875" y="-16.5" x="-36.859375" style="" class="basic label-container"></rect><g transform="translate(-29.359375, -9)" style="" class="label"><foreignobject height="18" width="58.71875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Bundled</span>
+</div>
+</foreignobject></g></g><g transform="translate(242.6015625, 315.5)" id="state-Binary-3" class="node statediagram-state"><rect height="33" width="60.359375" y="-16.5" x="-30.1796875" style="" class="basic label-container"></rect><g transform="translate(-22.6796875, -9)" style="" class="label"><foreignobject height="18" width="45.359375">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Binary</span>
+</div>
+</foreignobject></g></g><g transform="translate(242.6015625, 416.5)" id="state-Installed-4" class="node statediagram-state"><rect height="33" width="74.59375" y="-16.5" x="-37.296875" style="" class="basic label-container"></rect><g transform="translate(-29.796875, -9)" style="" class="label"><foreignobject height="18" width="59.59375">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Installed</span>
+</div>
+</foreignobject></g></g><g transform="translate(242.6015625, 517.5)" id="state-Loaded-5" class="node statediagram-state"><rect height="33" width="68.390625" y="-16.5" x="-34.1953125" style="" class="basic label-container"></rect><g transform="translate(-26.6953125, -9)" style="" class="label"><foreignobject height="18" width="53.390625">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Loaded</span>
+</div>
+</foreignobject></g></g><g transform="translate(242.6015625, 591)" id="state-theWholeGame_end-5" class="node default"><circle height="14" width="14" r="7" class="state-start"></circle><circle height="10" width="10" r="5" class="state-end"></circle></g></g></g></g></g></g>
+</svg>
+</p>
 </div>
 </div>
 </div>
 </section>
 <section id="states-of-r-packages-1" class="slide level2">
 <h2>states of R packages</h2>
-<div class="cell" data-reveal="true">
+<div class="cell">
 <div class="cell-output-display">
 <div>
 <p>
-</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-2">stateDiagram-v2
-direction LR
-[*] --&gt; Dev
-Dev --&gt; Use
-state Dev {
-  [*] --&gt; Source
-  Source --&gt; Bundled: devtools#58;#58;build()
-  Bundled --&gt; Binary: devtools#58;#58;build(binary = TRUE)
-}
-state Use {
-  binary --&gt; Installed: install.packages()
-  Installed --&gt; Loaded: library()
-  Loaded --&gt; [*]
-}
-</pre>
-<div id="mermaid-tooltip-2" class="mermaidTooltip">
-
+<svg aria-labelledby="chart-title-mermaid-1658614988996 chart-desc-mermaid-1658614988996" role="img" viewbox="0 0 764.203125 365" height="365" class="statediagram" xmlns="http://www.w3.org/2000/svg" width="764" id="mermaid-figure-4" style=" display: block; margin: auto auto auto auto">
+<title id="chart-title-mermaid-1658614988996">
+</title>
+<desc id="chart-desc-mermaid-1658614988996"></desc>
+<style>#mermaid-figure-4 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-figure-4 .error-icon{fill:#552222;}#mermaid-figure-4 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-4 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-4 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-4 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-4 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-4 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-4 .marker{fill:#333333;stroke:#333333;}#mermaid-figure-4 .marker.cross{stroke:#333333;}#mermaid-figure-4 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-4 defs #mermaid-figure-4-statediagram-barbEnd{fill:#333333;stroke:#333333;}#mermaid-figure-4 g.stateGroup text{fill:#9370DB;stroke:none;font-size:10px;}#mermaid-figure-4 g.stateGroup text{fill:#333;stroke:none;font-size:10px;}#mermaid-figure-4 g.stateGroup .state-title{font-weight:bolder;fill:#131300;}#mermaid-figure-4 g.stateGroup rect{fill:#ECECFF;stroke:#9370DB;}#mermaid-figure-4 g.stateGroup line{stroke:#333333;stroke-width:1;}#mermaid-figure-4 .transition{stroke:#333333;stroke-width:1;fill:none;}#mermaid-figure-4 .stateGroup .composit{fill:white;border-bottom:1px;}#mermaid-figure-4 .stateGroup .alt-composit{fill:#e0e0e0;border-bottom:1px;}#mermaid-figure-4 .state-note{stroke:#aaaa33;fill:#fff5ad;}#mermaid-figure-4 .state-note text{fill:black;stroke:none;font-size:10px;}#mermaid-figure-4 .stateLabel .box{stroke:none;stroke-width:0;fill:#ECECFF;opacity:0.5;}#mermaid-figure-4 .edgeLabel .label rect{fill:#ECECFF;opacity:0.5;}#mermaid-figure-4 .edgeLabel .label text{fill:#333;}#mermaid-figure-4 .label div .edgeLabel{color:#333;}#mermaid-figure-4 .stateLabel text{fill:#131300;font-size:10px;font-weight:bold;}#mermaid-figure-4 .node circle.state-start{fill:#333333;stroke:#333333;}#mermaid-figure-4 .node .fork-join{fill:#333333;stroke:#333333;}#mermaid-figure-4 .node circle.state-end{fill:#9370DB;stroke:white;stroke-width:1.5;}#mermaid-figure-4 .end-state-inner{fill:white;stroke-width:1.5;}#mermaid-figure-4 .node rect{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-figure-4 .node polygon{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-figure-4 #mermaid-figure-4-statediagram-barbEnd{fill:#333333;}#mermaid-figure-4 .statediagram-cluster rect{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-figure-4 .cluster-label,#mermaid-figure-4 .nodeLabel{color:#131300;}#mermaid-figure-4 .statediagram-cluster rect.outer{rx:5px;ry:5px;}#mermaid-figure-4 .statediagram-state .divider{stroke:#9370DB;}#mermaid-figure-4 .statediagram-state .title-state{rx:5px;ry:5px;}#mermaid-figure-4 .statediagram-cluster.statediagram-cluster .inner{fill:white;}#mermaid-figure-4 .statediagram-cluster.statediagram-cluster-alt .inner{fill:#f0f0f0;}#mermaid-figure-4 .statediagram-cluster .inner{rx:0;ry:0;}#mermaid-figure-4 .statediagram-state rect.basic{rx:5px;ry:5px;}#mermaid-figure-4 .statediagram-state rect.divider{stroke-dasharray:10,10;fill:#f0f0f0;}#mermaid-figure-4 .note-edge{stroke-dasharray:5;}#mermaid-figure-4 .statediagram-note rect{fill:#fff5ad;stroke:#aaaa33;stroke-width:1px;rx:0;ry:0;}#mermaid-figure-4 .statediagram-note rect{fill:#fff5ad;stroke:#aaaa33;stroke-width:1px;rx:0;ry:0;}#mermaid-figure-4 .statediagram-note text{fill:black;}#mermaid-figure-4 .statediagram-note .nodeLabel{color:black;}#mermaid-figure-4 .statediagram .edgeLabel{color:red;}#mermaid-figure-4 #dependencyStart,#mermaid-figure-4 #dependencyEnd{fill:#333333;stroke:#333333;stroke-width:1;}#mermaid-figure-4 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><defs><marker orient="auto" markerunits="strokeWidth" markerheight="14" markerwidth="20" refy="7" refx="19" id="mermaid-figure-4-statediagram-barbEnd"><path d="M 19,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#mermaid-figure-4-statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge0" d="M22,182.5L26.166666666666668,182.5C30.333333333333332,182.5,38.666666666666664,182.5,47,182.5C55.333333333333336,182.5,63.666666666666664,182.5,67.83333333333333,182.5L72,182.5"></path><path marker-end="url(#mermaid-figure-4-statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge1" d="M541.203125,182.5L545.3697916666666,182.5C549.5364583333334,182.5,557.8697916666666,182.5,566.203125,182.5C574.5364583333334,182.5,582.8697916666666,182.5,587.0364583333334,182.5L591.203125,182.5"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
 </div>
-<p></p>
+</foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g></g><g class="nodes"><g transform="translate(15, 182.5)" id="state-root_start-0" class="node default"><circle height="14" width="14" r="7" class="state-start"></circle></g><g transform="translate(64.5, 0)" class="root"><g class="clusters"><g id="Dev" class="statediagram-state statediagram-cluster"><rect height="349" width="469.203125" y="8" x="8" class="outer"></rect><g transform="translate(228.375, 8)" class="cluster-label"><foreignobject height="18" width="28.453125">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Dev</span>
+</div>
+</foreignobject></g><rect height="328" width="469.203125" y="25" x="8" class="inner"></rect></g></g><g class="edgePaths"><path marker-end="url(#mermaid-figure-4-statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge2" d="M242.6015625,47L242.6015625,51.166666666666664C242.6015625,55.333333333333336,242.6015625,63.666666666666664,242.6015625,72C242.6015625,80.33333333333333,242.6015625,88.66666666666667,242.6015625,92.83333333333333L242.6015625,97"></path><path marker-end="url(#mermaid-figure-4-statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge3" d="M242.6015625,130L242.6015625,135.66666666666666C242.6015625,141.33333333333334,242.6015625,152.66666666666666,242.6015625,164C242.6015625,175.33333333333334,242.6015625,186.66666666666666,242.6015625,192.33333333333334L242.6015625,198"></path><path marker-end="url(#mermaid-figure-4-statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge4" d="M242.6015625,231L242.6015625,236.66666666666666C242.6015625,242.33333333333334,242.6015625,253.66666666666666,242.6015625,265C242.6015625,276.3333333333333,242.6015625,287.6666666666667,242.6015625,293.3333333333333L242.6015625,299"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g transform="translate(242.6015625, 164)" class="edgeLabel"><g transform="translate(-161.921875, -9)" class="label"><rect height="18" width="323.84375" ry="0" rx="0"></rect><foreignobject height="18" width="323.84375">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel">devtools::build()</span>
+</div>
+</foreignobject></g></g><g transform="translate(242.6015625, 265)" class="edgeLabel"><g transform="translate(-214.6015625, -9)" class="label"><rect height="18" width="429.203125" ry="0" rx="0"></rect><foreignobject height="18" width="429.203125">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel">devtools::build(binary = TRUE)</span>
+</div>
+</foreignobject></g></g></g><g class="nodes"><g transform="translate(242.6015625, 40)" id="state-Dev_start-2" class="node default"><circle height="14" width="14" r="7" class="state-start"></circle></g><g transform="translate(242.6015625, 113.5)" id="state-Source-3" class="node statediagram-state"><rect height="33" width="65.703125" y="-16.5" x="-32.8515625" style="" class="basic label-container"></rect><g transform="translate(-25.3515625, -9)" style="" class="label"><foreignobject height="18" width="50.703125">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Source</span>
+</div>
+</foreignobject></g></g><g transform="translate(242.6015625, 214.5)" id="state-Bundled-4" class="node statediagram-state"><rect height="33" width="73.71875" y="-16.5" x="-36.859375" style="" class="basic label-container"></rect><g transform="translate(-29.359375, -9)" style="" class="label"><foreignobject height="18" width="58.71875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Bundled</span>
+</div>
+</foreignobject></g></g><g transform="translate(242.6015625, 315.5)" id="state-Binary-4" class="node statediagram-state"><rect height="33" width="60.359375" y="-16.5" x="-30.1796875" style="" class="basic label-container"></rect><g transform="translate(-22.6796875, -9)" style="" class="label"><foreignobject height="18" width="45.359375">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Binary</span>
+</div>
+</foreignobject></g></g></g></g><g transform="translate(583.703125, 0)" class="root"><g class="clusters"><g id="Use" class="statediagram-state statediagram-cluster"><rect height="349" width="164.5" y="8" x="8" class="outer"></rect><g transform="translate(76.0234375, 8)" class="cluster-label"><foreignobject height="18" width="28.453125">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Use</span>
+</div>
+</foreignobject></g><rect height="328" width="164.5" y="25" x="8" class="inner"></rect></g></g><g class="edgePaths"><path marker-end="url(#mermaid-figure-4-statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge5" d="M90.25,66L90.25,71.66666666666667C90.25,77.33333333333333,90.25,88.66666666666667,90.25,100C90.25,111.33333333333333,90.25,122.66666666666667,90.25,128.33333333333334L90.25,134"></path><path marker-end="url(#mermaid-figure-4-statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge6" d="M90.25,167L90.25,172.66666666666666C90.25,178.33333333333334,90.25,189.66666666666666,90.25,201C90.25,212.33333333333334,90.25,223.66666666666666,90.25,229.33333333333334L90.25,235"></path><path marker-end="url(#mermaid-figure-4-statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge7" d="M90.25,268L90.25,272.1666666666667C90.25,276.3333333333333,90.25,284.6666666666667,90.25,293C90.25,301.3333333333333,90.25,309.6666666666667,90.25,313.8333333333333L90.25,318"></path></g><g class="edgeLabels"><g transform="translate(90.25, 100)" class="edgeLabel"><g transform="translate(-62.25, -9)" class="label"><rect height="18" width="124.5" ry="0" rx="0"></rect><foreignobject height="18" width="124.5">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel">install.packages()</span>
+</div>
+</foreignobject></g></g><g transform="translate(90.25, 201)" class="edgeLabel"><g transform="translate(-27.109375, -9)" class="label"><rect height="18" width="54.21875" ry="0" rx="0"></rect><foreignobject height="18" width="54.21875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel">library()</span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g></g><g class="nodes"><g transform="translate(90.25, 49.5)" id="state-binary-5" class="node statediagram-state"><rect height="33" width="58.578125" y="-16.5" x="-29.2890625" style="" class="basic label-container"></rect><g transform="translate(-21.7890625, -9)" style="" class="label"><foreignobject height="18" width="43.578125">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">binary</span>
+</div>
+</foreignobject></g></g><g transform="translate(90.25, 150.5)" id="state-Installed-6" class="node statediagram-state"><rect height="33" width="74.59375" y="-16.5" x="-37.296875" style="" class="basic label-container"></rect><g transform="translate(-29.796875, -9)" style="" class="label"><foreignobject height="18" width="59.59375">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Installed</span>
+</div>
+</foreignobject></g></g><g transform="translate(90.25, 251.5)" id="state-Loaded-7" class="node statediagram-state"><rect height="33" width="68.390625" y="-16.5" x="-34.1953125" style="" class="basic label-container"></rect><g transform="translate(-26.6953125, -9)" style="" class="label"><foreignobject height="18" width="53.390625">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">Loaded</span>
+</div>
+</foreignobject></g></g><g transform="translate(90.25, 325)" id="state-Use_end-7" class="node default"><circle height="14" width="14" r="7" class="state-start"></circle><circle height="10" width="10" r="5" class="state-end"></circle></g></g></g></g></g></g>
+</svg>
+</p>
 </div>
 </div>
 </div>
@@ -1031,7 +1129,7 @@ state Use {
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc5c45" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc772b" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1110,21 +1208,25 @@ state Use {
 <div class="question">
 <p>install a package from r-universe</p>
 </div>
+<div class="small">
 <ol type="1">
+<li><p>open the <code>personal-radmin</code> project</p></li>
 <li><p><code>install.packages("gitcellar")</code> # not on cran!</p></li>
-<li><p>update your project <code>.Rprofile</code>:</p>
+<li><p>update your project <code>.Rprofile</code>:<br>
+<code>usethis::edit_r_profile(scope = "project")</code></p>
 <div class="sourceCode" id="cb10" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ropensci =</span> <span class="st">"https://ropensci.r-universe.dev"</span>,</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>, <span class="co"># macOS</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">RSPM =</span> <span class="st">"https://packagemanager.rstudio.com/cran/latest"</span> <span class="co"># windows</span></span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>restart R</p></li>
+<li><p>save <code>.Rprofile</code> and restart R</p></li>
 <li><p><code>install.packages("gitcellar")</code></p></li>
 </ol>
+</div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc5bb7" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<div class="countdown" id="timer_62dc76f2" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
@@ -1217,6 +1319,7 @@ The quick and dirty approach you took then comes right back at you as a boomeran
 <p>time travel!</p>
 </div>
 <ol type="1">
+<li><p>open the <code>personal-radmin</code> project</p></li>
 <li><p>update your project <code>.Rprofile</code> with a date-based snapshot of CRAN</p>
 <div class="sourceCode" id="cb11" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">RSPM =</span> <span class="st">"https://packagemanager.rstudio.com/cran/2021-03-31"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Restart R</p></li>
@@ -1225,7 +1328,7 @@ The quick and dirty approach you took then comes right back at you as a boomeran
 <p>what version of dplyr did you install?</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc5db8" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dc756e" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1233,82 +1336,130 @@ The quick and dirty approach you took then comes right back at you as a boomeran
 </section>
 <section id="shared-project-environment" class="slide level2">
 <h2>shared project environment</h2>
-<div class="cell" data-reveal="true">
+<div class="cell">
 <div class="cell-output-display">
 <div>
 <p>
-</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-3">graph
-L --- P1
-L --- P2
-L --- P3
-L(library)
-P1(project1)
-P2(project2)
-P3(project3)
-</pre>
-<div id="mermaid-tooltip-3" class="mermaidTooltip">
-
+<svg viewbox="0 0 346.765625 142" height="142" aria-labelledby="chart-title-mermaid-1658614988647 chart-desc-mermaid-1658614988647" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="347" id="mermaid-figure-3" style=" display: block; margin: auto auto auto auto">
+<title id="chart-title-mermaid-1658614988647">
+</title>
+<desc id="chart-desc-mermaid-1658614988647"></desc>
+<style>#mermaid-figure-3 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-figure-3 .error-icon{fill:#552222;}#mermaid-figure-3 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-3 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-3 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-3 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-3 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-3 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-3 .marker{fill:#333333;stroke:#333333;}#mermaid-figure-3 .marker.cross{stroke:#333333;}#mermaid-figure-3 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-3 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#mermaid-figure-3 .cluster-label text{fill:#333;}#mermaid-figure-3 .cluster-label span{color:#333;}#mermaid-figure-3 .label text,#mermaid-figure-3 span{fill:#333;color:#333;}#mermaid-figure-3 .node rect,#mermaid-figure-3 .node circle,#mermaid-figure-3 .node ellipse,#mermaid-figure-3 .node polygon,#mermaid-figure-3 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-figure-3 .node .label{text-align:center;}#mermaid-figure-3 .node.clickable{cursor:pointer;}#mermaid-figure-3 .arrowheadPath{fill:#333333;}#mermaid-figure-3 .edgePath .path{stroke:#333333;stroke-width:2.0px;}#mermaid-figure-3 .flowchart-link{stroke:#333333;fill:none;}#mermaid-figure-3 .edgeLabel{background-color:#e8e8e8;text-align:center;}#mermaid-figure-3 .edgeLabel rect{opacity:0.5;background-color:#e8e8e8;fill:#e8e8e8;}#mermaid-figure-3 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaid-figure-3 .cluster text{fill:#333;}#mermaid-figure-3 .cluster span{color:#333;}#mermaid-figure-3 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-3 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><g class="output"><g class="clusters"></g><g class="edgePaths"><g style="opacity: 1;" id="L-L-P1" class="edgePath LS-L LE-P1"><path style="fill:none" marker-end="url(#mermaid-figure-3-arrowhead9)" d="M141.6015625,38.017604333374365L125.74479166666667,43.51467027781197C109.88802083333333,49.011736222249574,78.17447916666667,60.00586811112479,62.317708333333336,69.66960072222906C46.4609375,79.33333333333333,46.4609375,87.66666666666667,46.4609375,91.83333333333333L46.4609375,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-3-arrowhead9"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-L-P2" class="edgePath LS-L LE-P2"><path style="fill:none" marker-end="url(#mermaid-figure-3-arrowhead10)" d="M173.3828125,46L173.3828125,50.166666666666664C173.3828125,54.333333333333336,173.3828125,62.666666666666664,173.3828125,71C173.3828125,79.33333333333333,173.3828125,87.66666666666667,173.3828125,91.83333333333333L173.3828125,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-3-arrowhead10"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-L-P3" class="edgePath LS-L LE-P3"><path style="fill:none" marker-end="url(#mermaid-figure-3-arrowhead11)" d="M205.1640625,38.017604333374365L221.02083333333334,43.51467027781197C236.87760416666666,49.011736222249574,268.5911458333333,60.00586811112479,284.4479166666667,69.66960072222906C300.3046875,79.33333333333333,300.3046875,87.66666666666667,300.3046875,91.83333333333333L300.3046875,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-3-arrowhead11"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g></g><g class="edgeLabels"><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span id="L-L-L-P1" class="edgeLabel L-LS-L' L-LE-P1" style=""></span>
 </div>
-<p></p>
+</foreignobject></g></g><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span id="L-L-L-P2" class="edgeLabel L-LS-L' L-LE-P2" style=""></span>
+</div>
+</foreignobject></g></g><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span id="L-L-L-P3" class="edgeLabel L-LS-L' L-LE-P3" style=""></span>
+</div>
+</foreignobject></g></g></g><g class="nodes"><g style="opacity: 1;" transform="translate(173.3828125,27)" id="flowchart-L-10" class="node default"><rect class="label-container" height="38" width="63.5625" y="-19" x="-31.78125" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-21.78125,-9)"><foreignobject height="18" width="43.5625">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+library
+</div>
+</foreignobject></g></g></g><g style="opacity: 1;" transform="translate(46.4609375,115)" id="flowchart-P1-11" class="node default"><rect class="label-container" height="38" width="76.921875" y="-19" x="-38.4609375" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-28.4609375,-9)"><foreignobject height="18" width="56.921875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+project1
+</div>
+</foreignobject></g></g></g><g style="opacity: 1;" transform="translate(173.3828125,115)" id="flowchart-P2-13" class="node default"><rect class="label-container" height="38" width="76.921875" y="-19" x="-38.4609375" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-28.4609375,-9)"><foreignobject height="18" width="56.921875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+project2
+</div>
+</foreignobject></g></g></g><g style="opacity: 1;" transform="translate(300.3046875,115)" id="flowchart-P3-15" class="node default"><rect class="label-container" height="38" width="76.921875" y="-19" x="-38.4609375" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-28.4609375,-9)"><foreignobject height="18" width="56.921875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+project3
+</div>
+</foreignobject></g></g></g></g></g></g>
+</svg>
+</p>
 </div>
 </div>
 </div>
+<p><br></p>
+<h3 id="libpaths"><code>.libPaths()</code></h3>
+<div class="sourceCode" id="cb12" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"C:/Users/edavi/Documents/R/win-library/3.6"</span> <span class="co"># user</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>] <span class="st">"C:/Program Files/R/R-3.6.3/library"</span> <span class="co"># system</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="renv-isolated-project-environments" class="slide level2">
+<h2>renv: isolated project environments</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+<svg viewbox="0 0 346.765625 230" height="230" aria-labelledby="chart-title-mermaid-1658614988244 chart-desc-mermaid-1658614988244" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="347" id="mermaid-figure-2" style=" display: block; margin: auto auto auto auto">
+<title id="chart-title-mermaid-1658614988244">
+</title>
+<desc id="chart-desc-mermaid-1658614988244"></desc>
+<style>#mermaid-figure-2 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-figure-2 .error-icon{fill:#552222;}#mermaid-figure-2 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-2 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-2 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-2 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-2 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-2 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-2 .marker{fill:#333333;stroke:#333333;}#mermaid-figure-2 .marker.cross{stroke:#333333;}#mermaid-figure-2 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-2 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#mermaid-figure-2 .cluster-label text{fill:#333;}#mermaid-figure-2 .cluster-label span{color:#333;}#mermaid-figure-2 .label text,#mermaid-figure-2 span{fill:#333;color:#333;}#mermaid-figure-2 .node rect,#mermaid-figure-2 .node circle,#mermaid-figure-2 .node ellipse,#mermaid-figure-2 .node polygon,#mermaid-figure-2 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-figure-2 .node .label{text-align:center;}#mermaid-figure-2 .node.clickable{cursor:pointer;}#mermaid-figure-2 .arrowheadPath{fill:#333333;}#mermaid-figure-2 .edgePath .path{stroke:#333333;stroke-width:2.0px;}#mermaid-figure-2 .flowchart-link{stroke:#333333;fill:none;}#mermaid-figure-2 .edgeLabel{background-color:#e8e8e8;text-align:center;}#mermaid-figure-2 .edgeLabel rect{opacity:0.5;background-color:#e8e8e8;fill:#e8e8e8;}#mermaid-figure-2 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaid-figure-2 .cluster text{fill:#333;}#mermaid-figure-2 .cluster span{color:#333;}#mermaid-figure-2 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-2 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><g class="output"><g class="clusters"></g><g class="edgePaths"><g style="opacity: 1;" id="L-C-L1" class="edgePath LS-C LE-L1"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead16)" d="M118.57563920454545,46L106.55652225378788,50.166666666666664C94.5374053030303,54.333333333333336,70.49917140151514,62.666666666666664,58.48005445075757,71C46.4609375,79.33333333333333,46.4609375,87.66666666666667,46.4609375,91.83333333333333L46.4609375,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead16"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-C-L2" class="edgePath LS-C LE-L2"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead17)" d="M173.3828125,46L173.3828125,50.166666666666664C173.3828125,54.333333333333336,173.3828125,62.666666666666664,173.3828125,71C173.3828125,79.33333333333333,173.3828125,87.66666666666667,173.3828125,91.83333333333333L173.3828125,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead17"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-C-L3" class="edgePath LS-C LE-L3"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead18)" d="M228.18998579545456,46L240.20910274621212,50.166666666666664C252.22821969696972,54.333333333333336,276.2664535984848,62.666666666666664,288.28557054924244,71C300.3046875,79.33333333333333,300.3046875,87.66666666666667,300.3046875,91.83333333333333L300.3046875,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead18"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-L1-P1" class="edgePath LS-L1 LE-P1"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead19)" d="M46.4609375,134L46.4609375,138.16666666666666C46.4609375,142.33333333333334,46.4609375,150.66666666666666,46.4609375,159C46.4609375,167.33333333333334,46.4609375,175.66666666666666,46.4609375,179.83333333333334L46.4609375,184" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead19"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-L2-P2" class="edgePath LS-L2 LE-P2"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead20)" d="M173.3828125,134L173.3828125,138.16666666666666C173.3828125,142.33333333333334,173.3828125,150.66666666666666,173.3828125,159C173.3828125,167.33333333333334,173.3828125,175.66666666666666,173.3828125,179.83333333333334L173.3828125,184" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead20"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-L3-P3" class="edgePath LS-L3 LE-P3"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead21)" d="M300.3046875,134L300.3046875,138.16666666666666C300.3046875,142.33333333333334,300.3046875,150.66666666666666,300.3046875,159C300.3046875,167.33333333333334,300.3046875,175.66666666666666,300.3046875,179.83333333333334L300.3046875,184" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead21"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g></g><g class="edgeLabels"><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span id="L-L-C-L1" class="edgeLabel L-LS-C' L-LE-L1" style=""></span>
+</div>
+</foreignobject></g></g><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span id="L-L-C-L2" class="edgeLabel L-LS-C' L-LE-L2" style=""></span>
+</div>
+</foreignobject></g></g><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span id="L-L-C-L3" class="edgeLabel L-LS-C' L-LE-L3" style=""></span>
+</div>
+</foreignobject></g></g><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span id="L-L-L1-P1" class="edgeLabel L-LS-L1' L-LE-P1" style=""></span>
+</div>
+</foreignobject></g></g><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span id="L-L-L2-P2" class="edgeLabel L-LS-L2' L-LE-P2" style=""></span>
+</div>
+</foreignobject></g></g><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span id="L-L-L3-P3" class="edgeLabel L-LS-L3' L-LE-P3" style=""></span>
+</div>
+</foreignobject></g></g></g><g class="nodes"><g style="opacity: 1;" transform="translate(173.3828125,27)" id="flowchart-C-19" class="node default"><rect class="label-container" height="38" width="109.84375" y="-19" x="-54.921875" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-44.921875,-9)"><foreignobject height="18" width="89.84375">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+global cache
+</div>
+</foreignobject></g></g></g><g style="opacity: 1;" transform="translate(46.4609375,115)" id="flowchart-L1-20" class="node default"><rect class="label-container" height="38" width="72.46875" y="-19" x="-36.234375" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-26.234375,-9)"><foreignobject height="18" width="52.46875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+library1
+</div>
+</foreignobject></g></g></g><g style="opacity: 1;" transform="translate(173.3828125,115)" id="flowchart-L2-22" class="node default"><rect class="label-container" height="38" width="72.46875" y="-19" x="-36.234375" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-26.234375,-9)"><foreignobject height="18" width="52.46875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+library2
+</div>
+</foreignobject></g></g></g><g style="opacity: 1;" transform="translate(300.3046875,115)" id="flowchart-L3-24" class="node default"><rect class="label-container" height="38" width="72.46875" y="-19" x="-36.234375" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-26.234375,-9)"><foreignobject height="18" width="52.46875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+library3
+</div>
+</foreignobject></g></g></g><g style="opacity: 1;" transform="translate(46.4609375,203)" id="flowchart-P1-26" class="node default"><rect class="label-container" height="38" width="76.921875" y="-19" x="-38.4609375" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-28.4609375,-9)"><foreignobject height="18" width="56.921875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+project1
+</div>
+</foreignobject></g></g></g><g style="opacity: 1;" transform="translate(173.3828125,203)" id="flowchart-P2-28" class="node default"><rect class="label-container" height="38" width="76.921875" y="-19" x="-38.4609375" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-28.4609375,-9)"><foreignobject height="18" width="56.921875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+project2
+</div>
+</foreignobject></g></g></g><g style="opacity: 1;" transform="translate(300.3046875,203)" id="flowchart-P3-30" class="node default"><rect class="label-container" height="38" width="76.921875" y="-19" x="-38.4609375" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-28.4609375,-9)"><foreignobject height="18" width="56.921875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+project3
+</div>
+</foreignobject></g></g></g></g></g></g>
+</svg>
+</p>
+</div>
+</div>
+</div>
+<h3 id="libpaths-1"><code>.libPaths()</code></h3>
+<div class="sourceCode" id="cb13" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span> Project <span class="st">'~/projects/sample-project'</span> loaded. [renv <span class="dv">0</span>.<span class="fl">15.5</span>]</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">.libPaths</span>()</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"C:/Users/edavi/Documents/projects/sample-project/renv/library/R-3.6/x86_64-w64-mingw32"</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>] <span class="st">"C:/Program Files/R/R-3.6.3/library"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="isolated-project-environments" class="slide level2">
-<h2>isolated project environments</h2>
-<div class="cell" data-reveal="true">
-<div class="cell-output-display">
-<div>
-<p>
-</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-4">graph
-L1 --- P1
-L2 --- P2
-L3 --- P3
-L1(library)
-L2(library)
-L3(library)
-P1(project1)
-P2(project2)
-P3(project3)
-</pre>
-<div id="mermaid-tooltip-4" class="mermaidTooltip">
-
-</div>
-<p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="global-package-cache" class="slide level2">
-<h2>global package cache</h2>
-<div class="cell" data-reveal="true">
-<div class="cell-output-display">
-<div>
-<p>
-</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-5">graph
-C --- L1
-C --- L2
-C --- L3
-L1 --- P1
-L2 --- P2
-L3 --- P3
-L1(library1)
-L2(library2)
-L3(library3)
-P1(project1)
-P2(project2)
-P3(project3)
-C(global cache)
-</pre>
-<div id="mermaid-tooltip-5" class="mermaidTooltip">
-
-</div>
-<p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="isolated-project-environments-1" class="slide level2">
 <h2>isolated project environments</h2>
 <ul>
 <li>experiment with new packages without breaking other projects</li>
@@ -1316,14 +1467,33 @@ C(global cache)
 <li>re-use packages you’ve already installed</li>
 </ul>
 </section>
-<section id="renvinit" class="slide level2">
-<h2><code>renv::init()</code></h2>
-<div class="sourceCode" id="cb12" data-code-line-numbers="|2|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">.libPaths</span>()</span>
-<span id="cb12-2"><a href="#cb12-2"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="fu">.libPaths</span>()</span>
-<span id="cb12-4"><a href="#cb12-4"></a>renv<span class="sc">::</span><span class="fu">deactivate</span>()</span>
-<span id="cb12-5"><a href="#cb12-5"></a><span class="fu">.libPaths</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>why are we doing this? - don’t break your old dashboards - where is this actually going - talk more explicitly about the behavior of renv - steal kevin’s graphics on renv</p>
+<section id="activity-4" class="slide level2">
+<h2>activity</h2>
+<div class="question">
+<p>create an isolated project library</p>
+</div>
+<div class="small">
+<ol type="1">
+<li>open your <code>wtf-fix-paths</code> project</li>
+<li><code>install.packages("renv")</code></li>
+<li><code>renv::init()</code></li>
+<li><code>renv::status()</code></li>
+<li>add <code>library(parallelly)</code> to any file in the <code>R</code> directory</li>
+<li><code>renv::status()</code></li>
+<li><code>install.packages("parallelly")</code></li>
+<li><code>renv::status()</code></li>
+<li><code>renv::snapshot()</code></li>
+<li>remove <code>library(parallelly)</code> from the file you added it to</li>
+<li><code>renv::status()</code></li>
+</ol>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62dc74cc" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 <aside class="notes">
 <p>run <code>.libPaths()</code> to see what your default package libraries are initialize an renv–you’ll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in <code>renv/activate.R</code> deactivate the environment and check libPaths() again–it should be back to normal</p>
 <style type="text/css">
@@ -1338,66 +1508,22 @@ C(global cache)
           display:block!important;
       }</style></aside>
 </section>
-<section id="renv.lock" class="slide level2">
-<h2><code>renv.lock</code></h2>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">{</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a>  <span class="dt">"R"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a>    <span class="dt">"Version"</span><span class="fu">:</span> <span class="st">"4.1.2"</span><span class="fu">,</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a>    <span class="dt">"Repositories"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a>      <span class="fu">{</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a>        <span class="dt">"Name"</span><span class="fu">:</span> <span class="st">"CRAN"</span><span class="fu">,</span></span>
-<span id="cb13-7"><a href="#cb13-7"></a>        <span class="dt">"URL"</span><span class="fu">:</span> <span class="st">"https://cloud.r-project.org"</span></span>
-<span id="cb13-8"><a href="#cb13-8"></a>      <span class="fu">}</span></span>
-<span id="cb13-9"><a href="#cb13-9"></a>    <span class="ot">]</span></span>
-<span id="cb13-10"><a href="#cb13-10"></a>  <span class="fu">},</span></span>
-<span id="cb13-11"><a href="#cb13-11"></a>  <span class="dt">"Packages"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb13-12"><a href="#cb13-12"></a>    <span class="er">[...]</span></span>
-<span id="cb13-13"><a href="#cb13-13"></a>    <span class="dt">"knitr"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb13-14"><a href="#cb13-14"></a>      <span class="dt">"Package"</span><span class="fu">:</span> <span class="st">"knitr"</span><span class="fu">,</span></span>
-<span id="cb13-15"><a href="#cb13-15"></a>      <span class="dt">"Version"</span><span class="fu">:</span> <span class="st">"1.39"</span><span class="fu">,</span></span>
-<span id="cb13-16"><a href="#cb13-16"></a>      <span class="dt">"Source"</span><span class="fu">:</span> <span class="st">"Repository"</span><span class="fu">,</span></span>
-<span id="cb13-17"><a href="#cb13-17"></a>      <span class="dt">"Repository"</span><span class="fu">:</span> <span class="st">"CRAN"</span><span class="fu">,</span></span>
-<span id="cb13-18"><a href="#cb13-18"></a>      <span class="dt">"Hash"</span><span class="fu">:</span> <span class="st">"029ab7c4badd3cf8af69016b2ba27493"</span><span class="fu">,</span></span>
-<span id="cb13-19"><a href="#cb13-19"></a>      <span class="dt">"Requirements"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb13-20"><a href="#cb13-20"></a>        <span class="st">"evaluate"</span><span class="ot">,</span></span>
-<span id="cb13-21"><a href="#cb13-21"></a>        <span class="st">"highr"</span><span class="ot">,</span></span>
-<span id="cb13-22"><a href="#cb13-22"></a>        <span class="st">"stringr"</span><span class="ot">,</span></span>
-<span id="cb13-23"><a href="#cb13-23"></a>        <span class="st">"xfun"</span><span class="ot">,</span></span>
-<span id="cb13-24"><a href="#cb13-24"></a>        <span class="st">"yaml"</span></span>
-<span id="cb13-25"><a href="#cb13-25"></a>      <span class="ot">]</span></span>
-<span id="cb13-26"><a href="#cb13-26"></a>    <span class="fu">},</span></span>
-<span id="cb13-27"><a href="#cb13-27"></a>    <span class="er">...</span></span>
-<span id="cb13-28"><a href="#cb13-28"></a>  <span class="fu">}</span></span>
-<span id="cb13-29"><a href="#cb13-29"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<aside class="notes">
-<p>created from <code>renv::snapshot()</code> by default, identifies dependencies of your code for example: usethis doesn’t usually appear in my lockfiles, because I’m running it interactively, rather than making it a dependency of my projects</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
+
 <section id="renvinstall" class="slide level2">
 <h2><code>renv::install()</code></h2>
 <p>or <a href="https://rstudio.github.io/renv/articles/renv.html#shims"><code>install.packages()</code></a> with shims enabled</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite"</span>)</span>
-<span id="cb14-2"><a href="#cb14-2"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite@1.2"</span>) <span class="co"># at version</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jeroen/jsonlite"</span>) <span class="co"># latest</span></span>
-<span id="cb14-4"><a href="#cb14-4"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d"</span>) <span class="co"># at SHA</span></span>
-<span id="cb14-5"><a href="#cb14-5"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"path/to/package"</span>) <span class="co"># local source</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite"</span>)</span>
+<span id="cb15-2"><a href="#cb15-2"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite@1.2"</span>) <span class="co"># at version</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a>renv<span class="sc">::</span>install<span class="st">"jeroen/jsonlite"</span><span class="er">)</span> <span class="co"># latest</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a>renv<span class="sc">::</span>install<span class="st">"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d"</span><span class="er">)</span> <span class="co"># at SHA</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"path/to/package"</span>) <span class="co"># local source</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr>
 <div class="fragment">
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>devtools<span class="sc">::</span><span class="fu">install</span>()</span>
-<span id="cb15-2"><a href="#cb15-2"></a>devtools<span class="sc">::</span><span class="fu">install_version</span>()</span>
-<span id="cb15-3"><a href="#cb15-3"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>()</span>
-<span id="cb15-4"><a href="#cb15-4"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>()</span>
-<span id="cb15-5"><a href="#cb15-5"></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"path/to/package"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite"</span>)</span>
+<span id="cb16-2"><a href="#cb16-2"></a>devtools<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">"jsonlite@1.2"</span>) <span class="co"># at version</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"jeroen/jsonlite"</span>) <span class="co"># latest</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d"</span>) <span class="co"># at SHA</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"path/to/package"</span>) <span class="co"># local source</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="the-junk-drawer" class="slide level2">
@@ -1417,65 +1543,10 @@ C(global cache)
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="using-publiic-package-manager" class="slide level2">
-<h2>using publiic package manager</h2>
-</section>
-<section id="activity-4" class="slide level2">
-<h2>activity</h2>
-<ol type="a">
-<li>create two projects</li>
-</ol>
-<p>just use status messages rather than showing people lockfile</p>
-<ol type="a">
-<li>using renv, install.packages(“renv”) install(“jeroen/jsonlite”) install jsonlite from github then install from CRAN to roll back</li>
-</ol>
-<p>more explanation of global cache</p>
-<p>then roll back to released version</p>
-<ol start="2" type="a">
-<li>restore the environment from an existing project</li>
-</ol>
-<ul>
-<li>an old one of yours from github</li>
-<li>create an environment for a tidyverse package</li>
-</ul>
-<p>dtplyr renv example where across isn’t implementeed</p>
-</section>
-<section id="activity-5" class="slide level2">
-<h2>activity</h2>
-<div class="question">
-<ul>
-<li>install dev <code>jsonlite</code>, then roll back to released version</li>
-</ul>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_62dc5de1" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
 </section></section>
-<section id="upgrading-r" class="title-slide slide level1 center">
-<h1>upgrading R</h1>
-<div class="agenda">
-<ul>
-<li><p>installing R</p></li>
-<li><p>starting R</p></li>
-<li><p>installing R packages</p></li>
-<li><p>reproducible environments</p></li>
-</ul>
-<div class="agenda-active">
-<ul>
-<li>upgrading R</li>
-</ul>
-</div>
-</div>
-</section>
-
 <section>
-<section id="installing-upgrading-r" class="title-slide slide level1 center">
-<h1>installing / upgrading R</h1>
+<section id="focus-areas-4" class="title-slide slide level1 center" data-background-color="#333399">
+<h1>focus areas</h1>
 <div class="agenda">
 <ul>
 <li><p>starting R</p></li>
@@ -1518,6 +1589,10 @@ C(global cache)
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="where-weve-been" class="slide level2">
+<h2>where we’ve been</h2>
+<img data-src="img/project-oyster.svg" class="r-stretch">
 </section>
 <section id="package-managers" class="slide level2">
 <h2>package managers</h2>
@@ -1581,10 +1656,10 @@ C(global cache)
 <ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">windows</a></li><li><a href="#tabset-6-2">*nix</a></li></ul>
 <div class="tab-content">
 <div id="tabset-6-1">
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource powershell number-lines code-with-copy"><code class="sourceCode powershell"><span id="cb16-1"><a href="#cb16-1"></a>scoop install rig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource powershell number-lines code-with-copy"><code class="sourceCode powershell"><span id="cb17-1"><a href="#cb17-1"></a>scoop install rig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-6-2">
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1"></a><span class="ex">brew</span> install rig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1"></a><span class="ex">brew</span> install rig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1610,23 +1685,23 @@ nvm<br>
 <section id="language-versions" class="slide level2">
 <h2>language versions</h2>
 <p>using your language manager, install a language version:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a href="#cb18-1"></a>❯ rig install --help</span>
-<span id="cb18-2"><a href="#cb18-2"></a>rig-add</span>
-<span id="cb18-3"><a href="#cb18-3"></a></span>
-<span id="cb18-4"><a href="#cb18-4"></a>DESCRIPTION:</span>
-<span id="cb18-5"><a href="#cb18-5"></a>    Download and install an R version, from the official sources.</span>
-<span id="cb18-6"><a href="#cb18-6"></a>    It keeps the already installed R versions, except versions within the</span>
-<span id="cb18-7"><a href="#cb18-7"></a>    same minor branch, see below.</span>
-<span id="cb18-8"><a href="#cb18-8"></a></span>
-<span id="cb18-9"><a href="#cb18-9"></a>EXAMPLES:</span>
-<span id="cb18-10"><a href="#cb18-10"></a>    # Add the latest release</span>
-<span id="cb18-11"><a href="#cb18-11"></a>    rig add release</span>
-<span id="cb18-12"><a href="#cb18-12"></a></span>
-<span id="cb18-13"><a href="#cb18-13"></a>    # Install specific version</span>
-<span id="cb18-14"><a href="#cb18-14"></a>    rig add 4.1.2</span>
-<span id="cb18-15"><a href="#cb18-15"></a></span>
-<span id="cb18-16"><a href="#cb18-16"></a>    # Install latest version within a minor branch</span>
-<span id="cb18-17"><a href="#cb18-17"></a>    rig add 4.1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb19-1"><a href="#cb19-1"></a>❯ rig install --help</span>
+<span id="cb19-2"><a href="#cb19-2"></a>rig-add</span>
+<span id="cb19-3"><a href="#cb19-3"></a></span>
+<span id="cb19-4"><a href="#cb19-4"></a>DESCRIPTION:</span>
+<span id="cb19-5"><a href="#cb19-5"></a>    Download and install an R version, from the official sources.</span>
+<span id="cb19-6"><a href="#cb19-6"></a>    It keeps the already installed R versions, except versions within the</span>
+<span id="cb19-7"><a href="#cb19-7"></a>    same minor branch, see below.</span>
+<span id="cb19-8"><a href="#cb19-8"></a></span>
+<span id="cb19-9"><a href="#cb19-9"></a>EXAMPLES:</span>
+<span id="cb19-10"><a href="#cb19-10"></a>    # Add the latest release</span>
+<span id="cb19-11"><a href="#cb19-11"></a>    rig add release</span>
+<span id="cb19-12"><a href="#cb19-12"></a></span>
+<span id="cb19-13"><a href="#cb19-13"></a>    # Install specific version</span>
+<span id="cb19-14"><a href="#cb19-14"></a>    rig add 4.1.2</span>
+<span id="cb19-15"><a href="#cb19-15"></a></span>
+<span id="cb19-16"><a href="#cb19-16"></a>    # Install latest version within a minor branch</span>
+<span id="cb19-17"><a href="#cb19-17"></a>    rig add 4.1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
 <p>if you’re running a distribution of linux that rig doesn’t support: - https://docs.rstudio.com/resources/install-r/</p>
 <p>if no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/</p>
@@ -1645,19 +1720,19 @@ nvm<br>
 <section id="environment-managers" class="slide level2">
 <h2>environment managers</h2>
 <p>using your desired version of the language, install an environment manager:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="project-2" class="slide level2">
 <h2>project</h2>
 <p>using your environment manager, install your project’s dependencies:</p>
 <ul>
 <li><p>create a new environment</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>restore a pre-defined environment</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
 </section>
-<section id="activity-6" class="slide level2 smaller">
+<section id="activity-5" class="slide level2 smaller">
 <h2>activity</h2>
 <div class="question">
 <ol type="1">
@@ -1676,7 +1751,7 @@ nvm<br>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dc5bab" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62dc7861" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>

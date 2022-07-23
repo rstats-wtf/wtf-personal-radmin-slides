@@ -7,6 +7,13 @@
     "text": "Course material\n\nrstd.io/wtf-2022-rsc"
   },
   {
+    "objectID": "index.html#create-a-project",
+    "href": "index.html#create-a-project",
+    "title": "",
+    "section": "create a project",
+    "text": "create a project\n\nusethis::create_project(\"~/personal-radmin\")"
+  },
+  {
     "objectID": "index.html#a-brief-personal-history",
     "href": "index.html#a-brief-personal-history",
     "title": "",
@@ -165,14 +172,14 @@
     "href": "index.html#states-of-r-packages",
     "title": "",
     "section": "states of R packages",
-    "text": "states of R packages\n\n\n\n\nstateDiagram-v2\nstate theWholeGame {\n[*] --> Source\nSource --> Bundled: devtools#58;#58;build()\nBundled --> Binary: devtools#58;#58;build(binary = TRUE)\nBinary --> Installed: install.packages()\nInstalled --> Loaded: library()\nLoaded --> [*]\n}"
+    "text": "states of R packages\n\n\n\n\n\n\n\n\n\n\n\ntheWholeGame\n\n\n\n\n\n\n\ndevtools::build()\n\n\n\ndevtools::build(binary = TRUE)\n\n\n\ninstall.packages()\n\n\n\nlibrary()\n\n\n\n\n\n\n\nSource\n\n\n\nBundled\n\n\n\nBinary\n\n\n\nInstalled\n\n\n\nLoaded"
   },
   {
     "objectID": "index.html#states-of-r-packages-1",
     "href": "index.html#states-of-r-packages-1",
     "title": "",
     "section": "states of R packages",
-    "text": "states of R packages\n\n\n\n\nstateDiagram-v2\ndirection LR\n[*] --> Dev\nDev --> Use\nstate Dev {\n  [*] --> Source\n  Source --> Bundled: devtools#58;#58;build()\n  Bundled --> Binary: devtools#58;#58;build(binary = TRUE)\n}\nstate Use {\n  binary --> Installed: install.packages()\n  Installed --> Loaded: library()\n  Loaded --> [*]\n}"
+    "text": "states of R packages\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDev\n\n\n\n\n\n\n\ndevtools::build()\n\n\n\ndevtools::build(binary = TRUE)\n\n\n\nSource\n\n\n\nBundled\n\n\n\nBinary\n\n\n\nUse\n\n\n\ninstall.packages()\n\n\n\nlibrary()\n\n\n\n\n\n\n\nbinary\n\n\n\nInstalled\n\n\n\nLoaded"
   },
   {
     "objectID": "index.html#r-pkgs.org",
@@ -284,7 +291,7 @@
     "href": "index.html#activity-2",
     "title": "",
     "section": "activity",
-    "text": "activity\n\ninstall a package from r-universe\n\n\ninstall.packages(\"gitcellar\") # not on cran!\nupdate your project .Rprofile:\noptions(repos = c(\n  ropensci = \"https://ropensci.r-universe.dev\",\n  CRAN = \"https://cloud.r-project.org\", # macOS\n  RSPM = \"https://packagemanager.rstudio.com/cran/latest\" # windows\n))\nrestart R\ninstall.packages(\"gitcellar\")\n\n\n\n\n10:00"
+    "text": "activity\n\ninstall a package from r-universe\n\n\n\nopen the personal-radmin project\ninstall.packages(\"gitcellar\") # not on cran!\nupdate your project .Rprofile:\nusethis::edit_r_profile(scope = \"project\")\noptions(repos = c(\n  ropensci = \"https://ropensci.r-universe.dev\",\n  CRAN = \"https://cloud.r-project.org\", # macOS\n  RSPM = \"https://packagemanager.rstudio.com/cran/latest\" # windows\n))\nsave .Rprofile and restart R\ninstall.packages(\"gitcellar\")\n\n\n\n\n\n05:00"
   },
   {
     "objectID": "index.html#discussion",
@@ -347,56 +354,42 @@
     "href": "index.html#activity-3",
     "title": "",
     "section": "activity",
-    "text": "activity\n\ntime travel!\n\n\nupdate your project .Rprofile with a date-based snapshot of CRAN\noptions(repos = c(RSPM = \"https://packagemanager.rstudio.com/cran/2021-03-31\"))\nRestart R\ninstall.packages(\"dplyr\")\n\nwhat version of dplyr did you install?\n\n\n\n05:00"
+    "text": "activity\n\ntime travel!\n\n\nopen the personal-radmin project\nupdate your project .Rprofile with a date-based snapshot of CRAN\noptions(repos = c(RSPM = \"https://packagemanager.rstudio.com/cran/2021-03-31\"))\nRestart R\ninstall.packages(\"dplyr\")\n\nwhat version of dplyr did you install?\n\n\n\n05:00"
   },
   {
     "objectID": "index.html#shared-project-environment",
     "href": "index.html#shared-project-environment",
     "title": "",
     "section": "shared project environment",
-    "text": "shared project environment\n\n\n\n\ngraph\nL --- P1\nL --- P2\nL --- P3\nL(library)\nP1(project1)\nP2(project2)\nP3(project3)"
+    "text": "shared project environment\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary\n\n\n\nproject1\n\n\n\nproject2\n\n\n\nproject3\n\n\n\n\n\n\n\n\n.libPaths()\n[1] \"C:/Users/edavi/Documents/R/win-library/3.6\" # user\n[2] \"C:/Program Files/R/R-3.6.3/library\" # system"
+  },
+  {
+    "objectID": "index.html#renv-isolated-project-environments",
+    "href": "index.html#renv-isolated-project-environments",
+    "title": "",
+    "section": "renv: isolated project environments",
+    "text": "renv: isolated project environments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nglobal cache\n\n\n\nlibrary1\n\n\n\nlibrary2\n\n\n\nlibrary3\n\n\n\nproject1\n\n\n\nproject2\n\n\n\nproject3\n\n\n\n\n\n\n\n.libPaths()\n* Project '~/projects/sample-project' loaded. [renv 0.15.5]\n> .libPaths()\n[1] \"C:/Users/edavi/Documents/projects/sample-project/renv/library/R-3.6/x86_64-w64-mingw32\"\n[2] \"C:/Program Files/R/R-3.6.3/library\""
   },
   {
     "objectID": "index.html#isolated-project-environments",
     "href": "index.html#isolated-project-environments",
     "title": "",
     "section": "isolated project environments",
-    "text": "isolated project environments\n\n\n\n\ngraph\nL1 --- P1\nL2 --- P2\nL3 --- P3\nL1(library)\nL2(library)\nL3(library)\nP1(project1)\nP2(project2)\nP3(project3)"
-  },
-  {
-    "objectID": "index.html#global-package-cache",
-    "href": "index.html#global-package-cache",
-    "title": "",
-    "section": "global package cache",
-    "text": "global package cache\n\n\n\n\ngraph\nC --- L1\nC --- L2\nC --- L3\nL1 --- P1\nL2 --- P2\nL3 --- P3\nL1(library1)\nL2(library2)\nL3(library3)\nP1(project1)\nP2(project2)\nP3(project3)\nC(global cache)"
-  },
-  {
-    "objectID": "index.html#isolated-project-environments-1",
-    "href": "index.html#isolated-project-environments-1",
-    "title": "",
-    "section": "isolated project environments",
     "text": "isolated project environments\n\nexperiment with new packages without breaking other projects\nshare exactly which versions you’re using with your team or future you\nre-use packages you’ve already installed"
   },
   {
-    "objectID": "index.html#renvinit",
-    "href": "index.html#renvinit",
+    "objectID": "index.html#activity-4",
+    "href": "index.html#activity-4",
     "title": "",
-    "section": "renv::init()",
-    "text": "renv::init()\n.libPaths()\nrenv::init()\n.libPaths()\nrenv::deactivate()\n.libPaths()\nwhy are we doing this? - don’t break your old dashboards - where is this actually going - talk more explicitly about the behavior of renv - steal kevin’s graphics on renv\n\nrun .libPaths() to see what your default package libraries are initialize an renv–you’ll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in renv/activate.R deactivate the environment and check libPaths() again–it should be back to normal"
-  },
-  {
-    "objectID": "index.html#renv.lock",
-    "href": "index.html#renv.lock",
-    "title": "",
-    "section": "renv.lock",
-    "text": "renv.lock\n{\n  \"R\": {\n    \"Version\": \"4.1.2\",\n    \"Repositories\": [\n      {\n        \"Name\": \"CRAN\",\n        \"URL\": \"https://cloud.r-project.org\"\n      }\n    ]\n  },\n  \"Packages\": {\n    [...]\n    \"knitr\": {\n      \"Package\": \"knitr\",\n      \"Version\": \"1.39\",\n      \"Source\": \"Repository\",\n      \"Repository\": \"CRAN\",\n      \"Hash\": \"029ab7c4badd3cf8af69016b2ba27493\",\n      \"Requirements\": [\n        \"evaluate\",\n        \"highr\",\n        \"stringr\",\n        \"xfun\",\n        \"yaml\"\n      ]\n    },\n    ...\n  }\n}\n\ncreated from renv::snapshot() by default, identifies dependencies of your code for example: usethis doesn’t usually appear in my lockfiles, because I’m running it interactively, rather than making it a dependency of my projects"
+    "section": "activity",
+    "text": "activity\n\ncreate an isolated project library\n\n\n\nopen your wtf-fix-paths project\ninstall.packages(\"renv\")\nrenv::init()\nrenv::status()\nadd library(parallelly) to any file in the R directory\nrenv::status()\ninstall.packages(\"parallelly\")\nrenv::status()\nrenv::snapshot()\nremove library(parallelly) from the file you added it to\nrenv::status()\n\n\n\n\n\n10:00\n\n\n\n\nrun .libPaths() to see what your default package libraries are initialize an renv–you’ll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in renv/activate.R deactivate the environment and check libPaths() again–it should be back to normal"
   },
   {
     "objectID": "index.html#renvinstall",
     "href": "index.html#renvinstall",
     "title": "",
     "section": "renv::install()",
-    "text": "renv::install()\nor install.packages() with shims enabled\nrenv::install(\"jsonlite\")\nrenv::install(\"jsonlite@1.2\") # at version\nrenv::install(\"jeroen/jsonlite\") # latest\nrenv::install(\"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d\") # at SHA\nrenv::install(\"path/to/package\") # local source\n\n\ndevtools::install()\ndevtools::install_version()\ndevtools::install_github()\ndevtools::install_github()\ndevtools::install(\"path/to/package\")"
+    "text": "renv::install()\nor install.packages() with shims enabled\nrenv::install(\"jsonlite\")\nrenv::install(\"jsonlite@1.2\") # at version\nrenv::install\"jeroen/jsonlite\") # latest\nrenv::install\"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d\") # at SHA\nrenv::install(\"path/to/package\") # local source\n\n\ndevtools::install(\"jsonlite\")\ndevtools::install_version(\"jsonlite@1.2\") # at version\ndevtools::install_github(\"jeroen/jsonlite\") # latest\ndevtools::install_github(\"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d\") # at SHA\ndevtools::install(\"path/to/package\") # local source"
   },
   {
     "objectID": "index.html#the-junk-drawer",
@@ -406,32 +399,18 @@
     "text": "the junk drawer\nfor reprexes, tweets, and other ephemera:\n~/Documents/scratch\n\nI use renv for everything, and have one junk project into which I install things without regard for stability or reproducibility"
   },
   {
-    "objectID": "index.html#using-publiic-package-manager",
-    "href": "index.html#using-publiic-package-manager",
-    "title": "",
-    "section": "using publiic package manager",
-    "text": "using publiic package manager"
-  },
-  {
-    "objectID": "index.html#activity-4",
-    "href": "index.html#activity-4",
-    "title": "",
-    "section": "activity",
-    "text": "activity\n\ncreate two projects\n\njust use status messages rather than showing people lockfile\n\nusing renv, install.packages(“renv”) install(“jeroen/jsonlite”) install jsonlite from github then install from CRAN to roll back\n\nmore explanation of global cache\nthen roll back to released version\n\nrestore the environment from an existing project\n\n\nan old one of yours from github\ncreate an environment for a tidyverse package\n\ndtplyr renv example where across isn’t implementeed"
-  },
-  {
-    "objectID": "index.html#activity-5",
-    "href": "index.html#activity-5",
-    "title": "",
-    "section": "activity",
-    "text": "activity\n\n\ninstall dev jsonlite, then roll back to released version\n\n\n\n\n\n01:00"
-  },
-  {
     "objectID": "index.html#practice-makes-perfect",
     "href": "index.html#practice-makes-perfect",
     "title": "",
     "section": "practice makes perfect",
     "text": "practice makes perfect\n\nWindows 10+macOSLinux\n\n\nWindows Sandbox\n\n\n🤷\n\n\nMultipass\nDigital Ocean\nLinode\n\n\n\n\nThe best way to become more comfortable with installing things is to practice in an environment you can throw away\n- the windows sandbox lets you test in an environment on your machine that won’t affect your computer - enabling it is outside the scope of this course - for linux users, the easiest thing to do is stand up a small VPS - I don’t know of a good safe way to test mac environments"
+  },
+  {
+    "objectID": "index.html#where-weve-been",
+    "href": "index.html#where-weve-been",
+    "title": "",
+    "section": "where we’ve been",
+    "text": "where we’ve been"
   },
   {
     "objectID": "index.html#package-managers",
@@ -490,8 +469,8 @@
     "text": "project\nusing your environment manager, install your project’s dependencies:\n\ncreate a new environment\nrenv::init()\nrestore a pre-defined environment\nrenv::restore()"
   },
   {
-    "objectID": "index.html#activity-6",
-    "href": "index.html#activity-6",
+    "objectID": "index.html#activity-5",
+    "href": "index.html#activity-5",
     "title": "",
     "section": "activity",
     "text": "activity\n\n\nread the rig FAQ, or the rswitch guide\ninstall a different major/minor version of R\n\nhttps://cran.r-project.org/bin/macosx/\nhttps://cran.r-project.org/bin/windows/base/old/\n\ninstall rig\n\nuse `rig to install a different major or minor version of R\nopen RStudio with that newly installed R version\n\n\n\n\n\n\n01:00"
