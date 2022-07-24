@@ -937,12 +937,12 @@ create an isolated project library
 1. `install.packages("renv")`
 1. `renv::init()`
 1. `renv::status()`
-1. add `library(parallelly)` to any file in the `R` directory
+1. add `library(parallelly)` to any file in the `wtf-fix-paths/R` directory; save file
 1. `renv::status()`
 1. `install.packages("parallelly")`
 1. `renv::status()`
-1. `renv::snapshot()`
-1. remove `library(parallelly)` from the file you added it to
+1. `renv::snapshot()` (`y` proceed)
+1. remove `library(parallelly)` from the file you added it to; save file
 1. `renv::status()`
 :::
 
