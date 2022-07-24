@@ -399,6 +399,27 @@
     "text": "the junk drawer\nfor reprexes, tweets, and other ephemera:\n~/Documents/scratch\n\nI use renv for everything, and have one junk project into which I install things without regard for stability or reproducibility"
   },
   {
+    "objectID": "index.html#why-3",
+    "href": "index.html#why-3",
+    "title": "",
+    "section": "why",
+    "text": "why"
+  },
+  {
+    "objectID": "index.html#bigger-context",
+    "href": "index.html#bigger-context",
+    "title": "",
+    "section": "bigger context",
+    "text": "bigger context"
+  },
+  {
+    "objectID": "index.html#bigger-context-1",
+    "href": "index.html#bigger-context-1",
+    "title": "",
+    "section": "bigger context",
+    "text": "bigger context"
+  },
+  {
     "objectID": "index.html#practice-makes-perfect",
     "href": "index.html#practice-makes-perfect",
     "title": "",
@@ -406,18 +427,11 @@
     "text": "practice makes perfect\n\nWindows 10+macOSLinux\n\n\nWindows Sandbox\n\n\n🤷\n\n\nMultipass\nDigital Ocean\nLinode\n\n\n\n\nThe best way to become more comfortable with installing things is to practice in an environment you can throw away\n- the windows sandbox lets you test in an environment on your machine that won’t affect your computer - enabling it is outside the scope of this course - for linux users, the easiest thing to do is stand up a small VPS - I don’t know of a good safe way to test mac environments"
   },
   {
-    "objectID": "index.html#where-weve-been",
-    "href": "index.html#where-weve-been",
-    "title": "",
-    "section": "where we’ve been",
-    "text": "where we’ve been"
-  },
-  {
     "objectID": "index.html#package-managers",
     "href": "index.html#package-managers",
     "title": "",
     "section": "package managers",
-    "text": "package managers\nsoftware whose job it is to install other software\n\n\n\n\n\n\n\nOperating system\nRecommended\n\n\n\n\n windows\nscoop, chocolatey, winget\n\n\n macOS\nhomebrew\n\n\n linux\nhomebrew, apt, yum, zypper"
+    "text": "package managers\nsoftware whose job it is to install other software\n🙉 not the same kinds of packages as RSPM\n\n\n\n\n\n\n\nOperating system\nRecommended\n\n\n\n\n windows\nscoop, chocolatey, winget\n\n\n macOS\nhomebrew\n\n\n linux\nhomebrew, apt, yum, zypper"
   },
   {
     "objectID": "index.html#section",
