@@ -420,15 +420,15 @@
     "text": "why"
   },
   {
-    "objectID": "index.html#bigger-context",
-    "href": "index.html#bigger-context",
+    "objectID": "index.html#why-4",
+    "href": "index.html#why-4",
     "title": "",
-    "section": "bigger context",
-    "text": "bigger context"
+    "section": "why",
+    "text": "why"
   },
   {
-    "objectID": "index.html#bigger-context-1",
-    "href": "index.html#bigger-context-1",
+    "objectID": "index.html#bigger-context",
+    "href": "index.html#bigger-context",
     "title": "",
     "section": "bigger context",
     "text": "bigger context"
@@ -445,7 +445,7 @@
     "href": "index.html#package-managers",
     "title": "",
     "section": "package managers",
-    "text": "package managers\nsoftware whose job it is to install other software\n🙉 not the same kinds of packages as RSPM\n\n\n\n\n\n\n\nOperating system\nRecommended\n\n\n\n\n windows\nscoop, chocolatey, winget\n\n\n macOS\nhomebrew\n\n\n linux\nhomebrew, apt, yum, zypper"
+    "text": "package managers\nsoftware whose job it is to install other software\n🙉 not the same kinds of packages as RSPM\n\n\n\n\npackage manager\n\n\n\n\n windows\nscoop, chocolatey, winget\n\n\n macOS\nhomebrew\n\n\n linux\nhomebrew, apt, yum, zypper"
   },
   {
     "objectID": "index.html#section",
