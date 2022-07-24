@@ -754,7 +754,6 @@ binaries are usually preferred, but for development versions of packages, you ma
 library(ggplot2)
 library(tibble)
 library(ggrepel)
-library(plotly)
 mm <- tribble(
   ~x, ~y, ~label, ~Description, ~status,
   0.1, 0.1, 'Validated', 'Admins test and approve \n a subset of CRAN', TRUE,
@@ -803,7 +802,6 @@ p <- ggplot(mm, aes(x, y)) +
   scale_y_continuous(limits = c(0,1), breaks = seq(0,1,0.25), labels =  c("Locked Down","", "", "", "Open")) +
   theme_minimal() + 
   scale_color_manual(breaks = NULL, values = c("#ff0000","#a3c586")) + 
-  
   labs(
     x = "Who is Responsible for Reproducing the Environment?",
     y = "Package Access",
@@ -1036,15 +1034,26 @@ I use `renv` for everything, and have one junk project into which I install thin
 
 ::: agenda
 -   starting R
-
 -   installing R packages
-
 -   reproducible environments
+
 ::: agenda-active
 -   installing / upgrading R
 :::
 
 :::
+
+## why
+
+![](img/project-oyster-greyed.svg){.r-stretch}
+
+## bigger context
+
+![](img/project-oyster.svg)
+
+## bigger context
+
+![](img/r-project-oyster.svg)
 
 ## practice makes perfect
 
@@ -1072,14 +1081,10 @@ The best way to become more comfortable with installing things is to practice in
 - I don't know of a good safe way to test mac environments
 :::
 
-## where we've been
-
-![](img/project-oyster.svg){.r-stretch}
-
 ## package managers
 
-software whose job it is to install other software
-
+software whose job it is to install other software  
+:hear_no_evil: not the same kinds of _packages_ as RSPM
 
 | Operating system | Recommended |
 |------------------|-------------------------------|
