@@ -60,7 +60,14 @@
     "href": "index.html#use-a-newline",
     "title": "",
     "section": "⚠️ Use a newline",
-    "text": "⚠️ Use a newline\n\n\n.Renviron and .Rprofile must end in a newline.  \nR may silently throw away the last line if you don’t do this"
+    "text": "⚠️ Use a newline\n\n\nstartup files must end in a newline.  \nR may silently throw away the last line if you don’t do this."
+  },
+  {
+    "objectID": "index.html#renviron",
+    "href": "index.html#renviron",
+    "title": "",
+    "section": ".Renviron",
+    "text": ".Renviron\nenvironment variables\n\na […] named value that can affect the way running processes will behave on a computer"
   },
   {
     "objectID": "index.html#editing-.renviron",
@@ -70,11 +77,11 @@
     "text": "Editing .Renviron\n\nusethis::edit_r_environ(scope = ?)\n\n\n\nuser\n~/.Renviron\n\nproject\npath/to/your/project/.Renviron"
   },
   {
-    "objectID": "index.html#renviron",
-    "href": "index.html#renviron",
+    "objectID": "index.html#what-goes-in-.renviron",
+    "href": "index.html#what-goes-in-.renviron",
     "title": "",
-    "section": ".Renviron",
-    "text": ".Renviron\n✅ R-specific environment variables\n✅ API keys\n❌ R code"
+    "section": "what goes in .Renviron",
+    "text": "what goes in .Renviron\n✅ R-specific environment variables\n✅ API keys\n❌ R code"
   },
   {
     "objectID": "index.html#example-.renviron",
@@ -95,7 +102,7 @@
     "href": "index.html#activity",
     "title": "",
     "section": "activity",
-    "text": "activity\n\nedit your user .Renvironedit your project .Renvironhandle a collision\n\n\n\nusethis::edit_r_environ()\nadd WTF_USER=<your name>\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_USER Sys.getenv(“WTF_USER”)\n\n\n\n\nusethis::edit_r_environ(\"project\")\nadd WTF_PROJECT=<your name>\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_USER Sys.getenv(“WTF_PROJECT”)\n\n\n\n\nusethis::edit_r_environ()\nadd WTF_DAVID=user\nusethis::edit_r_environ(\"project\")\nadd WTF_DAVID=project\nrestart your R session\nretrieve the value of WTF_DAVID\n\n\n\n\n\n\n\n10:00"
+    "text": "activity\n\nedit your user .Renvironedit your project .Renvironhandle a collision\n\n\n\nusethis::edit_r_environ()\nadd WTF_USER=<your name>\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_USER Sys.getenv(\"WTF_USER\")\n\n\n\n\nusethis::edit_r_environ(\"project\")\nadd WTF_PROJECT=<your name>\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_PROJECT Sys.getenv(\"WTF_PROJECT\")\n\n\n\n\nusethis::edit_r_environ()\nadd WTF_DAVID=user\nusethis::edit_r_environ(\"project\")\nadd WTF_DAVID=project\nrestart your R session\nretrieve the value of WTF_DAVID\n\n\n\n\n\n\n\n10:00"
   },
   {
     "objectID": "index.html#rprofile",
