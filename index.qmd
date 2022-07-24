@@ -444,39 +444,38 @@ having a reason to slack off is fun but being able to get your work done quickly
 ## states of R packages
 
 ```{mermaid}
-stateDiagram-v2
-state theWholeGame {
-[*] --> Source
-Source --> Bundled: devtools#58;#58;build()
-Bundled --> Binary: devtools#58;#58;build(binary = TRUE)
-Binary --> Installed: install.packages()
-Installed --> Loaded: library()
-Loaded --> [*]
-}
+%%{init: {"theme": "dark" } }%%
+graph TD
+Source -- "devtools::build()" --> Bundled
+Bundled -- "devtools::build(binary = TRUE)"--> Binary 
+Binary --"install.packages()"--> Installed 
+Installed --"library()"--> Loaded 
 ```
+
+::: aside
+[R Packages -- Structure](https://r-pkgs.org/Structure.html)
+:::
 
 ## states of R packages
 
 ```{mermaid}
-stateDiagram-v2
+%%{init: {"theme": "dark" } }%%
+flowchart TD
+subgraph dev
+  direction LR
+Source -- "devtools::build()" --> Bundled
+Bundled -- "devtools::build(binary = TRUE)"--> Binary 
+end
+subgraph use
 direction LR
-[*] --> Dev
-Dev --> Use
-state Dev {
-  [*] --> Source
-  Source --> Bundled: devtools#58;#58;build()
-  Bundled --> Binary: devtools#58;#58;build(binary = TRUE)
-}
-state Use {
-  binary --> Installed: install.packages()
-  Installed --> Loaded: library()
-  Loaded --> [*]
-}
+Binary --"install.packages()"--> Installed 
+Installed --"library()"--> Loaded 
+end
 ```
 
-## r-pkgs.org
-
-https://r-pkgs.org/Structure.html
+::: aside
+[R Packages -- Structure](https://r-pkgs.org/Structure.html)
+:::
 
 
 ::: notes
@@ -888,6 +887,7 @@ countdown_timer(minutes = 5, bottom = 0)
 
 ::: {data-id="env"}
 ```{mermaid}
+%%{init: {"theme": "dark" } }%%
 graph
 L --- P1
 L --- P2
@@ -912,6 +912,7 @@ P3(project3)
 
 ::: {data-id="env"}
 ```{mermaid}
+%%{init: {"theme": "dark" } }%% 
 graph
 C --- L1
 C --- L2
