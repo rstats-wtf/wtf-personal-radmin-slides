@@ -336,6 +336,13 @@
     "text": "tools\n\n\nrspm\n\n\nrenv\n\n\n\n\nrenv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - renv::install() can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache -makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out"
   },
   {
+    "objectID": "index.html#rspm-2",
+    "href": "index.html#rspm-2",
+    "title": "",
+    "section": "rspm",
+    "text": "rspm"
+  },
+  {
     "objectID": "index.html#rspm-latest",
     "href": "index.html#rspm-latest",
     "title": "",
@@ -357,22 +364,29 @@
     "text": "activity\n\ntime travel!\n\n\nopen the personal-radmin project\nupdate your project .Rprofile with a date-based snapshot of CRAN\noptions(repos = c(RSPM = \"https://packagemanager.rstudio.com/cran/2021-03-31\"))\nRestart R\ninstall.packages(\"dplyr\")\n\nwhat version of dplyr did you install?\n\n\n\n05:00"
   },
   {
+    "objectID": "index.html#renv-2",
+    "href": "index.html#renv-2",
+    "title": "",
+    "section": "renv",
+    "text": "renv"
+  },
+  {
     "objectID": "index.html#shared-project-environment",
     "href": "index.html#shared-project-environment",
     "title": "",
     "section": "shared project environment",
-    "text": "shared project environment\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary\n\n\n\nproject1\n\n\n\nproject2\n\n\n\nproject3\n\n\n\n\n\n\n\n\n.libPaths()\n[1] \"C:/Users/edavi/Documents/R/win-library/3.6\" # user\n[2] \"C:/Program Files/R/R-3.6.3/library\" # system"
-  },
-  {
-    "objectID": "index.html#renv-isolated-project-environments",
-    "href": "index.html#renv-isolated-project-environments",
-    "title": "",
-    "section": "renv: isolated project environments",
-    "text": "renv: isolated project environments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nglobal cache\n\n\n\nlibrary1\n\n\n\nlibrary2\n\n\n\nlibrary3\n\n\n\nproject1\n\n\n\nproject2\n\n\n\nproject3\n\n\n\n\n\n\n\n.libPaths()\n* Project '~/projects/sample-project' loaded. [renv 0.15.5]\n> .libPaths()\n[1] \"C:/Users/edavi/Documents/projects/sample-project/renv/library/R-3.6/x86_64-w64-mingw32\"\n[2] \"C:/Program Files/R/R-3.6.3/library\""
+    "text": "shared project environment\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary\n\n\n\nproject1\n\n\n\nproject2\n\n\n\nproject3\n\n\n\n\n\n\n\n\n\n.libPaths()\n[1] \"C:/Users/edavi/Documents/R/win-library/3.6\" # user\n[2] \"C:/Program Files/R/R-3.6.3/library\" # system"
   },
   {
     "objectID": "index.html#isolated-project-environments",
     "href": "index.html#isolated-project-environments",
+    "title": "",
+    "section": "isolated project environments",
+    "text": "isolated project environments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nglobal cache\n\n\n\nlibrary1\n\n\n\nlibrary2\n\n\n\nlibrary3\n\n\n\nproject1\n\n\n\nproject2\n\n\n\nproject3\n\n\n\n\n\n\n\n\n\n.libPaths()\n* Project '~/projects/sample-project' loaded. [renv 0.15.5]\n> .libPaths()\n[1] \"C:/Users/edavi/Documents/projects/sample-project/renv/library/R-3.6/x86_64-w64-mingw32\"\n[2] \"C:/Program Files/R/R-3.6.3/library\""
+  },
+  {
+    "objectID": "index.html#isolated-project-environments-1",
+    "href": "index.html#isolated-project-environments-1",
     "title": "",
     "section": "isolated project environments",
     "text": "isolated project environments\n\nexperiment with new packages without breaking other projects\nshare exactly which versions you’re using with your team or future you\nre-use packages you’ve already installed"
