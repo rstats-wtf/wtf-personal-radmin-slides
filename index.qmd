@@ -517,7 +517,7 @@ under: Make it explicit  why we care about installing from source
 
 ## may not be the latest
 
-![](img/parallely-versions-highlight.png)
+![](img/parallelly-versions-highlight.png)
 
 ## may not be the latest
 
