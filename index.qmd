@@ -839,6 +839,10 @@ renv has a number of tools that are helpful for adopting a project-based workflo
   -makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn't work out
 :::
 
+## rspm
+
+![](img/icon-rspm.png){.r-stretch}
+
 ## rspm: latest
 
 ![](img/rspm-latest.png)
@@ -868,8 +872,13 @@ what version of dplyr did you install?
 countdown_timer(minutes = 5, bottom = 0)
 ```
 
-## shared project environment
+## renv
 
+![](img/renv-small.png){.r-stretch}
+
+## shared project environment {auto-animate="true"}
+
+::: {data-id="env"}
 ```{mermaid}
 graph
 L --- P1
@@ -880,6 +889,8 @@ P1(project1)
 P2(project2)
 P3(project3)
 ```
+:::
+
 <br/>
 
 ### `.libPaths()`
@@ -889,8 +900,9 @@ P3(project3)
 [2] "C:/Program Files/R/R-3.6.3/library" # system
 ```
 
-## renv: isolated project environments
+## isolated project environments {auto-animate="true"}
 
+::: {data-id="env"}
 ```{mermaid}
 graph
 C --- L1
@@ -907,6 +919,9 @@ P2(project2)
 P3(project3)
 C(global cache)
 ```
+:::
+
+<br/>
 
 ### `.libPaths()`
 
