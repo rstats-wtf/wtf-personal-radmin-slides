@@ -697,7 +697,6 @@ devtools::has_devel()
 
 > `## Your system is ready to build packages! `
 
-
 ## activity
 
 ::: question
@@ -1069,7 +1068,7 @@ I use `renv` for everything, and have one junk project into which I install thin
 
 ![](img/project-oyster-greyed.svg){.r-stretch}
 
-## bigger context
+## why
 
 ![](img/project-oyster.svg)
 
@@ -1108,11 +1107,11 @@ The best way to become more comfortable with installing things is to practice in
 software whose job it is to install other software  
 :hear_no_evil: not the same kinds of _packages_ as RSPM
 
-| Operating system | Recommended |
-|------------------|-------------------------------|
-| {{< fa brands windows >}} windows        | **scoop**, chocolatey, winget |
-| {{< fa brands apple >}} macOS            | **homebrew**                  |
-| {{< fa brands linux >}} linux            | **homebrew**, apt, yum, zypper|
+|                                   | package manager               |
+|---------------------------------- |-------------------------------|
+| {{< fa brands windows >}} windows | **scoop**, chocolatey, winget |
+| {{< fa brands apple >}} macOS     | **homebrew**                  |
+| {{< fa brands linux >}} linux     | **homebrew**, apt, yum, zypper|
 
 ## :warning:
 
