@@ -382,7 +382,7 @@
     "href": "index.html#activity-4",
     "title": "",
     "section": "activity",
-    "text": "activity\n\ncreate an isolated project library\n\n\n\nopen your wtf-fix-paths project\ninstall.packages(\"renv\")\nrenv::init()\nrenv::status()\nadd library(parallelly) to any file in the R directory\nrenv::status()\ninstall.packages(\"parallelly\")\nrenv::status()\nrenv::snapshot()\nremove library(parallelly) from the file you added it to\nrenv::status()\n\n\n\n\n\n10:00\n\n\n\n\nrun .libPaths() to see what your default package libraries are initialize an renv–you’ll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in renv/activate.R deactivate the environment and check libPaths() again–it should be back to normal"
+    "text": "activity\n\ncreate an isolated project library\n\n\n\nopen your wtf-fix-paths project\ninstall.packages(\"renv\")\nrenv::init()\nrenv::status()\nadd library(parallelly) to any file in the wtf-fix-paths/R directory; save file\nrenv::status()\ninstall.packages(\"parallelly\")\nrenv::status()\nrenv::snapshot() (y proceed)\nremove library(parallelly) from the file you added it to; save file\nrenv::status()\n\n\n\n\n\n10:00\n\n\n\n\nrun .libPaths() to see what your default package libraries are initialize an renv–you’ll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in renv/activate.R deactivate the environment and check libPaths() again–it should be back to normal"
   },
   {
     "objectID": "index.html#renvinstall",
