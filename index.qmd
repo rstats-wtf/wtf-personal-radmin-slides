@@ -159,17 +159,23 @@ Sometimes we want to change the way our code behaves _without_ having to change 
 
 ::: columns
 ::: column
-`.Renviron` and `.Rprofile` **must** end in a newline.
+startup files **must** end in a newline.
 <br/>
 <br/>
 
-R may silently throw away the last line if you don't do this
+R may silently throw away the last line if you don't do this.
 :::
 
 ::: column
 ![](img/insert-newline-end-highlight.png)
 :::
 :::
+
+## `.Renviron`
+
+environment variables
+
+> a [...] named value that can affect the way running processes will behave on a computer
 
 ## Editing `.Renviron`
 
@@ -189,7 +195,7 @@ R may silently throw away the last line if you don't do this
 :::
 ::::
 
-## `.Renviron`
+## what goes in `.Renviron`
 
 :white_check_mark: R-specific environment variables\
 :white_check_mark: API keys\
@@ -235,7 +241,8 @@ if values clash, _project_ wins
 1. restart your R session  
   `CTRL + SHIFT + F10`  
   `CMD  + SHIFT + 0 `
-1. Retrieve the value of WTF_USER Sys.getenv("WTF_USER")
+1. Retrieve the value of WTF_USER 
+    `Sys.getenv("WTF_USER")`
 
 ### edit your project `.Renviron` {.smaller}
 
@@ -244,7 +251,8 @@ if values clash, _project_ wins
 1. restart your R session  
   `CTRL + SHIFT + F10`  
   `CMD  + SHIFT + 0 `
-1. Retrieve the value of WTF_USER Sys.getenv("WTF_PROJECT")
+1. Retrieve the value of WTF_PROJECT
+    `Sys.getenv("WTF_PROJECT")`
 
 ### handle a collision {.smaller}
 
