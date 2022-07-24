@@ -1041,8 +1041,6 @@ I use `renv` for everything, and have one junk project into which I install thin
 -   installing / upgrading R
 :::
 
-:::
-
 ## why
 
 ![](img/project-oyster-greyed.svg){.r-stretch}
