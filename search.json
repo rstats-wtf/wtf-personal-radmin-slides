@@ -179,21 +179,14 @@
     "href": "index.html#states-of-r-packages",
     "title": "",
     "section": "states of R packages",
-    "text": "states of R packages\n\n\n\n\n\n\n\n\n\n\n\ntheWholeGame\n\n\n\n\n\n\n\ndevtools::build()\n\n\n\ndevtools::build(binary = TRUE)\n\n\n\ninstall.packages()\n\n\n\nlibrary()\n\n\n\n\n\n\n\nSource\n\n\n\nBundled\n\n\n\nBinary\n\n\n\nInstalled\n\n\n\nLoaded"
+    "text": "states of R packages\n\n\n\n\n\n\n\n\n\n\n\ndevtools::build()\n\n\n\ndevtools::build(binary = TRUE)\n\n\n\ninstall.packages()\n\n\n\nlibrary()\n\n\n\nSource\n\n\n\nBundled\n\n\n\nBinary\n\n\n\nInstalled\n\n\n\nLoaded\n\n\n\n\n\n\n\n\n\nR Packages – Structure"
   },
   {
     "objectID": "index.html#states-of-r-packages-1",
     "href": "index.html#states-of-r-packages-1",
     "title": "",
     "section": "states of R packages",
-    "text": "states of R packages\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDev\n\n\n\n\n\n\n\ndevtools::build()\n\n\n\ndevtools::build(binary = TRUE)\n\n\n\nSource\n\n\n\nBundled\n\n\n\nBinary\n\n\n\nUse\n\n\n\ninstall.packages()\n\n\n\nlibrary()\n\n\n\n\n\n\n\nbinary\n\n\n\nInstalled\n\n\n\nLoaded"
-  },
-  {
-    "objectID": "index.html#r-pkgs.org",
-    "href": "index.html#r-pkgs.org",
-    "title": "",
-    "section": "r-pkgs.org",
-    "text": "r-pkgs.org\nhttps://r-pkgs.org/Structure.html\n\n“packages have to be compiled to run” the question is when - show how to set options for different environment managers - what does this look like in CI - insufficiently motivated? - you need the dev version of something\n\n?Workflows break w/ current CRAN package, need to go back to older package\nInstall package from github\nDevelop your own packages under: Make it explicit why we care about installing from source\nbinaries are probably faster\nCRAN doesn’t always have binaries available but you may not need them"
+    "text": "states of R packages\n\n\n\n\n\n\n\n\n\n\n\nuse\n\n\n\ndev\n\n\n\ndevtools::build()\n\n\n\ndevtools::build(binary = TRUE)\n\n\n\ninstall.packages()\n\n\n\nlibrary()\n\n\n\nInstalled\n\n\n\nLoaded\n\n\n\nBundled\n\n\n\nSource\n\n\n\nBinary\n\n\n\n\n\n\n\n\n\n“packages have to be compiled to run” the question is when - show how to set options for different environment managers - what does this look like in CI - insufficiently motivated? - you need the dev version of something\n\n?Workflows break w/ current CRAN package, need to go back to older package\nInstall package from github\nDevelop your own packages under: Make it explicit why we care about installing from source\nbinaries are probably faster\nCRAN doesn’t always have binaries available but you may not need them\n\n\n\nR Packages – Structure"
   },
   {
     "objectID": "index.html#binary",
@@ -389,7 +382,7 @@
     "href": "index.html#isolated-project-environments",
     "title": "",
     "section": "isolated project environments",
-    "text": "isolated project environments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nglobal cache\n\n\n\nlibrary1\n\n\n\nlibrary2\n\n\n\nlibrary3\n\n\n\nproject1\n\n\n\nproject2\n\n\n\nproject3\n\n\n\n\n\n\n\n\n\n.libPaths()\n* Project '~/projects/sample-project' loaded. [renv 0.15.5]\n> .libPaths()\n[1] \"C:/Users/edavi/Documents/projects/sample-project/renv/library/R-3.6/x86_64-w64-mingw32\"\n[2] \"C:/Program Files/R/R-3.6.3/library\""
+    "text": "isolated project environments\n\n\n\n\n\n\n\nSyntax error in graphmermaid version 9.1.1\n\n\n\n\n\n\n\n.libPaths()\n* Project '~/projects/sample-project' loaded. [renv 0.15.5]\n> .libPaths()\n[1] \"C:/Users/edavi/Documents/projects/sample-project/renv/library/R-3.6/x86_64-w64-mingw32\"\n[2] \"C:/Program Files/R/R-3.6.3/library\""
   },
   {
     "objectID": "index.html#isolated-project-environments-1",
