@@ -204,9 +204,9 @@ environment variables
 
 ## what goes in `.Renviron`
 
-:white_check_mark: R-specific environment variables
-:white_check_mark: API keys
-:x: R code
+:white_check_mark: R-specific environment variables  
+:white_check_mark: API keys  
+:x: R code  
 
 ## example `.Renviron`
 
