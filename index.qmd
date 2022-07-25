@@ -184,6 +184,12 @@ environment variables
 
 > a [...] named value that can affect the way running processes will behave on a computer
 
+## what goes in `.Renviron`
+
+:white_check_mark: R-specific environment variables  
+:white_check_mark: API keys or other secrets  
+:x: R code  
+
 ## Editing `.Renviron`
 
 ::: {.r .r-fit-text}
@@ -201,12 +207,6 @@ environment variables
 `path/to/your/project/.Renviron`
 :::
 ::::
-
-## what goes in `.Renviron`
-
-:white_check_mark: R-specific environment variables  
-:white_check_mark: API keys  
-:x: R code  
 
 ## example `.Renviron`
 
@@ -782,7 +782,7 @@ You _will_ need to reproduce or update your analysis.
 You might get audited!
 :::
 
-## reproducibility strategies
+## [reproducibility strategies](https://environments.rstudio.com/reproduce)
 
 ```{r}
 library(ggplot2)
@@ -845,7 +845,7 @@ p <- ggplot(mm, aes(x, y)) +
 p
 ```
 
-## reproducibility strategies {transition="none"}
+## [reproducibility strategies](https://environments.rstudio.com/reproduce) {transition="none"}
 
 ```{r}
 p + annotate("rect", xmin = .75, xmax = .95, ymin = .75, ymax = .95, alpha = .2)
@@ -1090,6 +1090,8 @@ for reprexes, tweets, and other ephemera:
 I use `renv` for everything, and have one junk project into which I install things without regard for stability or reproducibility
 :::
 
+## sysdeps??
+
 
 # agenda {background-color="#333399"}
 
@@ -1106,15 +1108,21 @@ I use `renv` for everything, and have one junk project into which I install thin
 
 ## why
 
+::: r-stack
 ![](img/project-oyster-greyed.svg){.r-stretch}
+:::
 
 ## why
 
+::: r-stack
 ![](img/project-oyster.svg)
+:::
 
 ## bigger context
 
+::: r-stack
 ![](img/r-project-oyster.svg)
+:::
 
 ## practice makes perfect
 
@@ -1153,9 +1161,9 @@ software whose job it is to install other software
 
 |                                   | package manager               |
 |---------------------------------- |-------------------------------|
-| {{< fa brands windows >}} windows | **scoop**, chocolatey, winget |
-| {{< fa brands apple >}} macOS     | **homebrew**                  |
-| {{< fa brands linux >}} linux     | **homebrew**, apt, yum, zypper|
+| {{< fa brands windows >}} windows | [scoop](https://scoop.sh/), chocolatey, winget |
+| {{< fa brands apple >}} macOS     | [homebrew](https://brew.sh/)                  |
+| {{< fa brands linux >}} linux     | [homebrew](https://brew.sh/), apt, yum, zypper|
 
 ## :warning:
 
@@ -1175,20 +1183,24 @@ using your package manager, install a language manager
 ::: panel-tabset
 ### windows
 
-``` powershell
+
+```{.bash code-line-numbers="false"}
 scoop install rig
 ```
 
 ### \*nix
 
-``` bash
+``` {.bash code-line-numbers="false"}
 brew install rig
 ```
 :::
 
-<small> pyenv\
-nvm\
-</small>
+language managers for other languages:
+
+{{< fa brands python >}} pyenv  
+{{< fa brands node-js >}} nvm  
+{{< fa brands rust >}} rustup  
+
 
 ::: notes
 -   many language managers are often written in some language other than the one they are responsible for managing
