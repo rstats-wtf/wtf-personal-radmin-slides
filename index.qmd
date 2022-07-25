@@ -117,10 +117,11 @@ this is intended to provide context on my priorities / habits of thought:
 :::
 
 ::: notes
-We're extending the lessons from Day 1 to think about what it means to work with R projects over time. That means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts. Working on an old project on a new computer is a lot like trying to put an app into production.
+We're extending the lessons from Day 1 to think about what it means to work with R projects over time.  
+That means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts. Working on an old project on a new computer is a lot like trying to put an app into production.
 :::
 
-## focus areas {background-color="#333399"}
+## agenda {background-color="#333399"}
 
 ::: agenda
 -   starting R
@@ -130,7 +131,7 @@ We're extending the lessons from Day 1 to think about what it means to work with
 :::
 
 
-# focus areas {background-color="#333399"}
+# agenda {background-color="#333399"}
 
 ::: agenda
 
@@ -146,6 +147,12 @@ We're extending the lessons from Day 1 to think about what it means to work with
 ## why?
 
 Sometimes we want to change the way our code behaves _without_ having to change the code.
+
+::: notes
+behaves might mean  
+- "what computer do I think I'm on"
+- "is this dev or prod"?
+:::
 
 ## R startup sequence {.smaller background-color="#cccccc"}
 
@@ -197,8 +204,8 @@ environment variables
 
 ## what goes in `.Renviron`
 
-:white_check_mark: R-specific environment variables\
-:white_check_mark: API keys\
+:white_check_mark: R-specific environment variables
+:white_check_mark: API keys
 :x: R code
 
 ## example `.Renviron`
@@ -317,6 +324,10 @@ R code that runs at the start of each session
     -   load frequently used interactive packages
     -   aliases / shortcuts for frequently used functions
 
+## what not to put in `.Rprofile`
+
+If it matters for code you share, it **should not** be in `.Rprofile`
+
 ## why shouldn't these go in `.Rprofile`?
 
 ::: incremental
@@ -325,10 +336,6 @@ R code that runs at the start of each session
 -   `f <- dplyr::filter`
 -   `theme_set(theme_bw())`
 :::
-
-## dev dependencies
-
-If it matters for code you share, it **should not** be in `.Rprofile`
 
 ## discuss with your neighbor
 
@@ -347,21 +354,11 @@ library(devtools)
 countdown_timer(minutes = 2, bottom = 0)
 ```
 
-## andrie's `.Rprofile`
+## dotfiles
 
-``` r
-# Set CRAN mirror
-if (R.version$status == "Under development (unstable)") {
-  options(repos = c(CRAN = "https://cloud.r-project.org/"))
-} else {
-  options(repos = c(CRAN = "https://packagemanager.rstudio.com/all/latest"))
-}
-
-# Set the executable for GhostScript
-if (.Platform$OS.type == "windows") {
-  Sys.setenv(R_GSCMD = Sys.which("gswin64c"))
-}
-```
+::: r-fit-text
+https://github.com/search?q=.Rprofile
+:::
 
 ## activity
 
@@ -417,7 +414,7 @@ if it exists, your user `.Rprofile` will not be evaluated
 :::
 ::::
 
-# focus areas {background-color="#333399"}
+# agenda {background-color="#333399"}
 
 ::: agenda
 
@@ -480,26 +477,19 @@ end
 
 ::: notes
 
-"packages have to be compiled to run"
-the question is when
 - show how to set options for different environment managers
-- what does this look like in CI
-- insufficiently motivated?
-- you need the dev version of something
-
-- ?Workflows break w/ current CRAN package, need to go back to older package
 - Install package from github
 - Develop your own packages
-under: Make it explicit  why we care about installing from source
-
-- binaries are probably faster 
-- CRAN doesn't always have binaries available but you may not need them
 :::
 
 ## Binary
 
 -   compiled ahead of time
--   easiest to install
+-   easiest / fastest to install
+
+::: notes
+you may particularly care about installation speed if you're being billed by the minute for compute time, or if you need computations to finish before a timeout
+:::
 
 ## where to get binaries
 
@@ -632,14 +622,16 @@ Does RStudio Package Manager serve a binary of `dplyr` for R 3.4?
 countdown_timer(minutes = 2, bottom = 0)
 ```
 
-
 ## Source
 
--   compiled in development environment
+-   compiled in _your_ environment
 -   requires extra tools when package uses C, C++ or Fortran
 
 ::: notes
-One additional complication for \*nix users: generally on windows can install and load packages that depend on other lower level libraries quite easily. Explain installing `sf`, for example.
+
+- most common reason to install from source is when you want the development version of a package from github
+One additional complication for \*nix users: 
+- generally on windows can install and load packages that depend on other lower level libraries quite easily. Explain installing `sf`, for example.
 :::
 
 ## if you don't have tools
@@ -736,7 +728,7 @@ countdown_timer(minutes = 5, bottom = 0)
 
 binaries are usually preferred, but for development versions of packages, you may need to install from source.
 
-# focus areas {background-color="#333399"}
+# agenda {background-color="#333399"}
 
 ::: agenda
 
@@ -753,6 +745,11 @@ binaries are usually preferred, but for development versions of packages, you ma
 ## why?
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The quick and dirty approach you took then comes right back at you as a boomerang. <br><br>Therefore, ban the concept of one-off altogether. No matter what the asker says, it will have to be done again, always!<br><br>3/9</p>&mdash; Edwin Thoen (@edwin_thoen) <a href="https://twitter.com/edwin_thoen/status/1526261181631152129?ref_src=twsrc%5Etfw">May 16, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+:::
+You _will_ need to reproduce or update your analysis.
+You might get audited!
+:::
 
 ## reproducibility strategies
 
@@ -823,6 +820,10 @@ p
 p + annotate("rect", xmin = .75, xmax = .95, ymin = .75, ymax = .95, alpha = .2)
 ```
 
+::: notes
+we're focused in particular on systems where we have both access and responsibility
+:::
+
 ## tools
 
 :::: columns
@@ -882,7 +883,7 @@ countdown_timer(minutes = 5, bottom = 0)
 
 ![](img/renv-small.png){.r-stretch}
 
-## shared project environment {auto-animate="true"}
+## shared project environment
 
 ::: {data-id="env"}
 ```{mermaid}
@@ -898,6 +899,12 @@ P3(project3)
 ```
 :::
 
+::: notes
+- by default all of your packages are installed into your user library
+- the unforunate default behavior in macOS is also that this is the system library
+- updating a package in the shared environments updates it for _all_ of your projects
+:::
+
 <br/>
 
 ### `.libPaths()`
@@ -907,11 +914,11 @@ P3(project3)
 [2] "C:/Program Files/R/R-3.6.3/library" # system
 ```
 
-## isolated project environments {auto-animate="true"}
+## isolated project environments
 
 ::: {data-id="env"}
 ```{mermaid}
-%%{init: {"theme": "dark" } }%% 
+%%{init: {"theme": "dark" } }%%
 graph
 C --- L1
 C --- L2
@@ -1053,7 +1060,7 @@ I use `renv` for everything, and have one junk project into which I install thin
 :::
 
 
-# focus areas {background-color="#333399"}
+# agenda {background-color="#333399"}
 
 ::: agenda
 
