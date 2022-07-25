@@ -18,14 +18,14 @@
     "href": "index.html#a-brief-personal-history",
     "title": "",
     "section": "a brief personal history:",
-    "text": "a brief personal history:\n\n\n\nAuditor\n\n\npersonal laptop \nRStudio in Citrix \nairgapped RStudio Workbench \nairgapped Shiny Server Pro \nSpecial Issue Individual Laptop  \nSpecial Issue Individual Desktop \nSpecial Issue Team Desktop \n\n\n\n\nData Scientist\n\n\npersonal laptop \nwork laptop \nRStudio in Citrix \nRStudio Server \n\n\n\n\nSolutions Engineer\n\n\npersonal laptop \nWork laptop \nRStudio Workbench Demo Server \nRStudio Workbench Internal Server \n\n\n\n\n\nthis is intended to provide context on my priorities / habits of thought: - it needs to work across operating systems - You can’t depend on having pro features - avoid admin where possible - as portable as practical - audit context means I need to be able to reproduce exactly - “run this command” preferable to a confluence page of screenshots"
+    "text": "a brief personal history:\n\n\n\nAuditor\n\n\npersonal laptop \nRStudio in Citrix \nairgapped RStudio Workbench \nairgapped Shiny Server Pro \nSpecial Issue Individual Laptop  \nSpecial Issue Individual Desktop \nSpecial Issue Team Desktop \n\n\n\n\nData Scientist\n\n\npersonal laptop \nwork laptop \nRStudio in Citrix \nRStudio Server \n\n\n\n\nSolutions Engineer\n\n\npersonal laptop \nwork laptop \nRStudio Workbench Demo Server \nRStudio Workbench Internal Server \n\n\n\n\n\nthis is intended to provide context on my priorities / habits of thought: - it needs to work across operating systems - You can’t depend on having pro features - avoid admin where possible - as portable as practical - audit context means I need to be able to reproduce exactly - “run this command” preferable to a confluence page of screenshots"
   },
   {
     "objectID": "index.html#how-do-i",
     "href": "index.html#how-do-i",
     "title": "",
     "section": "How do I…",
-    "text": "How do I…\n\n\nupgrade the version of R I’m using for this project?\nknow which package versions I’m using for this project?\nmove this project from one machine to another?\n\n\n\nWe’re extending the lessons from Day 1 to think about what it means to work with R projects over time.\nThat means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts. Working on an old project on a new computer is a lot like trying to put an app into production."
+    "text": "How do I…\n\n\nupgrade the version of R I’m using for this project?\ntrack which package versions I’m using for this project?\nmove this project from one machine to another?\n\n\n\nWe’re extending the lessons from Day 1 to think about what it means to work with R projects over time.\nThat means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts. Working on an old project on a new computer is a lot like trying to put an app into production."
   },
   {
     "objectID": "index.html#agenda",
@@ -441,6 +441,13 @@
     "text": "practice makes perfect\n\nWindows 10+macOSLinux\n\n\nWindows Sandbox\n\n\n🤷\n\n\nMultipass\nDigital Ocean\nLinode\n\n\n\n\nThe best way to become more comfortable with installing things is to practice in an environment you can throw away\n- the windows sandbox lets you test in an environment on your machine that won’t affect your computer - enabling it is outside the scope of this course - for linux users, the easiest thing to do is stand up a small VPS - I don’t know of a good safe way to test mac environments"
   },
   {
+    "objectID": "index.html#run-this-command-clickops",
+    "href": "index.html#run-this-command-clickops",
+    "title": "",
+    "section": "“run this command” >> clickOps",
+    "text": "“run this command” >> clickOps"
+  },
+  {
     "objectID": "index.html#package-managers",
     "href": "index.html#package-managers",
     "title": "",
@@ -453,20 +460,6 @@
     "title": "",
     "section": "⚠️",
     "text": "⚠️\nAvoid installing your language with a package manager\n\nYou want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are not consistently effective Other software that you install with your package manager may expect that package manager to be running the latest Idiosyncracies of your language will be better understood by a dedicated tool"
-  },
-  {
-    "objectID": "index.html#clickops",
-    "href": "index.html#clickops",
-    "title": "",
-    "section": "clickOps",
-    "text": "clickOps"
-  },
-  {
-    "objectID": "index.html#rig",
-    "href": "index.html#rig",
-    "title": "",
-    "section": "rig",
-    "text": "rig\nhttps://github.com/r-lib/rig/"
   },
   {
     "objectID": "index.html#language-managers",
