@@ -582,11 +582,42 @@ downloaded 121 KB
 
 ::: panel-tabset
 
-### base
+### CRAN {{< fa brands windows >}}
 
-``` {.r code-line-numbers="6"}
+``` {.r code-line-numbers="5"}
+> install.packages("parallelly", repos = "https://cran.rstudio.com")
+Installing package into ‘C:/Users/edavi/Documents/R/win-library/4.1’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.1/parallelly_1.32.1.zip'
+Content type 'application/zip' length 306137 bytes (298 KB)
+downloaded 298 KB
+
+package ‘parallelly’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\edavi\AppData\Local\Temp\Rtmpa2s3e8\downloaded_packages
+```
+
+### CRAN {{<fa brands apple>}}
+
+```{.r code-line-numbers="4"}
+> install.packages("renv", repos="https://cran.rstudio.com")
+Installing package into ‘/Users/edavidaja/Library/R/x86_64/4.1/library’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.1/renv_0.15.5.tgz'
+Content type 'application/x-gzip' length 1866760 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+
+The downloaded binary packages are in
+ /var/folders/b5/fl4ff68d23s148tg1_1gnflc0000gn/T//RtmpMk69B0/downloaded_packages
+```
+
+### RSPM
+
+``` {.r code-line-numbers="5"}
 > install.packages("remotes")
-https://cran.rstudio.com/bin/windows/Rtools/
 Installing package into ‘C:/Users/WDAGUtilityAccount/AppData/Local/R/win-library/4.2’
 (as ‘lib’ is unspecified)
 trying URL 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/remotes_2.4.2.zip'
