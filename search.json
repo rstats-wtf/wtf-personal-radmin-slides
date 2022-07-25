@@ -70,18 +70,18 @@
     "text": ".Renviron\nenvironment variables\n\na […] named value that can affect the way running processes will behave on a computer"
   },
   {
+    "objectID": "index.html#what-goes-in-.renviron",
+    "href": "index.html#what-goes-in-.renviron",
+    "title": "",
+    "section": "what goes in .Renviron",
+    "text": "what goes in .Renviron\n✅ R-specific environment variables\n✅ API keys or other secrets\n❌ R code"
+  },
+  {
     "objectID": "index.html#editing-.renviron",
     "href": "index.html#editing-.renviron",
     "title": "",
     "section": "Editing .Renviron",
     "text": "Editing .Renviron\n\nusethis::edit_r_environ(scope = ?)\n\n\n\nuser\n~/.Renviron\n\nproject\npath/to/your/project/.Renviron"
-  },
-  {
-    "objectID": "index.html#what-goes-in-.renviron",
-    "href": "index.html#what-goes-in-.renviron",
-    "title": "",
-    "section": "what goes in .Renviron",
-    "text": "what goes in .Renviron\n✅ R-specific environment variables\n✅ API keys\n❌ R code"
   },
   {
     "objectID": "index.html#example-.renviron",
@@ -413,6 +413,13 @@
     "text": "the junk drawer\nfor reprexes, tweets, and other ephemera:\n~/Documents/scratch\n\nI use renv for everything, and have one junk project into which I install things without regard for stability or reproducibility"
   },
   {
+    "objectID": "index.html#sysdeps",
+    "href": "index.html#sysdeps",
+    "title": "",
+    "section": "sysdeps??",
+    "text": "sysdeps??"
+  },
+  {
     "objectID": "index.html#why-3",
     "href": "index.html#why-3",
     "title": "",
@@ -466,7 +473,7 @@
     "href": "index.html#language-managers",
     "title": "",
     "section": "language managers",
-    "text": "language managers\nusing your package manager, install a language manager\n\nwindows*nix\n\n\nscoop install rig\n\n\nbrew install rig\n\n\n\n pyenv\nnvm\n\n\n\nmany language managers are often written in some language other than the one they are responsible for managing"
+    "text": "language managers\nusing your package manager, install a language manager\n\nwindows*nix\n\n\nscoop install rig\n\n\nbrew install rig\n\n\n\nlanguage managers for other languages:\n pyenv\n nvm\n rustup\n\n\nmany language managers are often written in some language other than the one they are responsible for managing"
   },
   {
     "objectID": "index.html#language-versions",
