@@ -473,7 +473,8 @@
 </ul>
 </div>
 <aside class="notes">
-<p>We’re extending the lessons from Day 1 to think about what it means to work with R projects over time. That means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts. Working on an old project on a new computer is a lot like trying to put an app into production.</p>
+<p>We’re extending the lessons from Day 1 to think about what it means to work with R projects over time.<br>
+That means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts. Working on an old project on a new computer is a lot like trying to put an app into production.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -486,8 +487,8 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="focus-areas" class="slide level2" data-background-color="#333399">
-<h2>focus areas</h2>
+<section id="agenda" class="slide level2" data-background-color="#333399">
+<h2>agenda</h2>
 <div class="agenda">
 <ul>
 <li>starting R</li>
@@ -498,8 +499,8 @@
 </div>
 </section></section>
 <section>
-<section id="focus-areas-1" class="title-slide slide level1 center" data-background-color="#333399">
-<h1>focus areas</h1>
+<section id="agenda-1" class="title-slide slide level1 center" data-background-color="#333399">
+<h1>agenda</h1>
 <div class="agenda">
 <div class="agenda-active">
 <ul>
@@ -516,6 +517,20 @@
 <section id="why" class="slide level2">
 <h2>why?</h2>
 <p>Sometimes we want to change the way our code behaves <em>without</em> having to change the code.</p>
+<aside class="notes">
+<p>behaves might mean<br>
+- “what computer do I think I’m on” - “is this dev or prod”?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="r-startup-sequence" class="slide level2 smaller" data-background-color="#cccccc">
 <h2>R startup sequence</h2>
@@ -560,9 +575,7 @@
 </section>
 <section id="what-goes-in-.renviron" class="slide level2">
 <h2>what goes in <code>.Renviron</code></h2>
-<p><span class="emoji" data-emoji="white_check_mark">✅</span> R-specific environment variables<br>
-<span class="emoji" data-emoji="white_check_mark">✅</span> API keys<br>
-<span class="emoji" data-emoji="x">❌</span> R code</p>
+<p><span class="emoji" data-emoji="white_check_mark">✅</span> R-specific environment variables <span class="emoji" data-emoji="white_check_mark">✅</span> API keys <span class="emoji" data-emoji="x">❌</span> R code</p>
 </section>
 <section id="example-.renviron" class="slide level2">
 <h2>example <code>.Renviron</code></h2>
@@ -624,7 +637,7 @@ if values clash, <em>project</em> wins</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62de8781" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dede3d" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -671,6 +684,10 @@ if values clash, <em>project</em> wins</p>
 </ul></li>
 </ul>
 </section>
+<section id="what-not-to-put-in-.rprofile" class="slide level2">
+<h2>what not to put in <code>.Rprofile</code></h2>
+<p>If it matters for code you share, it <strong>should not</strong> be in <code>.Rprofile</code></p>
+</section>
 <section id="why-shouldnt-these-go-in-.rprofile" class="slide level2">
 <h2>why shouldn’t these go in <code>.Rprofile</code>?</h2>
 <div>
@@ -682,10 +699,6 @@ if values clash, <em>project</em> wins</p>
 </ul>
 </div>
 </section>
-<section id="dev-dependencies" class="slide level2">
-<h2>dev dependencies</h2>
-<p>If it matters for code you share, it <strong>should not</strong> be in <code>.Rprofile</code></p>
-</section>
 <section id="discuss-with-your-neighbor" class="slide level2">
 <h2>discuss with your neighbor</h2>
 <div class="question">
@@ -696,25 +709,17 @@ if values clash, <em>project</em> wins</p>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="fu">library</span>(devtools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62de85fb" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dede1e" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 </section>
-<section id="andries-.rprofile" class="slide level2">
-<h2>andrie’s <code>.Rprofile</code></h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Set CRAN mirror</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="cf">if</span> (R.version<span class="sc">$</span>status <span class="sc">==</span> <span class="st">"Under development (unstable)"</span>) {</span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org/"</span>))</span>
-<span id="cb4-4"><a href="#cb4-4"></a>} <span class="cf">else</span> {</span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN =</span> <span class="st">"https://packagemanager.rstudio.com/all/latest"</span>))</span>
-<span id="cb4-6"><a href="#cb4-6"></a>}</span>
-<span id="cb4-7"><a href="#cb4-7"></a></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="co"># Set the executable for GhostScript</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="cf">if</span> (.Platform<span class="sc">$</span>OS.type <span class="sc">==</span> <span class="st">"windows"</span>) {</span>
-<span id="cb4-10"><a href="#cb4-10"></a>  <span class="fu">Sys.setenv</span>(<span class="at">R_GSCMD =</span> <span class="fu">Sys.which</span>(<span class="st">"gswin64c"</span>))</span>
-<span id="cb4-11"><a href="#cb4-11"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="dotfiles" class="slide level2">
+<h2>dotfiles</h2>
+<div class="r-fit-text">
+<p>https://github.com/search?q=.Rprofile</p>
+</div>
 </section>
 <section id="activity-1" class="slide level2">
 <h2>activity</h2>
@@ -745,7 +750,7 @@ if values clash, <em>project</em> wins</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62de85a6" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dedf55" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -773,8 +778,8 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 </div>
 </section></section>
 <section>
-<section id="focus-areas-2" class="title-slide slide level1 center" data-background-color="#333399">
-<h1>focus areas</h1>
+<section id="agenda-2" class="title-slide slide level1 center" data-background-color="#333399">
+<h1>agenda</h1>
 <div class="agenda">
 <ul>
 <li>starting R</li>
@@ -813,10 +818,10 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 <div class="cell-output-display">
 <div>
 <p>
-<svg viewbox="0 0 234.3125 478" height="478" aria-labelledby="chart-title-mermaid-1658750215928 chart-desc-mermaid-1658750215928" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="234" id="mermaid-figure-1" style=" display: block; margin: auto auto auto auto">
-<title id="chart-title-mermaid-1658750215928">
+<svg viewbox="0 0 234.3125 478" height="478" aria-labelledby="chart-title-mermaid-1658772747463 chart-desc-mermaid-1658772747463" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="234" id="mermaid-figure-1" style=" display: block; margin: auto auto auto auto">
+<title id="chart-title-mermaid-1658772747463">
 </title>
-<desc id="chart-desc-mermaid-1658750215928"></desc>
+<desc id="chart-desc-mermaid-1658772747463"></desc>
 <style>#mermaid-figure-1 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#ccc;}#mermaid-figure-1 .error-icon{fill:#a44141;}#mermaid-figure-1 .error-text{fill:#ddd;stroke:#ddd;}#mermaid-figure-1 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-1 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-1 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-1 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-1 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-1 .marker{fill:lightgrey;stroke:lightgrey;}#mermaid-figure-1 .marker.cross{stroke:lightgrey;}#mermaid-figure-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-1 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#ccc;}#mermaid-figure-1 .cluster-label text{fill:#F9FFFE;}#mermaid-figure-1 .cluster-label span{color:#F9FFFE;}#mermaid-figure-1 .label text,#mermaid-figure-1 span{fill:#ccc;color:#ccc;}#mermaid-figure-1 .node rect,#mermaid-figure-1 .node circle,#mermaid-figure-1 .node ellipse,#mermaid-figure-1 .node polygon,#mermaid-figure-1 .node path{fill:#1f2020;stroke:#81B1DB;stroke-width:1px;}#mermaid-figure-1 .node .label{text-align:center;}#mermaid-figure-1 .node.clickable{cursor:pointer;}#mermaid-figure-1 .arrowheadPath{fill:lightgrey;}#mermaid-figure-1 .edgePath .path{stroke:lightgrey;stroke-width:2.0px;}#mermaid-figure-1 .flowchart-link{stroke:lightgrey;fill:none;}#mermaid-figure-1 .edgeLabel{background-color:hsl(0, 0%, 34.4117647059%);text-align:center;}#mermaid-figure-1 .edgeLabel rect{opacity:0.5;background-color:hsl(0, 0%, 34.4117647059%);fill:hsl(0, 0%, 34.4117647059%);}#mermaid-figure-1 .cluster rect{fill:hsl(180, 1.5873015873%, 28.3529411765%);stroke:rgba(255, 255, 255, 0.25);stroke-width:1px;}#mermaid-figure-1 .cluster text{fill:#F9FFFE;}#mermaid-figure-1 .cluster span{color:#F9FFFE;}#mermaid-figure-1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(20, 1.5873015873%, 12.3529411765%);border:1px solid rgba(255, 255, 255, 0.25);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
 <g><g class="output"><g class="clusters"></g><g class="edgePaths"><g style="opacity: 1;" id="L-Source-Bundled" class="edgePath LS-Source LE-Bundled"><path style="fill:none" marker-end="url(#mermaid-figure-1-arrowhead26)" d="M117.15625,46L117.15625,51.666666666666664C117.15625,57.333333333333336,117.15625,68.66666666666667,117.15625,80C117.15625,91.33333333333333,117.15625,102.66666666666667,117.15625,108.33333333333333L117.15625,114" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-1-arrowhead26"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowheadPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs></g><g style="opacity: 1;" id="L-Bundled-Binary" class="edgePath LS-Bundled LE-Binary"><path style="fill:none" marker-end="url(#mermaid-figure-1-arrowhead27)" d="M117.15625,152L117.15625,157.66666666666666C117.15625,163.33333333333334,117.15625,174.66666666666666,117.15625,186C117.15625,197.33333333333334,117.15625,208.66666666666666,117.15625,214.33333333333334L117.15625,220" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-1-arrowhead27"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowheadPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs></g><g style="opacity: 1;" id="L-Binary-Installed" class="edgePath LS-Binary LE-Installed"><path style="fill:none" marker-end="url(#mermaid-figure-1-arrowhead28)" d="M117.15625,258L117.15625,263.6666666666667C117.15625,269.3333333333333,117.15625,280.6666666666667,117.15625,292C117.15625,303.3333333333333,117.15625,314.6666666666667,117.15625,320.3333333333333L117.15625,326" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-1-arrowhead28"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowheadPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs></g><g style="opacity: 1;" id="L-Installed-Loaded" class="edgePath LS-Installed LE-Loaded"><path style="fill:none" marker-end="url(#mermaid-figure-1-arrowhead29)" d="M117.15625,364L117.15625,369.6666666666667C117.15625,375.3333333333333,117.15625,386.6666666666667,117.15625,398C117.15625,409.3333333333333,117.15625,420.6666666666667,117.15625,426.3333333333333L117.15625,432" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-1-arrowhead29"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowheadPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs></g></g><g class="edgeLabels"><g style="opacity: 1;" transform="translate(117.15625,80)" class="edgeLabel"><g class="label" transform="translate(-56.4765625,-9)"><rect height="18" width="112.953125" ry="0" rx="0"></rect><foreignobject height="18" width="112.953125">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
@@ -870,10 +875,10 @@ Loaded
 <div class="cell-output-display">
 <div>
 <p>
-<svg viewbox="0 0 274.3125 553" height="553" aria-labelledby="chart-title-mermaid-1658750216741 chart-desc-mermaid-1658750216741" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="274" id="mermaid-figure-4" style=" display: block; margin: auto auto auto auto">
-<title id="chart-title-mermaid-1658750216741">
+<svg viewbox="0 0 274.3125 553" height="553" aria-labelledby="chart-title-mermaid-1658772748309 chart-desc-mermaid-1658772748309" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="274" id="mermaid-figure-4" style=" display: block; margin: auto auto auto auto">
+<title id="chart-title-mermaid-1658772748309">
 </title>
-<desc id="chart-desc-mermaid-1658750216741"></desc>
+<desc id="chart-desc-mermaid-1658772748309"></desc>
 <style>#mermaid-figure-4 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#ccc;}#mermaid-figure-4 .error-icon{fill:#a44141;}#mermaid-figure-4 .error-text{fill:#ddd;stroke:#ddd;}#mermaid-figure-4 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-4 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-4 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-4 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-4 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-4 .marker{fill:lightgrey;stroke:lightgrey;}#mermaid-figure-4 .marker.cross{stroke:lightgrey;}#mermaid-figure-4 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-4 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#ccc;}#mermaid-figure-4 .cluster-label text{fill:#F9FFFE;}#mermaid-figure-4 .cluster-label span{color:#F9FFFE;}#mermaid-figure-4 .label text,#mermaid-figure-4 span{fill:#ccc;color:#ccc;}#mermaid-figure-4 .node rect,#mermaid-figure-4 .node circle,#mermaid-figure-4 .node ellipse,#mermaid-figure-4 .node polygon,#mermaid-figure-4 .node path{fill:#1f2020;stroke:#81B1DB;stroke-width:1px;}#mermaid-figure-4 .node .label{text-align:center;}#mermaid-figure-4 .node.clickable{cursor:pointer;}#mermaid-figure-4 .arrowheadPath{fill:lightgrey;}#mermaid-figure-4 .edgePath .path{stroke:lightgrey;stroke-width:2.0px;}#mermaid-figure-4 .flowchart-link{stroke:lightgrey;fill:none;}#mermaid-figure-4 .edgeLabel{background-color:hsl(0, 0%, 34.4117647059%);text-align:center;}#mermaid-figure-4 .edgeLabel rect{opacity:0.5;background-color:hsl(0, 0%, 34.4117647059%);fill:hsl(0, 0%, 34.4117647059%);}#mermaid-figure-4 .cluster rect{fill:hsl(180, 1.5873015873%, 28.3529411765%);stroke:rgba(255, 255, 255, 0.25);stroke-width:1px;}#mermaid-figure-4 .cluster text{fill:#F9FFFE;}#mermaid-figure-4 .cluster span{color:#F9FFFE;}#mermaid-figure-4 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(20, 1.5873015873%, 12.3529411765%);border:1px solid rgba(255, 255, 255, 0.25);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-4 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
 <g transform="translate(0, 0)"><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="9" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="0" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"><g id="use" class="cluster default"><rect height="184" width="144.59375" y="361" x="64.859375" ry="0" rx="0" style=""></rect><g transform="translate(124.2578125, 366)" class="cluster-label"><foreignobject height="18" width="25.796875">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
@@ -927,13 +932,10 @@ Loaded
 </div>
 
 <aside class="notes">
-<p>“packages have to be compiled to run” the question is when - show how to set options for different environment managers - what does this look like in CI - insufficiently motivated? - you need the dev version of something</p>
 <ul>
-<li><p>?Workflows break w/ current CRAN package, need to go back to older package</p></li>
-<li><p>Install package from github</p></li>
-<li><p>Develop your own packages under: Make it explicit why we care about installing from source</p></li>
-<li><p>binaries are probably faster</p></li>
-<li><p>CRAN doesn’t always have binaries available but you may not need them</p></li>
+<li>show how to set options for different environment managers</li>
+<li>Install package from github</li>
+<li>Develop your own packages</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -953,8 +955,21 @@ Loaded
 <h2>Binary</h2>
 <ul>
 <li>compiled ahead of time</li>
-<li>easiest to install</li>
+<li>easiest / fastest to install</li>
 </ul>
+<aside class="notes">
+<p>you may particularly care about installation speed if you’re being billed by the minute for compute time, or if you need computations to finish before a timeout</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="where-to-get-binaries" class="slide level2">
 <h2>where to get binaries</h2>
@@ -1003,62 +1018,62 @@ Loaded
 <img data-src="img/parallelly-versions-highlight.png" class="r-stretch"></section>
 <section id="may-not-be-the-latest-1" class="slide level2">
 <h2>may not be the latest</h2>
-<div class="sourceCode" id="cb5" data-code-line-numbers="6-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"parallelly"</span>, <span class="at">repos =</span> <span class="st">"https://cran.rstudio.com"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2"></a></span>
-<span id="cb5-3"><a href="#cb5-3"></a>Installing package into ‘C<span class="sc">:</span><span class="er">/</span>Users<span class="sc">/</span>WDAGUtilityAccount<span class="sc">/</span>Documents<span class="sc">/</span>R<span class="sc">/</span>win<span class="sc">-</span>library<span class="sc">/</span><span class="fl">4.0</span>’</span>
-<span id="cb5-4"><a href="#cb5-4"></a>(as ‘lib’ is unspecified)</span>
-<span id="cb5-5"><a href="#cb5-5"></a></span>
-<span id="cb5-6"><a href="#cb5-6"></a>  There is a binary version available but the source version is later<span class="sc">:</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a>           binary source needs_compilation</span>
-<span id="cb5-8"><a href="#cb5-8"></a>parallelly <span class="dv">1</span>.<span class="fl">31.0</span> <span class="dv">1</span>.<span class="fl">32.1</span>             <span class="cn">FALSE</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a></span>
-<span id="cb5-10"><a href="#cb5-10"></a>installing the source package ‘parallelly’</span>
-<span id="cb5-11"><a href="#cb5-11"></a></span>
-<span id="cb5-12"><a href="#cb5-12"></a>trying URL <span class="st">'https://cran.rstudio.com/src/contrib/parallelly_1.32.1.tar.gz'</span></span>
-<span id="cb5-13"><a href="#cb5-13"></a>Content type <span class="st">'application/x-gzip'</span> length <span class="dv">124853</span> <span class="fu">bytes</span> (<span class="dv">121</span> KB)</span>
-<span id="cb5-14"><a href="#cb5-14"></a>downloaded <span class="dv">121</span> KB</span>
-<span id="cb5-15"><a href="#cb5-15"></a></span>
-<span id="cb5-16"><a href="#cb5-16"></a><span class="sc">*</span> installing <span class="sc">*</span>source<span class="sc">*</span> package <span class="st">'parallelly'</span> ...</span>
-<span id="cb5-17"><a href="#cb5-17"></a><span class="sc">**</span> package <span class="st">'parallelly'</span> successfully unpacked and MD5 sums checked</span>
-<span id="cb5-18"><a href="#cb5-18"></a><span class="sc">**</span> using staged installation</span>
-<span id="cb5-19"><a href="#cb5-19"></a><span class="sc">**</span> R</span>
-<span id="cb5-20"><a href="#cb5-20"></a><span class="sc">**</span> inst</span>
-<span id="cb5-21"><a href="#cb5-21"></a><span class="sc">**</span> byte<span class="sc">-</span>compile and prepare package <span class="cf">for</span> lazy loading</span>
-<span id="cb5-22"><a href="#cb5-22"></a><span class="sc">**</span> help</span>
-<span id="cb5-23"><a href="#cb5-23"></a><span class="sc">**</span><span class="er">*</span> installing help indices</span>
-<span id="cb5-24"><a href="#cb5-24"></a>  converting help <span class="cf">for</span> package <span class="st">'parallelly'</span></span>
-<span id="cb5-25"><a href="#cb5-25"></a>    finding HTML links ... done</span>
-<span id="cb5-26"><a href="#cb5-26"></a>    as.cluster                              html  </span>
-<span id="cb5-27"><a href="#cb5-27"></a>    autoStopCluster                         html  </span>
-<span id="cb5-28"><a href="#cb5-28"></a>    availableConnections                    html  </span>
-<span id="cb5-29"><a href="#cb5-29"></a>    availableCores                          html  </span>
-<span id="cb5-30"><a href="#cb5-30"></a>    availableWorkers                        html  </span>
-<span id="cb5-31"><a href="#cb5-31"></a>    canPortBeUsed                           html  </span>
-<span id="cb5-32"><a href="#cb5-32"></a>    cpuLoad                                 html  </span>
-<span id="cb5-33"><a href="#cb5-33"></a>    find_rshcmd                             html  </span>
-<span id="cb5-34"><a href="#cb5-34"></a>    freeCores                               html  </span>
-<span id="cb5-35"><a href="#cb5-35"></a>    freePort                                html  </span>
-<span id="cb5-36"><a href="#cb5-36"></a>    getOption2                              html  </span>
-<span id="cb5-37"><a href="#cb5-37"></a>    isConnectionValid                       html  </span>
-<span id="cb5-38"><a href="#cb5-38"></a>    isForkedChild                           html  </span>
-<span id="cb5-39"><a href="#cb5-39"></a>    isForkedNode                            html  </span>
-<span id="cb5-40"><a href="#cb5-40"></a>    isLocalhostNode                         html  </span>
-<span id="cb5-41"><a href="#cb5-41"></a>    isNodeAlive                             html  </span>
-<span id="cb5-42"><a href="#cb5-42"></a>    makeClusterMPI                          html  </span>
-<span id="cb5-43"><a href="#cb5-43"></a>    makeClusterPSOCK                        html  </span>
-<span id="cb5-44"><a href="#cb5-44"></a>    parallelly.options                      html  </span>
-<span id="cb5-45"><a href="#cb5-45"></a>    pid_exists                              html  </span>
-<span id="cb5-46"><a href="#cb5-46"></a>    supportsMulticore                       html  </span>
-<span id="cb5-47"><a href="#cb5-47"></a><span class="sc">**</span><span class="er">*</span> copying figures</span>
-<span id="cb5-48"><a href="#cb5-48"></a><span class="sc">**</span> building package indices</span>
-<span id="cb5-49"><a href="#cb5-49"></a><span class="sc">**</span> testing <span class="cf">if</span> installed package can be loaded from temporary location</span>
-<span id="cb5-50"><a href="#cb5-50"></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> i386</span>
-<span id="cb5-51"><a href="#cb5-51"></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> x64</span>
-<span id="cb5-52"><a href="#cb5-52"></a><span class="sc">**</span> testing <span class="cf">if</span> installed package can be loaded from final location</span>
-<span id="cb5-53"><a href="#cb5-53"></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> i386</span>
-<span id="cb5-54"><a href="#cb5-54"></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> x64</span>
-<span id="cb5-55"><a href="#cb5-55"></a><span class="sc">**</span> testing <span class="cf">if</span> installed package keeps a record of temporary installation path</span>
-<span id="cb5-56"><a href="#cb5-56"></a><span class="sc">*</span> <span class="fu">DONE</span> (parallelly)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4" data-code-line-numbers="6-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"parallelly"</span>, <span class="at">repos =</span> <span class="st">"https://cran.rstudio.com"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a>Installing package into ‘C<span class="sc">:</span><span class="er">/</span>Users<span class="sc">/</span>WDAGUtilityAccount<span class="sc">/</span>Documents<span class="sc">/</span>R<span class="sc">/</span>win<span class="sc">-</span>library<span class="sc">/</span><span class="fl">4.0</span>’</span>
+<span id="cb4-4"><a href="#cb4-4"></a>(as ‘lib’ is unspecified)</span>
+<span id="cb4-5"><a href="#cb4-5"></a></span>
+<span id="cb4-6"><a href="#cb4-6"></a>  There is a binary version available but the source version is later<span class="sc">:</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>           binary source needs_compilation</span>
+<span id="cb4-8"><a href="#cb4-8"></a>parallelly <span class="dv">1</span>.<span class="fl">31.0</span> <span class="dv">1</span>.<span class="fl">32.1</span>             <span class="cn">FALSE</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a></span>
+<span id="cb4-10"><a href="#cb4-10"></a>installing the source package ‘parallelly’</span>
+<span id="cb4-11"><a href="#cb4-11"></a></span>
+<span id="cb4-12"><a href="#cb4-12"></a>trying URL <span class="st">'https://cran.rstudio.com/src/contrib/parallelly_1.32.1.tar.gz'</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a>Content type <span class="st">'application/x-gzip'</span> length <span class="dv">124853</span> <span class="fu">bytes</span> (<span class="dv">121</span> KB)</span>
+<span id="cb4-14"><a href="#cb4-14"></a>downloaded <span class="dv">121</span> KB</span>
+<span id="cb4-15"><a href="#cb4-15"></a></span>
+<span id="cb4-16"><a href="#cb4-16"></a><span class="sc">*</span> installing <span class="sc">*</span>source<span class="sc">*</span> package <span class="st">'parallelly'</span> ...</span>
+<span id="cb4-17"><a href="#cb4-17"></a><span class="sc">**</span> package <span class="st">'parallelly'</span> successfully unpacked and MD5 sums checked</span>
+<span id="cb4-18"><a href="#cb4-18"></a><span class="sc">**</span> using staged installation</span>
+<span id="cb4-19"><a href="#cb4-19"></a><span class="sc">**</span> R</span>
+<span id="cb4-20"><a href="#cb4-20"></a><span class="sc">**</span> inst</span>
+<span id="cb4-21"><a href="#cb4-21"></a><span class="sc">**</span> byte<span class="sc">-</span>compile and prepare package <span class="cf">for</span> lazy loading</span>
+<span id="cb4-22"><a href="#cb4-22"></a><span class="sc">**</span> help</span>
+<span id="cb4-23"><a href="#cb4-23"></a><span class="sc">**</span><span class="er">*</span> installing help indices</span>
+<span id="cb4-24"><a href="#cb4-24"></a>  converting help <span class="cf">for</span> package <span class="st">'parallelly'</span></span>
+<span id="cb4-25"><a href="#cb4-25"></a>    finding HTML links ... done</span>
+<span id="cb4-26"><a href="#cb4-26"></a>    as.cluster                              html  </span>
+<span id="cb4-27"><a href="#cb4-27"></a>    autoStopCluster                         html  </span>
+<span id="cb4-28"><a href="#cb4-28"></a>    availableConnections                    html  </span>
+<span id="cb4-29"><a href="#cb4-29"></a>    availableCores                          html  </span>
+<span id="cb4-30"><a href="#cb4-30"></a>    availableWorkers                        html  </span>
+<span id="cb4-31"><a href="#cb4-31"></a>    canPortBeUsed                           html  </span>
+<span id="cb4-32"><a href="#cb4-32"></a>    cpuLoad                                 html  </span>
+<span id="cb4-33"><a href="#cb4-33"></a>    find_rshcmd                             html  </span>
+<span id="cb4-34"><a href="#cb4-34"></a>    freeCores                               html  </span>
+<span id="cb4-35"><a href="#cb4-35"></a>    freePort                                html  </span>
+<span id="cb4-36"><a href="#cb4-36"></a>    getOption2                              html  </span>
+<span id="cb4-37"><a href="#cb4-37"></a>    isConnectionValid                       html  </span>
+<span id="cb4-38"><a href="#cb4-38"></a>    isForkedChild                           html  </span>
+<span id="cb4-39"><a href="#cb4-39"></a>    isForkedNode                            html  </span>
+<span id="cb4-40"><a href="#cb4-40"></a>    isLocalhostNode                         html  </span>
+<span id="cb4-41"><a href="#cb4-41"></a>    isNodeAlive                             html  </span>
+<span id="cb4-42"><a href="#cb4-42"></a>    makeClusterMPI                          html  </span>
+<span id="cb4-43"><a href="#cb4-43"></a>    makeClusterPSOCK                        html  </span>
+<span id="cb4-44"><a href="#cb4-44"></a>    parallelly.options                      html  </span>
+<span id="cb4-45"><a href="#cb4-45"></a>    pid_exists                              html  </span>
+<span id="cb4-46"><a href="#cb4-46"></a>    supportsMulticore                       html  </span>
+<span id="cb4-47"><a href="#cb4-47"></a><span class="sc">**</span><span class="er">*</span> copying figures</span>
+<span id="cb4-48"><a href="#cb4-48"></a><span class="sc">**</span> building package indices</span>
+<span id="cb4-49"><a href="#cb4-49"></a><span class="sc">**</span> testing <span class="cf">if</span> installed package can be loaded from temporary location</span>
+<span id="cb4-50"><a href="#cb4-50"></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> i386</span>
+<span id="cb4-51"><a href="#cb4-51"></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> x64</span>
+<span id="cb4-52"><a href="#cb4-52"></a><span class="sc">**</span> testing <span class="cf">if</span> installed package can be loaded from final location</span>
+<span id="cb4-53"><a href="#cb4-53"></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> i386</span>
+<span id="cb4-54"><a href="#cb4-54"></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> x64</span>
+<span id="cb4-55"><a href="#cb4-55"></a><span class="sc">**</span> testing <span class="cf">if</span> installed package keeps a record of temporary installation path</span>
+<span id="cb4-56"><a href="#cb4-56"></a><span class="sc">*</span> <span class="fu">DONE</span> (parallelly)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="rstudio-package-manager" class="slide level2">
 <h2><a href="https://packagemanager.rstudio.com">RStudio Package Manager</a></h2>
@@ -1074,27 +1089,27 @@ Loaded
 <ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">base</a></li><li><a href="#tabset-3-2">renv</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
-<div class="sourceCode" id="cb6" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
-<span id="cb6-2"><a href="#cb6-2"></a>https<span class="sc">:</span><span class="er">//</span>cran.rstudio.com<span class="sc">/</span>bin<span class="sc">/</span>windows<span class="sc">/</span>Rtools<span class="sc">/</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a>Installing package into ‘C<span class="sc">:</span><span class="er">/</span>Users<span class="sc">/</span>WDAGUtilityAccount<span class="sc">/</span>AppData<span class="sc">/</span>Local<span class="sc">/</span>R<span class="sc">/</span>win<span class="sc">-</span>library<span class="sc">/</span><span class="fl">4.2</span>’</span>
-<span id="cb6-4"><a href="#cb6-4"></a>(as ‘lib’ is unspecified)</span>
-<span id="cb6-5"><a href="#cb6-5"></a>trying URL <span class="st">'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/remotes_2.4.2.zip'</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a>Content type <span class="st">'binary/octet-stream'</span> length <span class="dv">399930</span> <span class="fu">bytes</span> (<span class="dv">390</span> KB)</span>
-<span id="cb6-7"><a href="#cb6-7"></a>downloaded <span class="dv">390</span> KB</span>
-<span id="cb6-8"><a href="#cb6-8"></a></span>
-<span id="cb6-9"><a href="#cb6-9"></a>package ‘remotes’ successfully unpacked and MD5 sums checked</span>
-<span id="cb6-10"><a href="#cb6-10"></a></span>
-<span id="cb6-11"><a href="#cb6-11"></a>The downloaded binary packages are <span class="cf">in</span></span>
-<span id="cb6-12"><a href="#cb6-12"></a>  C<span class="sc">:</span>\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpA1edRi\downloaded_packages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2"></a>https<span class="sc">:</span><span class="er">//</span>cran.rstudio.com<span class="sc">/</span>bin<span class="sc">/</span>windows<span class="sc">/</span>Rtools<span class="sc">/</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>Installing package into ‘C<span class="sc">:</span><span class="er">/</span>Users<span class="sc">/</span>WDAGUtilityAccount<span class="sc">/</span>AppData<span class="sc">/</span>Local<span class="sc">/</span>R<span class="sc">/</span>win<span class="sc">-</span>library<span class="sc">/</span><span class="fl">4.2</span>’</span>
+<span id="cb5-4"><a href="#cb5-4"></a>(as ‘lib’ is unspecified)</span>
+<span id="cb5-5"><a href="#cb5-5"></a>trying URL <span class="st">'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/remotes_2.4.2.zip'</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>Content type <span class="st">'binary/octet-stream'</span> length <span class="dv">399930</span> <span class="fu">bytes</span> (<span class="dv">390</span> KB)</span>
+<span id="cb5-7"><a href="#cb5-7"></a>downloaded <span class="dv">390</span> KB</span>
+<span id="cb5-8"><a href="#cb5-8"></a></span>
+<span id="cb5-9"><a href="#cb5-9"></a>package ‘remotes’ successfully unpacked and MD5 sums checked</span>
+<span id="cb5-10"><a href="#cb5-10"></a></span>
+<span id="cb5-11"><a href="#cb5-11"></a>The downloaded binary packages are <span class="cf">in</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a>  C<span class="sc">:</span>\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpA1edRi\downloaded_packages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-3-2">
-<div class="sourceCode" id="cb7" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="sc">&gt;</span> renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"fs"</span>)</span>
-<span id="cb7-2"><a href="#cb7-2"></a>Retrieving <span class="st">'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/fs_1.5.2.zip'</span> ...</span>
-<span id="cb7-3"><a href="#cb7-3"></a>  OK [downloaded <span class="fl">380.9</span> Kb <span class="cf">in</span> <span class="fl">0.5</span> secs]</span>
-<span id="cb7-4"><a href="#cb7-4"></a>Installing fs [<span class="dv">1</span>.<span class="fl">5.2</span>] ...</span>
-<span id="cb7-5"><a href="#cb7-5"></a>  OK [installed binary]</span>
-<span id="cb7-6"><a href="#cb7-6"></a>Moving fs [<span class="dv">1</span>.<span class="fl">5.2</span>] into the cache ...</span>
-<span id="cb7-7"><a href="#cb7-7"></a>  OK [moved to cache <span class="cf">in</span> <span class="fl">7.4</span> milliseconds]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="sc">&gt;</span> renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"fs"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2"></a>Retrieving <span class="st">'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/fs_1.5.2.zip'</span> ...</span>
+<span id="cb6-3"><a href="#cb6-3"></a>  OK [downloaded <span class="fl">380.9</span> Kb <span class="cf">in</span> <span class="fl">0.5</span> secs]</span>
+<span id="cb6-4"><a href="#cb6-4"></a>Installing fs [<span class="dv">1</span>.<span class="fl">5.2</span>] ...</span>
+<span id="cb6-5"><a href="#cb6-5"></a>  OK [installed binary]</span>
+<span id="cb6-6"><a href="#cb6-6"></a>Moving fs [<span class="dv">1</span>.<span class="fl">5.2</span>] into the cache ...</span>
+<span id="cb6-7"><a href="#cb6-7"></a>  OK [moved to cache <span class="cf">in</span> <span class="fl">7.4</span> milliseconds]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1106,7 +1121,7 @@ Loaded
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62de87a1" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dee052" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1115,11 +1130,14 @@ Loaded
 <section id="source" class="slide level2">
 <h2>Source</h2>
 <ul>
-<li>compiled in development environment</li>
+<li>compiled in <em>your</em> environment</li>
 <li>requires extra tools when package uses C, C++ or Fortran</li>
 </ul>
 <aside class="notes">
-<p>One additional complication for *nix users: generally on windows can install and load packages that depend on other lower level libraries quite easily. Explain installing <code>sf</code>, for example.</p>
+<ul>
+<li>most common reason to install from source is when you want the development version of a package from github One additional complication for *nix users:</li>
+<li>generally on windows can install and load packages that depend on other lower level libraries quite easily. Explain installing <code>sf</code>, for example.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1134,21 +1152,21 @@ Loaded
 </section>
 <section id="if-you-dont-have-tools" class="slide level2">
 <h2>if you don’t have tools</h2>
-<div class="sourceCode" id="cb8" data-code-line-numbers="11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>Running <span class="st">`</span><span class="at">R CMD build</span><span class="st">`</span>...</span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="sc">*</span> checking <span class="cf">for</span> file <span class="st">'C:\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpkTUH61</span><span class="sc">\r</span><span class="st">emotes192027624804</span><span class="sc">\t</span><span class="st">idyverse-dplyr-36ef054/DESCRIPTION'</span> ... OK</span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="sc">*</span> preparing <span class="st">'dplyr'</span><span class="sc">:</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="er">*</span> checking DESCRIPTION meta<span class="sc">-</span>information ... OK</span>
-<span id="cb8-5"><a href="#cb8-5"></a><span class="sc">*</span> cleaning src</span>
-<span id="cb8-6"><a href="#cb8-6"></a><span class="sc">*</span> installing the package to process help pages</span>
-<span id="cb8-7"><a href="#cb8-7"></a>      <span class="sc">-----------------------------------</span></span>
-<span id="cb8-8"><a href="#cb8-8"></a><span class="er">*</span> installing <span class="sc">*</span>source<span class="sc">*</span> package <span class="st">'dplyr'</span> ...</span>
-<span id="cb8-9"><a href="#cb8-9"></a><span class="sc">**</span> using staged installation</span>
-<span id="cb8-10"><a href="#cb8-10"></a><span class="sc">**</span> libs</span>
-<span id="cb8-11"><a href="#cb8-11"></a>Warning <span class="cf">in</span> <span class="fu">system</span>(cmd) <span class="sc">:</span> <span class="st">'make'</span> not found</span>
-<span id="cb8-12"><a href="#cb8-12"></a>ERROR<span class="sc">:</span> compilation failed <span class="cf">for</span> package <span class="st">'dplyr'</span></span>
-<span id="cb8-13"><a href="#cb8-13"></a><span class="sc">*</span> removing <span class="st">'C:/Users/WDAGUT~1/AppData/Local/Temp/Rtmp6hYuyV/Rinst1334d1a23d1/dplyr'</span></span>
-<span id="cb8-14"><a href="#cb8-14"></a>      <span class="sc">-----------------------------------</span></span>
-<span id="cb8-15"><a href="#cb8-15"></a>ERROR<span class="sc">:</span> package installation failed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7" data-code-line-numbers="11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>Running <span class="st">`</span><span class="at">R CMD build</span><span class="st">`</span>...</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="sc">*</span> checking <span class="cf">for</span> file <span class="st">'C:\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpkTUH61</span><span class="sc">\r</span><span class="st">emotes192027624804</span><span class="sc">\t</span><span class="st">idyverse-dplyr-36ef054/DESCRIPTION'</span> ... OK</span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="sc">*</span> preparing <span class="st">'dplyr'</span><span class="sc">:</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="er">*</span> checking DESCRIPTION meta<span class="sc">-</span>information ... OK</span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="sc">*</span> cleaning src</span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="sc">*</span> installing the package to process help pages</span>
+<span id="cb7-7"><a href="#cb7-7"></a>      <span class="sc">-----------------------------------</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="er">*</span> installing <span class="sc">*</span>source<span class="sc">*</span> package <span class="st">'dplyr'</span> ...</span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="sc">**</span> using staged installation</span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="sc">**</span> libs</span>
+<span id="cb7-11"><a href="#cb7-11"></a>Warning <span class="cf">in</span> <span class="fu">system</span>(cmd) <span class="sc">:</span> <span class="st">'make'</span> not found</span>
+<span id="cb7-12"><a href="#cb7-12"></a>ERROR<span class="sc">:</span> compilation failed <span class="cf">for</span> package <span class="st">'dplyr'</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a><span class="sc">*</span> removing <span class="st">'C:/Users/WDAGUT~1/AppData/Local/Temp/Rtmp6hYuyV/Rinst1334d1a23d1/dplyr'</span></span>
+<span id="cb7-14"><a href="#cb7-14"></a>      <span class="sc">-----------------------------------</span></span>
+<span id="cb7-15"><a href="#cb7-15"></a>ERROR<span class="sc">:</span> package installation failed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="how-to-get-the-tools" class="slide level2">
 <h2>how to get the tools</h2>
@@ -1166,7 +1184,7 @@ Loaded
 </div>
 <div id="tabset-4-3">
 <p>install tools via package manager, e.g.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href="#cb9-1"></a>apt install make</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href="#cb8-1"></a>apt install make</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1191,18 +1209,18 @@ Loaded
 <li><p><code>install.packages("gitcellar")</code> # not on cran!</p></li>
 <li><p>update your project <code>.Rprofile</code>:<br>
 <code>usethis::edit_r_profile(scope = "project")</code></p>
-<div class="sourceCode" id="cb10" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ropensci =</span> <span class="st">"https://ropensci.r-universe.dev"</span>,</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>, <span class="co"># macOS</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">RSPM =</span> <span class="st">"https://packagemanager.rstudio.com/cran/latest"</span> <span class="co"># windows</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb9" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ropensci =</span> <span class="st">"https://ropensci.r-universe.dev"</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>, <span class="co"># macOS</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">RSPM =</span> <span class="st">"https://packagemanager.rstudio.com/cran/latest"</span> <span class="co"># windows</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>save <code>.Rprofile</code> and restart R</p></li>
 <li><p><code>install.packages("gitcellar")</code></p></li>
 </ol>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62de88ad" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dedea3" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1222,8 +1240,8 @@ Loaded
 <p>binaries are usually preferred, but for development versions of packages, you may need to install from source.</p>
 </section></section>
 <section>
-<section id="focus-areas-3" class="title-slide slide level1 center" data-background-color="#333399">
-<h1>focus areas</h1>
+<section id="agenda-3" class="title-slide slide level1 center" data-background-color="#333399">
+<h1>agenda</h1>
 <div class="agenda">
 <ul>
 <li>starting R</li>
@@ -1248,6 +1266,7 @@ The quick and dirty approach you took then comes right back at you as a boomeran
 — Edwin Thoen (<span class="citation" data-cites="edwin_thoen">@edwin_thoen</span>) <a href="https://twitter.com/edwin_thoen/status/1526261181631152129?ref_src=twsrc%5Etfw">May 16, 2022</a>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>::: You <em>will</em> need to reproduce or update your analysis. You might get audited! :::</p>
 </section>
 <section id="reproducibility-strategies" class="slide level2">
 <h2>reproducibility strategies</h2>
@@ -1255,8 +1274,25 @@ The quick and dirty approach you took then comes right back at you as a boomeran
 <img data-src="index_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
 <section id="reproducibility-strategies-1" class="slide level2" data-transition="none">
 <h2>reproducibility strategies</h2>
-
-<img data-src="index_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+</div>
+</div>
+<aside class="notes">
+<p>we’re focused in particular on systems where we have both access and responsibility</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="tools" class="slide level2">
 <h2>tools</h2>
 <div class="columns">
@@ -1302,14 +1338,14 @@ The quick and dirty approach you took then comes right back at you as a boomeran
 <ol type="1">
 <li><p>open the <code>personal-radmin</code> project</p></li>
 <li><p>update your project <code>.Rprofile</code> with a date-based snapshot of CRAN</p>
-<div class="sourceCode" id="cb11" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">RSPM =</span> <span class="st">"https://packagemanager.rstudio.com/cran/2021-03-31"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb10" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">RSPM =</span> <span class="st">"https://packagemanager.rstudio.com/cran/2021-03-31"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Restart R</p></li>
 <li><p><code>install.packages("dplyr")</code></p></li>
 </ol>
 <p>what version of dplyr did you install?</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62de8544" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dee0b7" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1319,17 +1355,17 @@ The quick and dirty approach you took then comes right back at you as a boomeran
 <h2>renv</h2>
 <img data-src="img/renv-small.png" class="r-stretch">
 </section>
-<section id="shared-project-environment" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">shared project environment</h2>
+<section id="shared-project-environment" class="slide level2">
+<h2>shared project environment</h2>
 <div data-id="env">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <p>
-<svg viewbox="0 0 346.765625 142" height="142" aria-labelledby="chart-title-mermaid-1658750216477 chart-desc-mermaid-1658750216477" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="347" id="mermaid-figure-3" style=" display: block; margin: auto auto auto auto">
-<title id="chart-title-mermaid-1658750216477">
+<svg viewbox="0 0 346.765625 142" height="142" aria-labelledby="chart-title-mermaid-1658772748035 chart-desc-mermaid-1658772748035" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="347" id="mermaid-figure-3" style=" display: block; margin: auto auto auto auto">
+<title id="chart-title-mermaid-1658772748035">
 </title>
-<desc id="chart-desc-mermaid-1658750216477"></desc>
+<desc id="chart-desc-mermaid-1658772748035"></desc>
 <style>#mermaid-figure-3 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#ccc;}#mermaid-figure-3 .error-icon{fill:#a44141;}#mermaid-figure-3 .error-text{fill:#ddd;stroke:#ddd;}#mermaid-figure-3 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-3 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-3 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-3 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-3 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-3 .marker{fill:lightgrey;stroke:lightgrey;}#mermaid-figure-3 .marker.cross{stroke:lightgrey;}#mermaid-figure-3 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-3 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#ccc;}#mermaid-figure-3 .cluster-label text{fill:#F9FFFE;}#mermaid-figure-3 .cluster-label span{color:#F9FFFE;}#mermaid-figure-3 .label text,#mermaid-figure-3 span{fill:#ccc;color:#ccc;}#mermaid-figure-3 .node rect,#mermaid-figure-3 .node circle,#mermaid-figure-3 .node ellipse,#mermaid-figure-3 .node polygon,#mermaid-figure-3 .node path{fill:#1f2020;stroke:#81B1DB;stroke-width:1px;}#mermaid-figure-3 .node .label{text-align:center;}#mermaid-figure-3 .node.clickable{cursor:pointer;}#mermaid-figure-3 .arrowheadPath{fill:lightgrey;}#mermaid-figure-3 .edgePath .path{stroke:lightgrey;stroke-width:2.0px;}#mermaid-figure-3 .flowchart-link{stroke:lightgrey;fill:none;}#mermaid-figure-3 .edgeLabel{background-color:hsl(0, 0%, 34.4117647059%);text-align:center;}#mermaid-figure-3 .edgeLabel rect{opacity:0.5;background-color:hsl(0, 0%, 34.4117647059%);fill:hsl(0, 0%, 34.4117647059%);}#mermaid-figure-3 .cluster rect{fill:hsl(180, 1.5873015873%, 28.3529411765%);stroke:rgba(255, 255, 255, 0.25);stroke-width:1px;}#mermaid-figure-3 .cluster text{fill:#F9FFFE;}#mermaid-figure-3 .cluster span{color:#F9FFFE;}#mermaid-figure-3 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(20, 1.5873015873%, 12.3529411765%);border:1px solid rgba(255, 255, 255, 0.25);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-3 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
 <g><g class="output"><g class="clusters"></g><g class="edgePaths"><g style="opacity: 1;" id="L-L-P1" class="edgePath LS-L LE-P1"><path style="fill:none" marker-end="url(#mermaid-figure-3-arrowhead9)" d="M141.6015625,38.017604333374365L125.74479166666667,43.51467027781197C109.88802083333333,49.011736222249574,78.17447916666667,60.00586811112479,62.317708333333336,69.66960072222906C46.4609375,79.33333333333333,46.4609375,87.66666666666667,46.4609375,91.83333333333333L46.4609375,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-3-arrowhead9"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-L-P2" class="edgePath LS-L LE-P2"><path style="fill:none" marker-end="url(#mermaid-figure-3-arrowhead10)" d="M173.3828125,46L173.3828125,50.166666666666664C173.3828125,54.333333333333336,173.3828125,62.666666666666664,173.3828125,71C173.3828125,79.33333333333333,173.3828125,87.66666666666667,173.3828125,91.83333333333333L173.3828125,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-3-arrowhead10"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-L-P3" class="edgePath LS-L LE-P3"><path style="fill:none" marker-end="url(#mermaid-figure-3-arrowhead11)" d="M205.1640625,38.017604333374365L221.02083333333334,43.51467027781197C236.87760416666666,49.011736222249574,268.5911458333333,60.00586811112479,284.4479166666667,69.66960072222906C300.3046875,79.33333333333333,300.3046875,87.66666666666667,300.3046875,91.83333333333333L300.3046875,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-3-arrowhead11"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g></g><g class="edgeLabels"><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
@@ -1366,21 +1402,93 @@ project3
 </div>
 </div>
 </div>
+<aside class="notes">
+<ul>
+<li>by default all of your packages are installed into your user library</li>
+<li>the unforunate default behavior in macOS is also that this is the system library</li>
+<li>updating a package in the shared environments updates it for <em>all</em> of your projects</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <p><br></p>
 <h3 id="libpaths"><code>.libPaths()</code></h3>
-<div class="sourceCode" id="cb12" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb12-1" class="hljs-ln-code"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"C:/Users/edavi/Documents/R/win-library/3.6"</span> <span class="co"># user</span></span>
-<span id="cb12-2" class="hljs-ln-code"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>] <span class="st">"C:/Program Files/R/R-3.6.3/library"</span> <span class="co"># system</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"C:/Users/edavi/Documents/R/win-library/3.6"</span> <span class="co"># user</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>] <span class="st">"C:/Program Files/R/R-3.6.3/library"</span> <span class="co"># system</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="isolated-project-environments" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">isolated project environments</h2>
+<section id="isolated-project-environments" class="slide level2">
+<h2>isolated project environments</h2>
 <div data-id="env">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <p>
-<svg id="mermaid-figure-2" width="512" xmlns="http://www.w3.org/2000/svg" height="512" viewbox="768 0 512 512" style=" display: block; margin: auto auto auto auto">
+<svg viewbox="0 0 346.765625 230" height="230" aria-labelledby="chart-title-mermaid-1658772747764 chart-desc-mermaid-1658772747764" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="347" id="mermaid-figure-2" style=" display: block; margin: auto auto auto auto">
+<title id="chart-title-mermaid-1658772747764">
+</title>
+<desc id="chart-desc-mermaid-1658772747764"></desc>
 <style>#mermaid-figure-2 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#ccc;}#mermaid-figure-2 .error-icon{fill:#a44141;}#mermaid-figure-2 .error-text{fill:#ddd;stroke:#ddd;}#mermaid-figure-2 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-2 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-2 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-2 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-2 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-2 .marker{fill:lightgrey;stroke:lightgrey;}#mermaid-figure-2 .marker.cross{stroke:lightgrey;}#mermaid-figure-2 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-2 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#ccc;}#mermaid-figure-2 .cluster-label text{fill:#F9FFFE;}#mermaid-figure-2 .cluster-label span{color:#F9FFFE;}#mermaid-figure-2 .label text,#mermaid-figure-2 span{fill:#ccc;color:#ccc;}#mermaid-figure-2 .node rect,#mermaid-figure-2 .node circle,#mermaid-figure-2 .node ellipse,#mermaid-figure-2 .node polygon,#mermaid-figure-2 .node path{fill:#1f2020;stroke:#81B1DB;stroke-width:1px;}#mermaid-figure-2 .node .label{text-align:center;}#mermaid-figure-2 .node.clickable{cursor:pointer;}#mermaid-figure-2 .arrowheadPath{fill:lightgrey;}#mermaid-figure-2 .edgePath .path{stroke:lightgrey;stroke-width:2.0px;}#mermaid-figure-2 .flowchart-link{stroke:lightgrey;fill:none;}#mermaid-figure-2 .edgeLabel{background-color:hsl(0, 0%, 34.4117647059%);text-align:center;}#mermaid-figure-2 .edgeLabel rect{opacity:0.5;background-color:hsl(0, 0%, 34.4117647059%);fill:hsl(0, 0%, 34.4117647059%);}#mermaid-figure-2 .cluster rect{fill:hsl(180, 1.5873015873%, 28.3529411765%);stroke:rgba(255, 255, 255, 0.25);stroke-width:1px;}#mermaid-figure-2 .cluster text{fill:#F9FFFE;}#mermaid-figure-2 .cluster span{color:#F9FFFE;}#mermaid-figure-2 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(20, 1.5873015873%, 12.3529411765%);border:1px solid rgba(255, 255, 255, 0.25);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-2 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
-<g></g><g><path class="error-icon" d="m411.313,123.313c6.25-6.25 6.25-16.375 0-22.625s-16.375-6.25-22.625,0l-32,32-9.375,9.375-20.688-20.688c-12.484-12.5-32.766-12.5-45.25,0l-16,16c-1.261,1.261-2.304,2.648-3.31,4.051-21.739-8.561-45.324-13.426-70.065-13.426-105.867,0-192,86.133-192,192s86.133,192 192,192 192-86.133 192-192c0-24.741-4.864-48.327-13.426-70.065 1.402-1.007 2.79-2.049 4.051-3.31l16-16c12.5-12.492 12.5-32.758 0-45.25l-20.688-20.688 9.375-9.375 32.001-31.999zm-219.313,100.687c-52.938,0-96,43.063-96,96 0,8.836-7.164,16-16,16s-16-7.164-16-16c0-70.578 57.422-128 128-128 8.836,0 16,7.164 16,16s-7.164,16-16,16z"></path><path class="error-icon" d="m459.02,148.98c-6.25-6.25-16.375-6.25-22.625,0s-6.25,16.375 0,22.625l16,16c3.125,3.125 7.219,4.688 11.313,4.688 4.094,0 8.188-1.563 11.313-4.688 6.25-6.25 6.25-16.375 0-22.625l-16.001-16z"></path><path class="error-icon" d="m340.395,75.605c3.125,3.125 7.219,4.688 11.313,4.688 4.094,0 8.188-1.563 11.313-4.688 6.25-6.25 6.25-16.375 0-22.625l-16-16c-6.25-6.25-16.375-6.25-22.625,0s-6.25,16.375 0,22.625l15.999,16z"></path><path class="error-icon" d="m400,64c8.844,0 16-7.164 16-16v-32c0-8.836-7.156-16-16-16-8.844,0-16,7.164-16,16v32c0,8.836 7.156,16 16,16z"></path><path class="error-icon" d="m496,96.586h-32c-8.844,0-16,7.164-16,16 0,8.836 7.156,16 16,16h32c8.844,0 16-7.164 16-16 0-8.836-7.156-16-16-16z"></path><path class="error-icon" d="m436.98,75.605c3.125,3.125 7.219,4.688 11.313,4.688 4.094,0 8.188-1.563 11.313-4.688l32-32c6.25-6.25 6.25-16.375 0-22.625s-16.375-6.25-22.625,0l-32,32c-6.251,6.25-6.251,16.375-0.001,22.625z"></path><text class="error-text" x="1240" y="250" font-size="150px" style="text-anchor: middle;">Syntax error in graph</text><text class="error-text" x="1050" y="400" font-size="100px" style="text-anchor: middle;">mermaid version 9.1.1</text></g>
+<g><g class="output"><g class="clusters"></g><g class="edgePaths"><g style="opacity: 1;" id="L-C-L1" class="edgePath LS-C LE-L1"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead16)" d="M118.57563920454545,46L106.55652225378788,50.166666666666664C94.5374053030303,54.333333333333336,70.49917140151514,62.666666666666664,58.48005445075757,71C46.4609375,79.33333333333333,46.4609375,87.66666666666667,46.4609375,91.83333333333333L46.4609375,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead16"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-C-L2" class="edgePath LS-C LE-L2"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead17)" d="M173.3828125,46L173.3828125,50.166666666666664C173.3828125,54.333333333333336,173.3828125,62.666666666666664,173.3828125,71C173.3828125,79.33333333333333,173.3828125,87.66666666666667,173.3828125,91.83333333333333L173.3828125,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead17"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-C-L3" class="edgePath LS-C LE-L3"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead18)" d="M228.18998579545456,46L240.20910274621212,50.166666666666664C252.22821969696972,54.333333333333336,276.2664535984848,62.666666666666664,288.28557054924244,71C300.3046875,79.33333333333333,300.3046875,87.66666666666667,300.3046875,91.83333333333333L300.3046875,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead18"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-L1-P1" class="edgePath LS-L1 LE-P1"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead19)" d="M46.4609375,134L46.4609375,138.16666666666666C46.4609375,142.33333333333334,46.4609375,150.66666666666666,46.4609375,159C46.4609375,167.33333333333334,46.4609375,175.66666666666666,46.4609375,179.83333333333334L46.4609375,184" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead19"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-L2-P2" class="edgePath LS-L2 LE-P2"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead20)" d="M173.3828125,134L173.3828125,138.16666666666666C173.3828125,142.33333333333334,173.3828125,150.66666666666666,173.3828125,159C173.3828125,167.33333333333334,173.3828125,175.66666666666666,173.3828125,179.83333333333334L173.3828125,184" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead20"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-L3-P3" class="edgePath LS-L3 LE-P3"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead21)" d="M300.3046875,134L300.3046875,138.16666666666666C300.3046875,142.33333333333334,300.3046875,150.66666666666666,300.3046875,159C300.3046875,167.33333333333334,300.3046875,175.66666666666666,300.3046875,179.83333333333334L300.3046875,184" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead21"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g></g><g class="edgeLabels"><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span id="L-L-C-L1" class="edgeLabel L-LS-C' L-LE-L1" style=""></span>
+</div>
+</foreignobject></g></g><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span id="L-L-C-L2" class="edgeLabel L-LS-C' L-LE-L2" style=""></span>
+</div>
+</foreignobject></g></g><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span id="L-L-C-L3" class="edgeLabel L-LS-C' L-LE-L3" style=""></span>
+</div>
+</foreignobject></g></g><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span id="L-L-L1-P1" class="edgeLabel L-LS-L1' L-LE-P1" style=""></span>
+</div>
+</foreignobject></g></g><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span id="L-L-L2-P2" class="edgeLabel L-LS-L2' L-LE-P2" style=""></span>
+</div>
+</foreignobject></g></g><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+<span id="L-L-L3-P3" class="edgeLabel L-LS-L3' L-LE-P3" style=""></span>
+</div>
+</foreignobject></g></g></g><g class="nodes"><g style="opacity: 1;" transform="translate(173.3828125,27)" id="flowchart-C-19" class="node default"><rect class="label-container" height="38" width="109.84375" y="-19" x="-54.921875" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-44.921875,-9)"><foreignobject height="18" width="89.84375">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+global cache
+</div>
+</foreignobject></g></g></g><g style="opacity: 1;" transform="translate(46.4609375,115)" id="flowchart-L1-20" class="node default"><rect class="label-container" height="38" width="72.46875" y="-19" x="-36.234375" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-26.234375,-9)"><foreignobject height="18" width="52.46875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+library1
+</div>
+</foreignobject></g></g></g><g style="opacity: 1;" transform="translate(173.3828125,115)" id="flowchart-L2-22" class="node default"><rect class="label-container" height="38" width="72.46875" y="-19" x="-36.234375" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-26.234375,-9)"><foreignobject height="18" width="52.46875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+library2
+</div>
+</foreignobject></g></g></g><g style="opacity: 1;" transform="translate(300.3046875,115)" id="flowchart-L3-24" class="node default"><rect class="label-container" height="38" width="72.46875" y="-19" x="-36.234375" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-26.234375,-9)"><foreignobject height="18" width="52.46875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+library3
+</div>
+</foreignobject></g></g></g><g style="opacity: 1;" transform="translate(46.4609375,203)" id="flowchart-P1-26" class="node default"><rect class="label-container" height="38" width="76.921875" y="-19" x="-38.4609375" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-28.4609375,-9)"><foreignobject height="18" width="56.921875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+project1
+</div>
+</foreignobject></g></g></g><g style="opacity: 1;" transform="translate(173.3828125,203)" id="flowchart-P2-28" class="node default"><rect class="label-container" height="38" width="76.921875" y="-19" x="-38.4609375" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-28.4609375,-9)"><foreignobject height="18" width="56.921875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+project2
+</div>
+</foreignobject></g></g></g><g style="opacity: 1;" transform="translate(300.3046875,203)" id="flowchart-P3-30" class="node default"><rect class="label-container" height="38" width="76.921875" y="-19" x="-38.4609375" ry="5" rx="5"></rect><g transform="translate(0,0)" class="label"><g transform="translate(-28.4609375,-9)"><foreignobject height="18" width="56.921875">
+<div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
+project3
+</div>
+</foreignobject></g></g></g></g></g></g>
 </svg>
 </p>
 </div>
@@ -1389,10 +1497,10 @@ project3
 </div>
 <p><br></p>
 <h3 id="libpaths-1"><code>.libPaths()</code></h3>
-<div class="sourceCode" id="cb13" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb13-1" class="hljs-ln-code"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span> Project <span class="st">'~/projects/sample-project'</span> loaded. [renv <span class="dv">0</span>.<span class="fl">15.5</span>]</span>
-<span id="cb13-2" class="hljs-ln-code"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">.libPaths</span>()</span>
-<span id="cb13-3" class="hljs-ln-code"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"C:/Users/edavi/Documents/projects/sample-project/renv/library/R-3.6/x86_64-w64-mingw32"</span></span>
-<span id="cb13-4" class="hljs-ln-code"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>] <span class="st">"C:/Program Files/R/R-3.6.3/library"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span> Project <span class="st">'~/projects/sample-project'</span> loaded. [renv <span class="dv">0</span>.<span class="fl">15.5</span>]</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">.libPaths</span>()</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"C:/Users/edavi/Documents/projects/sample-project/renv/library/R-3.6/x86_64-w64-mingw32"</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>] <span class="st">"C:/Program Files/R/R-3.6.3/library"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="isolated-project-environments-1" class="slide level2">
 <h2>isolated project environments</h2>
@@ -1424,7 +1532,7 @@ project3
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62de8876" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62dee0e8" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1447,18 +1555,18 @@ project3
 <section id="renvinstall" class="slide level2">
 <h2><code>renv::install()</code></h2>
 <p>or <a href="https://rstudio.github.io/renv/articles/renv.html#shims"><code>install.packages()</code></a> with shims enabled</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite"</span>)</span>
-<span id="cb15-2"><a href="#cb15-2"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite@1.2"</span>) <span class="co"># at version</span></span>
-<span id="cb15-3"><a href="#cb15-3"></a>renv<span class="sc">::</span>install<span class="st">"jeroen/jsonlite"</span><span class="er">)</span> <span class="co"># latest</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a>renv<span class="sc">::</span>install<span class="st">"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d"</span><span class="er">)</span> <span class="co"># at SHA</span></span>
-<span id="cb15-5"><a href="#cb15-5"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"path/to/package"</span>) <span class="co"># local source</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite"</span>)</span>
+<span id="cb14-2"><a href="#cb14-2"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite@1.2"</span>) <span class="co"># at version</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>renv<span class="sc">::</span>install<span class="st">"jeroen/jsonlite"</span><span class="er">)</span> <span class="co"># latest</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a>renv<span class="sc">::</span>install<span class="st">"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d"</span><span class="er">)</span> <span class="co"># at SHA</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"path/to/package"</span>) <span class="co"># local source</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr>
 <div class="fragment">
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite"</span>)</span>
-<span id="cb16-2"><a href="#cb16-2"></a>devtools<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">"jsonlite@1.2"</span>) <span class="co"># at version</span></span>
-<span id="cb16-3"><a href="#cb16-3"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"jeroen/jsonlite"</span>) <span class="co"># latest</span></span>
-<span id="cb16-4"><a href="#cb16-4"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d"</span>) <span class="co"># at SHA</span></span>
-<span id="cb16-5"><a href="#cb16-5"></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"path/to/package"</span>) <span class="co"># local source</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite"</span>)</span>
+<span id="cb15-2"><a href="#cb15-2"></a>devtools<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">"jsonlite@1.2"</span>) <span class="co"># at version</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"jeroen/jsonlite"</span>) <span class="co"># latest</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d"</span>) <span class="co"># at SHA</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"path/to/package"</span>) <span class="co"># local source</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="the-junk-drawer" class="slide level2">
@@ -1480,8 +1588,8 @@ project3
       }</style></aside>
 </section></section>
 <section>
-<section id="focus-areas-4" class="title-slide slide level1 center" data-background-color="#333399">
-<h1>focus areas</h1>
+<section id="agenda-4" class="title-slide slide level1 center" data-background-color="#333399">
+<h1>agenda</h1>
 <p>::: agenda</p>
 <ul>
 <li>starting R</li>
@@ -1598,10 +1706,10 @@ project3
 <ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">windows</a></li><li><a href="#tabset-6-2">*nix</a></li></ul>
 <div class="tab-content">
 <div id="tabset-6-1">
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource powershell number-lines code-with-copy"><code class="sourceCode powershell"><span id="cb17-1"><a href="#cb17-1"></a>scoop install rig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource powershell number-lines code-with-copy"><code class="sourceCode powershell"><span id="cb16-1"><a href="#cb16-1"></a>scoop install rig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-6-2">
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1"></a><span class="ex">brew</span> install rig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1"></a><span class="ex">brew</span> install rig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1627,23 +1735,23 @@ nvm<br>
 <section id="language-versions" class="slide level2">
 <h2>language versions</h2>
 <p>using your language manager, install a language version:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb19-1"><a href="#cb19-1"></a>❯ rig install --help</span>
-<span id="cb19-2"><a href="#cb19-2"></a>rig-add</span>
-<span id="cb19-3"><a href="#cb19-3"></a></span>
-<span id="cb19-4"><a href="#cb19-4"></a>DESCRIPTION:</span>
-<span id="cb19-5"><a href="#cb19-5"></a>    Download and install an R version, from the official sources.</span>
-<span id="cb19-6"><a href="#cb19-6"></a>    It keeps the already installed R versions, except versions within the</span>
-<span id="cb19-7"><a href="#cb19-7"></a>    same minor branch, see below.</span>
-<span id="cb19-8"><a href="#cb19-8"></a></span>
-<span id="cb19-9"><a href="#cb19-9"></a>EXAMPLES:</span>
-<span id="cb19-10"><a href="#cb19-10"></a>    # Add the latest release</span>
-<span id="cb19-11"><a href="#cb19-11"></a>    rig add release</span>
-<span id="cb19-12"><a href="#cb19-12"></a></span>
-<span id="cb19-13"><a href="#cb19-13"></a>    # Install specific version</span>
-<span id="cb19-14"><a href="#cb19-14"></a>    rig add 4.1.2</span>
-<span id="cb19-15"><a href="#cb19-15"></a></span>
-<span id="cb19-16"><a href="#cb19-16"></a>    # Install latest version within a minor branch</span>
-<span id="cb19-17"><a href="#cb19-17"></a>    rig add 4.1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a href="#cb18-1"></a>❯ rig install --help</span>
+<span id="cb18-2"><a href="#cb18-2"></a>rig-add</span>
+<span id="cb18-3"><a href="#cb18-3"></a></span>
+<span id="cb18-4"><a href="#cb18-4"></a>DESCRIPTION:</span>
+<span id="cb18-5"><a href="#cb18-5"></a>    Download and install an R version, from the official sources.</span>
+<span id="cb18-6"><a href="#cb18-6"></a>    It keeps the already installed R versions, except versions within the</span>
+<span id="cb18-7"><a href="#cb18-7"></a>    same minor branch, see below.</span>
+<span id="cb18-8"><a href="#cb18-8"></a></span>
+<span id="cb18-9"><a href="#cb18-9"></a>EXAMPLES:</span>
+<span id="cb18-10"><a href="#cb18-10"></a>    # Add the latest release</span>
+<span id="cb18-11"><a href="#cb18-11"></a>    rig add release</span>
+<span id="cb18-12"><a href="#cb18-12"></a></span>
+<span id="cb18-13"><a href="#cb18-13"></a>    # Install specific version</span>
+<span id="cb18-14"><a href="#cb18-14"></a>    rig add 4.1.2</span>
+<span id="cb18-15"><a href="#cb18-15"></a></span>
+<span id="cb18-16"><a href="#cb18-16"></a>    # Install latest version within a minor branch</span>
+<span id="cb18-17"><a href="#cb18-17"></a>    rig add 4.1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
 <p>if you’re running a distribution of linux that rig doesn’t support: - https://docs.rstudio.com/resources/install-r/</p>
 <p>if no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/</p>
@@ -1662,16 +1770,16 @@ nvm<br>
 <section id="environment-managers" class="slide level2">
 <h2>environment managers</h2>
 <p>using your desired version of the language, install an environment manager:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="project-2" class="slide level2">
 <h2>project</h2>
 <p>using your environment manager, install your project’s dependencies:</p>
 <ul>
 <li><p>create a new environment</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>restore a pre-defined environment</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
 </section>
 <section id="activity-5" class="slide level2 smaller">
@@ -1693,7 +1801,7 @@ nvm<br>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62de85e2" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62dedd77" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>

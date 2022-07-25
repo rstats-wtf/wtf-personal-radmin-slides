@@ -25,21 +25,21 @@
     "href": "index.html#how-do-i",
     "title": "",
     "section": "How do I…",
-    "text": "How do I…\n\n\nupgrade the version of R I’m using for this project?\nknow which package versions I’m using for this project?\nmove this project from one machine to another?\n\n\n\nWe’re extending the lessons from Day 1 to think about what it means to work with R projects over time. That means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts. Working on an old project on a new computer is a lot like trying to put an app into production."
+    "text": "How do I…\n\n\nupgrade the version of R I’m using for this project?\nknow which package versions I’m using for this project?\nmove this project from one machine to another?\n\n\n\nWe’re extending the lessons from Day 1 to think about what it means to work with R projects over time.\nThat means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts. Working on an old project on a new computer is a lot like trying to put an app into production."
   },
   {
-    "objectID": "index.html#focus-areas",
-    "href": "index.html#focus-areas",
+    "objectID": "index.html#agenda",
+    "href": "index.html#agenda",
     "title": "",
-    "section": "focus areas",
-    "text": "focus areas\n\n\nstarting R\ninstalling R packages\nreproducible environments\ninstalling / upgrading R"
+    "section": "agenda",
+    "text": "agenda\n\n\nstarting R\ninstalling R packages\nreproducible environments\ninstalling / upgrading R"
   },
   {
     "objectID": "index.html#why",
     "href": "index.html#why",
     "title": "",
     "section": "why?",
-    "text": "why?\nSometimes we want to change the way our code behaves without having to change the code."
+    "text": "why?\nSometimes we want to change the way our code behaves without having to change the code.\n\nbehaves might mean\n- “what computer do I think I’m on” - “is this dev or prod”?"
   },
   {
     "objectID": "index.html#r-startup-sequence",
@@ -81,7 +81,7 @@
     "href": "index.html#what-goes-in-.renviron",
     "title": "",
     "section": "what goes in .Renviron",
-    "text": "what goes in .Renviron\n✅ R-specific environment variables\n✅ API keys\n❌ R code"
+    "text": "what goes in .Renviron\n✅ R-specific environment variables ✅ API keys ❌ R code"
   },
   {
     "objectID": "index.html#example-.renviron",
@@ -126,18 +126,18 @@
     "text": "what to put in .Rprofile\n\nset a default CRAN mirror\ncustomize R prompt\nselectively change (but be careful)\n\noptions, screen width, numeric display\nload frequently used interactive packages\naliases / shortcuts for frequently used functions"
   },
   {
+    "objectID": "index.html#what-not-to-put-in-.rprofile",
+    "href": "index.html#what-not-to-put-in-.rprofile",
+    "title": "",
+    "section": "what not to put in .Rprofile",
+    "text": "what not to put in .Rprofile\nIf it matters for code you share, it should not be in .Rprofile"
+  },
+  {
     "objectID": "index.html#why-shouldnt-these-go-in-.rprofile",
     "href": "index.html#why-shouldnt-these-go-in-.rprofile",
     "title": "",
     "section": "why shouldn’t these go in .Rprofile?",
     "text": "why shouldn’t these go in .Rprofile?\n\n\noptions(stringsAsFactors = FALSE)\nlibrary(tidyverse)\nf <- dplyr::filter\ntheme_set(theme_bw())"
-  },
-  {
-    "objectID": "index.html#dev-dependencies",
-    "href": "index.html#dev-dependencies",
-    "title": "",
-    "section": "dev dependencies",
-    "text": "dev dependencies\nIf it matters for code you share, it should not be in .Rprofile"
   },
   {
     "objectID": "index.html#discuss-with-your-neighbor",
@@ -147,11 +147,11 @@
     "text": "discuss with your neighbor\n\nWhy might these be safe to put in .Rprofile?\n\n\nlibrary(usethis)\nlibrary(devtools)\n\n\n\n02:00"
   },
   {
-    "objectID": "index.html#andries-.rprofile",
-    "href": "index.html#andries-.rprofile",
+    "objectID": "index.html#dotfiles",
+    "href": "index.html#dotfiles",
     "title": "",
-    "section": "andrie’s .Rprofile",
-    "text": "andrie’s .Rprofile\n# Set CRAN mirror\nif (R.version$status == \"Under development (unstable)\") {\n  options(repos = c(CRAN = \"https://cloud.r-project.org/\"))\n} else {\n  options(repos = c(CRAN = \"https://packagemanager.rstudio.com/all/latest\"))\n}\n\n# Set the executable for GhostScript\nif (.Platform$OS.type == \"windows\") {\n  Sys.setenv(R_GSCMD = Sys.which(\"gswin64c\"))\n}"
+    "section": "dotfiles",
+    "text": "dotfiles\n\nhttps://github.com/search?q=.Rprofile"
   },
   {
     "objectID": "index.html#activity-1",
@@ -186,14 +186,14 @@
     "href": "index.html#states-of-r-packages-1",
     "title": "",
     "section": "states of R packages",
-    "text": "states of R packages\n\n\n\n\n\n\n\n\n\n\n\nuse\n\n\n\ndev\n\n\n\ndevtools::build()\n\n\n\ndevtools::build(binary = TRUE)\n\n\n\ninstall.packages()\n\n\n\nlibrary()\n\n\n\nInstalled\n\n\n\nLoaded\n\n\n\nBundled\n\n\n\nSource\n\n\n\nBinary\n\n\n\n\n\n\n\n\n\n“packages have to be compiled to run” the question is when - show how to set options for different environment managers - what does this look like in CI - insufficiently motivated? - you need the dev version of something\n\n?Workflows break w/ current CRAN package, need to go back to older package\nInstall package from github\nDevelop your own packages under: Make it explicit why we care about installing from source\nbinaries are probably faster\nCRAN doesn’t always have binaries available but you may not need them\n\n\n\nR Packages – Structure"
+    "text": "states of R packages\n\n\n\n\n\n\n\n\n\n\n\nuse\n\n\n\ndev\n\n\n\ndevtools::build()\n\n\n\ndevtools::build(binary = TRUE)\n\n\n\ninstall.packages()\n\n\n\nlibrary()\n\n\n\nInstalled\n\n\n\nLoaded\n\n\n\nBundled\n\n\n\nSource\n\n\n\nBinary\n\n\n\n\n\n\n\n\n\n\nshow how to set options for different environment managers\nInstall package from github\nDevelop your own packages\n\n\n\nR Packages – Structure"
   },
   {
     "objectID": "index.html#binary",
     "href": "index.html#binary",
     "title": "",
     "section": "Binary",
-    "text": "Binary\n\ncompiled ahead of time\neasiest to install"
+    "text": "Binary\n\ncompiled ahead of time\neasiest / fastest to install\n\n\nyou may particularly care about installation speed if you’re being billed by the minute for compute time, or if you need computations to finish before a timeout"
   },
   {
     "objectID": "index.html#where-to-get-binaries",
@@ -263,7 +263,7 @@
     "href": "index.html#source",
     "title": "",
     "section": "Source",
-    "text": "Source\n\ncompiled in development environment\nrequires extra tools when package uses C, C++ or Fortran\n\n\nOne additional complication for *nix users: generally on windows can install and load packages that depend on other lower level libraries quite easily. Explain installing sf, for example."
+    "text": "Source\n\ncompiled in your environment\nrequires extra tools when package uses C, C++ or Fortran\n\n\n\nmost common reason to install from source is when you want the development version of a package from github One additional complication for *nix users:\ngenerally on windows can install and load packages that depend on other lower level libraries quite easily. Explain installing sf, for example."
   },
   {
     "objectID": "index.html#if-you-dont-have-tools",
@@ -312,7 +312,7 @@
     "href": "index.html#why-2",
     "title": "",
     "section": "why?",
-    "text": "why?\n\n\nThe quick and dirty approach you took then comes right back at you as a boomerang. Therefore, ban the concept of one-off altogether. No matter what the asker says, it will have to be done again, always!3/9\n\n— Edwin Thoen (@edwin_thoen) May 16, 2022"
+    "text": "why?\n\n\nThe quick and dirty approach you took then comes right back at you as a boomerang. Therefore, ban the concept of one-off altogether. No matter what the asker says, it will have to be done again, always!3/9\n\n— Edwin Thoen (@edwin_thoen) May 16, 2022\n\n\n::: You will need to reproduce or update your analysis. You might get audited! :::"
   },
   {
     "objectID": "index.html#reproducibility-strategies",
@@ -326,7 +326,7 @@
     "href": "index.html#reproducibility-strategies-1",
     "title": "",
     "section": "reproducibility strategies",
-    "text": "reproducibility strategies"
+    "text": "reproducibility strategies\n\n\n\n\n\n\nwe’re focused in particular on systems where we have both access and responsibility"
   },
   {
     "objectID": "index.html#tools",
@@ -375,14 +375,14 @@
     "href": "index.html#shared-project-environment",
     "title": "",
     "section": "shared project environment",
-    "text": "shared project environment\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary\n\n\n\nproject1\n\n\n\nproject2\n\n\n\nproject3\n\n\n\n\n\n\n\n\n\n.libPaths()\n[1] \"C:/Users/edavi/Documents/R/win-library/3.6\" # user\n[2] \"C:/Program Files/R/R-3.6.3/library\" # system"
+    "text": "shared project environment\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary\n\n\n\nproject1\n\n\n\nproject2\n\n\n\nproject3\n\n\n\n\n\n\n\n\n\n\nby default all of your packages are installed into your user library\nthe unforunate default behavior in macOS is also that this is the system library\nupdating a package in the shared environments updates it for all of your projects\n\n\n\n.libPaths()\n[1] \"C:/Users/edavi/Documents/R/win-library/3.6\" # user\n[2] \"C:/Program Files/R/R-3.6.3/library\" # system"
   },
   {
     "objectID": "index.html#isolated-project-environments",
     "href": "index.html#isolated-project-environments",
     "title": "",
     "section": "isolated project environments",
-    "text": "isolated project environments\n\n\n\n\n\n\n\nSyntax error in graphmermaid version 9.1.1\n\n\n\n\n\n\n\n.libPaths()\n* Project '~/projects/sample-project' loaded. [renv 0.15.5]\n> .libPaths()\n[1] \"C:/Users/edavi/Documents/projects/sample-project/renv/library/R-3.6/x86_64-w64-mingw32\"\n[2] \"C:/Program Files/R/R-3.6.3/library\""
+    "text": "isolated project environments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nglobal cache\n\n\n\nlibrary1\n\n\n\nlibrary2\n\n\n\nlibrary3\n\n\n\nproject1\n\n\n\nproject2\n\n\n\nproject3\n\n\n\n\n\n\n\n\n\n.libPaths()\n* Project '~/projects/sample-project' loaded. [renv 0.15.5]\n> .libPaths()\n[1] \"C:/Users/edavi/Documents/projects/sample-project/renv/library/R-3.6/x86_64-w64-mingw32\"\n[2] \"C:/Program Files/R/R-3.6.3/library\""
   },
   {
     "objectID": "index.html#isolated-project-environments-1",
