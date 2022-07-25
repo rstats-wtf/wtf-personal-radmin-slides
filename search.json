@@ -81,7 +81,7 @@
     "href": "index.html#what-goes-in-.renviron",
     "title": "",
     "section": "what goes in .Renviron",
-    "text": "what goes in .Renviron\n✅ R-specific environment variables ✅ API keys ❌ R code"
+    "text": "what goes in .Renviron\n✅ R-specific environment variables\n✅ API keys\n❌ R code"
   },
   {
     "objectID": "index.html#example-.renviron",
