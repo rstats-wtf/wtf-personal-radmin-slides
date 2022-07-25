@@ -249,7 +249,7 @@
     "href": "index.html#how-do-i-know-i-got-a-binary-package",
     "title": "",
     "section": "how do I know I got a binary package?",
-    "text": "how do I know I got a binary package?\n\nbaserenv\n\n\n> install.packages(\"remotes\")\nhttps://cran.rstudio.com/bin/windows/Rtools/\nInstalling package into ‘C:/Users/WDAGUtilityAccount/AppData/Local/R/win-library/4.2’\n(as ‘lib’ is unspecified)\ntrying URL 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/remotes_2.4.2.zip'\nContent type 'binary/octet-stream' length 399930 bytes (390 KB)\ndownloaded 390 KB\n\npackage ‘remotes’ successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n  C:\\Users\\WDAGUtilityAccount\\AppData\\Local\\Temp\\RtmpA1edRi\\downloaded_packages\n\n\n> renv::install(\"fs\")\nRetrieving 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/fs_1.5.2.zip' ...\n  OK [downloaded 380.9 Kb in 0.5 secs]\nInstalling fs [1.5.2] ...\n  OK [installed binary]\nMoving fs [1.5.2] into the cache ...\n  OK [moved to cache in 7.4 milliseconds]"
+    "text": "how do I know I got a binary package?\n\nCRAN CRAN {{}}RSPMrenv\n\n\n> install.packages(\"parallelly\", repos = \"https://cran.rstudio.com\")\nInstalling package into ‘C:/Users/edavi/Documents/R/win-library/4.1’\n(as ‘lib’ is unspecified)\ntrying URL 'https://cran.rstudio.com/bin/windows/contrib/4.1/parallelly_1.32.1.zip'\nContent type 'application/zip' length 306137 bytes (298 KB)\ndownloaded 298 KB\n\npackage ‘parallelly’ successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\edavi\\AppData\\Local\\Temp\\Rtmpa2s3e8\\downloaded_packages\n\n\n> install.packages(\"renv\", repos=\"https://cran.rstudio.com\")\nInstalling package into ‘/Users/edavidaja/Library/R/x86_64/4.1/library’\n(as ‘lib’ is unspecified)\ntrying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.1/renv_0.15.5.tgz'\nContent type 'application/x-gzip' length 1866760 bytes (1.8 MB)\n==================================================\ndownloaded 1.8 MB\n\n\nThe downloaded binary packages are in\n /var/folders/b5/fl4ff68d23s148tg1_1gnflc0000gn/T//RtmpMk69B0/downloaded_packages\n\n\n> install.packages(\"remotes\")\nInstalling package into ‘C:/Users/WDAGUtilityAccount/AppData/Local/R/win-library/4.2’\n(as ‘lib’ is unspecified)\ntrying URL 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/remotes_2.4.2.zip'\nContent type 'binary/octet-stream' length 399930 bytes (390 KB)\ndownloaded 390 KB\n\npackage ‘remotes’ successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n  C:\\Users\\WDAGUtilityAccount\\AppData\\Local\\Temp\\RtmpA1edRi\\downloaded_packages\n\n\n> renv::install(\"fs\")\nRetrieving 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/fs_1.5.2.zip' ...\n  OK [downloaded 380.9 Kb in 0.5 secs]\nInstalling fs [1.5.2] ...\n  OK [installed binary]\nMoving fs [1.5.2] into the cache ...\n  OK [moved to cache in 7.4 milliseconds]"
   },
   {
     "objectID": "index.html#pop-quiz-hotshot",
@@ -336,8 +336,8 @@
     "text": "tools\n\n\nrspm\n\n\nrenv\n\n\n\n\nrenv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - renv::install() can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache -makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out"
   },
   {
-    "objectID": "index.html#rspm-2",
-    "href": "index.html#rspm-2",
+    "objectID": "index.html#rspm-3",
+    "href": "index.html#rspm-3",
     "title": "",
     "section": "rspm",
     "text": "rspm"
