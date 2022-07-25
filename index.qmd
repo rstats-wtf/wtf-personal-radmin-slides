@@ -91,7 +91,7 @@ countdown_timer <- function(
 
 ::: r-fit-text
 -   personal laptop {{< fa brands windows >}}
--   Work laptop {{< fa brands apple >}}
+-   work laptop {{< fa brands apple >}}
 -   RStudio Workbench Demo Server {{< fa brands linux >}}
 -   RStudio Workbench Internal Server {{< fa brands linux >}}
 :::
@@ -112,7 +112,7 @@ this is intended to provide context on my priorities / habits of thought:
 
 ::: incremental
 -   upgrade the version of R I'm using for this project?
--   know which package versions I'm using for this project?
+-   track which package versions I'm using for this project?
 -   move this project from one machine to another?
 :::
 
@@ -584,7 +584,7 @@ downloaded 121 KB
 
 ### CRAN {{< fa brands windows >}}
 
-``` {.r code-line-numbers="5"}
+``` {.r code-line-numbers="5,10"}
 > install.packages("parallelly", repos = "https://cran.rstudio.com")
 Installing package into ‘C:/Users/edavi/Documents/R/win-library/4.1’
 (as ‘lib’ is unspecified)
@@ -600,7 +600,7 @@ The downloaded binary packages are in
 
 ### CRAN {{< fa brands apple >}}
 
-```{.r code-line-numbers="4"}
+```{.r code-line-numbers="4,10"}
 > install.packages("renv", repos="https://cran.rstudio.com")
 Installing package into ‘/Users/edavidaja/Library/R/x86_64/4.1/library’
 (as ‘lib’ is unspecified)
@@ -616,7 +616,7 @@ The downloaded binary packages are in
 
 ### RSPM
 
-``` {.r code-line-numbers="5"}
+``` {.r code-line-numbers="10"}
 > install.packages("remotes")
 Installing package into ‘C:/Users/WDAGUtilityAccount/AppData/Local/R/win-library/4.2’
 (as ‘lib’ is unspecified)
@@ -715,7 +715,7 @@ apt install make
 ## got tools?
 
 :::{.r .r-fit-text}
-devtools::has_devel()
+`devtools::has_devel()`
 :::
 
 > `## Your system is ready to build packages! `
@@ -1102,6 +1102,7 @@ I use `renv` for everything, and have one junk project into which I install thin
 ::: agenda-active
 -   installing / upgrading R
 :::
+:::
 
 ## why
 
@@ -1141,6 +1142,10 @@ The best way to become more comfortable with installing things is to practice in
 - I don't know of a good safe way to test mac environments
 :::
 
+## "run this command" >> clickOps
+
+![](img/installing-R.png)
+
 ## package managers
 
 software whose job it is to install other software  
@@ -1162,14 +1167,6 @@ Tools for freezing installations with your package manager are not consistently 
 Other software that you install with your package manager may expect that package manager to be running the latest
 Idiosyncracies of your language will be better understood by a dedicated tool
 :::
-
-## clickOps
-
-![](img/installing-R.png)
-
-## rig
-
-<https://github.com/r-lib/rig/>
 
 ## language managers
 
