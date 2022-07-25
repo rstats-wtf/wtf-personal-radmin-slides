@@ -598,7 +598,7 @@ The downloaded binary packages are in
 	C:\Users\edavi\AppData\Local\Temp\Rtmpa2s3e8\downloaded_packages
 ```
 
-### CRAN {{<fa brands apple>}}
+### CRAN {{< fa brands apple >}}
 
 ```{.r code-line-numbers="4"}
 > install.packages("renv", repos="https://cran.rstudio.com")
@@ -689,25 +689,25 @@ ERROR: package installation failed
 
 ::: panel-tabset
 
-### windows
+### windows {{< fa brands windows > >}}
 
 [Rtools](https://cran.r-project.org/bin/windows/Rtools/)
 
-### macOS
+### macOS {{< fa brands apple >}}
 
-XCode
+[XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
 
 :warning: don't run right now
 
-`xcode-select --install`
+```{.bash code-line-numbers="false"}
+xcode-select --install
+```
 
-or download from the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
-
-### linux
+### linux {{< fa brands linux >}}
 
 install tools via package manager, e.g.
 
-``` shell
+``` bash
 apt install make
 ```
 :::
