@@ -409,6 +409,12 @@ if it exists, your user `.Rprofile` will not be evaluated
 :::
 ::::
 
+::: notes
+Environment variables are inherited by child processes, so setting them early in the startup process is valuable
+Hosting providers trying to deal with secrets will often let you supply environment variables
+
+:::
+
 # agenda {.agenda}
 
 -   starting R :white_check_mark:
