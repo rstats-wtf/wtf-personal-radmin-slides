@@ -125,7 +125,7 @@ That means that in addition to wanting our individual projects to flow smoothly,
 
 -   starting R
 -   installing R packages
--   reproducible environments
+-   creating reproducible environments
 -   installing / upgrading R
 
 
@@ -133,7 +133,7 @@ That means that in addition to wanting our individual projects to flow smoothly,
 
 -   starting R :arrow_left:
 -   installing R packages
--   reproducible environments
+-   creating reproducible environments
 -   installing / upgrading R
 
 ## why?
@@ -413,7 +413,7 @@ if it exists, your user `.Rprofile` will not be evaluated
 
 -   starting R :white_check_mark:
 -   installing R packages :arrow_left:
--   reproducible environments
+-   creating reproducible environments
 -   installing / upgrading R
 
 ## why
@@ -777,7 +777,7 @@ binaries are usually preferred, but for development versions of packages, you ma
 
 -   starting R :white_check_mark:
 -   installing R packages :white_check_mark:
--   reproducible environments :arrow_left:
+-   creating reproducible environments :arrow_left:
 -   installing / upgrading R
 
 ## why?
@@ -1117,7 +1117,7 @@ I use `renv` for everything, and have one junk project into which I install thin
 
 -   starting R :white_check_mark:
 -   installing R packages :white_check_mark:
--   reproducible environments :white_check_mark:
+-   creating reproducible environments :white_check_mark:
 -   installing / upgrading R :arrow_left:
 
 ## why
