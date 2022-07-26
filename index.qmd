@@ -499,6 +499,10 @@ you may particularly care about installation speed if you're being billed by the
 
 ## may not be the latest
 
+![](img/compile-from-sources-question.png)
+
+## may not be the latest
+
 ```{.r code-line-numbers="6-8"}
 > install.packages("parallelly", repos = "https://cran.rstudio.com")
 
@@ -655,6 +659,10 @@ One additional complication for \*nix users:
 
 ## if you don't have tools
 
+::: panel-tabset
+
+### `make`
+
 ``` {.r code-line-numbers="11"}
 Running `R CMD build`...
 * checking for file 'C:\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpkTUH61\remotes192027624804\tidyverse-dplyr-36ef054/DESCRIPTION' ... OK
@@ -672,6 +680,24 @@ ERROR: compilation failed for package 'dplyr'
       -----------------------------------
 ERROR: package installation failed
 ```
+
+### `g++`
+
+``` {.r code-line-numbers="7"}
+Warning in untar2(tarfile, files, list, exdir, restore_times) :
+  skipping pax global extended headers
+* installing *source* package 'dplyr' ...
+** using staged installation
+** libs
+c:/Rtools/mingw_64/bin/g++ -std=gnu++11  -I"C:/PROGRA~1/R/R-36~1.3/include" -DNDEBUG          -O2 -Wall  -mtune=core2 -c filter.cpp -o filter.o
+sh: line 1: c:/Rtools/mingw_64/bin/g++: No such file or directory
+make: *** [C:/PROGRA~1/R/R-36~1.3/etc/x64/Makeconf:215: filter.o] Error 127
+ERROR: compilation failed for package 'dplyr'
+* removing 'C:/Users/edavi/DOCUME~1/projects/WTF-PR~1/renv/staging/1/dplyr'
+Error: install of package 'dplyr' failed
+```
+
+:::
 
 ## how to get the tools
 
