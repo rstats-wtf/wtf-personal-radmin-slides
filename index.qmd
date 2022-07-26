@@ -17,7 +17,7 @@ execute:
 from: markdown+emoji
 ---
 
-# personal R administration
+# personal R administration {.agenda}
 
 throw your computer into the ocean with confidence
 
@@ -121,28 +121,20 @@ We're extending the lessons from Day 1 to think about what it means to work with
 That means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts. Working on an old project on a new computer is a lot like trying to put an app into production.
 :::
 
-## agenda {background-color="#333399"}
+## agenda {.agenda}
 
-::: agenda
 -   starting R
 -   installing R packages
 -   reproducible environments
 -   installing / upgrading R
-:::
 
 
-# agenda {background-color="#333399"}
+# agenda {.agenda}
 
-::: agenda
-
-::: agenda-active
--   starting R
-:::
-
+-   starting R :arrow_left:
 -   installing R packages
 -   reproducible environments
 -   installing / upgrading R
-:::
 
 ## why?
 
@@ -156,11 +148,15 @@ behaves might mean
 
 ## R startup sequence {.smaller background-color="#cccccc"}
 
+::: r-stack
 ![](img/R-startup.svg)
+:::
 
 ## R startup sequence (our focus) {.smaller background-color="#cccccc"}
 
+::: r-stack
 ![](img/r-startup-focus.svg)
+:::
 
 ## :warning: Use a newline
 
@@ -414,25 +410,18 @@ if it exists, your user `.Rprofile` will not be evaluated
 :::
 ::::
 
-# agenda {background-color="#333399"}
+# agenda {.agenda}
 
-::: agenda
-
--   starting R
-
-::: agenda-active
--   installing R packages
-:::
-
+-   starting R :white_check_mark:
+-   installing R packages :arrow_left:
 -   reproducible environments
 -   installing / upgrading R
 
-:::
-
-
 ## why
 
+::: r-stack
 ![](img/slacking-tidyverse.png)
+:::
 
 ::: notes
 having a reason to slack off is fun but being able to get your work done quickly is more fun
@@ -759,23 +748,18 @@ countdown_timer(minutes = 5, bottom = 0)
 
 binaries are usually preferred, but for development versions of packages, you may need to install from source.
 
-# agenda {background-color="#333399"}
+# agenda {.agenda}
 
-::: agenda
-
--   starting R
--   installing R packages
-
-::: agenda-active
--   reproducible environments
-:::
-
-- installing / upgrading R
-:::
+-   starting R :white_check_mark:
+-   installing R packages :white_check_mark:
+-   reproducible environments :arrow_left:
+-   installing / upgrading R
 
 ## why?
 
+::: r-stack
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The quick and dirty approach you took then comes right back at you as a boomerang. <br><br>Therefore, ban the concept of one-off altogether. No matter what the asker says, it will have to be done again, always!<br><br>3/9</p>&mdash; Edwin Thoen (@edwin_thoen) <a href="https://twitter.com/edwin_thoen/status/1526261181631152129?ref_src=twsrc%5Etfw">May 16, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+:::
 
 :::
 You _will_ need to reproduce or update your analysis.
@@ -859,13 +843,23 @@ we're focused in particular on systems where we have both access and responsibil
 
 :::: columns
 ::: column
+
 ### rspm
+
+::: r-stack
 ![](img/icon-rspm.png){.r-stretch}
 :::
 
+:::
+
 ::: column
+
 ### renv
+
+::: r-stack
 ![](img/renv-small.png){.r-stretch}
+:::
+
 :::
 ::::
 
@@ -879,7 +873,9 @@ renv has a number of tools that are helpful for adopting a project-based workflo
 
 ## rspm
 
+::: r-stack
 ![](img/icon-rspm.png){.r-stretch}
+:::
 
 ## rspm: latest
 
@@ -912,7 +908,9 @@ countdown_timer(minutes = 5, bottom = 0)
 
 ## renv
 
+::: r-stack
 ![](img/renv-small.png){.r-stretch}
+:::
 
 ## shared project environment
 
@@ -1093,18 +1091,12 @@ I use `renv` for everything, and have one junk project into which I install thin
 ## sysdeps??
 
 
-# agenda {background-color="#333399"}
+# agenda {.agenda}
 
-::: agenda
-
--   starting R
--   installing R packages
--   reproducible environments
-
-::: agenda-active
--   installing / upgrading R
-:::
-:::
+-   starting R :white_check_mark:
+-   installing R packages :white_check_mark:
+-   reproducible environments :white_check_mark:
+-   installing / upgrading R :arrow_left:
 
 ## why
 
@@ -1195,15 +1187,36 @@ brew install rig
 ```
 :::
 
+::: small
 language managers for other languages:
 
 {{< fa brands python >}} pyenv  
 {{< fa brands node-js >}} nvm  
 {{< fa brands rust >}} rustup  
-
+:::
 
 ::: notes
 -   many language managers are often written in some language other than the one they are responsible for managing
+:::
+
+## switching R versions {{< fa brands windows >}}
+
+### `CTRL +  CLICK`
+
+::: r-stack
+![](img/ctrl_click.png)
+:::
+
+## switching R versions {{< fa brands windows >}}
+
+::: r-stack
+![](img/r_version_select_windows-highlight.png)
+:::
+
+## switching R versions {{< fa brands apple >}}
+
+::: r-fit-text
+[RSwitch](https://rud.is/rswitch/)
 :::
 
 ## language versions
@@ -1240,9 +1253,9 @@ if no pre-compiled binary of rig is available: - https://docs.rstudio.com/resour
 
 using your desired version of the language, install an environment manager:
 
-``` r
-install.packages("renv")
-```
+::: {.r .r-fit-text}
+`install.packages("renv")`
+:::
 
 ## project
 
@@ -1254,32 +1267,31 @@ using your environment manager, install your project's dependencies:
     renv::init()
     ```
 
--   restore a pre-defined environment
+-   restore an already defined environment
 
     ``` r
     renv::restore()
     ```
 
-## activity {.smaller}
+## activity
 
-::: question
-1.  read the [rig FAQ](https://github.com/r-lib/rig#-faq), or the [rswitch guide](https://rud.is/rswitch/guide/)
+::: panel-tabset
 
-2.  install a different major/minor version of R
+### relaxed
 
-    -   <https://cran.r-project.org/bin/macosx/>
+read the [rig FAQ](https://github.com/r-lib/rig#-faq), or the [rswitch guide](https://rud.is/rswitch/guide/)
 
-    -   <https://cran.r-project.org/bin/windows/base/old/>
+### spartan
 
-3.  install `rig`
+- install `rig`  
+-  use rig to install a different **major** or **minor** version of R  
+:warning: avoid installing a _patch_ version  
+-  open RStudio with that newly installed R version  
 
-    -   use \`rig to install a different major or minor version of R
-
-    -   open RStudio with that newly installed R version
 :::
 
 ```{r}
-countdown(minutes = 1)
+countdown(minutes = 10)
 ```
 
 ## rig + renv
