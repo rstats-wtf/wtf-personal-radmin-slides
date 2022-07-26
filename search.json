@@ -179,7 +179,7 @@
     "href": "index.html#wrapping-up",
     "title": "",
     "section": "wrapping up",
-    "text": "wrapping up\n\n\n.Renviron\n\nsecrets\nenvironment information\n\n\n.Rprofile\n\ndevelopment dependencies"
+    "text": "wrapping up\n\n\n.Renviron\n\nsecrets\nenvironment information\n\n\n.Rprofile\n\ndevelopment dependencies\n\n\n\n\nEnvironment variables are inherited by child processes, so setting them early in the startup process is valuable Hosting providers trying to deal with secrets will often let you supply environment variables"
   },
   {
     "objectID": "index.html#why-1",
@@ -333,7 +333,7 @@
     "href": "index.html#why-2",
     "title": "",
     "section": "why?",
-    "text": "why?\n\n\n\nThe quick and dirty approach you took then comes right back at you as a boomerang. Therefore, ban the concept of one-off altogether. No matter what the asker says, it will have to be done again, always!3/9\n\n— Edwin Thoen (@edwin_thoen) May 16, 2022\n\n\n\n::: You will need to reproduce or update your analysis. You might get audited! :::"
+    "text": "why?\n\n\n\nThe quick and dirty approach you took then comes right back at you as a boomerang. Therefore, ban the concept of one-off altogether. No matter what the asker says, it will have to be done again, always!3/9\n\n— Edwin Thoen (@edwin_thoen) May 16, 2022\n\n\n\n\nYou will need to reproduce or update your analysis. You might get audited!"
   },
   {
     "objectID": "index.html#reproducibility-strategies",
