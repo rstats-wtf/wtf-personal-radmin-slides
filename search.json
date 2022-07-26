@@ -32,7 +32,7 @@
     "href": "index.html#agenda",
     "title": "",
     "section": "agenda",
-    "text": "agenda\n\n\nstarting R\ninstalling R packages\nreproducible environments\ninstalling / upgrading R"
+    "text": "agenda\n\nstarting R\ninstalling R packages\nreproducible environments\ninstalling / upgrading R"
   },
   {
     "objectID": "index.html#why",
@@ -172,7 +172,7 @@
     "href": "index.html#why-1",
     "title": "",
     "section": "why",
-    "text": "why\n\n\nhaving a reason to slack off is fun but being able to get your work done quickly is more fun"
+    "text": "why\n\n\n\n\nhaving a reason to slack off is fun but being able to get your work done quickly is more fun"
   },
   {
     "objectID": "index.html#states-of-r-packages",
@@ -312,7 +312,7 @@
     "href": "index.html#why-2",
     "title": "",
     "section": "why?",
-    "text": "why?\n\n\nThe quick and dirty approach you took then comes right back at you as a boomerang. Therefore, ban the concept of one-off altogether. No matter what the asker says, it will have to be done again, always!3/9\n\n— Edwin Thoen (@edwin_thoen) May 16, 2022\n\n\n::: You will need to reproduce or update your analysis. You might get audited! :::"
+    "text": "why?\n\n\n\nThe quick and dirty approach you took then comes right back at you as a boomerang. Therefore, ban the concept of one-off altogether. No matter what the asker says, it will have to be done again, always!3/9\n\n— Edwin Thoen (@edwin_thoen) May 16, 2022\n\n\n\n::: You will need to reproduce or update your analysis. You might get audited! :::"
   },
   {
     "objectID": "index.html#reproducibility-strategies",
@@ -333,7 +333,7 @@
     "href": "index.html#tools",
     "title": "",
     "section": "tools",
-    "text": "tools\n\n\nrspm\n\n\nrenv\n\n\n\n\nrenv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - renv::install() can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache -makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out"
+    "text": "tools\n\n\nrspm\n\n\n\n\nrenv\n\n\n\n\n\n\nrenv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - renv::install() can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache -makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out"
   },
   {
     "objectID": "index.html#rspm-3",
@@ -473,7 +473,28 @@
     "href": "index.html#language-managers",
     "title": "",
     "section": "language managers",
-    "text": "language managers\nusing your package manager, install a language manager\n\nwindows*nix\n\n\nscoop install rig\n\n\nbrew install rig\n\n\n\nlanguage managers for other languages:\n pyenv\n nvm\n rustup\n\n\nmany language managers are often written in some language other than the one they are responsible for managing"
+    "text": "language managers\nusing your package manager, install a language manager\n\nwindows*nix\n\n\nscoop install rig\n\n\nbrew install rig\n\n\n\n\nlanguage managers for other languages:\n pyenv\n nvm\n rustup\n\n\n\nmany language managers are often written in some language other than the one they are responsible for managing"
+  },
+  {
+    "objectID": "index.html#switching-r-versions-fa-brands-windows",
+    "href": "index.html#switching-r-versions-fa-brands-windows",
+    "title": "",
+    "section": "switching R versions ",
+    "text": "switching R versions \nCTRL +  CLICK"
+  },
+  {
+    "objectID": "index.html#switching-r-versions-fa-brands-windows-1",
+    "href": "index.html#switching-r-versions-fa-brands-windows-1",
+    "title": "",
+    "section": "switching R versions ",
+    "text": "switching R versions"
+  },
+  {
+    "objectID": "index.html#switching-r-versions-fa-brands-apple",
+    "href": "index.html#switching-r-versions-fa-brands-apple",
+    "title": "",
+    "section": "switching R versions ",
+    "text": "switching R versions \n\nRSwitch"
   },
   {
     "objectID": "index.html#language-versions",
@@ -487,21 +508,21 @@
     "href": "index.html#environment-managers",
     "title": "",
     "section": "environment managers",
-    "text": "environment managers\nusing your desired version of the language, install an environment manager:\ninstall.packages(\"renv\")"
+    "text": "environment managers\nusing your desired version of the language, install an environment manager:\n\ninstall.packages(\"renv\")"
   },
   {
     "objectID": "index.html#project-2",
     "href": "index.html#project-2",
     "title": "",
     "section": "project",
-    "text": "project\nusing your environment manager, install your project’s dependencies:\n\ncreate a new environment\nrenv::init()\nrestore a pre-defined environment\nrenv::restore()"
+    "text": "project\nusing your environment manager, install your project’s dependencies:\n\ncreate a new environment\nrenv::init()\nrestore an already defined environment\nrenv::restore()"
   },
   {
     "objectID": "index.html#activity-5",
     "href": "index.html#activity-5",
     "title": "",
     "section": "activity",
-    "text": "activity\n\n\nread the rig FAQ, or the rswitch guide\ninstall a different major/minor version of R\n\nhttps://cran.r-project.org/bin/macosx/\nhttps://cran.r-project.org/bin/windows/base/old/\n\ninstall rig\n\nuse `rig to install a different major or minor version of R\nopen RStudio with that newly installed R version\n\n\n\n\n\n\n01:00"
+    "text": "activity\n\nrelaxedspartan\n\n\nread the rig FAQ, or the rswitch guide\n\n\n\ninstall rig\n\nuse rig to install a different major or minor version of R\n⚠️ avoid installing a patch version\n\nopen RStudio with that newly installed R version\n\n\n\n\n\n\n\n10:00"
   },
   {
     "objectID": "index.html#rig-renv",

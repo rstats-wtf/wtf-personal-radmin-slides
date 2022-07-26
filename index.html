@@ -389,7 +389,7 @@
 
 
 <section>
-<section id="personal-r-administration" class="title-slide slide level1 center">
+<section id="personal-r-administration" class="title-slide slide level1 agenda center">
 <h1>personal R administration</h1>
 <p>throw your computer into the ocean with confidence</p>
 <div class="cell">
@@ -487,32 +487,24 @@ That means that in addition to wanting our individual projects to flow smoothly,
           display:block!important;
       }</style></aside>
 </section>
-<section id="agenda" class="slide level2" data-background-color="#333399">
+<section id="agenda" class="slide level2 agenda">
 <h2>agenda</h2>
-<div class="agenda">
 <ul>
 <li>starting R</li>
 <li>installing R packages</li>
 <li>reproducible environments</li>
 <li>installing / upgrading R</li>
 </ul>
-</div>
 </section></section>
 <section>
-<section id="agenda-1" class="title-slide slide level1 center" data-background-color="#333399">
+<section id="agenda-1" class="title-slide slide level1 agenda center">
 <h1>agenda</h1>
-<div class="agenda">
-<div class="agenda-active">
 <ul>
-<li>starting R</li>
-</ul>
-</div>
-<ul>
+<li>starting R <span class="emoji" data-emoji="arrow_left">⬅️</span></li>
 <li>installing R packages</li>
 <li>reproducible environments</li>
 <li>installing / upgrading R</li>
 </ul>
-</div>
 </section>
 <section id="why" class="slide level2">
 <h2>why?</h2>
@@ -534,12 +526,16 @@ That means that in addition to wanting our individual projects to flow smoothly,
 </section>
 <section id="r-startup-sequence" class="slide level2 smaller" data-background-color="#cccccc">
 <h2>R startup sequence</h2>
-
-<img data-src="img/R-startup.svg" class="r-stretch"></section>
+<div class="r-stack">
+<p><img data-src="img/R-startup.svg"></p>
+</div>
+</section>
 <section id="r-startup-sequence-our-focus" class="slide level2 smaller" data-background-color="#cccccc">
 <h2>R startup sequence (our focus)</h2>
-
-<img data-src="img/r-startup-focus.svg" class="r-stretch"></section>
+<div class="r-stack">
+<p><img data-src="img/r-startup-focus.svg"></p>
+</div>
+</section>
 <section id="use-a-newline" class="slide level2">
 <h2><span class="emoji" data-emoji="warning">⚠️</span> Use a newline</h2>
 <div class="columns">
@@ -639,7 +635,7 @@ if values clash, <em>project</em> wins</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df11a2" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62df50fd" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -711,7 +707,7 @@ if values clash, <em>project</em> wins</p>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="fu">library</span>(devtools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df149c" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62df5000" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -752,7 +748,7 @@ if values clash, <em>project</em> wins</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df127f" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62df4f76" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -780,26 +776,20 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 </div>
 </section></section>
 <section>
-<section id="agenda-2" class="title-slide slide level1 center" data-background-color="#333399">
+<section id="agenda-2" class="title-slide slide level1 agenda center">
 <h1>agenda</h1>
-<div class="agenda">
 <ul>
-<li>starting R</li>
-</ul>
-<div class="agenda-active">
-<ul>
-<li>installing R packages</li>
-</ul>
-</div>
-<ul>
+<li>starting R <span class="emoji" data-emoji="white_check_mark">✅</span></li>
+<li>installing R packages <span class="emoji" data-emoji="arrow_left">⬅️</span></li>
 <li>reproducible environments</li>
 <li>installing / upgrading R</li>
 </ul>
-</div>
 </section>
 <section id="why-1" class="slide level2">
 <h2>why</h2>
+<div class="r-stack">
 <p><img data-src="img/slacking-tidyverse.png"></p>
+</div>
 <aside class="notes">
 <p>having a reason to slack off is fun but being able to get your work done quickly is more fun</p>
 <style type="text/css">
@@ -820,10 +810,10 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 <div class="cell-output-display">
 <div>
 <p>
-<svg viewbox="0 0 234.3125 478" height="478" aria-labelledby="chart-title-mermaid-1658786171803 chart-desc-mermaid-1658786171803" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="234" id="mermaid-figure-1" style=" display: block; margin: auto auto auto auto">
-<title id="chart-title-mermaid-1658786171803">
+<svg viewbox="0 0 234.3125 478" height="478" aria-labelledby="chart-title-mermaid-1658801686712 chart-desc-mermaid-1658801686712" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="234" id="mermaid-figure-1" style=" display: block; margin: auto auto auto auto">
+<title id="chart-title-mermaid-1658801686712">
 </title>
-<desc id="chart-desc-mermaid-1658786171803"></desc>
+<desc id="chart-desc-mermaid-1658801686712"></desc>
 <style>#mermaid-figure-1 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#ccc;}#mermaid-figure-1 .error-icon{fill:#a44141;}#mermaid-figure-1 .error-text{fill:#ddd;stroke:#ddd;}#mermaid-figure-1 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-1 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-1 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-1 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-1 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-1 .marker{fill:lightgrey;stroke:lightgrey;}#mermaid-figure-1 .marker.cross{stroke:lightgrey;}#mermaid-figure-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-1 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#ccc;}#mermaid-figure-1 .cluster-label text{fill:#F9FFFE;}#mermaid-figure-1 .cluster-label span{color:#F9FFFE;}#mermaid-figure-1 .label text,#mermaid-figure-1 span{fill:#ccc;color:#ccc;}#mermaid-figure-1 .node rect,#mermaid-figure-1 .node circle,#mermaid-figure-1 .node ellipse,#mermaid-figure-1 .node polygon,#mermaid-figure-1 .node path{fill:#1f2020;stroke:#81B1DB;stroke-width:1px;}#mermaid-figure-1 .node .label{text-align:center;}#mermaid-figure-1 .node.clickable{cursor:pointer;}#mermaid-figure-1 .arrowheadPath{fill:lightgrey;}#mermaid-figure-1 .edgePath .path{stroke:lightgrey;stroke-width:2.0px;}#mermaid-figure-1 .flowchart-link{stroke:lightgrey;fill:none;}#mermaid-figure-1 .edgeLabel{background-color:hsl(0, 0%, 34.4117647059%);text-align:center;}#mermaid-figure-1 .edgeLabel rect{opacity:0.5;background-color:hsl(0, 0%, 34.4117647059%);fill:hsl(0, 0%, 34.4117647059%);}#mermaid-figure-1 .cluster rect{fill:hsl(180, 1.5873015873%, 28.3529411765%);stroke:rgba(255, 255, 255, 0.25);stroke-width:1px;}#mermaid-figure-1 .cluster text{fill:#F9FFFE;}#mermaid-figure-1 .cluster span{color:#F9FFFE;}#mermaid-figure-1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(20, 1.5873015873%, 12.3529411765%);border:1px solid rgba(255, 255, 255, 0.25);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
 <g><g class="output"><g class="clusters"></g><g class="edgePaths"><g style="opacity: 1;" id="L-Source-Bundled" class="edgePath LS-Source LE-Bundled"><path style="fill:none" marker-end="url(#mermaid-figure-1-arrowhead26)" d="M117.15625,46L117.15625,51.666666666666664C117.15625,57.333333333333336,117.15625,68.66666666666667,117.15625,80C117.15625,91.33333333333333,117.15625,102.66666666666667,117.15625,108.33333333333333L117.15625,114" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-1-arrowhead26"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowheadPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs></g><g style="opacity: 1;" id="L-Bundled-Binary" class="edgePath LS-Bundled LE-Binary"><path style="fill:none" marker-end="url(#mermaid-figure-1-arrowhead27)" d="M117.15625,152L117.15625,157.66666666666666C117.15625,163.33333333333334,117.15625,174.66666666666666,117.15625,186C117.15625,197.33333333333334,117.15625,208.66666666666666,117.15625,214.33333333333334L117.15625,220" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-1-arrowhead27"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowheadPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs></g><g style="opacity: 1;" id="L-Binary-Installed" class="edgePath LS-Binary LE-Installed"><path style="fill:none" marker-end="url(#mermaid-figure-1-arrowhead28)" d="M117.15625,258L117.15625,263.6666666666667C117.15625,269.3333333333333,117.15625,280.6666666666667,117.15625,292C117.15625,303.3333333333333,117.15625,314.6666666666667,117.15625,320.3333333333333L117.15625,326" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-1-arrowhead28"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowheadPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs></g><g style="opacity: 1;" id="L-Installed-Loaded" class="edgePath LS-Installed LE-Loaded"><path style="fill:none" marker-end="url(#mermaid-figure-1-arrowhead29)" d="M117.15625,364L117.15625,369.6666666666667C117.15625,375.3333333333333,117.15625,386.6666666666667,117.15625,398C117.15625,409.3333333333333,117.15625,420.6666666666667,117.15625,426.3333333333333L117.15625,432" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-1-arrowhead29"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowheadPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs></g></g><g class="edgeLabels"><g style="opacity: 1;" transform="translate(117.15625,80)" class="edgeLabel"><g class="label" transform="translate(-56.4765625,-9)"><rect height="18" width="112.953125" ry="0" rx="0"></rect><foreignobject height="18" width="112.953125">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
@@ -877,10 +867,10 @@ Loaded
 <div class="cell-output-display">
 <div>
 <p>
-<svg viewbox="0 0 274.3125 553" height="553" aria-labelledby="chart-title-mermaid-1658786172649 chart-desc-mermaid-1658786172649" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="274" id="mermaid-figure-4" style=" display: block; margin: auto auto auto auto">
-<title id="chart-title-mermaid-1658786172649">
+<svg viewbox="0 0 274.3125 553" height="553" aria-labelledby="chart-title-mermaid-1658801687540 chart-desc-mermaid-1658801687540" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="274" id="mermaid-figure-4" style=" display: block; margin: auto auto auto auto">
+<title id="chart-title-mermaid-1658801687540">
 </title>
-<desc id="chart-desc-mermaid-1658786172649"></desc>
+<desc id="chart-desc-mermaid-1658801687540"></desc>
 <style>#mermaid-figure-4 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#ccc;}#mermaid-figure-4 .error-icon{fill:#a44141;}#mermaid-figure-4 .error-text{fill:#ddd;stroke:#ddd;}#mermaid-figure-4 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-4 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-4 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-4 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-4 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-4 .marker{fill:lightgrey;stroke:lightgrey;}#mermaid-figure-4 .marker.cross{stroke:lightgrey;}#mermaid-figure-4 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-4 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#ccc;}#mermaid-figure-4 .cluster-label text{fill:#F9FFFE;}#mermaid-figure-4 .cluster-label span{color:#F9FFFE;}#mermaid-figure-4 .label text,#mermaid-figure-4 span{fill:#ccc;color:#ccc;}#mermaid-figure-4 .node rect,#mermaid-figure-4 .node circle,#mermaid-figure-4 .node ellipse,#mermaid-figure-4 .node polygon,#mermaid-figure-4 .node path{fill:#1f2020;stroke:#81B1DB;stroke-width:1px;}#mermaid-figure-4 .node .label{text-align:center;}#mermaid-figure-4 .node.clickable{cursor:pointer;}#mermaid-figure-4 .arrowheadPath{fill:lightgrey;}#mermaid-figure-4 .edgePath .path{stroke:lightgrey;stroke-width:2.0px;}#mermaid-figure-4 .flowchart-link{stroke:lightgrey;fill:none;}#mermaid-figure-4 .edgeLabel{background-color:hsl(0, 0%, 34.4117647059%);text-align:center;}#mermaid-figure-4 .edgeLabel rect{opacity:0.5;background-color:hsl(0, 0%, 34.4117647059%);fill:hsl(0, 0%, 34.4117647059%);}#mermaid-figure-4 .cluster rect{fill:hsl(180, 1.5873015873%, 28.3529411765%);stroke:rgba(255, 255, 255, 0.25);stroke-width:1px;}#mermaid-figure-4 .cluster text{fill:#F9FFFE;}#mermaid-figure-4 .cluster span{color:#F9FFFE;}#mermaid-figure-4 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(20, 1.5873015873%, 12.3529411765%);border:1px solid rgba(255, 255, 255, 0.25);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-4 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
 <g transform="translate(0, 0)"><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="9" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="12" markerwidth="12" markerunits="userSpaceOnUse" refy="5" refx="0" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart" id="flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"><g id="use" class="cluster default"><rect height="184" width="144.59375" y="361" x="64.859375" ry="0" rx="0" style=""></rect><g transform="translate(124.2578125, 366)" class="cluster-label"><foreignobject height="18" width="25.796875">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
@@ -1148,7 +1138,7 @@ Loaded
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df11fd" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62df51c3" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1246,7 +1236,7 @@ Loaded
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df13ae" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62df4fdb" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1266,25 +1256,18 @@ Loaded
 <p>binaries are usually preferred, but for development versions of packages, you may need to install from source.</p>
 </section></section>
 <section>
-<section id="agenda-3" class="title-slide slide level1 center" data-background-color="#333399">
+<section id="agenda-3" class="title-slide slide level1 agenda center">
 <h1>agenda</h1>
-<div class="agenda">
 <ul>
-<li>starting R</li>
-<li>installing R packages</li>
-</ul>
-<div class="agenda-active">
-<ul>
-<li>reproducible environments</li>
-</ul>
-</div>
-<ul>
+<li>starting R <span class="emoji" data-emoji="white_check_mark">✅</span></li>
+<li>installing R packages <span class="emoji" data-emoji="white_check_mark">✅</span></li>
+<li>reproducible environments <span class="emoji" data-emoji="arrow_left">⬅️</span></li>
 <li>installing / upgrading R</li>
 </ul>
-</div>
 </section>
 <section id="why-2" class="slide level2">
 <h2>why?</h2>
+<div class="r-stack">
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">
 The quick and dirty approach you took then comes right back at you as a boomerang. <br><br>Therefore, ban the concept of one-off altogether. No matter what the asker says, it will have to be done again, always!<br><br>3/9
@@ -1292,6 +1275,7 @@ The quick and dirty approach you took then comes right back at you as a boomeran
 — Edwin Thoen (<span class="citation" data-cites="edwin_thoen">@edwin_thoen</span>) <a href="https://twitter.com/edwin_thoen/status/1526261181631152129?ref_src=twsrc%5Etfw">May 16, 2022</a>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 <p>::: You <em>will</em> need to reproduce or update your analysis. You might get audited! :::</p>
 </section>
 <section id="reproducibility-strategies" class="slide level2">
@@ -1324,10 +1308,14 @@ The quick and dirty approach you took then comes right back at you as a boomeran
 <div class="columns">
 <div class="column">
 <h3 id="rspm-2">rspm</h3>
+<div class="r-stack">
 <img data-src="img/icon-rspm.png" class="r-stretch">
+</div>
 </div><div class="column">
 <h3 id="renv-1">renv</h3>
+<div class="r-stack">
 <img data-src="img/renv-small.png" class="r-stretch">
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -1346,7 +1334,9 @@ The quick and dirty approach you took then comes right back at you as a boomeran
 </section>
 <section id="rspm-3" class="slide level2">
 <h2>rspm</h2>
+<div class="r-stack">
 <img data-src="img/icon-rspm.png" class="r-stretch">
+</div>
 </section>
 <section id="rspm-latest" class="slide level2">
 <h2>rspm: latest</h2>
@@ -1371,7 +1361,7 @@ The quick and dirty approach you took then comes right back at you as a boomeran
 <p>what version of dplyr did you install?</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df12d4" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62df50fe" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1379,7 +1369,9 @@ The quick and dirty approach you took then comes right back at you as a boomeran
 </section>
 <section id="renv-2" class="slide level2">
 <h2>renv</h2>
+<div class="r-stack">
 <img data-src="img/renv-small.png" class="r-stretch">
+</div>
 </section>
 <section id="shared-project-environment" class="slide level2">
 <h2>shared project environment</h2>
@@ -1388,10 +1380,10 @@ The quick and dirty approach you took then comes right back at you as a boomeran
 <div class="cell-output-display">
 <div>
 <p>
-<svg viewbox="0 0 346.765625 142" height="142" aria-labelledby="chart-title-mermaid-1658786172376 chart-desc-mermaid-1658786172376" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="347" id="mermaid-figure-3" style=" display: block; margin: auto auto auto auto">
-<title id="chart-title-mermaid-1658786172376">
+<svg viewbox="0 0 346.765625 142" height="142" aria-labelledby="chart-title-mermaid-1658801687272 chart-desc-mermaid-1658801687272" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="347" id="mermaid-figure-3" style=" display: block; margin: auto auto auto auto">
+<title id="chart-title-mermaid-1658801687272">
 </title>
-<desc id="chart-desc-mermaid-1658786172376"></desc>
+<desc id="chart-desc-mermaid-1658801687272"></desc>
 <style>#mermaid-figure-3 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#ccc;}#mermaid-figure-3 .error-icon{fill:#a44141;}#mermaid-figure-3 .error-text{fill:#ddd;stroke:#ddd;}#mermaid-figure-3 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-3 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-3 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-3 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-3 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-3 .marker{fill:lightgrey;stroke:lightgrey;}#mermaid-figure-3 .marker.cross{stroke:lightgrey;}#mermaid-figure-3 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-3 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#ccc;}#mermaid-figure-3 .cluster-label text{fill:#F9FFFE;}#mermaid-figure-3 .cluster-label span{color:#F9FFFE;}#mermaid-figure-3 .label text,#mermaid-figure-3 span{fill:#ccc;color:#ccc;}#mermaid-figure-3 .node rect,#mermaid-figure-3 .node circle,#mermaid-figure-3 .node ellipse,#mermaid-figure-3 .node polygon,#mermaid-figure-3 .node path{fill:#1f2020;stroke:#81B1DB;stroke-width:1px;}#mermaid-figure-3 .node .label{text-align:center;}#mermaid-figure-3 .node.clickable{cursor:pointer;}#mermaid-figure-3 .arrowheadPath{fill:lightgrey;}#mermaid-figure-3 .edgePath .path{stroke:lightgrey;stroke-width:2.0px;}#mermaid-figure-3 .flowchart-link{stroke:lightgrey;fill:none;}#mermaid-figure-3 .edgeLabel{background-color:hsl(0, 0%, 34.4117647059%);text-align:center;}#mermaid-figure-3 .edgeLabel rect{opacity:0.5;background-color:hsl(0, 0%, 34.4117647059%);fill:hsl(0, 0%, 34.4117647059%);}#mermaid-figure-3 .cluster rect{fill:hsl(180, 1.5873015873%, 28.3529411765%);stroke:rgba(255, 255, 255, 0.25);stroke-width:1px;}#mermaid-figure-3 .cluster text{fill:#F9FFFE;}#mermaid-figure-3 .cluster span{color:#F9FFFE;}#mermaid-figure-3 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(20, 1.5873015873%, 12.3529411765%);border:1px solid rgba(255, 255, 255, 0.25);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-3 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
 <g><g class="output"><g class="clusters"></g><g class="edgePaths"><g style="opacity: 1;" id="L-L-P1" class="edgePath LS-L LE-P1"><path style="fill:none" marker-end="url(#mermaid-figure-3-arrowhead9)" d="M141.6015625,38.017604333374365L125.74479166666667,43.51467027781197C109.88802083333333,49.011736222249574,78.17447916666667,60.00586811112479,62.317708333333336,69.66960072222906C46.4609375,79.33333333333333,46.4609375,87.66666666666667,46.4609375,91.83333333333333L46.4609375,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-3-arrowhead9"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-L-P2" class="edgePath LS-L LE-P2"><path style="fill:none" marker-end="url(#mermaid-figure-3-arrowhead10)" d="M173.3828125,46L173.3828125,50.166666666666664C173.3828125,54.333333333333336,173.3828125,62.666666666666664,173.3828125,71C173.3828125,79.33333333333333,173.3828125,87.66666666666667,173.3828125,91.83333333333333L173.3828125,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-3-arrowhead10"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-L-P3" class="edgePath LS-L LE-P3"><path style="fill:none" marker-end="url(#mermaid-figure-3-arrowhead11)" d="M205.1640625,38.017604333374365L221.02083333333334,43.51467027781197C236.87760416666666,49.011736222249574,268.5911458333333,60.00586811112479,284.4479166666667,69.66960072222906C300.3046875,79.33333333333333,300.3046875,87.66666666666667,300.3046875,91.83333333333333L300.3046875,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-3-arrowhead11"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g></g><g class="edgeLabels"><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
@@ -1457,10 +1449,10 @@ project3
 <div class="cell-output-display">
 <div>
 <p>
-<svg viewbox="0 0 346.765625 230" height="230" aria-labelledby="chart-title-mermaid-1658786172107 chart-desc-mermaid-1658786172107" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="347" id="mermaid-figure-2" style=" display: block; margin: auto auto auto auto">
-<title id="chart-title-mermaid-1658786172107">
+<svg viewbox="0 0 346.765625 230" height="230" aria-labelledby="chart-title-mermaid-1658801687008 chart-desc-mermaid-1658801687008" role="img" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="347" id="mermaid-figure-2" style=" display: block; margin: auto auto auto auto">
+<title id="chart-title-mermaid-1658801687008">
 </title>
-<desc id="chart-desc-mermaid-1658786172107"></desc>
+<desc id="chart-desc-mermaid-1658801687008"></desc>
 <style>#mermaid-figure-2 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#ccc;}#mermaid-figure-2 .error-icon{fill:#a44141;}#mermaid-figure-2 .error-text{fill:#ddd;stroke:#ddd;}#mermaid-figure-2 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-2 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-2 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-2 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-2 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-2 .marker{fill:lightgrey;stroke:lightgrey;}#mermaid-figure-2 .marker.cross{stroke:lightgrey;}#mermaid-figure-2 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-2 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#ccc;}#mermaid-figure-2 .cluster-label text{fill:#F9FFFE;}#mermaid-figure-2 .cluster-label span{color:#F9FFFE;}#mermaid-figure-2 .label text,#mermaid-figure-2 span{fill:#ccc;color:#ccc;}#mermaid-figure-2 .node rect,#mermaid-figure-2 .node circle,#mermaid-figure-2 .node ellipse,#mermaid-figure-2 .node polygon,#mermaid-figure-2 .node path{fill:#1f2020;stroke:#81B1DB;stroke-width:1px;}#mermaid-figure-2 .node .label{text-align:center;}#mermaid-figure-2 .node.clickable{cursor:pointer;}#mermaid-figure-2 .arrowheadPath{fill:lightgrey;}#mermaid-figure-2 .edgePath .path{stroke:lightgrey;stroke-width:2.0px;}#mermaid-figure-2 .flowchart-link{stroke:lightgrey;fill:none;}#mermaid-figure-2 .edgeLabel{background-color:hsl(0, 0%, 34.4117647059%);text-align:center;}#mermaid-figure-2 .edgeLabel rect{opacity:0.5;background-color:hsl(0, 0%, 34.4117647059%);fill:hsl(0, 0%, 34.4117647059%);}#mermaid-figure-2 .cluster rect{fill:hsl(180, 1.5873015873%, 28.3529411765%);stroke:rgba(255, 255, 255, 0.25);stroke-width:1px;}#mermaid-figure-2 .cluster text{fill:#F9FFFE;}#mermaid-figure-2 .cluster span{color:#F9FFFE;}#mermaid-figure-2 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(20, 1.5873015873%, 12.3529411765%);border:1px solid rgba(255, 255, 255, 0.25);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-2 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
 <g><g class="output"><g class="clusters"></g><g class="edgePaths"><g style="opacity: 1;" id="L-C-L1" class="edgePath LS-C LE-L1"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead16)" d="M118.57563920454545,46L106.55652225378788,50.166666666666664C94.5374053030303,54.333333333333336,70.49917140151514,62.666666666666664,58.48005445075757,71C46.4609375,79.33333333333333,46.4609375,87.66666666666667,46.4609375,91.83333333333333L46.4609375,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead16"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-C-L2" class="edgePath LS-C LE-L2"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead17)" d="M173.3828125,46L173.3828125,50.166666666666664C173.3828125,54.333333333333336,173.3828125,62.666666666666664,173.3828125,71C173.3828125,79.33333333333333,173.3828125,87.66666666666667,173.3828125,91.83333333333333L173.3828125,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead17"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-C-L3" class="edgePath LS-C LE-L3"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead18)" d="M228.18998579545456,46L240.20910274621212,50.166666666666664C252.22821969696972,54.333333333333336,276.2664535984848,62.666666666666664,288.28557054924244,71C300.3046875,79.33333333333333,300.3046875,87.66666666666667,300.3046875,91.83333333333333L300.3046875,96" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead18"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-L1-P1" class="edgePath LS-L1 LE-P1"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead19)" d="M46.4609375,134L46.4609375,138.16666666666666C46.4609375,142.33333333333334,46.4609375,150.66666666666666,46.4609375,159C46.4609375,167.33333333333334,46.4609375,175.66666666666666,46.4609375,179.83333333333334L46.4609375,184" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead19"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-L2-P2" class="edgePath LS-L2 LE-P2"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead20)" d="M173.3828125,134L173.3828125,138.16666666666666C173.3828125,142.33333333333334,173.3828125,150.66666666666666,173.3828125,159C173.3828125,167.33333333333334,173.3828125,175.66666666666666,173.3828125,179.83333333333334L173.3828125,184" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead20"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g style="opacity: 1;" id="L-L3-P3" class="edgePath LS-L3 LE-P3"><path style="fill:none" marker-end="url(#mermaid-figure-2-arrowhead21)" d="M300.3046875,134L300.3046875,138.16666666666666C300.3046875,142.33333333333334,300.3046875,150.66666666666666,300.3046875,159C300.3046875,167.33333333333334,300.3046875,175.66666666666666,300.3046875,179.83333333333334L300.3046875,184" class="path"></path><defs><marker orient="auto" markerheight="6" markerwidth="8" markerunits="strokeWidth" refy="5" refx="9" viewbox="0 0 10 10" id="mermaid-figure-2-arrowhead21"><path style="fill: #333" d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g></g><g class="edgeLabels"><g style="opacity: 1;" transform="" class="edgeLabel"><g class="label" transform="translate(0,0)"><rect height="0" width="0" ry="0" rx="0"></rect><foreignobject height="0" width="0">
 <div style="display: inline-block; white-space: nowrap;" data-xmlns="http://www.w3.org/1999/xhtml">
@@ -1558,7 +1550,7 @@ project3
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df1324" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
+<div class="countdown" id="timer_62df4f95" style="right:0;bottom:0;font-size:2em;" data-audio="true" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1617,20 +1609,14 @@ project3
 <h2>sysdeps??</h2>
 </section></section>
 <section>
-<section id="agenda-4" class="title-slide slide level1 center" data-background-color="#333399">
+<section id="agenda-4" class="title-slide slide level1 agenda center">
 <h1>agenda</h1>
-<div class="agenda">
 <ul>
-<li>starting R</li>
-<li>installing R packages</li>
-<li>reproducible environments</li>
+<li>starting R <span class="emoji" data-emoji="white_check_mark">✅</span></li>
+<li>installing R packages <span class="emoji" data-emoji="white_check_mark">✅</span></li>
+<li>reproducible environments <span class="emoji" data-emoji="white_check_mark">✅</span></li>
+<li>installing / upgrading R <span class="emoji" data-emoji="arrow_left">⬅️</span></li>
 </ul>
-<div class="agenda-active">
-<ul>
-<li>installing / upgrading R</li>
-</ul>
-</div>
-</div>
 </section>
 <section id="why-3" class="slide level2">
 <h2>why</h2>
@@ -1745,10 +1731,12 @@ project3
 </div>
 </div>
 </div>
+<div class="small">
 <p>language managers for other languages:</p>
 <p><i class="fa-brands fa-python"></i> pyenv<br>
 <i class="fa-brands fa-node-js"></i> nvm<br>
 <i class="fa-brands fa-rust"></i> rustup</p>
+</div>
 <aside class="notes">
 <ul>
 <li>many language managers are often written in some language other than the one they are responsible for managing</li>
@@ -1764,6 +1752,25 @@ project3
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="switching-r-versions-fa-brands-windows" class="slide level2">
+<h2>switching R versions <i class="fa-brands fa-windows"></i></h2>
+<h3 id="ctrl-click"><code>CTRL +  CLICK</code></h3>
+<div class="r-stack">
+<p><img data-src="img/ctrl_click.png"></p>
+</div>
+</section>
+<section id="switching-r-versions-fa-brands-windows-1" class="slide level2">
+<h2>switching R versions <i class="fa-brands fa-windows"></i></h2>
+<div class="r-stack">
+<p><img data-src="img/r_version_select_windows-highlight.png"></p>
+</div>
+</section>
+<section id="switching-r-versions-fa-brands-apple" class="slide level2">
+<h2>switching R versions <i class="fa-brands fa-apple"></i></h2>
+<div class="r-fit-text">
+<p><a href="https://rud.is/rswitch/">RSwitch</a></p>
+</div>
 </section>
 <section id="language-versions" class="slide level2">
 <h2>language versions</h2>
@@ -1803,39 +1810,44 @@ project3
 <section id="environment-managers" class="slide level2">
 <h2>environment managers</h2>
 <p>using your desired version of the language, install an environment manager:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="r r-fit-text">
+<p><code>install.packages("renv")</code></p>
+</div>
 </section>
 <section id="project-2" class="slide level2">
 <h2>project</h2>
 <p>using your environment manager, install your project’s dependencies:</p>
 <ul>
 <li><p>create a new environment</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>restore a pre-defined environment</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>restore an already defined environment</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
 </section>
-<section id="activity-5" class="slide level2 smaller">
+<section id="activity-5" class="slide level2">
 <h2>activity</h2>
-<div class="question">
-<ol type="1">
-<li><p>read the <a href="https://github.com/r-lib/rig#-faq">rig FAQ</a>, or the <a href="https://rud.is/rswitch/guide/">rswitch guide</a></p></li>
-<li><p>install a different major/minor version of R</p>
+<div class="panel-tabset">
+<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">relaxed</a></li><li><a href="#tabset-7-2">spartan</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1">
+<p>read the <a href="https://github.com/r-lib/rig#-faq">rig FAQ</a>, or the <a href="https://rud.is/rswitch/guide/">rswitch guide</a></p>
+</div>
+<div id="tabset-7-2">
 <ul>
-<li><p><a href="https://cran.r-project.org/bin/macosx/" class="uri">https://cran.r-project.org/bin/macosx/</a></p></li>
-<li><p><a href="https://cran.r-project.org/bin/windows/base/old/" class="uri">https://cran.r-project.org/bin/windows/base/old/</a></p></li>
-</ul></li>
-<li><p>install <code>rig</code></p>
-<ul>
-<li><p>use `rig to install a different major or minor version of R</p></li>
-<li><p>open RStudio with that newly installed R version</p></li>
-</ul></li>
-</ol>
+<li>install <code>rig</code><br>
+</li>
+<li>use rig to install a different <strong>major</strong> or <strong>minor</strong> version of R<br>
+<span class="emoji" data-emoji="warning">⚠️</span> avoid installing a <em>patch</em> version<br>
+</li>
+<li>open RStudio with that newly installed R version</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df152e" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<div class="countdown" id="timer_62df4f9c" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
