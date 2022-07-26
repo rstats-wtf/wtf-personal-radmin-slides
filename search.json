@@ -259,11 +259,11 @@
     "text": "RSPM"
   },
   {
-    "objectID": "index.html#how-do-i-know-i-got-a-binary-package",
-    "href": "index.html#how-do-i-know-i-got-a-binary-package",
+    "objectID": "index.html#how-do-i-know-i-got-a-binary",
+    "href": "index.html#how-do-i-know-i-got-a-binary",
     "title": "",
-    "section": "how do I know I got a binary package?",
-    "text": "how do I know I got a binary package?\n\nCRAN CRAN RSPMrenv\n\n\n> install.packages(\"parallelly\", repos = \"https://cran.rstudio.com\")\nInstalling package into ‘C:/Users/edavi/Documents/R/win-library/4.1’\n(as ‘lib’ is unspecified)\ntrying URL 'https://cran.rstudio.com/bin/windows/contrib/4.1/parallelly_1.32.1.zip'\nContent type 'application/zip' length 306137 bytes (298 KB)\ndownloaded 298 KB\n\npackage ‘parallelly’ successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\edavi\\AppData\\Local\\Temp\\Rtmpa2s3e8\\downloaded_packages\n\n\n> install.packages(\"renv\", repos=\"https://cran.rstudio.com\")\nInstalling package into ‘/Users/edavidaja/Library/R/x86_64/4.1/library’\n(as ‘lib’ is unspecified)\ntrying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.1/renv_0.15.5.tgz'\nContent type 'application/x-gzip' length 1866760 bytes (1.8 MB)\n==================================================\ndownloaded 1.8 MB\n\n\nThe downloaded binary packages are in\n /var/folders/b5/fl4ff68d23s148tg1_1gnflc0000gn/T//RtmpMk69B0/downloaded_packages\n\n\n> install.packages(\"remotes\")\nInstalling package into ‘C:/Users/WDAGUtilityAccount/AppData/Local/R/win-library/4.2’\n(as ‘lib’ is unspecified)\ntrying URL 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/remotes_2.4.2.zip'\nContent type 'binary/octet-stream' length 399930 bytes (390 KB)\ndownloaded 390 KB\n\npackage ‘remotes’ successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n  C:\\Users\\WDAGUtilityAccount\\AppData\\Local\\Temp\\RtmpA1edRi\\downloaded_packages\n\n\n> renv::install(\"fs\")\nRetrieving 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/fs_1.5.2.zip' ...\n  OK [downloaded 380.9 Kb in 0.5 secs]\nInstalling fs [1.5.2] ...\n  OK [installed binary]\nMoving fs [1.5.2] into the cache ...\n  OK [moved to cache in 7.4 milliseconds]"
+    "section": "how do I know I got a binary?",
+    "text": "how do I know I got a binary?\n\nCRAN CRAN RSPMrenv\n\n\n> install.packages(\"parallelly\", repos = \"https://cran.rstudio.com\")\nInstalling package into ‘C:/Users/edavi/Documents/R/win-library/4.1’\n(as ‘lib’ is unspecified)\ntrying URL 'https://cran.rstudio.com/bin/windows/contrib/4.1/parallelly_1.32.1.zip'\nContent type 'application/zip' length 306137 bytes (298 KB)\ndownloaded 298 KB\n\npackage ‘parallelly’ successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\edavi\\AppData\\Local\\Temp\\Rtmpa2s3e8\\downloaded_packages\n\n\n> install.packages(\"renv\", repos=\"https://cran.rstudio.com\")\nInstalling package into ‘/Users/edavidaja/Library/R/x86_64/4.1/library’\n(as ‘lib’ is unspecified)\ntrying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.1/renv_0.15.5.tgz'\nContent type 'application/x-gzip' length 1866760 bytes (1.8 MB)\n==================================================\ndownloaded 1.8 MB\n\n\nThe downloaded binary packages are in\n /var/folders/b5/fl4ff68d23s148tg1_1gnflc0000gn/T//RtmpMk69B0/downloaded_packages\n\n\n> install.packages(\"remotes\")\nInstalling package into ‘C:/Users/WDAGUtilityAccount/AppData/Local/R/win-library/4.2’\n(as ‘lib’ is unspecified)\ntrying URL 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/remotes_2.4.2.zip'\nContent type 'binary/octet-stream' length 399930 bytes (390 KB)\ndownloaded 390 KB\n\npackage ‘remotes’ successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n  C:\\Users\\WDAGUtilityAccount\\AppData\\Local\\Temp\\RtmpA1edRi\\downloaded_packages\n\n\n> renv::install(\"fs\")\nRetrieving 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/fs_1.5.2.zip' ...\n  OK [downloaded 380.9 Kb in 0.5 secs]\nInstalling fs [1.5.2] ...\n  OK [installed binary]\nMoving fs [1.5.2] into the cache ...\n  OK [moved to cache in 7.4 milliseconds]"
   },
   {
     "objectID": "index.html#pop-quiz-hotshot",
@@ -277,7 +277,7 @@
     "href": "index.html#source",
     "title": "",
     "section": "Source",
-    "text": "Source\n\ncompiled in your environment\nrequires extra tools when package uses C, C++ or Fortran\n\n\n\nmost common reason to install from source is when you want the development version of a package from github One additional complication for *nix users:\ngenerally on windows can install and load packages that depend on other lower level libraries quite easily. Explain installing sf, for example."
+    "text": "Source\n\ncompiled in your environment\nrequires extra tools when package uses C, C++, Fortran, Rust, etc.\n\n\n\nmost common reason to install from source is when you want the development version of a package from github One additional complication for *nix users:\ngenerally on windows can install and load packages that depend on other lower level libraries quite easily. Explain installing sf, for example."
   },
   {
     "objectID": "index.html#if-you-dont-have-tools",
@@ -427,13 +427,6 @@
     "text": "the junk drawer\nfor reprexes, tweets, and other ephemera:\n~/Documents/scratch\n\nI use renv for everything, and have one junk project into which I install things without regard for stability or reproducibility"
   },
   {
-    "objectID": "index.html#sysdeps",
-    "href": "index.html#sysdeps",
-    "title": "",
-    "section": "sysdeps??",
-    "text": "sysdeps??"
-  },
-  {
     "objectID": "index.html#why-3",
     "href": "index.html#why-3",
     "title": "",
@@ -536,13 +529,6 @@
     "href": "index.html#activity-5",
     "title": "",
     "section": "activity",
-    "text": "activity\n\nrelaxedspartan\n\n\nread the rig FAQ, or the rswitch guide\n\n\n\ninstall rig\n\nuse rig to install a different major or minor version of R\n⚠️ avoid installing a patch version\n\nopen RStudio with that newly installed R version\n\n\n\n\n\n\n\n10:00"
-  },
-  {
-    "objectID": "index.html#rig-renv",
-    "href": "index.html#rig-renv",
-    "title": "",
-    "section": "rig + renv",
-    "text": "rig + renv\n\nsnapshot the project library with renv\ninstall a new version of R\nrestore the project library in the new R version\n\n\n\n\nPersonal R Administration"
+    "text": "activity\n\nrelaxedspartan\n\n\nread the rig FAQ, or the rswitch guide\n\n\n\ninstall rig\n\nuse rig to install a different major or minor version of R\n⚠️ avoid installing a patch version\n\nopen RStudio with that newly installed R version\n\n\n\n\n\n\n\n10:00\n\n\n\n\n\n\nPersonal R Administration"
   }
 ]
