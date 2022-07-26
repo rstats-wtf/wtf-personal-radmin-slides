@@ -109,7 +109,7 @@
     "href": "index.html#renviron-recap",
     "title": "",
     "section": ".Renviron recap",
-    "text": ".Renviron recap\n\nuser and project scopes are additive\n\nif values clash, project wins"
+    "text": ".Renviron recap\nproject .Renviron “short-circuits”\nif it exists, your user .Renviron will not be evaluated"
   },
   {
     "objectID": "index.html#rprofile",
