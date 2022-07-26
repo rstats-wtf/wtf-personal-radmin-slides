@@ -792,7 +792,7 @@ binaries are usually preferred, but for development versions of packages, you ma
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The quick and dirty approach you took then comes right back at you as a boomerang. <br><br>Therefore, ban the concept of one-off altogether. No matter what the asker says, it will have to be done again, always!<br><br>3/9</p>&mdash; Edwin Thoen (@edwin_thoen) <a href="https://twitter.com/edwin_thoen/status/1526261181631152129?ref_src=twsrc%5Etfw">May 16, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 :::
 
-:::
+::: notes
 You _will_ need to reproduce or update your analysis.
 You might get audited!
 :::
