@@ -566,7 +566,7 @@ downloaded 121 KB
 
 ![](img/rspm-binaries-zoom-highlight.png)
 
-## how do I know I got a binary package?
+## how do I know I got a binary?
 
 ::: panel-tabset
 
@@ -644,7 +644,7 @@ countdown_timer(minutes = 2, bottom = 0)
 ## Source
 
 -   compiled in _your_ environment
--   requires extra tools when package uses C, C++ or Fortran
+-   requires extra tools when package uses C, C++, Fortran, Rust, etc.
 
 ::: notes
 
@@ -1087,9 +1087,6 @@ for reprexes, tweets, and other ephemera:
 I use `renv` for everything, and have one junk project into which I install things without regard for stability or reproducibility
 :::
 
-## sysdeps??
-
-
 # agenda {.agenda}
 
 -   starting R :white_check_mark:
@@ -1292,9 +1289,3 @@ read the [rig FAQ](https://github.com/r-lib/rig#-faq), or the [rswitch guide](ht
 ```{r}
 countdown(minutes = 10)
 ```
-
-## rig + renv
-
-1.  snapshot the project library with `renv`
-2.  install a new version of R
-3.  restore the project library in the new R version
