@@ -88,7 +88,7 @@
     "href": "index.html#example-.renviron",
     "title": "",
     "section": "example .Renviron",
-    "text": "example .Renviron\nuser\nPATH=\"${RTOOLS40_HOME}\\usr\\bin;${PATH}\" # windows users\nGITHUB_PAT=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\nCONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3\nR_HISTSIZE=100000\n\nproject\nRETICULATE_PYTHON=.venv/bin/python\nDB_USER=elephant\nDB_PASS=p0stgr3s\nuser and project scopes are additive\nif values clash, project wins"
+    "text": "example .Renviron\nuser\nPATH=\"${RTOOLS40_HOME}\\usr\\bin;${PATH}\" # windows users\nGITHUB_PAT=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\nCONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3\nR_HISTSIZE=100000\n\nproject\nRETICULATE_PYTHON=.venv/bin/python\nDB_USER=elephant\nDB_PASS=p0stgr3s"
   },
   {
     "objectID": "index.html#read-environment-variables",
@@ -103,6 +103,13 @@
     "title": "",
     "section": "activity",
     "text": "activity\n\nedit your user .Renvironedit your project .Renvironhandle a collision\n\n\n\nusethis::edit_r_environ()\nadd WTF_USER=<your name>\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_USER Sys.getenv(\"WTF_USER\")\n\n\n\n\nusethis::edit_r_environ(\"project\")\nadd WTF_PROJECT=<your name>\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_PROJECT Sys.getenv(\"WTF_PROJECT\")\n\n\n\n\nusethis::edit_r_environ()\nadd WTF_DAVID=user\nusethis::edit_r_environ(\"project\")\nadd WTF_DAVID=project\nrestart your R session\nretrieve the value of WTF_DAVID\n\n\n\n\n\n\n\n10:00"
+  },
+  {
+    "objectID": "index.html#renviron-recap",
+    "href": "index.html#renviron-recap",
+    "title": "",
+    "section": ".Renviron recap",
+    "text": ".Renviron recap\n\nuser and project scopes are additive\n\nif values clash, project wins"
   },
   {
     "objectID": "index.html#rprofile",
@@ -123,7 +130,7 @@
     "href": "index.html#what-to-put-in-.rprofile",
     "title": "",
     "section": "what to put in .Rprofile",
-    "text": "what to put in .Rprofile\n\nset a default CRAN mirror\ncustomize R prompt\nselectively change (but be careful)\n\noptions, screen width, numeric display\nload frequently used interactive packages\naliases / shortcuts for frequently used functions"
+    "text": "what to put in .Rprofile\n\nset a default CRAN mirror\ncustomize R prompt"
   },
   {
     "objectID": "index.html#what-not-to-put-in-.rprofile",
@@ -158,7 +165,14 @@
     "href": "index.html#activity-1",
     "title": "",
     "section": "activity",
-    "text": "activity\n\nedit your user .Rprofileedit your project .Rprofile\n\n\n\nusethis::edit_r_profile()\nadd print(\"from my user Rprofile\")\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nwhat value is printed when you restart?\n\n\n\n\nusethis::edit_r_profile(\"project\")\nadd print(\"from my project Rprofile\")\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nwhat value is printed when you restart?\n\n\n\n\n\n\n\n05:00\n\n\n\n\nproject .Rprofile “short-circuits”\nif it exists, your user .Rprofile will not be evaluated"
+    "text": "activity\n\nedit your user .Rprofileedit your project .Rprofile\n\n\n\nusethis::edit_r_profile()\nadd print(\"from my user Rprofile\")\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nwhat value is printed when you restart?\n\n\n\n\nusethis::edit_r_profile(\"project\")\nadd print(\"from my project Rprofile\")\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nwhat value is printed when you restart?\n\n\n\n\n\n\n\n05:00"
+  },
+  {
+    "objectID": "index.html#rprofile-recap",
+    "href": "index.html#rprofile-recap",
+    "title": "",
+    "section": ".Rprofile recap",
+    "text": ".Rprofile recap\nproject .Rprofile “short-circuits”\nif it exists, your user .Rprofile will not be evaluated"
   },
   {
     "objectID": "index.html#wrapping-up",
