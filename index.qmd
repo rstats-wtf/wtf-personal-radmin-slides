@@ -224,9 +224,6 @@ DB_USER=elephant
 DB_PASS=p0stgr3s
 ```
 
-user and project scopes are _additive_  
-if values clash, _project_ wins
-
 ## read environment variables
 
 ::: {.r .r-fit-text}
@@ -272,6 +269,11 @@ if values clash, _project_ wins
 countdown_timer(minutes = 10, bottom = 0)
 ```
 
+## `.Renviron` recap
+
+- user and project scopes are _additive_  
+- if values clash, _project_ wins
+
 ## `.Rprofile`
 
 R code that runs at the start of each session
@@ -315,12 +317,8 @@ R code that runs at the start of each session
 
 -   set a default CRAN mirror
 -   customize [R prompt](https://github.com/gaborcsardi/prompt/)
--   selectively change (but be careful)
-    -   options, screen width, numeric display
-    -   load frequently used interactive packages
-    -   aliases / shortcuts for frequently used functions
 
-## what not to put in `.Rprofile`
+## what *not* to put in `.Rprofile`
 
 If it matters for code you share, it **should not** be in `.Rprofile`
 
@@ -336,7 +334,7 @@ If it matters for code you share, it **should not** be in `.Rprofile`
 ## discuss with your neighbor
 
 ::: question
-Why might these be safe to put in `.Rprofile`?
+Why *might* these be safe to put in `.Rprofile`?
 :::
 
 <br>
@@ -384,10 +382,11 @@ https://github.com/search?q=.Rprofile
 countdown_timer(minutes = 5, bottom = 0)
 ```
 
-::: fragment
+## `.Rprofile` recap
+
 project `.Rprofile` "short-circuits"  
 if it exists, your user `.Rprofile` will not be evaluated
-:::
+
 
 ## wrapping up
 
