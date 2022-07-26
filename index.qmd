@@ -271,8 +271,8 @@ countdown_timer(minutes = 10, bottom = 0)
 
 ## `.Renviron` recap
 
-- user and project scopes are _additive_  
-- if values clash, _project_ wins
+project `.Renviron` "short-circuits"  
+if it exists, your user `.Renviron` will not be evaluated
 
 ## `.Rprofile`
 
