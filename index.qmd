@@ -210,7 +210,7 @@ environment variables
 
 ```bash
 PATH="${RTOOLS40_HOME}\usr\bin;${PATH}" # windows users
-GITHUB_PAT=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
+GITHUB_PAT=ghp_gVa6xK3bwERJ7xpWvoWj2dXMit4z43fWE8R
 CONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3
 R_HISTSIZE=100000
 ```
