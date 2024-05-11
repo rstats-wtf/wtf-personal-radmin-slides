@@ -487,12 +487,11 @@ you may particularly care about installation speed if you're being billed by the
 
 ## where to get binaries
 
-|                                   |        CRAN        | Public RStudio \n Package Manager   |
-|-----------------------------------|:------------------:|:-------------------------:|
-| {{< fa brands windows >}} windows | :white_check_mark: |    :white_check_mark:     |
-| {{< fa brands apple >}} mac OS    | :white_check_mark: |            :x:            |
-| {{< fa brands linux >}} linux     |        :x:         |    :white_check_mark:     |
-
+|                                   |        CRAN        | Posit Public Package Manager (p3m) |
+| --------------------------------- | :----------------: | :--------------------------------: |
+| {{< fa brands windows >}} windows | :white_check_mark: |         :white_check_mark:         |
+| {{< fa brands apple >}} mac OS    | :white_check_mark: |         :white_check_mark:         |
+| {{< fa brands linux >}} linux     |        :x:         |         :white_check_mark:         |
 ## are binaries available?
 
 ## CRAN
