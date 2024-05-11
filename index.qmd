@@ -21,31 +21,6 @@ from: markdown+emoji
 
 throw your computer into the ocean with confidence
 
-```{r setup}
-library(countdown)
-countdown_timer <- function(
-    minutes = 1, 
-    play_sound = TRUE, 
-    font_size = "2em", 
-    ...
-) {
-  countdown(
-    minutes = minutes,
-    # Fanfare when it's over
-    play_sound = play_sound,
-    # Set timer theme to match solarized colors
-    color_border              = "#FFFFFF",
-    color_text                = "#7aa81e",
-    color_running_background  = "#7aa81e",
-    color_running_text        = "#FFFFFF",
-    color_finished_background = "#ffa07a",
-    color_finished_text       = "#FFFFFF",
-    font_size = font_size,
-    ...
-  )
-}
-```
-
 ## Course material
 
 ::: r-fit-text
@@ -265,9 +240,7 @@ DB_PASS=p0stgr3s
 
 :::
 
-```{R}
-countdown_timer(minutes = 10, bottom = 0)
-```
+{{< countdown "10:00" >}}
 
 ## `.Renviron` recap
 
@@ -344,9 +317,7 @@ library(usethis)
 library(devtools)
 ```
 
-```{R}
-countdown_timer(minutes = 2, bottom = 0)
-```
+{{< countdown "2:00" >}}
 
 ## dotfiles
 
@@ -378,9 +349,7 @@ https://github.com/search?q=.Rprofile
 
 :::
 
-```{R}
-countdown_timer(minutes = 5, bottom = 0)
-```
+{{< countdown "5:00" >}}
 
 ## `.Rprofile` recap
 
@@ -646,9 +615,7 @@ Moving fs [1.5.2] into the cache ...
 Does RStudio Package Manager serve a binary of `dplyr` for R 3.4?
 :::
 
-```{R}
-countdown_timer(minutes = 2, bottom = 0)
-```
+{{< countdown "2:00" >}}
 
 ## Source
 
@@ -765,9 +732,7 @@ install a package from r-universe
 
 :::
 
-```{R}
-countdown_timer(minutes = 5, bottom = 0)
-```
+{{< countdown "5:00" >}}
 
 ## discussion
 
@@ -932,9 +897,7 @@ time travel!
 
 what version of dplyr did you install?
 
-```{R}
-countdown_timer(minutes = 5, bottom = 0)
-```
+{{< countdown "5:00" >}}
 
 ## renv
 
@@ -1033,10 +996,7 @@ create an isolated project library
 1. `renv::status()`
 :::
 
-
-```{R}
-countdown_timer(minutes = 10, bottom = 0)
-```
+{{< countdown "10:00" >}}
 
 ::: {.notes}
 run `.libPaths()` to see what your default package libraries are
@@ -1317,6 +1277,4 @@ read the [rig FAQ](https://github.com/r-lib/rig#-faq), or the [rswitch guide](ht
 
 :::
 
-```{r}
-countdown(minutes = 10)
-```
+{{< countdown "10:00" >}}
