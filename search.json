@@ -2,540 +2,554 @@
   {
     "objectID": "index.html#course-material",
     "href": "index.html#course-material",
-    "title": "",
+    "title": "personal radmin",
     "section": "Course material",
-    "text": "Course material\n\nrstd.io/wtf-2022-rsc"
-  },
-  {
-    "objectID": "index.html#create-a-project",
-    "href": "index.html#create-a-project",
-    "title": "",
-    "section": "create a project",
-    "text": "create a project\n\nusethis::create_project(\"~/personal-radmin\")"
+    "text": "Course material\n\nposit-conf-2024/wtf"
   },
   {
     "objectID": "index.html#a-brief-personal-history",
     "href": "index.html#a-brief-personal-history",
-    "title": "",
+    "title": "personal radmin",
     "section": "a brief personal history:",
-    "text": "a brief personal history:\n\n\n\nAuditor\n\n\npersonal laptop \nRStudio in Citrix \nairgapped RStudio Workbench \nairgapped Shiny Server Pro \nSpecial Issue Individual Laptop  \nSpecial Issue Individual Desktop \nSpecial Issue Team Desktop \n\n\n\n\nData Scientist\n\n\npersonal laptop \nwork laptop \nRStudio in Citrix \nRStudio Server \n\n\n\n\nSolutions Engineer\n\n\npersonal laptop \nwork laptop \nRStudio Workbench Demo Server \nRStudio Workbench Internal Server \n\n\n\n\n\nthis is intended to provide context on my priorities / habits of thought: - it needs to work across operating systems - You can’t depend on having pro features - avoid admin where possible - as portable as practical - audit context means I need to be able to reproduce exactly - “run this command” preferable to a confluence page of screenshots"
+    "text": "a brief personal history:\n\n\n\nAuditor\n\n\npersonal laptop \nRStudio in Citrix \nairgapped Posit Workbench \nairgapped Shiny Server Pro \nSpecial Issue Individual Laptop  \nSpecial Issue Individual Desktop \nSpecial Issue Team Desktop \n\n\n\n\nData Scientist\n\n\npersonal laptop \nwork laptop \nRStudio in Citrix \nRStudio Server \n\n\n\n\nSolutions Engineer\n\n\npersonal laptop \nwork laptop \nPosit Workbench Demo Server \nPosit Workbench Internal Server \nmisc ephemeral environments\n\n\n\n\n\nthis is intended to provide context on my priorities / habits of thought: - it needs to work across operating systems - You can’t depend on having pro features - avoid admin where possible - as portable as practical - audit context means I need to be able to reproduce exactly - “run this command” preferable to a confluence page of screenshots"
   },
   {
     "objectID": "index.html#how-do-i",
     "href": "index.html#how-do-i",
-    "title": "",
+    "title": "personal radmin",
     "section": "How do I…",
     "text": "How do I…\n\n\nupgrade the version of R I’m using for this project?\ntrack which package versions I’m using for this project?\nmove this project from one machine to another?\n\n\n\nWe’re extending the lessons from Day 1 to think about what it means to work with R projects over time.\nThat means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts. Working on an old project on a new computer is a lot like trying to put an app into production."
   },
   {
-    "objectID": "index.html#agenda",
-    "href": "index.html#agenda",
-    "title": "",
-    "section": "agenda",
-    "text": "agenda\n\nstarting R\ninstalling R packages\ncreating reproducible environments\ninstalling / upgrading R"
+    "objectID": "index.html#library",
+    "href": "index.html#library",
+    "title": "personal radmin",
+    "section": "📦 library",
+    "text": "📦 library\n\nR packages\n\nthe natural unit for distributing R code\n\n\n\nbase R\n\n14 base + 15 recommended packages\nships with all binary distributions of R\n\n\n\nFor example, have you used lattice recently? 🤷\n\nit came with your R installation, can use out of the box\nlibrary(lattice)"
+  },
+  {
+    "objectID": "index.html#where-do-packages-live-locally",
+    "href": "index.html#where-do-packages-live-locally",
+    "title": "personal radmin",
+    "section": "Where do packages live locally?",
+    "text": "Where do packages live locally?\n\nBy default, in the default library\n.Library\n\nAll libraries for the current session\n.libPaths()\n\nAll installed packages\ninstalled.packages()"
+  },
+  {
+    "objectID": "index.html#explore-your-package-library",
+    "href": "index.html#explore-your-package-library",
+    "title": "personal radmin",
+    "section": "explore your package library",
+    "text": "explore your package library\nusethis::use_course(\"rstats-wtf/wtf-explore-libraries\")\n# use_course(\"rstats-wtf/wtf-explore-libraries\", destdir = \"my/new/location\")\n\n  \n    −\n    +\n \n 07:30"
   },
   {
     "objectID": "index.html#why",
     "href": "index.html#why",
-    "title": "",
+    "title": "personal radmin",
     "section": "why?",
-    "text": "why?\nSometimes we want to change the way our code behaves without having to change the code.\n\nbehaves might mean\n- “what computer do I think I’m on” - “is this dev or prod”?"
+    "text": "why?\nSometimes we want to change the way our code behaves without having to change the code.\n\nbehaves might mean - “what computer do I think I’m on” - “is this dev or prod”?"
   },
   {
     "objectID": "index.html#r-startup-sequence",
     "href": "index.html#r-startup-sequence",
-    "title": "",
+    "title": "personal radmin",
     "section": "R startup sequence",
     "text": "R startup sequence"
   },
   {
     "objectID": "index.html#r-startup-sequence-our-focus",
     "href": "index.html#r-startup-sequence-our-focus",
-    "title": "",
+    "title": "personal radmin",
     "section": "R startup sequence (our focus)",
     "text": "R startup sequence (our focus)"
   },
   {
     "objectID": "index.html#use-a-newline",
     "href": "index.html#use-a-newline",
-    "title": "",
+    "title": "personal radmin",
     "section": "⚠️ Use a newline",
     "text": "⚠️ Use a newline\n\n\nstartup files must end in a newline.  \nR may silently throw away the last line if you don’t do this."
   },
   {
     "objectID": "index.html#renviron",
     "href": "index.html#renviron",
-    "title": "",
+    "title": "personal radmin",
     "section": ".Renviron",
     "text": ".Renviron\nenvironment variables\n\na […] named value that can affect the way running processes will behave on a computer"
   },
   {
     "objectID": "index.html#what-goes-in-.renviron",
     "href": "index.html#what-goes-in-.renviron",
-    "title": "",
+    "title": "personal radmin",
     "section": "what goes in .Renviron",
     "text": "what goes in .Renviron\n✅ R-specific environment variables\n✅ API keys or other secrets\n❌ R code"
   },
   {
     "objectID": "index.html#editing-.renviron",
     "href": "index.html#editing-.renviron",
-    "title": "",
+    "title": "personal radmin",
     "section": "Editing .Renviron",
     "text": "Editing .Renviron\n\nusethis::edit_r_environ(scope = ?)\n\n\n\nuser\n~/.Renviron\n\nproject\npath/to/your/project/.Renviron"
   },
   {
     "objectID": "index.html#example-.renviron",
     "href": "index.html#example-.renviron",
-    "title": "",
+    "title": "personal radmin",
     "section": "example .Renviron",
-    "text": "example .Renviron\nuser\nPATH=\"${RTOOLS40_HOME}\\usr\\bin;${PATH}\" # windows users\nGITHUB_PAT=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\nCONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3\nR_HISTSIZE=100000\n\nproject\nRETICULATE_PYTHON=.venv/bin/python\nDB_USER=elephant\nDB_PASS=p0stgr3s"
+    "text": "example .Renviron\nuser\nPATH=\"${RTOOLS40_HOME}\\usr\\bin;${PATH}\" # windows users\nGITHUB_PAT=ghp_gVa6xK3bwERJ7xpWvoWj2dXMit4z43fWE8R\nCONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3\nR_HISTSIZE=100000\n\nproject\nRETICULATE_PYTHON=.venv/bin/python\nDB_USER=elephant\nDB_PASS=p0stgr3s"
   },
   {
     "objectID": "index.html#read-environment-variables",
     "href": "index.html#read-environment-variables",
-    "title": "",
+    "title": "personal radmin",
     "section": "read environment variables",
     "text": "read environment variables\n\nSys.getenv()"
   },
   {
-    "objectID": "index.html#activity",
-    "href": "index.html#activity",
-    "title": "",
-    "section": "activity",
-    "text": "activity\n\nedit your user .Renvironedit your project .Renvironhandle a collision\n\n\n\nusethis::edit_r_environ()\nadd WTF_USER=<your name>\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_USER Sys.getenv(\"WTF_USER\")\n\n\n\n\nusethis::edit_r_environ(\"project\")\nadd WTF_PROJECT=<your name>\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_PROJECT Sys.getenv(\"WTF_PROJECT\")\n\n\n\n\nusethis::edit_r_environ()\nadd WTF_DAVID=user\nusethis::edit_r_environ(\"project\")\nadd WTF_DAVID=project\nrestart your R session\nretrieve the value of WTF_DAVID\n\n\n\n\n\n\n\n10:00"
+    "objectID": "index.html#edit-your-user-.renviron",
+    "href": "index.html#edit-your-user-.renviron",
+    "title": "personal radmin",
+    "section": "edit your user .Renviron",
+    "text": "edit your user .Renviron\n\nusethis::edit_r_environ()\nadd WTF_USER=&lt;your name&gt;_user\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_USER Sys.getenv(\"WTF_USER\")\n\n\n  \n    −\n    +\n \n 02:00"
+  },
+  {
+    "objectID": "index.html#edit-your-project-.renviron",
+    "href": "index.html#edit-your-project-.renviron",
+    "title": "personal radmin",
+    "section": "edit your project .Renviron",
+    "text": "edit your project .Renviron\n\nusethis::edit_r_environ(\"project\")\nadd WTF_PROJECT=&lt;your name&gt;_project\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nRetrieve the value of WTF_PROJECT Sys.getenv(\"WTF_PROJECT\")\n\n\n  \n    −\n    +\n \n 02:00\n \n\nwhat’s the value of WTF_USER after you set WTF_PROJECT?"
   },
   {
     "objectID": "index.html#renviron-recap",
     "href": "index.html#renviron-recap",
-    "title": "",
+    "title": "personal radmin",
     "section": ".Renviron recap",
     "text": ".Renviron recap\nproject .Renviron “short-circuits”\nif it exists, your user .Renviron will not be evaluated"
   },
   {
     "objectID": "index.html#rprofile",
     "href": "index.html#rprofile",
-    "title": "",
+    "title": "personal radmin",
     "section": ".Rprofile",
     "text": ".Rprofile\nR code that runs at the start of each session"
   },
   {
     "objectID": "index.html#interactive",
     "href": "index.html#interactive",
-    "title": "",
+    "title": "personal radmin",
     "section": "?interactive()",
-    "text": "?interactive()\n\n\nTRUE\n🧑‍💻 \n\nsending individual lines of code to the console\n\n \n\n☝️ most .Rprofile customization\n\n\nFALSE\n🤖 \n\nknitting an RMarkdown document\n\nR -e script.R"
+    "text": "?interactive()\n\n\nTRUE\n🧑‍💻 \n\nsending individual lines of code to the console\n\n \n\n☝️ most .Rprofile customization\n\n\nFALSE\n🤖 \n\nknitting an RMarkdown document\nR -e script.R"
   },
   {
     "objectID": "index.html#what-to-put-in-.rprofile",
     "href": "index.html#what-to-put-in-.rprofile",
-    "title": "",
+    "title": "personal radmin",
     "section": "what to put in .Rprofile",
     "text": "what to put in .Rprofile\n\nset a default CRAN mirror\ncustomize R prompt"
   },
   {
     "objectID": "index.html#what-not-to-put-in-.rprofile",
     "href": "index.html#what-not-to-put-in-.rprofile",
-    "title": "",
+    "title": "personal radmin",
     "section": "what not to put in .Rprofile",
     "text": "what not to put in .Rprofile\nIf it matters for code you share, it should not be in .Rprofile"
   },
   {
     "objectID": "index.html#why-shouldnt-these-go-in-.rprofile",
     "href": "index.html#why-shouldnt-these-go-in-.rprofile",
-    "title": "",
+    "title": "personal radmin",
     "section": "why shouldn’t these go in .Rprofile?",
-    "text": "why shouldn’t these go in .Rprofile?\n\n\noptions(stringsAsFactors = FALSE)\nlibrary(tidyverse)\nf <- dplyr::filter\ntheme_set(theme_bw())"
+    "text": "why shouldn’t these go in .Rprofile?\n\n\noptions(stringsAsFactors = FALSE)\nlibrary(tidyverse)\nf &lt;- dplyr::filter\ntheme_set(theme_bw())"
   },
   {
     "objectID": "index.html#discuss-with-your-neighbor",
     "href": "index.html#discuss-with-your-neighbor",
-    "title": "",
+    "title": "personal radmin",
     "section": "discuss with your neighbor",
-    "text": "discuss with your neighbor\n\nWhy might these be safe to put in .Rprofile?\n\n\nlibrary(usethis)\nlibrary(devtools)\n\n\n\n02:00"
+    "text": "discuss with your neighbor\n\nWhy might these be safe to put in .Rprofile?\n\n\nlibrary(usethis)\nlibrary(devtools)\n\n  \n    −\n    +\n \n 02:00"
   },
   {
     "objectID": "index.html#dotfiles",
     "href": "index.html#dotfiles",
-    "title": "",
+    "title": "personal radmin",
     "section": "dotfiles",
     "text": "dotfiles\n\nhttps://github.com/search?q=.Rprofile"
   },
   {
-    "objectID": "index.html#activity-1",
-    "href": "index.html#activity-1",
-    "title": "",
+    "objectID": "index.html#activity",
+    "href": "index.html#activity",
+    "title": "personal radmin",
     "section": "activity",
-    "text": "activity\n\nedit your user .Rprofileedit your project .Rprofile\n\n\n\nusethis::edit_r_profile()\nadd print(\"from my user Rprofile\")\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nwhat value is printed when you restart?\n\n\n\n\nusethis::edit_r_profile(\"project\")\nadd print(\"from my project Rprofile\")\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nwhat value is printed when you restart?\n\n\n\n\n\n\n\n05:00"
+    "text": "activity\n\nedit your user .Rprofileedit your project .Rprofile\n\n\n\nusethis::edit_r_profile()\nadd print(\"from my user Rprofile\")\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nwhat value is printed when you restart?\n\n\n\n\nusethis::edit_r_profile(\"project\")\nadd print(\"from my project Rprofile\")\nrestart your R session\nCTRL + SHIFT + F10\nCMD  + SHIFT + 0\nwhat value is printed when you restart?\n\n\n\n\n\n  \n    −\n    +\n \n 05:00"
   },
   {
     "objectID": "index.html#rprofile-recap",
     "href": "index.html#rprofile-recap",
-    "title": "",
+    "title": "personal radmin",
     "section": ".Rprofile recap",
     "text": ".Rprofile recap\nproject .Rprofile “short-circuits”\nif it exists, your user .Rprofile will not be evaluated"
   },
   {
     "objectID": "index.html#wrapping-up",
     "href": "index.html#wrapping-up",
-    "title": "",
+    "title": "personal radmin",
     "section": "wrapping up",
     "text": "wrapping up\n\n\n.Renviron\n\nsecrets\nenvironment information\n\n\n.Rprofile\n\ndevelopment dependencies\n\n\n\n\nEnvironment variables are inherited by child processes, so setting them early in the startup process is valuable Hosting providers trying to deal with secrets will often let you supply environment variables"
   },
   {
     "objectID": "index.html#why-1",
     "href": "index.html#why-1",
-    "title": "",
+    "title": "personal radmin",
     "section": "why",
     "text": "why\n\n\n\n\nhaving a reason to slack off is fun but being able to get your work done quickly is more fun"
   },
   {
     "objectID": "index.html#states-of-r-packages",
     "href": "index.html#states-of-r-packages",
-    "title": "",
+    "title": "personal radmin",
     "section": "states of R packages",
-    "text": "states of R packages\n\n\n\n\n\n\n\n\n\n\n\ndevtools::build()\n\n\n\ndevtools::build(binary = TRUE)\n\n\n\ninstall.packages()\n\n\n\nlibrary()\n\n\n\nSource\n\n\n\nBundled\n\n\n\nBinary\n\n\n\nInstalled\n\n\n\nLoaded\n\n\n\n\n\n\n\n\n\nR Packages – Structure"
+    "text": "states of R packages\n\n\n\n\n\n\n\n\n\ndevtools::build()\n\n\n\ndevtools::build(binary = TRUE)\n\n\n\ninstall.packages()\n\n\n\nlibrary()\n\n\n\nSource\n\n\n\nBundled\n\n\n\nBinary\n\n\n\nInstalled\n\n\n\nLoaded\n\n\n\n\n\n\n\n\n\n\nR Packages – Structure"
   },
   {
     "objectID": "index.html#states-of-r-packages-1",
     "href": "index.html#states-of-r-packages-1",
-    "title": "",
+    "title": "personal radmin",
     "section": "states of R packages",
-    "text": "states of R packages\n\n\n\n\n\n\n\n\n\n\n\nuse\n\n\n\ndev\n\n\n\ndevtools::build()\n\n\n\ndevtools::build(binary = TRUE)\n\n\n\ninstall.packages()\n\n\n\nlibrary()\n\n\n\nInstalled\n\n\n\nLoaded\n\n\n\nBundled\n\n\n\nSource\n\n\n\nBinary\n\n\n\n\n\n\n\n\n\n\nshow how to set options for different environment managers\nInstall package from github\nDevelop your own packages\n\n\n\nR Packages – Structure"
+    "text": "states of R packages\n\n\n\n\n\n\n\n\n\nuse\n\n\n\ndev\n\n\n\ndevtools::build()\n\n\n\ndevtools::build(binary = TRUE)\n\n\n\ninstall.packages()\n\n\n\nlibrary()\n\n\n\nInstalled\n\n\n\nLoaded\n\n\n\nBundled\n\n\n\nSource\n\n\n\nBinary\n\n\n\n\n\n\n\n\n\n\n\nshow how to set options for different environment managers\nInstall package from github\nDevelop your own packages\n\n\n\nR Packages – Structure"
   },
   {
     "objectID": "index.html#binary",
     "href": "index.html#binary",
-    "title": "",
+    "title": "personal radmin",
     "section": "Binary",
     "text": "Binary\n\ncompiled ahead of time\neasiest / fastest to install\n\n\nyou may particularly care about installation speed if you’re being billed by the minute for compute time, or if you need computations to finish before a timeout"
   },
   {
     "objectID": "index.html#where-to-get-binaries",
     "href": "index.html#where-to-get-binaries",
-    "title": "",
+    "title": "personal radmin",
     "section": "where to get binaries",
-    "text": "where to get binaries\n\n\n\n\n\n\n\n\n\nCRAN\nPublic RStudio Package Manager\n\n\n\n\n windows\n✅\n✅\n\n\n mac OS\n✅\n❌\n\n\n linux\n❌\n✅"
+    "text": "where to get binaries\n\n\n\n\n\n\n\n\n\nCRAN\nPosit Public Package Manager (p3m)\n\n\n\n\n windows\n✅\n✅\n\n\n mac OS\n✅\n✅\n\n\n linux\n❌\n✅"
   },
   {
     "objectID": "index.html#are-binaries-available",
     "href": "index.html#are-binaries-available",
-    "title": "",
+    "title": "personal radmin",
     "section": "are binaries available?",
     "text": "are binaries available?"
   },
   {
     "objectID": "index.html#cran",
     "href": "index.html#cran",
-    "title": "",
+    "title": "personal radmin",
     "section": "CRAN",
     "text": "CRAN"
   },
   {
     "objectID": "index.html#may-not-be-the-latest",
     "href": "index.html#may-not-be-the-latest",
-    "title": "",
+    "title": "personal radmin",
     "section": "may not be the latest",
     "text": "may not be the latest"
   },
   {
     "objectID": "index.html#may-not-be-the-latest-1",
     "href": "index.html#may-not-be-the-latest-1",
-    "title": "",
+    "title": "personal radmin",
     "section": "may not be the latest",
     "text": "may not be the latest"
   },
   {
     "objectID": "index.html#may-not-be-the-latest-2",
     "href": "index.html#may-not-be-the-latest-2",
-    "title": "",
+    "title": "personal radmin",
     "section": "may not be the latest",
-    "text": "may not be the latest\n> install.packages(\"parallelly\", repos = \"https://cran.rstudio.com\")\n\nInstalling package into ‘C:/Users/WDAGUtilityAccount/Documents/R/win-library/4.0’\n(as ‘lib’ is unspecified)\n\n  There is a binary version available but the source version is later:\n           binary source needs_compilation\nparallelly 1.31.0 1.32.1             FALSE\n\ninstalling the source package ‘parallelly’\n\ntrying URL 'https://cran.rstudio.com/src/contrib/parallelly_1.32.1.tar.gz'\nContent type 'application/x-gzip' length 124853 bytes (121 KB)\ndownloaded 121 KB\n\n* installing *source* package 'parallelly' ...\n** package 'parallelly' successfully unpacked and MD5 sums checked\n** using staged installation\n** R\n** inst\n** byte-compile and prepare package for lazy loading\n** help\n*** installing help indices\n  converting help for package 'parallelly'\n    finding HTML links ... done\n    as.cluster                              html  \n    autoStopCluster                         html  \n    availableConnections                    html  \n    availableCores                          html  \n    availableWorkers                        html  \n    canPortBeUsed                           html  \n    cpuLoad                                 html  \n    find_rshcmd                             html  \n    freeCores                               html  \n    freePort                                html  \n    getOption2                              html  \n    isConnectionValid                       html  \n    isForkedChild                           html  \n    isForkedNode                            html  \n    isLocalhostNode                         html  \n    isNodeAlive                             html  \n    makeClusterMPI                          html  \n    makeClusterPSOCK                        html  \n    parallelly.options                      html  \n    pid_exists                              html  \n    supportsMulticore                       html  \n*** copying figures\n** building package indices\n** testing if installed package can be loaded from temporary location\n*** arch - i386\n*** arch - x64\n** testing if installed package can be loaded from final location\n*** arch - i386\n*** arch - x64\n** testing if installed package keeps a record of temporary installation path\n* DONE (parallelly)"
+    "text": "may not be the latest\n&gt; install.packages(\"parallelly\", repos = \"https://cran.rstudio.com\")\n\nInstalling package into ‘C:/Users/WDAGUtilityAccount/Documents/R/win-library/4.0’\n(as ‘lib’ is unspecified)\n\n  There is a binary version available but the source version is later:\n           binary source needs_compilation\nparallelly 1.31.0 1.32.1             FALSE\n\ninstalling the source package ‘parallelly’\n\ntrying URL 'https://cran.rstudio.com/src/contrib/parallelly_1.32.1.tar.gz'\nContent type 'application/x-gzip' length 124853 bytes (121 KB)\ndownloaded 121 KB\n\n* installing *source* package 'parallelly' ...\n** package 'parallelly' successfully unpacked and MD5 sums checked\n** using staged installation\n** R\n** inst\n** byte-compile and prepare package for lazy loading\n** help\n*** installing help indices\n  converting help for package 'parallelly'\n    finding HTML links ... done\n    as.cluster                              html  \n    autoStopCluster                         html  \n    availableConnections                    html  \n    availableCores                          html  \n    availableWorkers                        html  \n    canPortBeUsed                           html  \n    cpuLoad                                 html  \n    find_rshcmd                             html  \n    freeCores                               html  \n    freePort                                html  \n    getOption2                              html  \n    isConnectionValid                       html  \n    isForkedChild                           html  \n    isForkedNode                            html  \n    isLocalhostNode                         html  \n    isNodeAlive                             html  \n    makeClusterMPI                          html  \n    makeClusterPSOCK                        html  \n    parallelly.options                      html  \n    pid_exists                              html  \n    supportsMulticore                       html  \n*** copying figures\n** building package indices\n** testing if installed package can be loaded from temporary location\n*** arch - i386\n*** arch - x64\n** testing if installed package can be loaded from final location\n*** arch - i386\n*** arch - x64\n** testing if installed package keeps a record of temporary installation path\n* DONE (parallelly)"
   },
   {
-    "objectID": "index.html#rstudio-package-manager",
-    "href": "index.html#rstudio-package-manager",
-    "title": "",
-    "section": "RStudio Package Manager",
-    "text": "RStudio Package Manager"
+    "objectID": "index.html#posit-package-manager",
+    "href": "index.html#posit-package-manager",
+    "title": "personal radmin",
+    "section": "Posit Package Manager",
+    "text": "Posit Package Manager"
   },
   {
-    "objectID": "index.html#rspm",
-    "href": "index.html#rspm",
-    "title": "",
-    "section": "RSPM",
-    "text": "RSPM"
+    "objectID": "index.html#ppm",
+    "href": "index.html#ppm",
+    "title": "personal radmin",
+    "section": "PPM",
+    "text": "PPM"
   },
   {
     "objectID": "index.html#how-do-i-know-i-got-a-binary",
     "href": "index.html#how-do-i-know-i-got-a-binary",
-    "title": "",
+    "title": "personal radmin",
     "section": "how do I know I got a binary?",
-    "text": "how do I know I got a binary?\n\nCRAN CRAN RSPMrenv\n\n\n> install.packages(\"parallelly\", repos = \"https://cran.rstudio.com\")\nInstalling package into ‘C:/Users/edavi/Documents/R/win-library/4.1’\n(as ‘lib’ is unspecified)\ntrying URL 'https://cran.rstudio.com/bin/windows/contrib/4.1/parallelly_1.32.1.zip'\nContent type 'application/zip' length 306137 bytes (298 KB)\ndownloaded 298 KB\n\npackage ‘parallelly’ successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\edavi\\AppData\\Local\\Temp\\Rtmpa2s3e8\\downloaded_packages\n\n\n> install.packages(\"renv\", repos=\"https://cran.rstudio.com\")\nInstalling package into ‘/Users/edavidaja/Library/R/x86_64/4.1/library’\n(as ‘lib’ is unspecified)\ntrying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.1/renv_0.15.5.tgz'\nContent type 'application/x-gzip' length 1866760 bytes (1.8 MB)\n==================================================\ndownloaded 1.8 MB\n\n\nThe downloaded binary packages are in\n /var/folders/b5/fl4ff68d23s148tg1_1gnflc0000gn/T//RtmpMk69B0/downloaded_packages\n\n\n> install.packages(\"remotes\")\nInstalling package into ‘C:/Users/WDAGUtilityAccount/AppData/Local/R/win-library/4.2’\n(as ‘lib’ is unspecified)\ntrying URL 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/remotes_2.4.2.zip'\nContent type 'binary/octet-stream' length 399930 bytes (390 KB)\ndownloaded 390 KB\n\npackage ‘remotes’ successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n  C:\\Users\\WDAGUtilityAccount\\AppData\\Local\\Temp\\RtmpA1edRi\\downloaded_packages\n\n\n> renv::install(\"fs\")\nRetrieving 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/fs_1.5.2.zip' ...\n  OK [downloaded 380.9 Kb in 0.5 secs]\nInstalling fs [1.5.2] ...\n  OK [installed binary]\nMoving fs [1.5.2] into the cache ...\n  OK [moved to cache in 7.4 milliseconds]"
+    "text": "how do I know I got a binary?\n\nCRAN CRAN PPMrenv\n\n\n&gt; install.packages(\"parallelly\", repos = \"https://cran.rstudio.com\")\nInstalling package into ‘C:/Users/edavi/Documents/R/win-library/4.1’\n(as ‘lib’ is unspecified)\ntrying URL 'https://cran.rstudio.com/bin/windows/contrib/4.1/parallelly_1.32.1.zip'\nContent type 'application/zip' length 306137 bytes (298 KB)\ndownloaded 298 KB\n\npackage ‘parallelly’ successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\edavi\\AppData\\Local\\Temp\\Rtmpa2s3e8\\downloaded_packages\n\n\n&gt; install.packages(\"renv\", repos=\"https://cran.rstudio.com\")\nInstalling package into ‘/Users/edavidaja/Library/R/x86_64/4.1/library’\n(as ‘lib’ is unspecified)\ntrying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.1/renv_0.15.5.tgz'\nContent type 'application/x-gzip' length 1866760 bytes (1.8 MB)\n==================================================\ndownloaded 1.8 MB\n\n\nThe downloaded binary packages are in\n /var/folders/b5/fl4ff68d23s148tg1_1gnflc0000gn/T//RtmpMk69B0/downloaded_packages\n\n\n&gt; install.packages(\"remotes\")\nInstalling package into ‘C:/Users/WDAGUtilityAccount/AppData/Local/R/win-library/4.2’\n(as ‘lib’ is unspecified)\ntrying URL 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/remotes_2.4.2.zip'\nContent type 'binary/octet-stream' length 399930 bytes (390 KB)\ndownloaded 390 KB\n\npackage ‘remotes’ successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n  C:\\Users\\WDAGUtilityAccount\\AppData\\Local\\Temp\\RtmpA1edRi\\downloaded_packages\n\n\n&gt; renv::install(\"fs\")\nRetrieving 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/fs_1.5.2.zip' ...\n  OK [downloaded 380.9 Kb in 0.5 secs]\nInstalling fs [1.5.2] ...\n  OK [installed binary]\nMoving fs [1.5.2] into the cache ...\n  OK [moved to cache in 7.4 milliseconds]"
   },
   {
     "objectID": "index.html#pop-quiz-hotshot",
     "href": "index.html#pop-quiz-hotshot",
-    "title": "",
+    "title": "personal radmin",
     "section": "pop quiz, hotshot",
-    "text": "pop quiz, hotshot\n\nDoes RStudio Package Manager serve a binary of dplyr for R 3.4?\n\n\n\n\n02:00"
+    "text": "pop quiz, hotshot\n\nDoes Posit Package Manager serve a binary of dplyr for R 3.4?\n\n\n  \n    −\n    +\n \n 02:00"
   },
   {
     "objectID": "index.html#source",
     "href": "index.html#source",
-    "title": "",
+    "title": "personal radmin",
     "section": "Source",
     "text": "Source\n\ncompiled in your environment\nrequires extra tools when package uses C, C++, Fortran, Rust, etc.\n\n\n\nmost common reason to install from source is when you want the development version of a package from github One additional complication for *nix users:\ngenerally on windows can install and load packages that depend on other lower level libraries quite easily. Explain installing sf, for example."
   },
   {
     "objectID": "index.html#if-you-dont-have-tools",
     "href": "index.html#if-you-dont-have-tools",
-    "title": "",
+    "title": "personal radmin",
     "section": "if you don’t have tools",
     "text": "if you don’t have tools\n\nmakeg++\n\n\nRunning `R CMD build`...\n* checking for file 'C:\\Users\\WDAGUtilityAccount\\AppData\\Local\\Temp\\RtmpkTUH61\\remotes192027624804\\tidyverse-dplyr-36ef054/DESCRIPTION' ... OK\n* preparing 'dplyr':\n* checking DESCRIPTION meta-information ... OK\n* cleaning src\n* installing the package to process help pages\n      -----------------------------------\n* installing *source* package 'dplyr' ...\n** using staged installation\n** libs\nWarning in system(cmd) : 'make' not found\nERROR: compilation failed for package 'dplyr'\n* removing 'C:/Users/WDAGUT~1/AppData/Local/Temp/Rtmp6hYuyV/Rinst1334d1a23d1/dplyr'\n      -----------------------------------\nERROR: package installation failed\n\n\nWarning in untar2(tarfile, files, list, exdir, restore_times) :\n  skipping pax global extended headers\n* installing *source* package 'dplyr' ...\n** using staged installation\n** libs\nc:/Rtools/mingw_64/bin/g++ -std=gnu++11  -I\"C:/PROGRA~1/R/R-36~1.3/include\" -DNDEBUG          -O2 -Wall  -mtune=core2 -c filter.cpp -o filter.o\nsh: line 1: c:/Rtools/mingw_64/bin/g++: No such file or directory\nmake: *** [C:/PROGRA~1/R/R-36~1.3/etc/x64/Makeconf:215: filter.o] Error 127\nERROR: compilation failed for package 'dplyr'\n* removing 'C:/Users/edavi/DOCUME~1/projects/WTF-PR~1/renv/staging/1/dplyr'\nError: install of package 'dplyr' failed"
   },
   {
     "objectID": "index.html#how-to-get-the-tools",
     "href": "index.html#how-to-get-the-tools",
-    "title": "",
+    "title": "personal radmin",
     "section": "how to get the tools",
     "text": "how to get the tools\n\nwindows macOS linux \n\n\nRtools\n\n\nXCode\n⚠️ don’t run right now\nxcode-select --install\n\n\ninstall tools via package manager, e.g.\napt install make"
   },
   {
     "objectID": "index.html#got-tools",
     "href": "index.html#got-tools",
-    "title": "",
+    "title": "personal radmin",
     "section": "got tools?",
     "text": "got tools?\n\ndevtools::has_devel()\n\n\n## Your system is ready to build packages!"
   },
   {
-    "objectID": "index.html#activity-2",
-    "href": "index.html#activity-2",
-    "title": "",
+    "objectID": "index.html#activity-1",
+    "href": "index.html#activity-1",
+    "title": "personal radmin",
     "section": "activity",
-    "text": "activity\n\ninstall a package from r-universe\n\n\n\nopen the personal-radmin project\ninstall.packages(\"gitcellar\") # not on cran!\nupdate your project .Rprofile:\nusethis::edit_r_profile(scope = \"project\")\noptions(repos = c(\n  ropensci = \"https://ropensci.r-universe.dev\",\n  CRAN = \"https://cloud.r-project.org\", # macOS\n  RSPM = \"https://packagemanager.rstudio.com/cran/latest\" # windows\n))\nsave .Rprofile and restart R\ninstall.packages(\"gitcellar\")\n\n\n\n\n\n05:00"
+    "text": "activity\n\ninstall a package from r-universe\n\n\n\nopen the personal-radmin project\ninstall.packages(\"gitcellar\") # not on cran!\nupdate your project .Rprofile:\nusethis::edit_r_profile(scope = \"project\")\noptions(repos = c(\n  ropensci = \"https://ropensci.r-universe.dev\",\n  CRAN = \"https://cloud.r-project.org\", # macOS\n  RSPM = \"https://packagemanager.rstudio.com/cran/latest\" # windows\n))\nsave .Rprofile and restart R\ninstall.packages(\"gitcellar\")\n\n\n\n  \n    −\n    +\n \n 05:00"
   },
   {
     "objectID": "index.html#discussion",
     "href": "index.html#discussion",
-    "title": "",
+    "title": "personal radmin",
     "section": "discussion",
     "text": "discussion\n\ndid you install gitcellar from binary or source?\n\nHow do you know?"
   },
   {
     "objectID": "index.html#wrapping-up-1",
     "href": "index.html#wrapping-up-1",
-    "title": "",
+    "title": "personal radmin",
     "section": "wrapping up",
     "text": "wrapping up\nbinaries are usually preferred, but for development versions of packages, you may need to install from source."
   },
   {
     "objectID": "index.html#why-2",
     "href": "index.html#why-2",
-    "title": "",
+    "title": "personal radmin",
     "section": "why?",
     "text": "why?\n\n\n\nThe quick and dirty approach you took then comes right back at you as a boomerang. Therefore, ban the concept of one-off altogether. No matter what the asker says, it will have to be done again, always!3/9\n\n— Edwin Thoen (@edwin_thoen) May 16, 2022\n\n\n\n\nYou will need to reproduce or update your analysis. You might get audited!"
   },
   {
     "objectID": "index.html#reproducibility-strategies",
     "href": "index.html#reproducibility-strategies",
-    "title": "",
+    "title": "personal radmin",
     "section": "reproducibility strategies",
     "text": "reproducibility strategies"
   },
   {
     "objectID": "index.html#reproducibility-strategies-1",
     "href": "index.html#reproducibility-strategies-1",
-    "title": "",
+    "title": "personal radmin",
     "section": "reproducibility strategies",
-    "text": "reproducibility strategies\n\n\n\n\n\n\nwe’re focused in particular on systems where we have both access and responsibility"
+    "text": "reproducibility strategies\n\n\nwe’re focused in particular on systems where we have both access and responsibility"
   },
   {
     "objectID": "index.html#tools",
     "href": "index.html#tools",
-    "title": "",
+    "title": "personal radmin",
     "section": "tools",
-    "text": "tools\n\n\nrspm\n\n\n\n\nrenv\n\n\n\n\n\n\nrenv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - renv::install() can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache -makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out"
+    "text": "tools\n\n\nppm\n\n\n\n\nrenv\n\n\n\n\n\n\nrenv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - renv::install() can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache - makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out"
   },
   {
-    "objectID": "index.html#rspm-3",
-    "href": "index.html#rspm-3",
-    "title": "",
-    "section": "rspm",
-    "text": "rspm"
+    "objectID": "index.html#ppm-3",
+    "href": "index.html#ppm-3",
+    "title": "personal radmin",
+    "section": "ppm",
+    "text": "ppm"
   },
   {
-    "objectID": "index.html#rspm-latest",
-    "href": "index.html#rspm-latest",
-    "title": "",
-    "section": "rspm: latest",
-    "text": "rspm: latest"
+    "objectID": "index.html#ppm-latest",
+    "href": "index.html#ppm-latest",
+    "title": "personal radmin",
+    "section": "ppm: latest",
+    "text": "ppm: latest"
   },
   {
-    "objectID": "index.html#rspm-date-based-snapshots",
-    "href": "index.html#rspm-date-based-snapshots",
-    "title": "",
-    "section": "rspm: date-based snapshots",
-    "text": "rspm: date-based snapshots"
+    "objectID": "index.html#ppm-date-based-snapshots",
+    "href": "index.html#ppm-date-based-snapshots",
+    "title": "personal radmin",
+    "section": "ppm: date-based snapshots",
+    "text": "ppm: date-based snapshots"
   },
   {
-    "objectID": "index.html#activity-3",
-    "href": "index.html#activity-3",
-    "title": "",
+    "objectID": "index.html#activity-2",
+    "href": "index.html#activity-2",
+    "title": "personal radmin",
     "section": "activity",
-    "text": "activity\n\ntime travel!\n\n\nopen the personal-radmin project\nupdate your project .Rprofile with a date-based snapshot of CRAN\noptions(repos = c(RSPM = \"https://packagemanager.rstudio.com/cran/2021-03-31\"))\nRestart R\ninstall.packages(\"dplyr\")\n\nwhat version of dplyr did you install?\n\n\n\n05:00"
+    "text": "activity\n\ntime travel!\n\n\nopen the personal-radmin project\nupdate your project .Rprofile with a date-based snapshot of CRAN\noptions(repos = c(RSPM = \"https://p3m.dev/cran/2021-03-31\"))\nRestart R\ninstall.packages(\"dplyr\")\n\nwhat version of dplyr did you install?\n\n  \n    −\n    +\n \n 05:00"
   },
   {
     "objectID": "index.html#renv-2",
     "href": "index.html#renv-2",
-    "title": "",
+    "title": "personal radmin",
     "section": "renv",
     "text": "renv"
   },
   {
     "objectID": "index.html#shared-project-environment",
     "href": "index.html#shared-project-environment",
-    "title": "",
+    "title": "personal radmin",
     "section": "shared project environment",
-    "text": "shared project environment\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary\n\n\n\nproject1\n\n\n\nproject2\n\n\n\nproject3\n\n\n\n\n\n\n\n\n\n\nby default all of your packages are installed into your user library\nthe unforunate default behavior in macOS is also that this is the system library\nupdating a package in the shared environments updates it for all of your projects\n\n\n\n.libPaths()\n[1] \"C:/Users/edavi/Documents/R/win-library/3.6\" # user\n[2] \"C:/Program Files/R/R-3.6.3/library\" # system"
+    "text": "shared project environment\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary\n\n\n\nproject1\n\n\n\nproject2\n\n\n\nproject3\n\n\n\n\n\n\n\n\n\n\n\nby default all of your packages are installed into your user library\nthe unforunate default behavior in macOS is also that this is the system library\nupdating a package in the shared environments updates it for all of your projects\n\n\n\n.libPaths()\n&gt; .libPaths()\n[1] \"C:/Users/edavi/AppData/Local/R/win-library/4.4\" # user\n[2] \"C:/Program Files/R/R-4.4.0/library\" # system"
   },
   {
     "objectID": "index.html#isolated-project-environments",
     "href": "index.html#isolated-project-environments",
-    "title": "",
+    "title": "personal radmin",
     "section": "isolated project environments",
-    "text": "isolated project environments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nglobal cache\n\n\n\nlibrary1\n\n\n\nlibrary2\n\n\n\nlibrary3\n\n\n\nproject1\n\n\n\nproject2\n\n\n\nproject3\n\n\n\n\n\n\n\n\n\n.libPaths()\n* Project '~/projects/sample-project' loaded. [renv 0.15.5]\n> .libPaths()\n[1] \"C:/Users/edavi/Documents/projects/sample-project/renv/library/R-3.6/x86_64-w64-mingw32\"\n[2] \"C:/Program Files/R/R-3.6.3/library\""
+    "text": "isolated project environments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nglobal cache\n\n\n\nlibrary1\n\n\n\nlibrary2\n\n\n\nlibrary3\n\n\n\nproject1\n\n\n\nproject2\n\n\n\nproject3\n\n\n\n\n\n\n\n\n\n\n.libPaths()\n- Project '~/sample-project' loaded. [renv 1.0.7]\n&gt; .libPaths()\n[1] \"C:/Users/edavi/Documents/sample-project/renv/library/windows/R-4.4/x86_64-w64-mingw32\"        \n[2] \"C:/Users/edavi/AppData/Local/R/cache/R/renv/sandbox/windows/R-4.4/x86_64-w64-mingw32/88765555\""
   },
   {
     "objectID": "index.html#isolated-project-environments-1",
     "href": "index.html#isolated-project-environments-1",
-    "title": "",
+    "title": "personal radmin",
     "section": "isolated project environments",
     "text": "isolated project environments\n\nexperiment with new packages without breaking other projects\nshare exactly which versions you’re using with your team or future you\nre-use packages you’ve already installed"
   },
   {
-    "objectID": "index.html#activity-4",
-    "href": "index.html#activity-4",
-    "title": "",
+    "objectID": "index.html#activity-3",
+    "href": "index.html#activity-3",
+    "title": "personal radmin",
     "section": "activity",
-    "text": "activity\n\ncreate an isolated project library\n\n\n\nopen your wtf-fix-paths project\ninstall.packages(\"renv\")\nrenv::init()\nrenv::status()\nadd library(parallelly) to any file in the wtf-fix-paths/R directory; save file\nrenv::status()\ninstall.packages(\"parallelly\")\nrenv::status()\nrenv::snapshot() (y proceed)\nremove library(parallelly) from the file you added it to; save file\nrenv::status()\n\n\n\n\n\n10:00\n\n\n\n\nrun .libPaths() to see what your default package libraries are initialize an renv–you’ll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in renv/activate.R deactivate the environment and check libPaths() again–it should be back to normal"
+    "text": "activity\n\ncreate an isolated project library\n\n\n\nopen your wtf-fix-paths project\ninstall.packages(\"renv\")\nrenv::init()\nrenv::status()\nadd library(parallelly) to any file in the wtf-fix-paths/R directory; save file\nrenv::status()\ninstall.packages(\"parallelly\")\nrenv::status()\nrenv::snapshot() (y proceed)\nremove library(parallelly) from the file you added it to; save file\nrenv::status()\n\n\n\n  \n    −\n    +\n \n 10:00\n \n\nrun .libPaths() to see what your default package libraries are initialize an renv–you’ll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in renv/activate.R deactivate the environment and check libPaths() again–it should be back to normal"
   },
   {
     "objectID": "index.html#renvinstall",
     "href": "index.html#renvinstall",
-    "title": "",
+    "title": "personal radmin",
     "section": "renv::install()",
     "text": "renv::install()\nor install.packages() with shims enabled\nrenv::install(\"jsonlite\")\nrenv::install(\"jsonlite@1.2\") # at version\nrenv::install\"jeroen/jsonlite\") # latest\nrenv::install\"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d\") # at SHA\nrenv::install(\"path/to/package\") # local source\n\n\ndevtools::install(\"jsonlite\")\ndevtools::install_version(\"jsonlite@1.2\") # at version\ndevtools::install_github(\"jeroen/jsonlite\") # latest\ndevtools::install_github(\"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d\") # at SHA\ndevtools::install(\"path/to/package\") # local source"
   },
   {
     "objectID": "index.html#the-junk-drawer",
     "href": "index.html#the-junk-drawer",
-    "title": "",
+    "title": "personal radmin",
     "section": "the junk drawer",
     "text": "the junk drawer\nfor reprexes, tweets, and other ephemera:\n~/Documents/scratch\n\nI use renv for everything, and have one junk project into which I install things without regard for stability or reproducibility"
   },
   {
     "objectID": "index.html#why-3",
     "href": "index.html#why-3",
-    "title": "",
+    "title": "personal radmin",
     "section": "why",
     "text": "why"
   },
   {
     "objectID": "index.html#why-4",
     "href": "index.html#why-4",
-    "title": "",
+    "title": "personal radmin",
     "section": "why",
     "text": "why"
   },
   {
     "objectID": "index.html#bigger-context",
     "href": "index.html#bigger-context",
-    "title": "",
+    "title": "personal radmin",
     "section": "bigger context",
     "text": "bigger context"
   },
   {
     "objectID": "index.html#practice-makes-perfect",
     "href": "index.html#practice-makes-perfect",
-    "title": "",
+    "title": "personal radmin",
     "section": "practice makes perfect",
-    "text": "practice makes perfect\n\nWindows 10+macOSLinux\n\n\nWindows Sandbox\n\n\n🤷\n\n\nMultipass\nDigital Ocean\nLinode\n\n\n\n\nThe best way to become more comfortable with installing things is to practice in an environment you can throw away\n- the windows sandbox lets you test in an environment on your machine that won’t affect your computer - enabling it is outside the scope of this course - for linux users, the easiest thing to do is stand up a small VPS - I don’t know of a good safe way to test mac environments"
+    "text": "practice makes perfect\n\nWindows 10+macOSLinux\n\n\nWindows Sandbox\n\n\ntart\nutm\n\n\nMultipass\nDigital Ocean\nLinode\n\n\n\n\nThe best way to become more comfortable with installing things is to practice in an environment you can throw away\n- the windows sandbox lets you test in an environment on your machine that won’t affect your computer - enabling it is outside the scope of this course - for linux users, the easiest thing to do is stand up a small VPS - I don’t know of a good safe way to test mac environments"
   },
   {
     "objectID": "index.html#run-this-command-clickops",
     "href": "index.html#run-this-command-clickops",
-    "title": "",
+    "title": "personal radmin",
     "section": "“run this command” >> clickOps",
-    "text": "“run this command” >> clickOps"
+    "text": "“run this command” &gt;&gt; clickOps"
   },
   {
     "objectID": "index.html#package-managers",
     "href": "index.html#package-managers",
-    "title": "",
+    "title": "personal radmin",
     "section": "package managers",
-    "text": "package managers\nsoftware whose job it is to install other software\n🙉 not the same kinds of packages as RSPM\n\n\n\n\npackage manager\n\n\n\n\n windows\nscoop, chocolatey, winget\n\n\n macOS\nhomebrew\n\n\n linux\nhomebrew, apt, yum, zypper"
+    "text": "package managers\nsoftware whose job it is to install other software\n🙉 not the same kinds of packages as PPM\n\n\n\n\npackage manager\n\n\n\n\n windows\nscoop, chocolatey, winget\n\n\n macOS\nhomebrew\n\n\n linux\nhomebrew, apt, yum, zypper"
   },
   {
     "objectID": "index.html#section",
     "href": "index.html#section",
-    "title": "",
+    "title": "personal radmin",
     "section": "⚠️",
     "text": "⚠️\nAvoid installing your language with a package manager\n\nYou want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are not consistently effective Other software that you install with your package manager may expect that package manager to be running the latest Idiosyncracies of your language will be better understood by a dedicated tool"
   },
   {
     "objectID": "index.html#language-managers",
     "href": "index.html#language-managers",
-    "title": "",
+    "title": "personal radmin",
     "section": "language managers",
-    "text": "language managers\nusing your package manager, install a language manager\n\nwindows*nix\n\n\nscoop install rig\n\n\nbrew install rig\n\n\n\n\nlanguage managers for other languages:\n pyenv\n nvm\n rustup\n\n\n\nmany language managers are often written in some language other than the one they are responsible for managing"
+    "text": "language managers\nusing your package manager, install a language manager\n\nwindows*nix\n\n\nscoop install rig\n\n\nbrew install rig\n\n\n\n\nlanguage managers for other languages:\n pyenv  nvm  rustup\n\n\n\nmany language managers are often written in some language other than the one they are responsible for managing"
   },
   {
-    "objectID": "index.html#switching-r-versions-fa-brands-windows",
-    "href": "index.html#switching-r-versions-fa-brands-windows",
-    "title": "",
+    "objectID": "index.html#switching-r-versions",
+    "href": "index.html#switching-r-versions",
+    "title": "personal radmin",
     "section": "switching R versions ",
     "text": "switching R versions \nCTRL +  CLICK"
   },
   {
-    "objectID": "index.html#switching-r-versions-fa-brands-windows-1",
-    "href": "index.html#switching-r-versions-fa-brands-windows-1",
-    "title": "",
+    "objectID": "index.html#switching-r-versions-1",
+    "href": "index.html#switching-r-versions-1",
+    "title": "personal radmin",
     "section": "switching R versions ",
     "text": "switching R versions"
   },
   {
-    "objectID": "index.html#switching-r-versions-fa-brands-apple",
-    "href": "index.html#switching-r-versions-fa-brands-apple",
-    "title": "",
+    "objectID": "index.html#switching-r-versions-2",
+    "href": "index.html#switching-r-versions-2",
+    "title": "personal radmin",
     "section": "switching R versions ",
     "text": "switching R versions \n\nRSwitch"
   },
   {
     "objectID": "index.html#language-versions",
     "href": "index.html#language-versions",
-    "title": "",
+    "title": "personal radmin",
     "section": "language versions",
     "text": "language versions\nusing your language manager, install a language version:\n❯ rig install --help\nrig-add\n\nDESCRIPTION:\n    Download and install an R version, from the official sources.\n    It keeps the already installed R versions, except versions within the\n    same minor branch, see below.\n\nEXAMPLES:\n    # Add the latest release\n    rig add release\n\n    # Install specific version\n    rig add 4.1.2\n\n    # Install latest version within a minor branch\n    rig add 4.1\n\nif you’re running a distribution of linux that rig doesn’t support: - https://docs.rstudio.com/resources/install-r/\nif no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/"
   },
   {
     "objectID": "index.html#environment-managers",
     "href": "index.html#environment-managers",
-    "title": "",
+    "title": "personal radmin",
     "section": "environment managers",
     "text": "environment managers\nusing your desired version of the language, install an environment manager:\n\ninstall.packages(\"renv\")"
   },
   {
     "objectID": "index.html#project-2",
     "href": "index.html#project-2",
-    "title": "",
+    "title": "personal radmin",
     "section": "project",
     "text": "project\nusing your environment manager, install your project’s dependencies:\n\ncreate a new environment\nrenv::init()\nrestore an already defined environment\nrenv::restore()"
   },
   {
-    "objectID": "index.html#activity-5",
-    "href": "index.html#activity-5",
-    "title": "",
+    "objectID": "index.html#activity-4",
+    "href": "index.html#activity-4",
+    "title": "personal radmin",
     "section": "activity",
-    "text": "activity\n\nrelaxedspartan\n\n\nread the rig FAQ, or the rswitch guide\n\n\n\ninstall rig\n\nuse rig to install a different major or minor version of R\n⚠️ avoid installing a patch version\n\nopen RStudio with that newly installed R version\n\n\n\n\n\n\n\n10:00\n\n\n\n\n\n\nPersonal R Administration"
+    "text": "activity\n\nrelaxedspartan\n\n\nread the rig FAQ, or the rswitch guide\n\n\n\ninstall rig\nuse rig to install a different major or minor version of R\n⚠️ avoid installing a patch version\n\nopen RStudio with that newly installed R version\n\n\n\n\n\n  \n    −\n    +\n \n 10:00\n \n\n\n\n\nPersonal R Administration"
   }
 ]

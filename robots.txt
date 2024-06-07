@@ -1,1 +1,1 @@
-Sitemap: https://github.com/rstats-wtf/wtf-personal-radmin-slides/sitemap.xml
+Sitemap: https://rstats-wtf.github.io/wtf-personal-radmin-slides/sitemap.xml
