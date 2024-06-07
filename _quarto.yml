@@ -1,3 +1,6 @@
 project:
   title: "personal-r-administration"
   type: website
+
+filters: 
+  - reveal-auto-agenda
