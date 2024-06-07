@@ -240,10 +240,8 @@ DB_PASS=p0stgr3s
 `Sys.getenv()`
 :::
 
-## activity
 
-::: panel-tabset
-### edit your user `.Renviron` {.smaller}
+## edit your user `.Renviron` {.smaller}
 
 1.  `usethis::edit_r_environ()`
 2.  add `WTF_USER=<your name>_user`
@@ -251,8 +249,10 @@ DB_PASS=p0stgr3s
     `CTRL + SHIFT + F10`\
     `CMD  + SHIFT + 0`
 4.  Retrieve the value of WTF_USER `Sys.getenv("WTF_USER")`
+  
+{{< countdown "2:00" >}}
 
-### edit your project `.Renviron` {.smaller}
+## edit your project `.Renviron` {.smaller}
 
 1.  `usethis::edit_r_environ("project")`
 2.  add `WTF_PROJECT=<your name>_project`
@@ -261,11 +261,11 @@ DB_PASS=p0stgr3s
     `CMD  + SHIFT + 0`
 4.  Retrieve the value of WTF_PROJECT `Sys.getenv("WTF_PROJECT")`
 
-:::
+{{< countdown "2:00" >}}
 
-{{< countdown "10:00" >}}
-
+::: question
 what's the value of `WTF_USER` after you set `WTF_PROJECT`?
+:::
 
 ## `.Renviron` recap
 
