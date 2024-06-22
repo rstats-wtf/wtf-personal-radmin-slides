@@ -1138,7 +1138,7 @@ You want to avoid having the language version your projects are using changed ou
 
 ## language managers
 
-using your package manager, install a language manager
+using your package manager, install [rig](https://github.com/r-lib/rig):
 
 ::: panel-tabset
 ### windows
@@ -1157,9 +1157,11 @@ brew install rig
 ::: small
 language managers for other languages:
 
-{{< fa brands python >}} pyenv
-{{< fa brands node-js >}} nvm
-{{< fa brands rust >}} rustup
+{{< fa brands python >}} [pyenv](https://github.com/pyenv/pyenv)  
+{{< fa brands node-js >}} [nvm](https://github.com/nvm-sh/nvm)  
+{{< fa brands rust >}} [rustup](https://rustup.rs/)  
+{{< fa globe >}} [asdf](https://asdf-vm.com/)  
+{{< fa globe >}} [mise-en-place](https://mise.jdx.dev/)
 :::
 
 ::: notes
@@ -1180,15 +1182,9 @@ language managers for other languages:
 ![](img/r_version_select_windows-highlight.png)
 :::
 
-## switching R versions {{< fa brands apple >}}
-
-::: r-fit-text
-[RSwitch](https://rud.is/rswitch/)
-:::
-
 ## language versions
 
-using your language manager, install a language version:
+using `rig`, install a version of R:
 
 ``` shell
 ❯ rig install --help
