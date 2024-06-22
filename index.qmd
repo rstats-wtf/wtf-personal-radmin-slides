@@ -215,20 +215,10 @@ environment variables
 
 ## example `.Renviron`
 
-### user
-
 ``` bash
 PATH="${RTOOLS40_HOME}\usr\bin;${PATH}" # windows users
-GITHUB_PAT=ghp_gVa6xK3bwERJ7xpWvoWj2dXMit4z43fWE8R
 CONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3
 R_HISTSIZE=100000
-```
-
-<br/>
-
-### project
-
-``` bash
 RETICULATE_PYTHON=.venv/bin/python
 DB_USER=elephant
 DB_PASS=p0stgr3s
@@ -269,7 +259,7 @@ what's the value of `WTF_USER` after you set `WTF_PROJECT`?
 
 ## `.Renviron` recap
 
-project `.Renviron` "short-circuits"\
+project `.Renviron` "short-circuits"
 if it exists, your user `.Renviron` will not be evaluated
 
 ## `.Rprofile`
