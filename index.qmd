@@ -603,7 +603,7 @@ Moving fs [1.5.2] into the cache ...
 ## pop quiz, hotshot
 
 ::: question
-Does Posit Package Manager serve a binary of `dplyr` for R 3.4?
+Does Posit Package Manager serve a binary of `dplyr` for R 3.6?
 :::
 
 {{< countdown "2:00" >}}
