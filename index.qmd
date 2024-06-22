@@ -215,20 +215,10 @@ environment variables
 
 ## example `.Renviron`
 
-### user
-
 ``` bash
 PATH="${RTOOLS40_HOME}\usr\bin;${PATH}" # windows users
-GITHUB_PAT=ghp_gVa6xK3bwERJ7xpWvoWj2dXMit4z43fWE8R
 CONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3
 R_HISTSIZE=100000
-```
-
-<br/>
-
-### project
-
-``` bash
 RETICULATE_PYTHON=.venv/bin/python
 DB_USER=elephant
 DB_PASS=p0stgr3s
@@ -269,7 +259,7 @@ what's the value of `WTF_USER` after you set `WTF_PROJECT`?
 
 ## `.Renviron` recap
 
-project `.Renviron` "short-circuits"\
+project `.Renviron` "short-circuits"
 if it exists, your user `.Renviron` will not be evaluated
 
 ## `.Rprofile`
@@ -613,7 +603,7 @@ Moving fs [1.5.2] into the cache ...
 ## pop quiz, hotshot
 
 ::: question
-Does Posit Package Manager serve a binary of `dplyr` for R 3.4?
+Does Posit Package Manager serve a binary of `dplyr` for R 3.6?
 :::
 
 {{< countdown "2:00" >}}
@@ -1051,7 +1041,7 @@ or [`install.packages()`](https://rstudio.github.io/renv/articles/renv.html#shim
 ``` r
 renv::install("jsonlite")
 renv::install("jsonlite@1.2") # at version
-renv::install"jeroen/jsonlite") # latest
+renv::install("jeroen/jsonlite") # latest
 renv::install"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d") # at SHA
 renv::install("path/to/package") # local source
 ```
@@ -1148,7 +1138,7 @@ You want to avoid having the language version your projects are using changed ou
 
 ## language managers
 
-using your package manager, install a language manager
+using your package manager, install [rig](https://github.com/r-lib/rig):
 
 ::: panel-tabset
 ### windows
@@ -1167,9 +1157,11 @@ brew install rig
 ::: small
 language managers for other languages:
 
-{{< fa brands python >}} pyenv
-{{< fa brands node-js >}} nvm
-{{< fa brands rust >}} rustup
+{{< fa brands python >}} [pyenv](https://github.com/pyenv/pyenv)  
+{{< fa brands node-js >}} [nvm](https://github.com/nvm-sh/nvm)  
+{{< fa brands rust >}} [rustup](https://rustup.rs/)  
+{{< fa globe >}} [asdf](https://asdf-vm.com/)  
+{{< fa globe >}} [mise-en-place](https://mise.jdx.dev/)
 :::
 
 ::: notes
@@ -1190,15 +1182,9 @@ language managers for other languages:
 ![](img/r_version_select_windows-highlight.png)
 :::
 
-## switching R versions {{< fa brands apple >}}
-
-::: r-fit-text
-[RSwitch](https://rud.is/rswitch/)
-:::
-
 ## language versions
 
-using your language manager, install a language version:
+using `rig`, install a version of R:
 
 ``` shell
 ❯ rig install --help
