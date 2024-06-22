@@ -1041,7 +1041,7 @@ or [`install.packages()`](https://rstudio.github.io/renv/articles/renv.html#shim
 ``` r
 renv::install("jsonlite")
 renv::install("jsonlite@1.2") # at version
-renv::install"jeroen/jsonlite") # latest
+renv::install("jeroen/jsonlite") # latest
 renv::install"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d") # at SHA
 renv::install("path/to/package") # local source
 ```
