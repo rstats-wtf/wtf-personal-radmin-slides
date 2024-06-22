@@ -11,7 +11,7 @@
     "href": "index.html#a-brief-personal-history",
     "title": "personal radmin",
     "section": "a brief personal history:",
-    "text": "a brief personal history:\n\n\n\nAuditor\n\n\npersonal laptop \nRStudio in Citrix \nairgapped Posit Workbench \nairgapped Shiny Server Pro \nSpecial Issue Individual Laptop  \nSpecial Issue Individual Desktop \nSpecial Issue Team Desktop \n\n\n\n\nData Scientist\n\n\npersonal laptop \nwork laptop \nRStudio in Citrix \nRStudio Server \n\n\n\n\nSolutions Engineer\n\n\npersonal laptop \nwork laptop \nPosit Workbench Demo Server \nPosit Workbench Internal Server \nmisc ephemeral environments\n\n\n\n\n\nthis is intended to provide context on my priorities / habits of thought: - it needs to work across operating systems - You can’t depend on having pro features - avoid admin where possible - as portable as practical - audit context means I need to be able to reproduce exactly - “run this command” preferable to a confluence page of screenshots"
+    "text": "a brief personal history:\n\n\n\nAuditor\n\n\npersonal laptop \nRStudio in Citrix \nairgapped Posit Workbench \nairgapped Shiny Server Pro \nSpecial Issue Individual Laptop  \nSpecial Issue Individual Desktop \nSpecial Issue Team Desktop \n\n\n\n\nData Scientist\n\n\npersonal laptop \nwork laptop \nRStudio in Citrix \nRStudio Server \n\n\n\n\nSolutions Engineer\n\n\npersonal laptop \nwork laptop \nPosit Workbench Demo Server \nPosit Workbench Internal Server \nmisc ephemeral environments\n\n\n\n\nthis is intended to provide context on my priorities / habits of thought: - it needs to work across operating systems - You can’t depend on having pro features - avoid admin where possible - as portable as practical - audit context means I need to be able to reproduce exactly - “run this command” preferable to a confluence page of screenshots"
   },
   {
     "objectID": "index.html#how-do-i",
@@ -95,7 +95,7 @@
     "href": "index.html#example-.renviron",
     "title": "personal radmin",
     "section": "example .Renviron",
-    "text": "example .Renviron\nuser\nPATH=\"${RTOOLS40_HOME}\\usr\\bin;${PATH}\" # windows users\nGITHUB_PAT=ghp_gVa6xK3bwERJ7xpWvoWj2dXMit4z43fWE8R\nCONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3\nR_HISTSIZE=100000\n\nproject\nRETICULATE_PYTHON=.venv/bin/python\nDB_USER=elephant\nDB_PASS=p0stgr3s"
+    "text": "example .Renviron\nPATH=\"${RTOOLS40_HOME}\\usr\\bin;${PATH}\" # windows users\nCONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3\nR_HISTSIZE=100000\nRETICULATE_PYTHON=.venv/bin/python\nDB_USER=elephant\nDB_PASS=p0stgr3s"
   },
   {
     "objectID": "index.html#read-environment-variables",
@@ -123,7 +123,7 @@
     "href": "index.html#renviron-recap",
     "title": "personal radmin",
     "section": ".Renviron recap",
-    "text": ".Renviron recap\nproject .Renviron “short-circuits”\nif it exists, your user .Renviron will not be evaluated"
+    "text": ".Renviron recap\nproject .Renviron “short-circuits” if it exists, your user .Renviron will not be evaluated"
   },
   {
     "objectID": "index.html#rprofile",
@@ -193,7 +193,7 @@
     "href": "index.html#wrapping-up",
     "title": "personal radmin",
     "section": "wrapping up",
-    "text": "wrapping up\n\n\n.Renviron\n\nsecrets\nenvironment information\n\n\n.Rprofile\n\ndevelopment dependencies\n\n\n\n\nEnvironment variables are inherited by child processes, so setting them early in the startup process is valuable Hosting providers trying to deal with secrets will often let you supply environment variables"
+    "text": "wrapping up\n\n\n.Renviron\n\nsecrets\nenvironment information\n\n\n.Rprofile\n\ndevelopment dependencies\n\n\n\nEnvironment variables are inherited by child processes, so setting them early in the startup process is valuable Hosting providers trying to deal with secrets will often let you supply environment variables"
   },
   {
     "objectID": "index.html#why-1",
@@ -291,7 +291,7 @@
     "href": "index.html#pop-quiz-hotshot",
     "title": "personal radmin",
     "section": "pop quiz, hotshot",
-    "text": "pop quiz, hotshot\n\nDoes Posit Package Manager serve a binary of dplyr for R 3.4?\n\n\n  \n    −\n    +\n \n 02:00"
+    "text": "pop quiz, hotshot\n\nDoes Posit Package Manager serve a binary of dplyr for R 3.6?\n\n\n  \n    −\n    +\n \n 02:00"
   },
   {
     "objectID": "index.html#source",
@@ -368,7 +368,7 @@
     "href": "index.html#tools",
     "title": "personal radmin",
     "section": "tools",
-    "text": "tools\n\n\nppm\n\n\n\n\nrenv\n\n\n\n\n\n\nrenv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - renv::install() can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache - makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out"
+    "text": "tools\n\n\nppm\n\n\n\n\nrenv\n\n\n\n\n\nrenv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - renv::install() can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache - makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out"
   },
   {
     "objectID": "index.html#ppm-3",
@@ -438,7 +438,7 @@
     "href": "index.html#renvinstall",
     "title": "personal radmin",
     "section": "renv::install()",
-    "text": "renv::install()\nor install.packages() with shims enabled\nrenv::install(\"jsonlite\")\nrenv::install(\"jsonlite@1.2\") # at version\nrenv::install\"jeroen/jsonlite\") # latest\nrenv::install\"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d\") # at SHA\nrenv::install(\"path/to/package\") # local source\n\n\ndevtools::install(\"jsonlite\")\ndevtools::install_version(\"jsonlite@1.2\") # at version\ndevtools::install_github(\"jeroen/jsonlite\") # latest\ndevtools::install_github(\"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d\") # at SHA\ndevtools::install(\"path/to/package\") # local source"
+    "text": "renv::install()\nor install.packages() with shims enabled\nrenv::install(\"jsonlite\")\nrenv::install(\"jsonlite@1.2\") # at version\nrenv::install(\"jeroen/jsonlite\") # latest\nrenv::install\"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d\") # at SHA\nrenv::install(\"path/to/package\") # local source\n\n\ndevtools::install(\"jsonlite\")\ndevtools::install_version(\"jsonlite@1.2\") # at version\ndevtools::install_github(\"jeroen/jsonlite\") # latest\ndevtools::install_github(\"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d\") # at SHA\ndevtools::install(\"path/to/package\") # local source"
   },
   {
     "objectID": "index.html#the-junk-drawer",
@@ -501,7 +501,7 @@
     "href": "index.html#language-managers",
     "title": "personal radmin",
     "section": "language managers",
-    "text": "language managers\nusing your package manager, install a language manager\n\nwindows*nix\n\n\nscoop install rig\n\n\nbrew install rig\n\n\n\n\nlanguage managers for other languages:\n pyenv  nvm  rustup\n\n\n\nmany language managers are often written in some language other than the one they are responsible for managing"
+    "text": "language managers\nusing your package manager, install rig:\n\nwindows*nix\n\n\nscoop install rig\n\n\nbrew install rig\n\n\n\n\nlanguage managers for other languages:\n pyenv\n nvm\n rustup\n asdf\n mise-en-place\n\n\n\nmany language managers are often written in some language other than the one they are responsible for managing"
   },
   {
     "objectID": "index.html#switching-r-versions",
@@ -518,18 +518,11 @@
     "text": "switching R versions"
   },
   {
-    "objectID": "index.html#switching-r-versions-2",
-    "href": "index.html#switching-r-versions-2",
-    "title": "personal radmin",
-    "section": "switching R versions ",
-    "text": "switching R versions \n\nRSwitch"
-  },
-  {
     "objectID": "index.html#language-versions",
     "href": "index.html#language-versions",
     "title": "personal radmin",
     "section": "language versions",
-    "text": "language versions\nusing your language manager, install a language version:\n❯ rig install --help\nrig-add\n\nDESCRIPTION:\n    Download and install an R version, from the official sources.\n    It keeps the already installed R versions, except versions within the\n    same minor branch, see below.\n\nEXAMPLES:\n    # Add the latest release\n    rig add release\n\n    # Install specific version\n    rig add 4.1.2\n\n    # Install latest version within a minor branch\n    rig add 4.1\n\nif you’re running a distribution of linux that rig doesn’t support: - https://docs.rstudio.com/resources/install-r/\nif no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/"
+    "text": "language versions\nusing rig, install a version of R:\n❯ rig install --help\nrig-add\n\nDESCRIPTION:\n    Download and install an R version, from the official sources.\n    It keeps the already installed R versions, except versions within the\n    same minor branch, see below.\n\nEXAMPLES:\n    # Add the latest release\n    rig add release\n\n    # Install specific version\n    rig add 4.1.2\n\n    # Install latest version within a minor branch\n    rig add 4.1\n\nif you’re running a distribution of linux that rig doesn’t support: - https://docs.rstudio.com/resources/install-r/\nif no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/"
   },
   {
     "objectID": "index.html#environment-managers",
@@ -539,8 +532,8 @@
     "text": "environment managers\nusing your desired version of the language, install an environment manager:\n\ninstall.packages(\"renv\")"
   },
   {
-    "objectID": "index.html#project-2",
-    "href": "index.html#project-2",
+    "objectID": "index.html#project-1",
+    "href": "index.html#project-1",
     "title": "personal radmin",
     "section": "project",
     "text": "project\nusing your environment manager, install your project’s dependencies:\n\ncreate a new environment\nrenv::init()\nrestore an already defined environment\nrenv::restore()"

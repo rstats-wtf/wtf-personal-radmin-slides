@@ -12,10 +12,10 @@
 <script src="site_libs/quarto-contrib/countdown-0.5.0/countdown.js"></script>
 <link href="site_libs/quarto-contrib/countdown-0.5.0/countdown.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.555">
+  <meta name="generator" content="quarto-1.5.47">
 
   <meta name="author" content="E. David Aja">
-  <title>personal-r-administration - personal radmin</title>
+  <title>personal-r-administration – personal radmin</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -46,7 +46,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -456,8 +456,7 @@ E. David Aja
 <li>misc ephemeral environments</li>
 </ul>
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <p>this is intended to provide context on my priorities / habits of thought: - it needs to work across operating systems - You can’t depend on having pro features - avoid admin where possible - as portable as practical - audit context means I need to be able to reproduce exactly - “run this command” preferable to a confluence page of screenshots</p>
 <style type="text/css">
@@ -558,7 +557,7 @@ That means that in addition to wanting our individual projects to flow smoothly,
 <h2>explore your package library</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>usethis<span class="sc">::</span><span class="fu">use_course</span>(<span class="st">"rstats-wtf/wtf-explore-libraries"</span>)</span>
 <span id="cb1-2"><a></a><span class="co"># use_course("rstats-wtf/wtf-explore-libraries", destdir = "my/new/location")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="timer_5f1bb518672c96a4604b46a8fbe547b393943cd1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_dc8bde39cf7d90f2d12f9f1e40930ec0222a7247" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -626,8 +625,7 @@ That means that in addition to wanting our individual projects to flow smoothly,
 <p>R may silently throw away the last line if you don’t do this.</p>
 </div><div class="column">
 <p><img data-src="img/insert-newline-end-highlight.png"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="renviron" class="slide level2">
 <h2><code>.Renviron</code></h2>
@@ -654,21 +652,16 @@ That means that in addition to wanting our individual projects to flow smoothly,
 </div><div class="column" style="width:60%;">
 <h3 id="project">project</h3>
 <p><code>path/to/your/project/.Renviron</code></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="example-.renviron" class="slide level2">
 <h2>example <code>.Renviron</code></h2>
-<h3 id="user-1">user</h3>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="va">PATH</span><span class="op">=</span><span class="st">"</span><span class="va">${RTOOLS40_HOME}</span><span class="st">\usr\bin;</span><span class="va">${PATH}</span><span class="st">"</span> <span class="co"># windows users</span></span>
-<span id="cb2-2"><a></a><span class="va">GITHUB_PAT</span><span class="op">=</span>ghp_gVa6xK3bwERJ7xpWvoWj2dXMit4z43fWE8R</span>
-<span id="cb2-3"><a></a><span class="va">CONNECT_API_KEY</span><span class="op">=</span>DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3</span>
-<span id="cb2-4"><a></a><span class="va">R_HISTSIZE</span><span class="op">=</span>100000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br></p>
-<h3 id="project-1">project</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="va">RETICULATE_PYTHON</span><span class="op">=</span>.venv/bin/python</span>
-<span id="cb3-2"><a></a><span class="va">DB_USER</span><span class="op">=</span>elephant</span>
-<span id="cb3-3"><a></a><span class="va">DB_PASS</span><span class="op">=</span>p0stgr3s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a></a><span class="va">CONNECT_API_KEY</span><span class="op">=</span>DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3</span>
+<span id="cb2-3"><a></a><span class="va">R_HISTSIZE</span><span class="op">=</span>100000</span>
+<span id="cb2-4"><a></a><span class="va">RETICULATE_PYTHON</span><span class="op">=</span>.venv/bin/python</span>
+<span id="cb2-5"><a></a><span class="va">DB_USER</span><span class="op">=</span>elephant</span>
+<span id="cb2-6"><a></a><span class="va">DB_PASS</span><span class="op">=</span>p0stgr3s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="read-environment-variables" class="slide level2">
 <h2>read environment variables</h2>
@@ -686,7 +679,7 @@ That means that in addition to wanting our individual projects to flow smoothly,
 <code>CMD  + SHIFT + 0</code></li>
 <li>Retrieve the value of WTF_USER <code>Sys.getenv("WTF_USER")</code></li>
 </ol>
-<div id="timer_5f1bb518672c96a4604b46a8fbe547b393943cd1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_dc8bde39cf7d90f2d12f9f1e40930ec0222a7247" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -704,7 +697,7 @@ That means that in addition to wanting our individual projects to flow smoothly,
 <code>CMD  + SHIFT + 0</code></li>
 <li>Retrieve the value of WTF_PROJECT <code>Sys.getenv("WTF_PROJECT")</code></li>
 </ol>
-<div id="timer_5f1bb518672c96a4604b46a8fbe547b393943cd1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_dc8bde39cf7d90f2d12f9f1e40930ec0222a7247" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -717,8 +710,7 @@ That means that in addition to wanting our individual projects to flow smoothly,
 </section>
 <section id="renviron-recap" class="slide level2">
 <h2><code>.Renviron</code> recap</h2>
-<p>project <code>.Renviron</code> “short-circuits”<br>
-if it exists, your user <code>.Renviron</code> will not be evaluated</p>
+<p>project <code>.Renviron</code> “short-circuits” if it exists, your user <code>.Renviron</code> will not be evaluated</p>
 </section>
 <section id="rprofile" class="slide level2">
 <h2><code>.Rprofile</code></h2>
@@ -744,8 +736,7 @@ if it exists, your user <code>.Renviron</code> will not be evaluated</p>
 <li>knitting an RMarkdown document</li>
 <li><code>R -e script.R</code></li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="what-to-put-in-.rprofile" class="slide level2">
 <h2>what to put in <code>.Rprofile</code></h2>
@@ -775,9 +766,9 @@ if it exists, your user <code>.Renviron</code> will not be evaluated</p>
 <p>Why <em>might</em> these be safe to put in <code>.Rprofile</code>?</p>
 </div>
 <p><br></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(usethis)</span>
-<span id="cb4-2"><a></a><span class="fu">library</span>(devtools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="timer_5f1bb518672c96a4604b46a8fbe547b393943cd1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(usethis)</span>
+<span id="cb3-2"><a></a><span class="fu">library</span>(devtools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="timer_dc8bde39cf7d90f2d12f9f1e40930ec0222a7247" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -818,7 +809,7 @@ if it exists, your user <code>.Renviron</code> will not be evaluated</p>
 </div>
 </div>
 </div>
-<div id="timer_5f1bb518672c96a4604b46a8fbe547b393943cd1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_dc8bde39cf7d90f2d12f9f1e40930ec0222a7247" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -845,8 +836,7 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 <ul>
 <li>development dependencies</li>
 </ul>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <p>Environment variables are inherited by child processes, so setting them early in the startup process is valuable Hosting providers trying to deal with secrets will often let you supply environment variables</p>
 <style type="text/css">
@@ -1111,62 +1101,62 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 <img data-src="img/compile-from-sources-question.png" class="r-stretch"></section>
 <section id="may-not-be-the-latest-2" class="slide level2">
 <h2>may not be the latest</h2>
-<div class="sourceCode" id="cb5" data-code-line-numbers="6-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"parallelly"</span>, <span class="at">repos =</span> <span class="st">"https://cran.rstudio.com"</span>)</span>
-<span id="cb5-2"><a></a></span>
-<span id="cb5-3"><a></a>Installing package into ‘C<span class="sc">:</span><span class="er">/</span>Users<span class="sc">/</span>WDAGUtilityAccount<span class="sc">/</span>Documents<span class="sc">/</span>R<span class="sc">/</span>win<span class="sc">-</span>library<span class="sc">/</span><span class="fl">4.0</span>’</span>
-<span id="cb5-4"><a></a>(as ‘lib’ is unspecified)</span>
-<span id="cb5-5"><a></a></span>
-<span id="cb5-6"><a></a>  There is a binary version available but the source version is later<span class="sc">:</span></span>
-<span id="cb5-7"><a></a>           binary source needs_compilation</span>
-<span id="cb5-8"><a></a>parallelly <span class="dv">1</span>.<span class="fl">31.0</span> <span class="dv">1</span>.<span class="fl">32.1</span>             <span class="cn">FALSE</span></span>
-<span id="cb5-9"><a></a></span>
-<span id="cb5-10"><a></a>installing the source package ‘parallelly’</span>
-<span id="cb5-11"><a></a></span>
-<span id="cb5-12"><a></a>trying URL <span class="st">'https://cran.rstudio.com/src/contrib/parallelly_1.32.1.tar.gz'</span></span>
-<span id="cb5-13"><a></a>Content type <span class="st">'application/x-gzip'</span> length <span class="dv">124853</span> <span class="fu">bytes</span> (<span class="dv">121</span> KB)</span>
-<span id="cb5-14"><a></a>downloaded <span class="dv">121</span> KB</span>
-<span id="cb5-15"><a></a></span>
-<span id="cb5-16"><a></a><span class="sc">*</span> installing <span class="sc">*</span>source<span class="sc">*</span> package <span class="st">'parallelly'</span> ...</span>
-<span id="cb5-17"><a></a><span class="sc">**</span> package <span class="st">'parallelly'</span> successfully unpacked and MD5 sums checked</span>
-<span id="cb5-18"><a></a><span class="sc">**</span> using staged installation</span>
-<span id="cb5-19"><a></a><span class="sc">**</span> R</span>
-<span id="cb5-20"><a></a><span class="sc">**</span> inst</span>
-<span id="cb5-21"><a></a><span class="sc">**</span> byte<span class="sc">-</span>compile and prepare package <span class="cf">for</span> lazy loading</span>
-<span id="cb5-22"><a></a><span class="sc">**</span> help</span>
-<span id="cb5-23"><a></a><span class="sc">**</span><span class="er">*</span> installing help indices</span>
-<span id="cb5-24"><a></a>  converting help <span class="cf">for</span> package <span class="st">'parallelly'</span></span>
-<span id="cb5-25"><a></a>    finding HTML links ... done</span>
-<span id="cb5-26"><a></a>    as.cluster                              html  </span>
-<span id="cb5-27"><a></a>    autoStopCluster                         html  </span>
-<span id="cb5-28"><a></a>    availableConnections                    html  </span>
-<span id="cb5-29"><a></a>    availableCores                          html  </span>
-<span id="cb5-30"><a></a>    availableWorkers                        html  </span>
-<span id="cb5-31"><a></a>    canPortBeUsed                           html  </span>
-<span id="cb5-32"><a></a>    cpuLoad                                 html  </span>
-<span id="cb5-33"><a></a>    find_rshcmd                             html  </span>
-<span id="cb5-34"><a></a>    freeCores                               html  </span>
-<span id="cb5-35"><a></a>    freePort                                html  </span>
-<span id="cb5-36"><a></a>    getOption2                              html  </span>
-<span id="cb5-37"><a></a>    isConnectionValid                       html  </span>
-<span id="cb5-38"><a></a>    isForkedChild                           html  </span>
-<span id="cb5-39"><a></a>    isForkedNode                            html  </span>
-<span id="cb5-40"><a></a>    isLocalhostNode                         html  </span>
-<span id="cb5-41"><a></a>    isNodeAlive                             html  </span>
-<span id="cb5-42"><a></a>    makeClusterMPI                          html  </span>
-<span id="cb5-43"><a></a>    makeClusterPSOCK                        html  </span>
-<span id="cb5-44"><a></a>    parallelly.options                      html  </span>
-<span id="cb5-45"><a></a>    pid_exists                              html  </span>
-<span id="cb5-46"><a></a>    supportsMulticore                       html  </span>
-<span id="cb5-47"><a></a><span class="sc">**</span><span class="er">*</span> copying figures</span>
-<span id="cb5-48"><a></a><span class="sc">**</span> building package indices</span>
-<span id="cb5-49"><a></a><span class="sc">**</span> testing <span class="cf">if</span> installed package can be loaded from temporary location</span>
-<span id="cb5-50"><a></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> i386</span>
-<span id="cb5-51"><a></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> x64</span>
-<span id="cb5-52"><a></a><span class="sc">**</span> testing <span class="cf">if</span> installed package can be loaded from final location</span>
-<span id="cb5-53"><a></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> i386</span>
-<span id="cb5-54"><a></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> x64</span>
-<span id="cb5-55"><a></a><span class="sc">**</span> testing <span class="cf">if</span> installed package keeps a record of temporary installation path</span>
-<span id="cb5-56"><a></a><span class="sc">*</span> <span class="fu">DONE</span> (parallelly)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4" data-code-line-numbers="6-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"parallelly"</span>, <span class="at">repos =</span> <span class="st">"https://cran.rstudio.com"</span>)</span>
+<span id="cb4-2"><a></a></span>
+<span id="cb4-3"><a></a>Installing package into ‘C<span class="sc">:</span><span class="er">/</span>Users<span class="sc">/</span>WDAGUtilityAccount<span class="sc">/</span>Documents<span class="sc">/</span>R<span class="sc">/</span>win<span class="sc">-</span>library<span class="sc">/</span><span class="fl">4.0</span>’</span>
+<span id="cb4-4"><a></a>(as ‘lib’ is unspecified)</span>
+<span id="cb4-5"><a></a></span>
+<span id="cb4-6"><a></a>  There is a binary version available but the source version is later<span class="sc">:</span></span>
+<span id="cb4-7"><a></a>           binary source needs_compilation</span>
+<span id="cb4-8"><a></a>parallelly <span class="dv">1</span>.<span class="fl">31.0</span> <span class="dv">1</span>.<span class="fl">32.1</span>             <span class="cn">FALSE</span></span>
+<span id="cb4-9"><a></a></span>
+<span id="cb4-10"><a></a>installing the source package ‘parallelly’</span>
+<span id="cb4-11"><a></a></span>
+<span id="cb4-12"><a></a>trying URL <span class="st">'https://cran.rstudio.com/src/contrib/parallelly_1.32.1.tar.gz'</span></span>
+<span id="cb4-13"><a></a>Content type <span class="st">'application/x-gzip'</span> length <span class="dv">124853</span> <span class="fu">bytes</span> (<span class="dv">121</span> KB)</span>
+<span id="cb4-14"><a></a>downloaded <span class="dv">121</span> KB</span>
+<span id="cb4-15"><a></a></span>
+<span id="cb4-16"><a></a><span class="sc">*</span> installing <span class="sc">*</span>source<span class="sc">*</span> package <span class="st">'parallelly'</span> ...</span>
+<span id="cb4-17"><a></a><span class="sc">**</span> package <span class="st">'parallelly'</span> successfully unpacked and MD5 sums checked</span>
+<span id="cb4-18"><a></a><span class="sc">**</span> using staged installation</span>
+<span id="cb4-19"><a></a><span class="sc">**</span> R</span>
+<span id="cb4-20"><a></a><span class="sc">**</span> inst</span>
+<span id="cb4-21"><a></a><span class="sc">**</span> byte<span class="sc">-</span>compile and prepare package <span class="cf">for</span> lazy loading</span>
+<span id="cb4-22"><a></a><span class="sc">**</span> help</span>
+<span id="cb4-23"><a></a><span class="sc">**</span><span class="er">*</span> installing help indices</span>
+<span id="cb4-24"><a></a>  converting help <span class="cf">for</span> package <span class="st">'parallelly'</span></span>
+<span id="cb4-25"><a></a>    finding HTML links ... done</span>
+<span id="cb4-26"><a></a>    as.cluster                              html  </span>
+<span id="cb4-27"><a></a>    autoStopCluster                         html  </span>
+<span id="cb4-28"><a></a>    availableConnections                    html  </span>
+<span id="cb4-29"><a></a>    availableCores                          html  </span>
+<span id="cb4-30"><a></a>    availableWorkers                        html  </span>
+<span id="cb4-31"><a></a>    canPortBeUsed                           html  </span>
+<span id="cb4-32"><a></a>    cpuLoad                                 html  </span>
+<span id="cb4-33"><a></a>    find_rshcmd                             html  </span>
+<span id="cb4-34"><a></a>    freeCores                               html  </span>
+<span id="cb4-35"><a></a>    freePort                                html  </span>
+<span id="cb4-36"><a></a>    getOption2                              html  </span>
+<span id="cb4-37"><a></a>    isConnectionValid                       html  </span>
+<span id="cb4-38"><a></a>    isForkedChild                           html  </span>
+<span id="cb4-39"><a></a>    isForkedNode                            html  </span>
+<span id="cb4-40"><a></a>    isLocalhostNode                         html  </span>
+<span id="cb4-41"><a></a>    isNodeAlive                             html  </span>
+<span id="cb4-42"><a></a>    makeClusterMPI                          html  </span>
+<span id="cb4-43"><a></a>    makeClusterPSOCK                        html  </span>
+<span id="cb4-44"><a></a>    parallelly.options                      html  </span>
+<span id="cb4-45"><a></a>    pid_exists                              html  </span>
+<span id="cb4-46"><a></a>    supportsMulticore                       html  </span>
+<span id="cb4-47"><a></a><span class="sc">**</span><span class="er">*</span> copying figures</span>
+<span id="cb4-48"><a></a><span class="sc">**</span> building package indices</span>
+<span id="cb4-49"><a></a><span class="sc">**</span> testing <span class="cf">if</span> installed package can be loaded from temporary location</span>
+<span id="cb4-50"><a></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> i386</span>
+<span id="cb4-51"><a></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> x64</span>
+<span id="cb4-52"><a></a><span class="sc">**</span> testing <span class="cf">if</span> installed package can be loaded from final location</span>
+<span id="cb4-53"><a></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> i386</span>
+<span id="cb4-54"><a></a><span class="sc">**</span><span class="er">*</span> arch <span class="sc">-</span> x64</span>
+<span id="cb4-55"><a></a><span class="sc">**</span> testing <span class="cf">if</span> installed package keeps a record of temporary installation path</span>
+<span id="cb4-56"><a></a><span class="sc">*</span> <span class="fu">DONE</span> (parallelly)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="posit-package-manager" class="slide level2">
 <h2><a href="https://p3m.dev">Posit Package Manager</a></h2>
@@ -1182,52 +1172,52 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 <ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">CRAN <i class="fa-brands fa-windows"></i></a></li><li><a href="#tabset-2-2">CRAN <i class="fa-brands fa-apple"></i></a></li><li><a href="#tabset-2-3">PPM</a></li><li><a href="#tabset-2-4">renv</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
-<div class="sourceCode" id="cb6" data-code-line-numbers="5,10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"parallelly"</span>, <span class="at">repos =</span> <span class="st">"https://cran.rstudio.com"</span>)</span>
-<span id="cb6-2"><a></a>Installing package into ‘C<span class="sc">:</span><span class="er">/</span>Users<span class="sc">/</span>edavi<span class="sc">/</span>Documents<span class="sc">/</span>R<span class="sc">/</span>win<span class="sc">-</span>library<span class="sc">/</span><span class="fl">4.1</span>’</span>
-<span id="cb6-3"><a></a>(as ‘lib’ is unspecified)</span>
-<span id="cb6-4"><a></a>trying URL <span class="st">'https://cran.rstudio.com/bin/windows/contrib/4.1/parallelly_1.32.1.zip'</span></span>
-<span id="cb6-5"><a></a>Content type <span class="st">'application/zip'</span> length <span class="dv">306137</span> <span class="fu">bytes</span> (<span class="dv">298</span> KB)</span>
-<span id="cb6-6"><a></a>downloaded <span class="dv">298</span> KB</span>
-<span id="cb6-7"><a></a></span>
-<span id="cb6-8"><a></a>package ‘parallelly’ successfully unpacked and MD5 sums checked</span>
-<span id="cb6-9"><a></a></span>
-<span id="cb6-10"><a></a>The downloaded binary packages are <span class="cf">in</span></span>
-<span id="cb6-11"><a></a>    C<span class="sc">:</span>\Users\edavi\AppData\Local\Temp\Rtmpa2s3e8\downloaded_packages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5" data-code-line-numbers="5,10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"parallelly"</span>, <span class="at">repos =</span> <span class="st">"https://cran.rstudio.com"</span>)</span>
+<span id="cb5-2"><a></a>Installing package into ‘C<span class="sc">:</span><span class="er">/</span>Users<span class="sc">/</span>edavi<span class="sc">/</span>Documents<span class="sc">/</span>R<span class="sc">/</span>win<span class="sc">-</span>library<span class="sc">/</span><span class="fl">4.1</span>’</span>
+<span id="cb5-3"><a></a>(as ‘lib’ is unspecified)</span>
+<span id="cb5-4"><a></a>trying URL <span class="st">'https://cran.rstudio.com/bin/windows/contrib/4.1/parallelly_1.32.1.zip'</span></span>
+<span id="cb5-5"><a></a>Content type <span class="st">'application/zip'</span> length <span class="dv">306137</span> <span class="fu">bytes</span> (<span class="dv">298</span> KB)</span>
+<span id="cb5-6"><a></a>downloaded <span class="dv">298</span> KB</span>
+<span id="cb5-7"><a></a></span>
+<span id="cb5-8"><a></a>package ‘parallelly’ successfully unpacked and MD5 sums checked</span>
+<span id="cb5-9"><a></a></span>
+<span id="cb5-10"><a></a>The downloaded binary packages are <span class="cf">in</span></span>
+<span id="cb5-11"><a></a>    C<span class="sc">:</span>\Users\edavi\AppData\Local\Temp\Rtmpa2s3e8\downloaded_packages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-2-2">
-<div class="sourceCode" id="cb7" data-code-line-numbers="4,10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"renv"</span>, <span class="at">repos=</span><span class="st">"https://cran.rstudio.com"</span>)</span>
-<span id="cb7-2"><a></a>Installing package into ‘<span class="sc">/</span>Users<span class="sc">/</span>edavidaja<span class="sc">/</span>Library<span class="sc">/</span>R<span class="sc">/</span>x86_64<span class="sc">/</span><span class="fl">4.1</span><span class="sc">/</span>library’</span>
-<span id="cb7-3"><a></a>(as ‘lib’ is unspecified)</span>
-<span id="cb7-4"><a></a>trying URL <span class="st">'https://cran.rstudio.com/bin/macosx/contrib/4.1/renv_0.15.5.tgz'</span></span>
-<span id="cb7-5"><a></a>Content type <span class="st">'application/x-gzip'</span> length <span class="dv">1866760</span> <span class="fu">bytes</span> (<span class="fl">1.8</span> MB)</span>
-<span id="cb7-6"><a></a><span class="sc">==</span><span class="er">================================================</span></span>
-<span id="cb7-7"><a></a>downloaded <span class="fl">1.8</span> MB</span>
-<span id="cb7-8"><a></a></span>
-<span id="cb7-9"><a></a></span>
-<span id="cb7-10"><a></a>The downloaded binary packages are <span class="cf">in</span></span>
-<span id="cb7-11"><a></a> <span class="sc">/</span>var<span class="sc">/</span>folders<span class="sc">/</span>b5<span class="sc">/</span>fl4ff68d23s148tg1_1gnflc0000gn<span class="sc">/</span>T<span class="sc">/</span><span class="er">/</span>RtmpMk69B0<span class="sc">/</span>downloaded_packages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6" data-code-line-numbers="4,10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"renv"</span>, <span class="at">repos=</span><span class="st">"https://cran.rstudio.com"</span>)</span>
+<span id="cb6-2"><a></a>Installing package into ‘<span class="sc">/</span>Users<span class="sc">/</span>edavidaja<span class="sc">/</span>Library<span class="sc">/</span>R<span class="sc">/</span>x86_64<span class="sc">/</span><span class="fl">4.1</span><span class="sc">/</span>library’</span>
+<span id="cb6-3"><a></a>(as ‘lib’ is unspecified)</span>
+<span id="cb6-4"><a></a>trying URL <span class="st">'https://cran.rstudio.com/bin/macosx/contrib/4.1/renv_0.15.5.tgz'</span></span>
+<span id="cb6-5"><a></a>Content type <span class="st">'application/x-gzip'</span> length <span class="dv">1866760</span> <span class="fu">bytes</span> (<span class="fl">1.8</span> MB)</span>
+<span id="cb6-6"><a></a><span class="sc">==</span><span class="er">================================================</span></span>
+<span id="cb6-7"><a></a>downloaded <span class="fl">1.8</span> MB</span>
+<span id="cb6-8"><a></a></span>
+<span id="cb6-9"><a></a></span>
+<span id="cb6-10"><a></a>The downloaded binary packages are <span class="cf">in</span></span>
+<span id="cb6-11"><a></a> <span class="sc">/</span>var<span class="sc">/</span>folders<span class="sc">/</span>b5<span class="sc">/</span>fl4ff68d23s148tg1_1gnflc0000gn<span class="sc">/</span>T<span class="sc">/</span><span class="er">/</span>RtmpMk69B0<span class="sc">/</span>downloaded_packages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-2-3">
-<div class="sourceCode" id="cb8" data-code-line-numbers="10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
-<span id="cb8-2"><a></a>Installing package into ‘C<span class="sc">:</span><span class="er">/</span>Users<span class="sc">/</span>WDAGUtilityAccount<span class="sc">/</span>AppData<span class="sc">/</span>Local<span class="sc">/</span>R<span class="sc">/</span>win<span class="sc">-</span>library<span class="sc">/</span><span class="fl">4.2</span>’</span>
-<span id="cb8-3"><a></a>(as ‘lib’ is unspecified)</span>
-<span id="cb8-4"><a></a>trying URL <span class="st">'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/remotes_2.4.2.zip'</span></span>
-<span id="cb8-5"><a></a>Content type <span class="st">'binary/octet-stream'</span> length <span class="dv">399930</span> <span class="fu">bytes</span> (<span class="dv">390</span> KB)</span>
-<span id="cb8-6"><a></a>downloaded <span class="dv">390</span> KB</span>
-<span id="cb8-7"><a></a></span>
-<span id="cb8-8"><a></a>package ‘remotes’ successfully unpacked and MD5 sums checked</span>
-<span id="cb8-9"><a></a></span>
-<span id="cb8-10"><a></a>The downloaded binary packages are <span class="cf">in</span></span>
-<span id="cb8-11"><a></a>  C<span class="sc">:</span>\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpA1edRi\downloaded_packages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7" data-code-line-numbers="10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb7-2"><a></a>Installing package into ‘C<span class="sc">:</span><span class="er">/</span>Users<span class="sc">/</span>WDAGUtilityAccount<span class="sc">/</span>AppData<span class="sc">/</span>Local<span class="sc">/</span>R<span class="sc">/</span>win<span class="sc">-</span>library<span class="sc">/</span><span class="fl">4.2</span>’</span>
+<span id="cb7-3"><a></a>(as ‘lib’ is unspecified)</span>
+<span id="cb7-4"><a></a>trying URL <span class="st">'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/remotes_2.4.2.zip'</span></span>
+<span id="cb7-5"><a></a>Content type <span class="st">'binary/octet-stream'</span> length <span class="dv">399930</span> <span class="fu">bytes</span> (<span class="dv">390</span> KB)</span>
+<span id="cb7-6"><a></a>downloaded <span class="dv">390</span> KB</span>
+<span id="cb7-7"><a></a></span>
+<span id="cb7-8"><a></a>package ‘remotes’ successfully unpacked and MD5 sums checked</span>
+<span id="cb7-9"><a></a></span>
+<span id="cb7-10"><a></a>The downloaded binary packages are <span class="cf">in</span></span>
+<span id="cb7-11"><a></a>  C<span class="sc">:</span>\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpA1edRi\downloaded_packages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-2-4">
-<div class="sourceCode" id="cb9" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="sc">&gt;</span> renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"fs"</span>)</span>
-<span id="cb9-2"><a></a>Retrieving <span class="st">'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/fs_1.5.2.zip'</span> ...</span>
-<span id="cb9-3"><a></a>  OK [downloaded <span class="fl">380.9</span> Kb <span class="cf">in</span> <span class="fl">0.5</span> secs]</span>
-<span id="cb9-4"><a></a>Installing fs [<span class="dv">1</span>.<span class="fl">5.2</span>] ...</span>
-<span id="cb9-5"><a></a>  OK [installed binary]</span>
-<span id="cb9-6"><a></a>Moving fs [<span class="dv">1</span>.<span class="fl">5.2</span>] into the cache ...</span>
-<span id="cb9-7"><a></a>  OK [moved to cache <span class="cf">in</span> <span class="fl">7.4</span> milliseconds]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="sc">&gt;</span> renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"fs"</span>)</span>
+<span id="cb8-2"><a></a>Retrieving <span class="st">'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/fs_1.5.2.zip'</span> ...</span>
+<span id="cb8-3"><a></a>  OK [downloaded <span class="fl">380.9</span> Kb <span class="cf">in</span> <span class="fl">0.5</span> secs]</span>
+<span id="cb8-4"><a></a>Installing fs [<span class="dv">1</span>.<span class="fl">5.2</span>] ...</span>
+<span id="cb8-5"><a></a>  OK [installed binary]</span>
+<span id="cb8-6"><a></a>Moving fs [<span class="dv">1</span>.<span class="fl">5.2</span>] into the cache ...</span>
+<span id="cb8-7"><a></a>  OK [moved to cache <span class="cf">in</span> <span class="fl">7.4</span> milliseconds]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1235,9 +1225,9 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 <section id="pop-quiz-hotshot" class="slide level2">
 <h2>pop quiz, hotshot</h2>
 <div class="question">
-<p>Does Posit Package Manager serve a binary of <code>dplyr</code> for R 3.4?</p>
+<p>Does Posit Package Manager serve a binary of <code>dplyr</code> for R 3.6?</p>
 </div>
-<div id="timer_5f1bb518672c96a4604b46a8fbe547b393943cd1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_dc8bde39cf7d90f2d12f9f1e40930ec0222a7247" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -1274,34 +1264,34 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 <ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1"><code>make</code></a></li><li><a href="#tabset-3-2"><code>g++</code></a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
-<div class="sourceCode" id="cb10" data-code-line-numbers="11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>Running <span class="st">`</span><span class="at">R CMD build</span><span class="st">`</span>...</span>
-<span id="cb10-2"><a></a><span class="sc">*</span> checking <span class="cf">for</span> file <span class="st">'C:\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpkTUH61</span><span class="sc">\r</span><span class="st">emotes192027624804</span><span class="sc">\t</span><span class="st">idyverse-dplyr-36ef054/DESCRIPTION'</span> ... OK</span>
-<span id="cb10-3"><a></a><span class="sc">*</span> preparing <span class="st">'dplyr'</span><span class="sc">:</span></span>
-<span id="cb10-4"><a></a><span class="er">*</span> checking DESCRIPTION meta<span class="sc">-</span>information ... OK</span>
-<span id="cb10-5"><a></a><span class="sc">*</span> cleaning src</span>
-<span id="cb10-6"><a></a><span class="sc">*</span> installing the package to process help pages</span>
-<span id="cb10-7"><a></a>      <span class="sc">-----------------------------------</span></span>
-<span id="cb10-8"><a></a><span class="er">*</span> installing <span class="sc">*</span>source<span class="sc">*</span> package <span class="st">'dplyr'</span> ...</span>
-<span id="cb10-9"><a></a><span class="sc">**</span> using staged installation</span>
-<span id="cb10-10"><a></a><span class="sc">**</span> libs</span>
-<span id="cb10-11"><a></a>Warning <span class="cf">in</span> <span class="fu">system</span>(cmd) <span class="sc">:</span> <span class="st">'make'</span> not found</span>
-<span id="cb10-12"><a></a>ERROR<span class="sc">:</span> compilation failed <span class="cf">for</span> package <span class="st">'dplyr'</span></span>
-<span id="cb10-13"><a></a><span class="sc">*</span> removing <span class="st">'C:/Users/WDAGUT~1/AppData/Local/Temp/Rtmp6hYuyV/Rinst1334d1a23d1/dplyr'</span></span>
-<span id="cb10-14"><a></a>      <span class="sc">-----------------------------------</span></span>
-<span id="cb10-15"><a></a>ERROR<span class="sc">:</span> package installation failed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9" data-code-line-numbers="11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>Running <span class="st">`</span><span class="at">R CMD build</span><span class="st">`</span>...</span>
+<span id="cb9-2"><a></a><span class="sc">*</span> checking <span class="cf">for</span> file <span class="st">'C:\Users\WDAGUtilityAccount\AppData\Local\Temp\RtmpkTUH61</span><span class="sc">\r</span><span class="st">emotes192027624804</span><span class="sc">\t</span><span class="st">idyverse-dplyr-36ef054/DESCRIPTION'</span> ... OK</span>
+<span id="cb9-3"><a></a><span class="sc">*</span> preparing <span class="st">'dplyr'</span><span class="sc">:</span></span>
+<span id="cb9-4"><a></a><span class="er">*</span> checking DESCRIPTION meta<span class="sc">-</span>information ... OK</span>
+<span id="cb9-5"><a></a><span class="sc">*</span> cleaning src</span>
+<span id="cb9-6"><a></a><span class="sc">*</span> installing the package to process help pages</span>
+<span id="cb9-7"><a></a>      <span class="sc">-----------------------------------</span></span>
+<span id="cb9-8"><a></a><span class="er">*</span> installing <span class="sc">*</span>source<span class="sc">*</span> package <span class="st">'dplyr'</span> ...</span>
+<span id="cb9-9"><a></a><span class="sc">**</span> using staged installation</span>
+<span id="cb9-10"><a></a><span class="sc">**</span> libs</span>
+<span id="cb9-11"><a></a>Warning <span class="cf">in</span> <span class="fu">system</span>(cmd) <span class="sc">:</span> <span class="st">'make'</span> not found</span>
+<span id="cb9-12"><a></a>ERROR<span class="sc">:</span> compilation failed <span class="cf">for</span> package <span class="st">'dplyr'</span></span>
+<span id="cb9-13"><a></a><span class="sc">*</span> removing <span class="st">'C:/Users/WDAGUT~1/AppData/Local/Temp/Rtmp6hYuyV/Rinst1334d1a23d1/dplyr'</span></span>
+<span id="cb9-14"><a></a>      <span class="sc">-----------------------------------</span></span>
+<span id="cb9-15"><a></a>ERROR<span class="sc">:</span> package installation failed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-3-2">
-<div class="sourceCode" id="cb11" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>Warning <span class="cf">in</span> <span class="fu">untar2</span>(tarfile, files, list, exdir, restore_times) <span class="sc">:</span></span>
-<span id="cb11-2"><a></a>  skipping pax global extended headers</span>
-<span id="cb11-3"><a></a><span class="sc">*</span> installing <span class="sc">*</span>source<span class="sc">*</span> package <span class="st">'dplyr'</span> ...</span>
-<span id="cb11-4"><a></a><span class="sc">**</span> using staged installation</span>
-<span id="cb11-5"><a></a><span class="sc">**</span> libs</span>
-<span id="cb11-6"><a></a>c<span class="sc">:</span><span class="er">/</span>Rtools<span class="sc">/</span>mingw_64<span class="sc">/</span>bin<span class="sc">/</span>g<span class="sc">++</span> <span class="sc">-</span>std<span class="ot">=</span>gnu<span class="sc">++</span><span class="dv">11</span>  <span class="sc">-</span>I<span class="st">"C:/PROGRA~1/R/R-36~1.3/include"</span> <span class="sc">-</span>DNDEBUG          <span class="sc">-</span>O2 <span class="sc">-</span>Wall  <span class="sc">-</span>mtune<span class="ot">=</span>core2 <span class="sc">-</span>c filter.cpp <span class="sc">-</span>o filter.o</span>
-<span id="cb11-7"><a></a>sh<span class="sc">:</span> line <span class="dv">1</span><span class="sc">:</span> c<span class="sc">:</span><span class="er">/</span>Rtools<span class="sc">/</span>mingw_64<span class="sc">/</span>bin<span class="sc">/</span>g<span class="sc">++</span><span class="er">:</span> No such file or directory</span>
-<span id="cb11-8"><a></a>make<span class="sc">:</span> <span class="er">***</span> [C<span class="sc">:</span><span class="er">/</span>PROGRA<span class="sc">~</span><span class="dv">1</span><span class="sc">/</span>R<span class="sc">/</span>R<span class="dv">-36</span><span class="sc">~</span><span class="fl">1.3</span><span class="sc">/</span>etc<span class="sc">/</span>x64<span class="sc">/</span>Makeconf<span class="sc">:</span><span class="dv">215</span><span class="sc">:</span> filter.o] Error <span class="dv">127</span></span>
-<span id="cb11-9"><a></a>ERROR<span class="sc">:</span> compilation failed <span class="cf">for</span> package <span class="st">'dplyr'</span></span>
-<span id="cb11-10"><a></a><span class="sc">*</span> removing <span class="st">'C:/Users/edavi/DOCUME~1/projects/WTF-PR~1/renv/staging/1/dplyr'</span></span>
-<span id="cb11-11"><a></a>Error<span class="sc">:</span> install of package <span class="st">'dplyr'</span> failed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>Warning <span class="cf">in</span> <span class="fu">untar2</span>(tarfile, files, list, exdir, restore_times) <span class="sc">:</span></span>
+<span id="cb10-2"><a></a>  skipping pax global extended headers</span>
+<span id="cb10-3"><a></a><span class="sc">*</span> installing <span class="sc">*</span>source<span class="sc">*</span> package <span class="st">'dplyr'</span> ...</span>
+<span id="cb10-4"><a></a><span class="sc">**</span> using staged installation</span>
+<span id="cb10-5"><a></a><span class="sc">**</span> libs</span>
+<span id="cb10-6"><a></a>c<span class="sc">:</span><span class="er">/</span>Rtools<span class="sc">/</span>mingw_64<span class="sc">/</span>bin<span class="sc">/</span>g<span class="sc">++</span> <span class="sc">-</span>std<span class="ot">=</span>gnu<span class="sc">++</span><span class="dv">11</span>  <span class="sc">-</span>I<span class="st">"C:/PROGRA~1/R/R-36~1.3/include"</span> <span class="sc">-</span>DNDEBUG          <span class="sc">-</span>O2 <span class="sc">-</span>Wall  <span class="sc">-</span>mtune<span class="ot">=</span>core2 <span class="sc">-</span>c filter.cpp <span class="sc">-</span>o filter.o</span>
+<span id="cb10-7"><a></a>sh<span class="sc">:</span> line <span class="dv">1</span><span class="sc">:</span> c<span class="sc">:</span><span class="er">/</span>Rtools<span class="sc">/</span>mingw_64<span class="sc">/</span>bin<span class="sc">/</span>g<span class="sc">++</span><span class="er">:</span> No such file or directory</span>
+<span id="cb10-8"><a></a>make<span class="sc">:</span> <span class="er">***</span> [C<span class="sc">:</span><span class="er">/</span>PROGRA<span class="sc">~</span><span class="dv">1</span><span class="sc">/</span>R<span class="sc">/</span>R<span class="dv">-36</span><span class="sc">~</span><span class="fl">1.3</span><span class="sc">/</span>etc<span class="sc">/</span>x64<span class="sc">/</span>Makeconf<span class="sc">:</span><span class="dv">215</span><span class="sc">:</span> filter.o] Error <span class="dv">127</span></span>
+<span id="cb10-9"><a></a>ERROR<span class="sc">:</span> compilation failed <span class="cf">for</span> package <span class="st">'dplyr'</span></span>
+<span id="cb10-10"><a></a><span class="sc">*</span> removing <span class="st">'C:/Users/edavi/DOCUME~1/projects/WTF-PR~1/renv/staging/1/dplyr'</span></span>
+<span id="cb10-11"><a></a>Error<span class="sc">:</span> install of package <span class="st">'dplyr'</span> failed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1317,11 +1307,11 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 <div id="tabset-4-2">
 <p><a href="https://apps.apple.com/us/app/xcode/id497799835?mt=12">XCode</a></p>
 <p><span class="emoji" data-emoji="warning">⚠️</span> don’t run right now</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a><span class="ex">xcode-select</span> <span class="at">--install</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a><span class="ex">xcode-select</span> <span class="at">--install</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-4-3">
 <p>install tools via package manager, e.g.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a></a><span class="ex">apt</span> install make</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a></a><span class="ex">apt</span> install make</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1346,16 +1336,16 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 <li><p><code>install.packages("gitcellar")</code> # not on cran!</p></li>
 <li><p>update your project <code>.Rprofile</code>:<br>
 <code>usethis::edit_r_profile(scope = "project")</code></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(</span>
-<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">ropensci =</span> <span class="st">"https://ropensci.r-universe.dev"</span>,</span>
-<span id="cb14-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>, <span class="co"># macOS</span></span>
-<span id="cb14-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">RSPM =</span> <span class="st">"https://packagemanager.rstudio.com/cran/latest"</span> <span class="co"># windows</span></span>
-<span id="cb14-5"><a aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(</span>
+<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">ropensci =</span> <span class="st">"https://ropensci.r-universe.dev"</span>,</span>
+<span id="cb13-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>, <span class="co"># macOS</span></span>
+<span id="cb13-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">RSPM =</span> <span class="st">"https://packagemanager.rstudio.com/cran/latest"</span> <span class="co"># windows</span></span>
+<span id="cb13-5"><a aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>save <code>.Rprofile</code> and restart R</p></li>
 <li><p><code>install.packages("gitcellar")</code></p></li>
 </ol>
 </div>
-<div id="timer_5f1bb518672c96a4604b46a8fbe547b393943cd1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_dc8bde39cf7d90f2d12f9f1e40930ec0222a7247" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -1458,8 +1448,7 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 <div class="r-stack">
 <img data-src="img/renv-small.png" class="r-stretch">
 </div>
-</div>
-</div>
+</div></div>
 <aside class="notes">
 <p>renv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - <code>renv::install()</code> can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache - makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out</p>
 <style type="text/css">
@@ -1496,12 +1485,12 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 <ol type="1">
 <li><p>open the <code>personal-radmin</code> project</p></li>
 <li><p>update your project <code>.Rprofile</code> with a date-based snapshot of CRAN</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">RSPM =</span> <span class="st">"https://p3m.dev/cran/2021-03-31"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">RSPM =</span> <span class="st">"https://p3m.dev/cran/2021-03-31"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Restart R</p></li>
 <li><p><code>install.packages("dplyr")</code></p></li>
 </ol>
 <p>what version of dplyr did you install?</p>
-<div id="timer_5f1bb518672c96a4604b46a8fbe547b393943cd1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_dc8bde39cf7d90f2d12f9f1e40930ec0222a7247" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -1580,9 +1569,9 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
       }</style></aside>
 <p><br></p>
 <h3 id="libpaths"><code>.libPaths()</code></h3>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">.libPaths</span>()</span>
-<span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"C:/Users/edavi/AppData/Local/R/win-library/4.4"</span> <span class="co"># user</span></span>
-<span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>] <span class="st">"C:/Program Files/R/R-4.4.0/library"</span> <span class="co"># system</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">.libPaths</span>()</span>
+<span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"C:/Users/edavi/AppData/Local/R/win-library/4.4"</span> <span class="co"># user</span></span>
+<span id="cb15-3"><a aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>] <span class="st">"C:/Program Files/R/R-4.4.0/library"</span> <span class="co"># system</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="isolated-project-environments" class="slide level2">
 <h2>isolated project environments</h2>
@@ -1656,10 +1645,10 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 </div>
 <p><br></p>
 <h3 id="libpaths-1"><code>.libPaths()</code></h3>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Project <span class="st">'~/sample-project'</span> loaded. [renv <span class="dv">1</span>.<span class="fl">0.7</span>]</span>
-<span id="cb17-2"><a aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">.libPaths</span>()</span>
-<span id="cb17-3"><a aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"C:/Users/edavi/Documents/sample-project/renv/library/windows/R-4.4/x86_64-w64-mingw32"</span>        </span>
-<span id="cb17-4"><a aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>] <span class="st">"C:/Users/edavi/AppData/Local/R/cache/R/renv/sandbox/windows/R-4.4/x86_64-w64-mingw32/88765555"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> Project <span class="st">'~/sample-project'</span> loaded. [renv <span class="dv">1</span>.<span class="fl">0.7</span>]</span>
+<span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">.libPaths</span>()</span>
+<span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"C:/Users/edavi/Documents/sample-project/renv/library/windows/R-4.4/x86_64-w64-mingw32"</span>        </span>
+<span id="cb16-4"><a aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>] <span class="st">"C:/Users/edavi/AppData/Local/R/cache/R/renv/sandbox/windows/R-4.4/x86_64-w64-mingw32/88765555"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="isolated-project-environments-1" class="slide level2">
 <h2>isolated project environments</h2>
@@ -1689,7 +1678,7 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 <li><code>renv::status()</code></li>
 </ol>
 </div>
-<div id="timer_5f1bb518672c96a4604b46a8fbe547b393943cd1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_dc8bde39cf7d90f2d12f9f1e40930ec0222a7247" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -1714,18 +1703,18 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 <section id="renvinstall" class="slide level2">
 <h2><code>renv::install()</code></h2>
 <p>or <a href="https://rstudio.github.io/renv/articles/renv.html#shims"><code>install.packages()</code></a> with shims enabled</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite"</span>)</span>
-<span id="cb19-2"><a></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite@1.2"</span>) <span class="co"># at version</span></span>
-<span id="cb19-3"><a></a>renv<span class="sc">::</span>install<span class="st">"jeroen/jsonlite"</span><span class="er">)</span> <span class="co"># latest</span></span>
-<span id="cb19-4"><a></a>renv<span class="sc">::</span>install<span class="st">"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d"</span><span class="er">)</span> <span class="co"># at SHA</span></span>
-<span id="cb19-5"><a></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"path/to/package"</span>) <span class="co"># local source</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite"</span>)</span>
+<span id="cb18-2"><a></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite@1.2"</span>) <span class="co"># at version</span></span>
+<span id="cb18-3"><a></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jeroen/jsonlite"</span>) <span class="co"># latest</span></span>
+<span id="cb18-4"><a></a>renv<span class="sc">::</span>install<span class="st">"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d"</span><span class="er">)</span> <span class="co"># at SHA</span></span>
+<span id="cb18-5"><a></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"path/to/package"</span>) <span class="co"># local source</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr>
 <div class="fragment">
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite"</span>)</span>
-<span id="cb20-2"><a></a>devtools<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">"jsonlite@1.2"</span>) <span class="co"># at version</span></span>
-<span id="cb20-3"><a></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"jeroen/jsonlite"</span>) <span class="co"># latest</span></span>
-<span id="cb20-4"><a></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d"</span>) <span class="co"># at SHA</span></span>
-<span id="cb20-5"><a></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"path/to/package"</span>) <span class="co"># local source</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"jsonlite"</span>)</span>
+<span id="cb19-2"><a></a>devtools<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">"jsonlite@1.2"</span>) <span class="co"># at version</span></span>
+<span id="cb19-3"><a></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"jeroen/jsonlite"</span>) <span class="co"># latest</span></span>
+<span id="cb19-4"><a></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"jeroen/jsonlite@80854359976250f30a86a6992c0d8c3b3d95473d"</span>) <span class="co"># at SHA</span></span>
+<span id="cb19-5"><a></a>devtools<span class="sc">::</span><span class="fu">install</span>(<span class="st">"path/to/package"</span>) <span class="co"># local source</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="the-junk-drawer" class="slide level2">
@@ -1871,21 +1860,25 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 </section>
 <section id="language-managers" class="slide level2">
 <h2>language managers</h2>
-<p>using your package manager, install a language manager</p>
+<p>using your package manager, install <a href="https://github.com/r-lib/rig">rig</a>:</p>
 <div class="panel-tabset">
 <ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">windows</a></li><li><a href="#tabset-6-2">*nix</a></li></ul>
 <div class="tab-content">
 <div id="tabset-6-1">
-<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a aria-hidden="true" tabindex="-1"></a><span class="ex">scoop</span> install rig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a aria-hidden="true" tabindex="-1"></a><span class="ex">scoop</span> install rig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-6-2">
-<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install rig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install rig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <div class="small">
 <p>language managers for other languages:</p>
-<p><i class="fa-brands fa-python"></i> pyenv <i class="fa-brands fa-node-js"></i> nvm <i class="fa-brands fa-rust"></i> rustup</p>
+<p><i class="fa-brands fa-python"></i> <a href="https://github.com/pyenv/pyenv">pyenv</a><br>
+<i class="fa-brands fa-node-js"></i> <a href="https://github.com/nvm-sh/nvm">nvm</a><br>
+<i class="fa-brands fa-rust"></i> <a href="https://rustup.rs/">rustup</a><br>
+<i class="fa-solid fa-globe"></i> <a href="https://asdf-vm.com/">asdf</a><br>
+<i class="fa-solid fa-globe"></i> <a href="https://mise.jdx.dev/">mise-en-place</a></p>
 </div>
 <aside class="notes">
 <ul>
@@ -1916,32 +1909,26 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 <p><img data-src="img/r_version_select_windows-highlight.png"></p>
 </div>
 </section>
-<section id="switching-r-versions-2" class="slide level2">
-<h2>switching R versions <i class="fa-brands fa-apple"></i></h2>
-<div class="r-fit-text">
-<p><a href="https://rud.is/rswitch/">RSwitch</a></p>
-</div>
-</section>
 <section id="language-versions" class="slide level2">
 <h2>language versions</h2>
-<p>using your language manager, install a language version:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb23-1"><a></a>❯ rig install --help</span>
-<span id="cb23-2"><a></a>rig-add</span>
-<span id="cb23-3"><a></a></span>
-<span id="cb23-4"><a></a>DESCRIPTION:</span>
-<span id="cb23-5"><a></a>    Download and install an R version, from the official sources.</span>
-<span id="cb23-6"><a></a>    It keeps the already installed R versions, except versions within the</span>
-<span id="cb23-7"><a></a>    same minor branch, see below.</span>
-<span id="cb23-8"><a></a></span>
-<span id="cb23-9"><a></a>EXAMPLES:</span>
-<span id="cb23-10"><a></a>    # Add the latest release</span>
-<span id="cb23-11"><a></a>    rig add release</span>
-<span id="cb23-12"><a></a></span>
-<span id="cb23-13"><a></a>    # Install specific version</span>
-<span id="cb23-14"><a></a>    rig add 4.1.2</span>
-<span id="cb23-15"><a></a></span>
-<span id="cb23-16"><a></a>    # Install latest version within a minor branch</span>
-<span id="cb23-17"><a></a>    rig add 4.1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>using <code>rig</code>, install a version of R:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb22-1"><a></a>❯ rig install --help</span>
+<span id="cb22-2"><a></a>rig-add</span>
+<span id="cb22-3"><a></a></span>
+<span id="cb22-4"><a></a>DESCRIPTION:</span>
+<span id="cb22-5"><a></a>    Download and install an R version, from the official sources.</span>
+<span id="cb22-6"><a></a>    It keeps the already installed R versions, except versions within the</span>
+<span id="cb22-7"><a></a>    same minor branch, see below.</span>
+<span id="cb22-8"><a></a></span>
+<span id="cb22-9"><a></a>EXAMPLES:</span>
+<span id="cb22-10"><a></a>    # Add the latest release</span>
+<span id="cb22-11"><a></a>    rig add release</span>
+<span id="cb22-12"><a></a></span>
+<span id="cb22-13"><a></a>    # Install specific version</span>
+<span id="cb22-14"><a></a>    rig add 4.1.2</span>
+<span id="cb22-15"><a></a></span>
+<span id="cb22-16"><a></a>    # Install latest version within a minor branch</span>
+<span id="cb22-17"><a></a>    rig add 4.1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
 <p>if you’re running a distribution of linux that rig doesn’t support: - https://docs.rstudio.com/resources/install-r/</p>
 <p>if no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/</p>
@@ -1964,14 +1951,14 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 <p><code>install.packages("renv")</code></p>
 </div>
 </section>
-<section id="project-2" class="slide level2">
+<section id="project-1" class="slide level2">
 <h2>project</h2>
 <p>using your environment manager, install your project’s dependencies:</p>
 <ul>
 <li><p>create a new environment</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>restore an already defined environment</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
 </section>
 <section id="activity-4" class="slide level2">
@@ -1993,7 +1980,7 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
 </div>
 </div>
 </div>
-<div id="timer_5f1bb518672c96a4604b46a8fbe547b393943cd1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_dc8bde39cf7d90f2d12f9f1e40930ec0222a7247" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -2290,18 +2277,7 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -2333,7 +2309,29 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/rstats-wtf\.github\.io\/wtf-personal-radmin-slides\/");
@@ -2341,7 +2339,7 @@ if it exists, your user <code>.Rprofile</code> will not be evaluated</p>
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
