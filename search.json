@@ -347,7 +347,7 @@
     "href": "index.html#activity-1",
     "title": "personal radmin",
     "section": "activity",
-    "text": "activity\n\ninstall a package from r-universe\n\n\n\nopen the personal-radmin project\ninstall.packages(\"gitcellar\") # not on cran!\nupdate your project .Rprofile:\nusethis::edit_r_profile(scope = \"project\")\noptions(repos = c(\n  ropensci = \"https://ropensci.r-universe.dev\",\n  CRAN = \"https://cloud.r-project.org\", # macOS\n  RSPM = \"https://p3m.dev/cran/latest\" # windows\n))\nsave .Rprofile and restart R\ninstall.packages(\"gitcellar\")\n\n\n\n  \n    −\n    +\n \n 05:00"
+    "text": "activity\n\ninstall a package from r-universe\n\n\n\nopen the wtf-explore-libraries project from earlier\ninstall.packages(\"gitcellar\") # not on cran!\nupdate your project .Rprofile:\nusethis::edit_r_profile(scope = \"project\")\noptions(repos = c(\n  ropensci = \"https://ropensci.r-universe.dev\",\n  CRAN = \"https://cloud.r-project.org\", # macOS\n  P3M = \"https://p3m.dev/cran/latest\" # windows\n))\nsave .Rprofile and restart R\ninstall.packages(\"gitcellar\")\n\n\n\n  \n    −\n    +\n \n 05:00"
   },
   {
     "objectID": "index.html#discussion",
@@ -417,7 +417,7 @@
     "href": "index.html#activity-2",
     "title": "personal radmin",
     "section": "activity",
-    "text": "activity\n\ntime travel!\n\n\nopen the personal-radmin project\nupdate your project .Rprofile with a date-based snapshot of CRAN\noptions(repos = c(RSPM = \"https://p3m.dev/cran/2021-03-31\"))\nRestart R\ninstall.packages(\"dplyr\")\n\nwhat version of dplyr did you install?\n\n  \n    −\n    +\n \n 05:00"
+    "text": "activity\n\ntime travel!\n\n\nopen the wtf-explore-libraries project\nupdate your project .Rprofile with a date-based snapshot of CRAN\noptions(repos = c(RSPM = \"https://p3m.dev/cran/2022-12-31\"))\nRestart R\ninstall.packages(\"dplyr\")\n\nwhat version of dplyr did you install?\n\n  \n    −\n    +\n \n 05:00"
   },
   {
     "objectID": "index.html#renv-2",
