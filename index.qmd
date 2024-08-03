@@ -139,6 +139,7 @@ All installed packages
 ```{.r}
 usethis::use_course("rstats-wtf/wtf-explore-libraries")
 # use_course("rstats-wtf/wtf-explore-libraries", destdir = "my/new/location")
+usethis::proj_activate("/path/to/my/new/location")
 ```
 
 {{< countdown "7:30" >}}
