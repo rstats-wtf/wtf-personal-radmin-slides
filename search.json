@@ -417,7 +417,14 @@
     "href": "index.html#activity-2",
     "title": "personal radmin",
     "section": "activity",
-    "text": "activity\n\ntime travel!\n\n\nopen the wtf-explore-libraries project\nupdate your project .Rprofile with a date-based snapshot of CRAN\noptions(repos = c(RSPM = \"https://p3m.dev/cran/2022-12-31\"))\nRestart R\ninstall.packages(\"dplyr\")\n\nwhat version of dplyr did you install?\n\n  \n    −\n    +\n \n 05:00"
+    "text": "activity\n\ntime travel!\n\n\nopen the wtf-explore-libraries project\nrun packageVersion(\"dplyr\")\nupdate your project .Rprofile with a date-based snapshot of CRAN\noptions(repos = c(RSPM = \"https://p3m.dev/cran/2022-12-31\"))\nRestart R\ninstall.packages(\"dplyr\")\n\nwhat version of dplyr did you install?\n\n  \n    −\n    +\n \n 05:00"
+  },
+  {
+    "objectID": "index.html#section-2",
+    "href": "index.html#section-2",
+    "title": "personal radmin",
+    "section": "⏪",
+    "text": "⏪\n\nremove the repository configuration from your project .Rprofile\nrestart R\nreinstall whatever versions of dplyr you were using before\n\nif that process seems silly, ✨ you should use renv ✨"
   },
   {
     "objectID": "index.html#renv-2",
@@ -511,8 +518,8 @@
     "text": "package managers\nsoftware whose job it is to install other software\n🙉 not the same kinds of packages as PPM\n\n\n\n\npackage manager\n\n\n\n\n windows\nscoop, chocolatey, winget\n\n\n macOS\nhomebrew\n\n\n linux\nhomebrew, apt, yum, zypper"
   },
   {
-    "objectID": "index.html#section-2",
-    "href": "index.html#section-2",
+    "objectID": "index.html#section-3",
+    "href": "index.html#section-3",
     "title": "personal radmin",
     "section": "⚠️",
     "text": "⚠️\nAvoid installing your language with a package manager\n\nYou want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are not consistently effective Other software that you install with your package manager may expect that package manager to be running the latest Idiosyncracies of your language will be better understood by a dedicated tool"
