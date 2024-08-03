@@ -1023,12 +1023,12 @@ renv has a number of tools that are helpful for adopting a project-based workflo
 time travel!
 :::
 
-1.  open the `personal-radmin` project
+1.  open the `wtf-explore-libraries` project
 
 2.  update your project `.Rprofile` with a date-based snapshot of CRAN
 
     ``` {.r code-line-numbers="false"}
-    options(repos = c(RSPM = "https://p3m.dev/cran/2021-03-31"))
+    options(repos = c(RSPM = "https://p3m.dev/cran/2022-12-31"))
     ```
 
 3.  Restart R
