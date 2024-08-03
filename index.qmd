@@ -692,6 +692,151 @@ apt install make
 
 > `## Your system is ready to build packages!`
 
+## system dependencies
+
+::: panel-tabset
+
+### xml2
+
+```{.r code-line-numbers="15-18"}
+* installing *source* package ‘xml2’ ...
+** package ‘xml2’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package libxml-2.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libxml-2.0.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'libxml-2.0', required by 'virtual:world', not found
+Package libxml-2.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libxml-2.0.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'libxml-2.0', required by 'virtual:world', not found
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lxml2
+------------------------- ANTICONF ERROR ---------------------------
+Configuration failed because libxml-2.0 was not found. Try installing:
+ * deb: libxml2-dev (Debian, Ubuntu, etc)
+ * rpm: libxml2-devel (Fedora, CentOS, RHEL)
+ * csw: libxml2_dev (Solaris)
+If libxml-2.0 is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a libxml-2.0.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+--------------------------------------------------------------------
+ERROR: configuration failed for package ‘xml2’
+* removing ‘/usr/local/lib/R/site-library/xml2’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp9JMc7F/downloaded_packages’
+Warning message:
+In install.packages("xml2") :
+  installation of package ‘xml2’ had non-zero exit status
+```
+
+### `openssl`
+
+```{.r code-line-numbers="6-10"}
+* installing *source* package ‘s2’ ...
+** package ‘s2’ successfully unpacked and MD5 sums checked
+** using staged installation
+Testing compiler using PKG_CFLAGS=
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed because openssl was not found. Try installing:
+ * deb: libssl-dev (Debian, Ubuntu, etc)
+ * rpm: openssl-devel (Fedora, CentOS, RHEL)
+ * csw: libssl_dev (Solaris)
+ * brew: openssl@1.1 (Mac OSX)
+If openssl is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a openssl.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+tools/version.c:1:10: fatal error: openssl/opensslv.h: No such file or directory
+    1 | #include <openssl/opensslv.h>
+      |          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+--------------------------------------------------------------------
+ERROR: configuration failed for package ‘s2’
+* removing ‘/usr/local/lib/R/site-library/s2’
+```
+
+### `units`
+
+```{.r code-line-numbers="8-11"}
+* installing *source* package ‘units’ ...
+** package ‘units’ successfully unpacked and MD5 sums checked
+** using staged installation
+configure: units: 0.8-5
+...
+configure: error:
+--------------------------------------------------------------------------------
+  Configuration failed because libudunits2.so was not found. Try installing:
+    * deb: libudunits2-dev (Debian, Ubuntu, ...)
+    * rpm: udunits2-devel (Fedora, EPEL, ...)
+    * brew: udunits (OSX)
+  If udunits2 is already installed in a non-standard location, use:
+    --configure-args='--with-udunits2-lib=/usr/local/lib'
+  if the library was not found, and/or:
+    --configure-args='--with-udunits2-include=/usr/include/udunits2'
+  if the header was not found, replacing paths with appropriate values.
+  You can alternatively set UDUNITS2_INCLUDE and UDUNITS2_LIBS manually.
+--------------------------------------------------------------------------------
+
+See `config.log' for more details
+ERROR: configuration failed for package ‘units’
+* removing ‘/usr/local/lib/R/site-library/units’
+```
+### `gdal`
+
+```{.r code-line-numbers="6-9"}
+* installing *source* package ‘sf’ ...
+** package ‘sf’ successfully unpacked and MD5 sums checked
+** using staged installation
+configure: CC: gcc
+configure: CXX: g++ -std=gnu++17
+checking for gdal-config... no
+no
+configure: error: gdal-config not found or not executable.
+ERROR: configuration failed for package ‘sf’
+* removing ‘/usr/local/lib/R/site-library/sf’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp8bqjb0/downloaded_packages’
+Warning message:
+In install.packages("sf") :
+  installation of package ‘sf’ had non-zero exit status
+```
+
+:::
+
+## bonus complication
+
+runtime dependencies
+
+::: panel-tabset
+
+### :white_check_mark:
+
+```{.r}
+> library(sf)
+Linking to GEOS 3.12.2, GDAL 3.9.1, PROJ 9.4.1; sf_use_s2() is TRUE
+```
+
+### :x:
+
+```{.r}
+The downloaded source packages are in
+	‘/tmp/RtmpIvTerY/downloaded_packages’
+> library(sf)
+Error: package or namespace load failed for ‘sf’ in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/usr/local/lib/R/site-library/units/libs/units.so':
+  libudunits2.so.0: cannot open shared object file: No such file or directory
+```
+:::
+
+## which sysdeps?
+
+![](img/p3m-sysdeps.png)
+
 ## activity
 
 ::: question
@@ -710,7 +855,7 @@ install a package from r-universe
     options(repos = c(
       ropensci = "https://ropensci.r-universe.dev",
       CRAN = "https://cloud.r-project.org", # macOS
-      RSPM = "https://packagemanager.rstudio.com/cran/latest" # windows
+      RSPM = "https://p3m.dev/cran/latest" # windows
     ))
     ```
 
