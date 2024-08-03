@@ -529,7 +529,7 @@ downloaded 121 KB
 * DONE (parallelly)
 ```
 
-## [Posit Package Manager](https://p3m.dev)
+## [Posit Public Package Manager](https://p3m.dev)
 
 ![](img/ppm-binaries.png)
 
@@ -540,6 +540,7 @@ downloaded 121 KB
 ## how do I know I got a binary?
 
 ::: panel-tabset
+
 ### CRAN {{< fa brands windows >}}
 
 ``` {.r code-line-numbers="5,10"}
@@ -572,7 +573,7 @@ The downloaded binary packages are in
  /var/folders/b5/fl4ff68d23s148tg1_1gnflc0000gn/T//RtmpMk69B0/downloaded_packages
 ```
 
-### [p3m](https://p3m.dev)
+### p3m
 
 ``` {.r code-line-numbers="10"}
 > install.packages("remotes")
@@ -604,7 +605,7 @@ Moving fs [1.5.2] into the cache ...
 ## pop quiz, hotshot
 
 ::: question
-Does [Posit Package Manager](https://p3m.dev) serve a binary of `dplyr` for R 3.6?
+Does [Posit Public Package Manager](https://p3m.dev) serve a binary of `dplyr` for R 3.6?
 :::
 
 {{< countdown "2:00" >}}
