@@ -1131,21 +1131,35 @@ C(global cache)
 create an isolated project library
 :::
 
-::: small
-1.  open your `wtf-fix-paths` project
-2.  `install.packages("renv")`
-3.  `renv::init()`
-4.  `renv::status()`
-5.  add `library(parallelly)` to any file in the `wtf-fix-paths/R` directory; save file
-6.  `renv::status()`
-7.  `install.packages("parallelly")`
-8.  `renv::status()`
-9.  `renv::snapshot()` (`y` proceed)
-10. remove `library(parallelly)` from the file you added it to; save file
-11. `renv::status()`
+```{.r}
+usethis::create_project("wtf-2024")
+install.packages("renv")
+renv::init()
+renv::status()
+```
+{{< countdown "3:00" >}}
+
+## activity
+
+::: question
+manage dependencies
 :::
 
-{{< countdown "10:00" >}}
+add `library(parallelly)` to any file in the `wtf-2024/R` directory
+
+```{.r}
+renv::status()
+install.packages("parallelly")
+renv::status()
+renv::snapshot()
+```
+remove `library(parallelly)` from the file you added it to
+
+```{.r}
+renv::status()
+```
+
+{{< countdown "5:00" >}}
 
 ::: notes
 run `.libPaths()` to see what your default package libraries are initialize an renv--you'll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in `renv/activate.R` deactivate the environment and check libPaths() again--it should be back to normal
