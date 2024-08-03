@@ -1024,20 +1024,29 @@ time travel!
 :::
 
 1.  open the `wtf-explore-libraries` project
+2.  run `packageVersion("dplyr")`
 
-2.  update your project `.Rprofile` with a date-based snapshot of CRAN
+3.  update your project `.Rprofile` with a date-based snapshot of CRAN
 
     ``` {.r code-line-numbers="false"}
     options(repos = c(RSPM = "https://p3m.dev/cran/2022-12-31"))
     ```
 
-3.  Restart R
+4.  Restart R
 
-4.  `install.packages("dplyr")`
+5.  `install.packages("dplyr")`
 
 what version of dplyr did you install?
 
 {{< countdown "5:00" >}}
+
+##  ⏪
+
+- remove the repository configuration from your project `.Rprofile`
+- restart R
+- reinstall whatever versions of dplyr you were using before
+
+if that process seems silly, :sparkles: [you should use `renv`](https://github.com/edavidaja/you-should-use-renv) :sparkles:
 
 ## renv
 
