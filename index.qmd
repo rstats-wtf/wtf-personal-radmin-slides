@@ -470,7 +470,7 @@ you may particularly care about installation speed if you're being billed by the
 ## may not be the latest
 
 ``` {.r code-line-numbers="6-8"}
-> install.packages("parallelly", repos = "https://cran.rstudio.com")
+> install.packages("parallelly", repos = "https://cran.r-project.org")
 
 Installing package into ‘C:/Users/WDAGUtilityAccount/Documents/R/win-library/4.0’
 (as ‘lib’ is unspecified)
@@ -481,7 +481,7 @@ parallelly 1.31.0 1.32.1             FALSE
 
 installing the source package ‘parallelly’
 
-trying URL 'https://cran.rstudio.com/src/contrib/parallelly_1.32.1.tar.gz'
+trying URL 'https://cran.r-project.org/src/contrib/parallelly_1.32.1.tar.gz'
 Content type 'application/x-gzip' length 124853 bytes (121 KB)
 downloaded 121 KB
 
@@ -542,10 +542,10 @@ downloaded 121 KB
 ### CRAN {{< fa brands windows >}}
 
 ``` {.r code-line-numbers="5,10"}
-> install.packages("parallelly", repos = "https://cran.rstudio.com")
+> install.packages("parallelly", repos = "https://cran.r-project.org")
 Installing package into ‘C:/Users/edavi/Documents/R/win-library/4.1’
 (as ‘lib’ is unspecified)
-trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.1/parallelly_1.32.1.zip'
+trying URL 'https://cran.r-project.org/bin/windows/contrib/4.1/parallelly_1.32.1.zip'
 Content type 'application/zip' length 306137 bytes (298 KB)
 downloaded 298 KB
 
@@ -558,10 +558,10 @@ The downloaded binary packages are in
 ### CRAN {{< fa brands apple >}}
 
 ``` {.r code-line-numbers="4,10"}
-> install.packages("renv", repos="https://cran.rstudio.com")
+> install.packages("renv", repos="https://cran.r-project.org")
 Installing package into ‘/Users/edavidaja/Library/R/x86_64/4.1/library’
 (as ‘lib’ is unspecified)
-trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.1/renv_0.15.5.tgz'
+trying URL 'https://cran.r-project.org/bin/macosx/contrib/4.1/renv_0.15.5.tgz'
 Content type 'application/x-gzip' length 1866760 bytes (1.8 MB)
 ==================================================
 downloaded 1.8 MB
@@ -571,13 +571,13 @@ The downloaded binary packages are in
  /var/folders/b5/fl4ff68d23s148tg1_1gnflc0000gn/T//RtmpMk69B0/downloaded_packages
 ```
 
-### PPM
+### [p3m](https://p3m.dev)
 
 ``` {.r code-line-numbers="10"}
 > install.packages("remotes")
 Installing package into ‘C:/Users/WDAGUtilityAccount/AppData/Local/R/win-library/4.2’
 (as ‘lib’ is unspecified)
-trying URL 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/remotes_2.4.2.zip'
+trying URL 'https://p3m.dev/cran/latest/bin/windows/contrib/4.2/remotes_2.4.2.zip'
 Content type 'binary/octet-stream' length 399930 bytes (390 KB)
 downloaded 390 KB
 
@@ -591,7 +591,7 @@ The downloaded binary packages are in
 
 ``` {.r code-line-numbers="5"}
 > renv::install("fs")
-Retrieving 'https://packagemanager.rstudio.com/all/latest/bin/windows/contrib/4.2/fs_1.5.2.zip' ...
+Retrieving 'https://p3m.dev/cran/latest/bin/windows/contrib/4.2/fs_1.5.2.zip' ...
   OK [downloaded 380.9 Kb in 0.5 secs]
 Installing fs [1.5.2] ...
   OK [installed binary]
@@ -603,7 +603,7 @@ Moving fs [1.5.2] into the cache ...
 ## pop quiz, hotshot
 
 ::: question
-Does Posit Package Manager serve a binary of `dplyr` for R 3.6?
+Does [Posit Package Manager](https://p3m.dev) serve a binary of `dplyr` for R 3.6?
 :::
 
 {{< countdown "2:00" >}}
