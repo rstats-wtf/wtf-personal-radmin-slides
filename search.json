@@ -266,11 +266,11 @@
     "text": "may not be the latest\n&gt; install.packages(\"parallelly\", repos = \"https://cran.r-project.org\")\n\nInstalling package into ‘C:/Users/WDAGUtilityAccount/Documents/R/win-library/4.0’\n(as ‘lib’ is unspecified)\n\n  There is a binary version available but the source version is later:\n           binary source needs_compilation\nparallelly 1.31.0 1.32.1             FALSE\n\ninstalling the source package ‘parallelly’\n\ntrying URL 'https://cran.r-project.org/src/contrib/parallelly_1.32.1.tar.gz'\nContent type 'application/x-gzip' length 124853 bytes (121 KB)\ndownloaded 121 KB\n\n* installing *source* package 'parallelly' ...\n** package 'parallelly' successfully unpacked and MD5 sums checked\n** using staged installation\n** R\n** inst\n** byte-compile and prepare package for lazy loading\n** help\n*** installing help indices\n  converting help for package 'parallelly'\n    finding HTML links ... done\n    as.cluster                              html  \n    autoStopCluster                         html  \n    availableConnections                    html  \n    availableCores                          html  \n    availableWorkers                        html  \n    canPortBeUsed                           html  \n    cpuLoad                                 html  \n    find_rshcmd                             html  \n    freeCores                               html  \n    freePort                                html  \n    getOption2                              html  \n    isConnectionValid                       html  \n    isForkedChild                           html  \n    isForkedNode                            html  \n    isLocalhostNode                         html  \n    isNodeAlive                             html  \n    makeClusterMPI                          html  \n    makeClusterPSOCK                        html  \n    parallelly.options                      html  \n    pid_exists                              html  \n    supportsMulticore                       html  \n*** copying figures\n** building package indices\n** testing if installed package can be loaded from temporary location\n*** arch - i386\n*** arch - x64\n** testing if installed package can be loaded from final location\n*** arch - i386\n*** arch - x64\n** testing if installed package keeps a record of temporary installation path\n* DONE (parallelly)"
   },
   {
-    "objectID": "index.html#posit-package-manager",
-    "href": "index.html#posit-package-manager",
+    "objectID": "index.html#posit-public-package-manager",
+    "href": "index.html#posit-public-package-manager",
     "title": "personal radmin",
-    "section": "Posit Package Manager",
-    "text": "Posit Package Manager"
+    "section": "Posit Public Package Manager",
+    "text": "Posit Public Package Manager"
   },
   {
     "objectID": "index.html#ppm",
@@ -291,7 +291,7 @@
     "href": "index.html#pop-quiz-hotshot",
     "title": "personal radmin",
     "section": "pop quiz, hotshot",
-    "text": "pop quiz, hotshot\n\nDoes Posit Package Manager serve a binary of dplyr for R 3.6?\n\n\n  \n    −\n    +\n \n 02:00"
+    "text": "pop quiz, hotshot\n\nDoes Posit Public Package Manager serve a binary of dplyr for R 3.6?\n\n\n  \n    −\n    +\n \n 02:00"
   },
   {
     "objectID": "index.html#source",
@@ -459,7 +459,14 @@
     "href": "index.html#activity-3",
     "title": "personal radmin",
     "section": "activity",
-    "text": "activity\n\ncreate an isolated project library\n\n\n\nopen your wtf-fix-paths project\ninstall.packages(\"renv\")\nrenv::init()\nrenv::status()\nadd library(parallelly) to any file in the wtf-fix-paths/R directory; save file\nrenv::status()\ninstall.packages(\"parallelly\")\nrenv::status()\nrenv::snapshot() (y proceed)\nremove library(parallelly) from the file you added it to; save file\nrenv::status()\n\n\n\n  \n    −\n    +\n \n 10:00\n \n\nrun .libPaths() to see what your default package libraries are initialize an renv–you’ll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in renv/activate.R deactivate the environment and check libPaths() again–it should be back to normal"
+    "text": "activity\n\ncreate an isolated project library\n\nusethis::create_project(\"wtf-2024\")\ninstall.packages(\"renv\")\nrenv::init()\nrenv::status()\n\n  \n    −\n    +\n \n 03:00"
+  },
+  {
+    "objectID": "index.html#activity-4",
+    "href": "index.html#activity-4",
+    "title": "personal radmin",
+    "section": "activity",
+    "text": "activity\n\nmanage dependencies\n\nadd library(parallelly) to any file in the wtf-2024/R directory\nrenv::status()\ninstall.packages(\"parallelly\")\nrenv::status()\nrenv::snapshot()\nremove library(parallelly) from the file you added it to\nrenv::status()\n\n  \n    −\n    +\n \n 05:00\n \n\nrun .libPaths() to see what your default package libraries are initialize an renv–you’ll see that the environment is now local to the project note the .Rprofile that gets placed into your project, which runs an R script in renv/activate.R deactivate the environment and check libPaths() again–it should be back to normal"
   },
   {
     "objectID": "index.html#renvinstall",
@@ -567,8 +574,8 @@
     "text": "project\nusing your environment manager, install your project’s dependencies:\n\ncreate a new environment\nrenv::init()\nrestore an already defined environment\nrenv::restore()"
   },
   {
-    "objectID": "index.html#activity-4",
-    "href": "index.html#activity-4",
+    "objectID": "index.html#activity-5",
+    "href": "index.html#activity-5",
     "title": "personal radmin",
     "section": "activity",
     "text": "activity\n\nrelaxedspartan\n\n\nread the rig FAQ, or the rswitch guide\n\n\n\ninstall rig\nuse rig to install a different major or minor version of R\n⚠️ avoid installing a patch version\n\nopen RStudio with that newly installed R version\n\n\n\n\n\n  \n    −\n    +\n \n 10:00\n \n\n\n\n\nPersonal R Administration"
