@@ -39,7 +39,7 @@
     "href": "index.html#explore-your-package-library",
     "title": "personal radmin",
     "section": "explore your package library",
-    "text": "explore your package library\nusethis::use_course(\"rstats-wtf/wtf-explore-libraries\")\n# use_course(\"rstats-wtf/wtf-explore-libraries\", destdir = \"my/new/location\")\n\n  \n    −\n    +\n \n 07:30"
+    "text": "explore your package library\nusethis::use_course(\"rstats-wtf/wtf-explore-libraries\")\n# use_course(\"rstats-wtf/wtf-explore-libraries\", destdir = \"my/new/location\")\nusethis::proj_activate(\"/path/to/my/new/location\")\n\n  \n    −\n    +\n \n 07:30"
   },
   {
     "objectID": "index.html#why",
