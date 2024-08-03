@@ -845,7 +845,7 @@ install a package from r-universe
 :::
 
 ::: small
-1.  open the `personal-radmin` project
+1.  open the `wtf-explore-libraries` project from earlier
 
 2.  `install.packages("gitcellar")` \# not on cran!
 
@@ -856,7 +856,7 @@ install a package from r-universe
     options(repos = c(
       ropensci = "https://ropensci.r-universe.dev",
       CRAN = "https://cloud.r-project.org", # macOS
-      RSPM = "https://p3m.dev/cran/latest" # windows
+      P3M = "https://p3m.dev/cran/latest" # windows
     ))
     ```
 
