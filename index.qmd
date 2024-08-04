@@ -881,27 +881,7 @@ binaries are usually preferred, but for development versions of packages, you ma
 
 ## why?
 
-::: r-stack
-<blockquote class="twitter-tweet">
-
-<p lang="en" dir="ltr">
-
-The quick and dirty approach you took then comes right back at you as a boomerang. <br><br>Therefore, ban the concept of one-off altogether. No matter what the asker says, it will have to be done again, always!<br><br>3/9
-
-</p>
-
-— Edwin Thoen (@edwin_thoen) <a href="https://twitter.com/edwin_thoen/status/1526261181631152129?ref_src=twsrc%5Etfw">May 16, 2022</a>
-
-</blockquote>
-
-```{=html}
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-```
-:::
-
-::: notes
-You *will* need to reproduce or update your analysis. You might get audited!
-:::
+put some science in ["data science"](https://www.getdbt.com/coalesce-2021/down-with-data-science)
 
 ## [reproducibility strategies](https://environments.rstudio.com/reproduce)
 
@@ -980,7 +960,7 @@ we're focused in particular on systems where we have both access and responsibil
 
 ::: columns
 ::: column
-### ppm
+### p3m
 
 ::: r-stack
 ![](img/icon-rspm.png){.r-stretch}
@@ -1004,17 +984,17 @@ renv has a number of tools that are helpful for adopting a project-based workflo
 - makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn't work out
 :::
 
-## ppm
+## p3m
 
 ::: r-stack
 ![](img/icon-rspm.png){.r-stretch}
 :::
 
-## ppm: latest
+## p3m: latest
 
 ![](img/p3m-latest.png)
 
-## ppm: date-based snapshots
+## p3m: date-based snapshots
 
 ![](img/rspm-2021-03-31-highlight.png)
 
