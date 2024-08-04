@@ -1279,8 +1279,10 @@ I use `renv` for everything, and have one junk project into which I install thin
 :::
 
 ::: notes
-The best way to become more comfortable with installing things is to practice in an environment you can throw away\
-- the windows sandbox lets you test in an environment on your machine that won't affect your computer - enabling it is outside the scope of this course - for linux users, the easiest thing to do is stand up a small VPS - I don't know of a good safe way to test mac environments
+The best way to become more comfortable with installing things is to practice in an environment you can throw away
+- the windows sandbox lets you test in an environment on your machine that won't affect your computer
+- enabling it is outside the scope of this course
+- for linux users, the easiest thing to do is stand up a small VPS
 :::
 
 ## "run this command" \>\> clickOps
@@ -1289,7 +1291,7 @@ The best way to become more comfortable with installing things is to practice in
 
 ## package managers
 
-software whose job it is to install other software\
+software whose job it is to install other software
 :hear_no_evil: not the same kinds of *packages* as PPM
 
 |                                   | package manager                                |
@@ -1338,7 +1340,7 @@ language managers for other languages:
 -   many language managers are often written in some language other than the one they are responsible for managing
 :::
 
-## switching R versions {{< fa brands windows >}}
+## switching R versions {{< fa brands windows >}} {visibility="hidden"}
 
 ### `CTRL +  CLICK`
 
@@ -1346,79 +1348,182 @@ language managers for other languages:
 ![](img/ctrl_click.png)
 :::
 
-## switching R versions {{< fa brands windows >}}
+## switching R versions {{< fa brands windows >}} {visibility="hidden"}
+
 
 ::: r-stack
 ![](img/r_version_select_windows-highlight.png)
+:::
+
+## list installed R versions
+
+::: panel-tabset
+
+### {{< fa brands apple >}}
+
+```{.bash}
+❯ rig list --help
+Description:
+  List installed R versions from `/Library/Framework/R.framework/Versions`.
+  It does _not_ check if they are working properly.
+
+  `rig ls` is an alias.
+```
+
+### {{< fa brands linux >}}
+
+```{.bash}
+❯ rig list --help
+Description:
+  List installed R versions from `/opt/R`. It does _not_ check if they are
+  working properly.
+
+  `rig ls` is an alias.
+```
+
 :::
 
 ## language versions
 
 using `rig`, install a version of R:
 
-``` shell
+```{.bash}
 ❯ rig install --help
-rig-add
+Description:
+  Download and install an R version, from the official sources.
+  It keeps the already installed R versions, except versions within the
+  same minor branch, see below.
 
-DESCRIPTION:
-    Download and install an R version, from the official sources.
-    It keeps the already installed R versions, except versions within the
-    same minor branch, see below.
+Options:
+      --without-cran-mirror
+          Do not set the cloud CRAN mirror
 
-EXAMPLES:
-    # Add the latest release
-    rig add release
+      --without-pak
+          Do not install pak.
 
-    # Install specific version
-    rig add 4.1.2
+      --pak-version <pak-version>
+          pak version to install.
 
-    # Install latest version within a minor branch
-    rig add 4.1
+          [default: stable]
+          [possible values: stable, rc, devel]
+
+  -a, --arch <arch>
+          Select macOS arch: arm64 or x86_64
+
+          [default: arm64]
+          [possible values: arm64, x86_64]
+
+  -h, --help
+          Print help (see a summary with '-h')
+
+Examples:
+  # Add the latest development snapshot
+  rig add devel
+
+  # Add the latest release
+  rig add release
+
+  # Install specific version
+  rig add 4.1.2
+
+  # Install latest version within a minor branch
+  rig add 4.1
+
+  # Install arm64 build of R (default on arm64 macs)
+  rig add -a arm64 release
+
+  # Install x86_64 build of R (default on x86_64 macs)
+  rig add -a x86_64 release
 ```
 
 ::: notes
 if you're running a distribution of linux that rig doesn't support: - https://docs.rstudio.com/resources/install-r/
 
-if no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/
+if no pre-compiled binary of R is available: - https://docs.rstudio.com/resources/install-r-source/
 :::
 
-## environment managers
+## switching default versions
 
-using your desired version of the language, install an environment manager:
+```{.bash}
+❯ rig switch --help
+Description:
+  Print or set the default R version. The default R version is the one that
+  is started with the `R` command, usually via the `/usr/local/bin/R`
+  symbolic link.
 
-::: {.r .r-fit-text}
-`install.packages("renv")`
-:::
+  `rig switch` is an alias of `rig default`.
 
-## project
+Usage: rig default [OPTIONS] [version]
 
-using your environment manager, install your project's dependencies:
+Arguments:
+  [version]
+          new default R version to set
 
--   create a new environment
+Options:
+      --json
+          JSON output
 
-    ``` r
-    renv::init()
-    ```
+  -h, --help
+          Print help (see a summary with '-h')
 
--   restore an already defined environment
+Examples:
+  # Query default R version
+  rig default
 
-    ``` r
-    renv::restore()
-    ```
+  # Set the default version
+  rig default 4.1
+```
+
+## launch rstudio
+
+```{.bash}
+❯ rig rstudio --help
+Description:
+  Start RStudio with the specified R version.
+
+  If the RStudio project or the specified directory contains an `renv.lock`
+  file (created by the renv package), and `version` is not specified, then
+  rig will read the preferred R version from the `renv.lock` file.
+  If the same exact version is not installed, then rig chooses
+  the latest version with the same major and minor components. If no such
+  version is available, rig throws an error.
+
+Examples:
+  # With default R version
+  rig rstudio
+
+  # With another R version
+  rig rstudio 4.0
+
+  # Open project with default R version
+  rig rstudio cli.Rproj
+
+  # Open renv project with the R version specified in the lock file
+  rig rstudio projects/myproject/renv.lock
+
+  # Open RStudio project with specified R version, either is good
+  rig rstudio 4.0 cli.Rproj
+  rig rstudio cli.Rproj 4.0
+
+Usage: rig rstudio [version] [project-file]
+
+Arguments:
+  [version]
+          R version to start
+
+  [project-file]
+          RStudio project file (.Rproj) to open
+```
 
 ## activity
 
-::: panel-tabset
-### relaxed
-
-read the [rig FAQ](https://github.com/r-lib/rig#-faq), or the [rswitch guide](https://rud.is/rswitch/guide/)
-
-### spartan
-
--   install `rig`
--   use rig to install a different **major** or **minor** version of R\
-    :warning: avoid installing a *patch* version\
--   open RStudio with that newly installed R version
+::: question
+migrate a project from one R version to another
 :::
 
-{{< countdown "10:00" >}}
+1. use `renv::snapshot()` to create an `renv.lock` file
+2. close RStudio
+3. launch RStudio with a different R version
+4. use `renv::restore()` to restore your project
+
+{{< countdown "7:00" >}}
