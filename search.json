@@ -508,7 +508,7 @@
     "href": "index.html#practice-makes-perfect",
     "title": "personal radmin",
     "section": "practice makes perfect",
-    "text": "practice makes perfect\n\nWindows 10+macOSLinux\n\n\nWindows Sandbox\n\n\ntart\nutm\n\n\nMultipass\nDigital Ocean\nLinode\n\n\n\n\nThe best way to become more comfortable with installing things is to practice in an environment you can throw away\n- the windows sandbox lets you test in an environment on your machine that won’t affect your computer - enabling it is outside the scope of this course - for linux users, the easiest thing to do is stand up a small VPS - I don’t know of a good safe way to test mac environments"
+    "text": "practice makes perfect\n\nWindows 10+macOSLinux\n\n\nWindows Sandbox\n\n\ntart\nutm\n\n\nMultipass\nDigital Ocean\nLinode\n\n\n\n\nThe best way to become more comfortable with installing things is to practice in an environment you can throw away - the windows sandbox lets you test in an environment on your machine that won’t affect your computer - enabling it is outside the scope of this course - for linux users, the easiest thing to do is stand up a small VPS"
   },
   {
     "objectID": "index.html#run-this-command-clickops",
@@ -522,7 +522,7 @@
     "href": "index.html#package-managers",
     "title": "personal radmin",
     "section": "package managers",
-    "text": "package managers\nsoftware whose job it is to install other software\n🙉 not the same kinds of packages as PPM\n\n\n\n\npackage manager\n\n\n\n\n windows\nscoop, chocolatey, winget\n\n\n macOS\nhomebrew\n\n\n linux\nhomebrew, apt, yum, zypper"
+    "text": "package managers\nsoftware whose job it is to install other software 🙉 not the same kinds of packages as PPM\n\n\n\n\npackage manager\n\n\n\n\n windows\nscoop, chocolatey, winget\n\n\n macOS\nhomebrew\n\n\n linux\nhomebrew, apt, yum, zypper"
   },
   {
     "objectID": "index.html#section-3",
@@ -539,45 +539,38 @@
     "text": "language managers\nusing your package manager, install rig:\n\nwindows*nix\n\n\nscoop install rig\n\n\nbrew install rig\n\n\n\n\nlanguage managers for other languages:\n pyenv\n nvm\n rustup\n asdf\n mise-en-place\n\n\n\nmany language managers are often written in some language other than the one they are responsible for managing"
   },
   {
-    "objectID": "index.html#switching-r-versions",
-    "href": "index.html#switching-r-versions",
+    "objectID": "index.html#list-installed-r-versions",
+    "href": "index.html#list-installed-r-versions",
     "title": "personal radmin",
-    "section": "switching R versions ",
-    "text": "switching R versions \nCTRL +  CLICK"
-  },
-  {
-    "objectID": "index.html#switching-r-versions-1",
-    "href": "index.html#switching-r-versions-1",
-    "title": "personal radmin",
-    "section": "switching R versions ",
-    "text": "switching R versions"
+    "section": "list installed R versions",
+    "text": "list installed R versions\n\n\n\n\n❯ rig list --help\nDescription:\n  List installed R versions from `/Library/Framework/R.framework/Versions`.\n  It does _not_ check if they are working properly.\n\n  `rig ls` is an alias.\n\n\n❯ rig list --help\nDescription:\n  List installed R versions from `/opt/R`. It does _not_ check if they are\n  working properly.\n\n  `rig ls` is an alias."
   },
   {
     "objectID": "index.html#language-versions",
     "href": "index.html#language-versions",
     "title": "personal radmin",
     "section": "language versions",
-    "text": "language versions\nusing rig, install a version of R:\n❯ rig install --help\nrig-add\n\nDESCRIPTION:\n    Download and install an R version, from the official sources.\n    It keeps the already installed R versions, except versions within the\n    same minor branch, see below.\n\nEXAMPLES:\n    # Add the latest release\n    rig add release\n\n    # Install specific version\n    rig add 4.1.2\n\n    # Install latest version within a minor branch\n    rig add 4.1\n\nif you’re running a distribution of linux that rig doesn’t support: - https://docs.rstudio.com/resources/install-r/\nif no pre-compiled binary of rig is available: - https://docs.rstudio.com/resources/install-r-source/"
+    "text": "language versions\nusing rig, install a version of R:\n❯ rig install --help\nDescription:\n  Download and install an R version, from the official sources.\n  It keeps the already installed R versions, except versions within the\n  same minor branch, see below.\n\nOptions:\n      --without-cran-mirror\n          Do not set the cloud CRAN mirror\n\n      --without-pak\n          Do not install pak.\n\n      --pak-version &lt;pak-version&gt;\n          pak version to install.\n\n          [default: stable]\n          [possible values: stable, rc, devel]\n\n  -a, --arch &lt;arch&gt;\n          Select macOS arch: arm64 or x86_64\n\n          [default: arm64]\n          [possible values: arm64, x86_64]\n\n  -h, --help\n          Print help (see a summary with '-h')\n\nExamples:\n  # Add the latest development snapshot\n  rig add devel\n\n  # Add the latest release\n  rig add release\n\n  # Install specific version\n  rig add 4.1.2\n\n  # Install latest version within a minor branch\n  rig add 4.1\n\n  # Install arm64 build of R (default on arm64 macs)\n  rig add -a arm64 release\n\n  # Install x86_64 build of R (default on x86_64 macs)\n  rig add -a x86_64 release\n\nif you’re running a distribution of linux that rig doesn’t support: - https://docs.rstudio.com/resources/install-r/\nif no pre-compiled binary of R is available: - https://docs.rstudio.com/resources/install-r-source/"
   },
   {
-    "objectID": "index.html#environment-managers",
-    "href": "index.html#environment-managers",
+    "objectID": "index.html#switching-default-versions",
+    "href": "index.html#switching-default-versions",
     "title": "personal radmin",
-    "section": "environment managers",
-    "text": "environment managers\nusing your desired version of the language, install an environment manager:\n\ninstall.packages(\"renv\")"
+    "section": "switching default versions",
+    "text": "switching default versions\n❯ rig switch --help\nDescription:\n  Print or set the default R version. The default R version is the one that\n  is started with the `R` command, usually via the `/usr/local/bin/R`\n  symbolic link.\n\n  `rig switch` is an alias of `rig default`.\n\nUsage: rig default [OPTIONS] [version]\n\nArguments:\n  [version]\n          new default R version to set\n\nOptions:\n      --json\n          JSON output\n\n  -h, --help\n          Print help (see a summary with '-h')\n\nExamples:\n  # Query default R version\n  rig default\n\n  # Set the default version\n  rig default 4.1"
   },
   {
-    "objectID": "index.html#project-1",
-    "href": "index.html#project-1",
+    "objectID": "index.html#launch-rstudio",
+    "href": "index.html#launch-rstudio",
     "title": "personal radmin",
-    "section": "project",
-    "text": "project\nusing your environment manager, install your project’s dependencies:\n\ncreate a new environment\nrenv::init()\nrestore an already defined environment\nrenv::restore()"
+    "section": "launch rstudio",
+    "text": "launch rstudio\n❯ rig rstudio --help\nDescription:\n  Start RStudio with the specified R version.\n\n  If the RStudio project or the specified directory contains an `renv.lock`\n  file (created by the renv package), and `version` is not specified, then\n  rig will read the preferred R version from the `renv.lock` file.\n  If the same exact version is not installed, then rig chooses\n  the latest version with the same major and minor components. If no such\n  version is available, rig throws an error.\n\nExamples:\n  # With default R version\n  rig rstudio\n\n  # With another R version\n  rig rstudio 4.0\n\n  # Open project with default R version\n  rig rstudio cli.Rproj\n\n  # Open renv project with the R version specified in the lock file\n  rig rstudio projects/myproject/renv.lock\n\n  # Open RStudio project with specified R version, either is good\n  rig rstudio 4.0 cli.Rproj\n  rig rstudio cli.Rproj 4.0\n\nUsage: rig rstudio [version] [project-file]\n\nArguments:\n  [version]\n          R version to start\n\n  [project-file]\n          RStudio project file (.Rproj) to open"
   },
   {
     "objectID": "index.html#activity-5",
     "href": "index.html#activity-5",
     "title": "personal radmin",
     "section": "activity",
-    "text": "activity\n\nrelaxedspartan\n\n\nread the rig FAQ, or the rswitch guide\n\n\n\ninstall rig\nuse rig to install a different major or minor version of R\n⚠️ avoid installing a patch version\n\nopen RStudio with that newly installed R version\n\n\n\n\n\n  \n    −\n    +\n \n 10:00\n \n\n\n\n\nPersonal R Administration"
+    "text": "activity\n\nmigrate a project from one R version to another\n\n\nuse renv::snapshot() to create an renv.lock file\nclose RStudio\nlaunch RStudio with a different R version\nuse renv::restore() to restore your project\n\n\n  \n    −\n    +\n \n 07:00\n \n\n\n\n\nPersonal R Administration"
   }
 ]
