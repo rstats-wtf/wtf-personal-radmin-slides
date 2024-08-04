@@ -368,7 +368,7 @@
     "href": "index.html#why-2",
     "title": "personal radmin",
     "section": "why?",
-    "text": "why?\n\n\n\nThe quick and dirty approach you took then comes right back at you as a boomerang. Therefore, ban the concept of one-off altogether. No matter what the asker says, it will have to be done again, always!3/9\n\n— Edwin Thoen (@edwin_thoen) May 16, 2022\n\n\n\n\nYou will need to reproduce or update your analysis. You might get audited!"
+    "text": "why?\nput some science in “data science”"
   },
   {
     "objectID": "index.html#reproducibility-strategies",
@@ -389,28 +389,28 @@
     "href": "index.html#tools",
     "title": "personal radmin",
     "section": "tools",
-    "text": "tools\n\n\nppm\n\n\n\n\nrenv\n\n\n\n\n\nrenv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - renv::install() can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache - makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out"
+    "text": "tools\n\n\np3m\n\n\n\n\nrenv\n\n\n\n\n\nrenv has a number of tools that are helpful for adopting a project-based workflow: - lockfile records what packages you use and where you instaled them from - renv::install() can handle installation from remote sources, local sources, package versions, bioconductor, rspm - per-project library isolation with global package cache - makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn’t work out"
   },
   {
-    "objectID": "index.html#ppm-2",
-    "href": "index.html#ppm-2",
+    "objectID": "index.html#p3m-2",
+    "href": "index.html#p3m-2",
     "title": "personal radmin",
-    "section": "ppm",
-    "text": "ppm"
+    "section": "p3m",
+    "text": "p3m"
   },
   {
-    "objectID": "index.html#ppm-latest",
-    "href": "index.html#ppm-latest",
+    "objectID": "index.html#p3m-latest",
+    "href": "index.html#p3m-latest",
     "title": "personal radmin",
-    "section": "ppm: latest",
-    "text": "ppm: latest"
+    "section": "p3m: latest",
+    "text": "p3m: latest"
   },
   {
-    "objectID": "index.html#ppm-date-based-snapshots",
-    "href": "index.html#ppm-date-based-snapshots",
+    "objectID": "index.html#p3m-date-based-snapshots",
+    "href": "index.html#p3m-date-based-snapshots",
     "title": "personal radmin",
-    "section": "ppm: date-based snapshots",
-    "text": "ppm: date-based snapshots"
+    "section": "p3m: date-based snapshots",
+    "text": "p3m: date-based snapshots"
   },
   {
     "objectID": "index.html#activity-2",
