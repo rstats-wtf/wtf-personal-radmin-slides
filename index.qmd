@@ -1339,6 +1339,17 @@ language managers for other languages:
 
 ::: panel-tabset
 
+### {{< fa brands windows >}}
+
+```{.bash}
+❯ rig list --help
+Description:
+  List installed R versions at `C:\Program Files\R`.
+  It does _not_ check if they are working properly.
+
+  `rig ls` is an alias.
+```
+
 ### {{< fa brands apple >}}
 
 ```{.bash}
