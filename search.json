@@ -543,7 +543,7 @@
     "href": "index.html#list-installed-r-versions",
     "title": "personal radmin",
     "section": "list installed R versions",
-    "text": "list installed R versions\n\n\n\n\n❯ rig list --help\nDescription:\n  List installed R versions from `/Library/Framework/R.framework/Versions`.\n  It does _not_ check if they are working properly.\n\n  `rig ls` is an alias.\n\n\n❯ rig list --help\nDescription:\n  List installed R versions from `/opt/R`. It does _not_ check if they are\n  working properly.\n\n  `rig ls` is an alias."
+    "text": "list installed R versions\n\n\n\n\n❯ rig list --help\nDescription:\n  List installed R versions at `C:\\Program Files\\R`.\n  It does _not_ check if they are working properly.\n\n  `rig ls` is an alias.\n\n\n❯ rig list --help\nDescription:\n  List installed R versions from `/Library/Framework/R.framework/Versions`.\n  It does _not_ check if they are working properly.\n\n  `rig ls` is an alias.\n\n\n❯ rig list --help\nDescription:\n  List installed R versions from `/opt/R`. It does _not_ check if they are\n  working properly.\n\n  `rig ls` is an alias."
   },
   {
     "objectID": "index.html#language-versions",
