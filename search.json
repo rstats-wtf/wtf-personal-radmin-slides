@@ -536,7 +536,7 @@
     "href": "index.html#language-managers",
     "title": "personal radmin",
     "section": "language managers",
-    "text": "language managers\nusing your package manager, install rig:\n\nwindows*nix\n\n\nscoop install rig\n\n\nbrew install rig\n\n\n\n\nlanguage managers for other languages:\n pyenv\n nvm\n rustup\n asdf\n mise-en-place\n\n\n\nmany language managers are often written in some language other than the one they are responsible for managing"
+    "text": "language managers\nusing your package manager, install rig:\n\nwindows*nix\n\n\nscoop install rig\n\n\nbrew tap r-lib/rig\nbrew install --cask rig\n\n\n\n\nlanguage managers for other languages:\n pyenv\n nvm\n rustup\n asdf\n mise-en-place\n\n\n\nmany language managers are often written in some language other than the one they are responsible for managing"
   },
   {
     "objectID": "index.html#list-installed-r-versions",
