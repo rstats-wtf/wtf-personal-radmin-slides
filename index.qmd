@@ -1302,7 +1302,8 @@ scoop install rig
 ### \*nix
 
 ``` {.bash code-line-numbers="false"}
-brew install rig
+brew tap r-lib/rig
+brew install --cask rig
 ```
 :::
 
