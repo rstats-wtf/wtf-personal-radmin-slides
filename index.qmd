@@ -966,7 +966,11 @@ what version of dplyr did you install?
 
 - remove the repository configuration from your project `.Rprofile`
 - restart R
-- reinstall whatever versions of dplyr you were using before
+- reinstall whatever version of dplyr you were using before, e.g.:
+
+  ```{.r code-line-numbers="false"}
+  remotes::install_vesion("dplyr", "1.0.10")
+  ```
 
 if that process seems silly, :sparkles: [you should use `renv`](https://github.com/edavidaja/you-should-use-renv) :sparkles:
 
@@ -1000,6 +1004,8 @@ P3(project3)
 
 <br/>
 
+## shared project environment
+
 ### `.libPaths()`
 
 ``` {.r code-line-numbers="false"}
@@ -1030,7 +1036,7 @@ C(global cache)
 ```
 :::
 
-<br/>
+## isolated project environments
 
 ### `.libPaths()`
 
@@ -1203,13 +1209,6 @@ software whose job it is to install other software
 | {{< fa brands apple >}} macOS     | [homebrew](https://brew.sh/)                   |
 | {{< fa brands linux >}} linux     | [homebrew](https://brew.sh/), apt, yum, zypper |
 
-## :warning:
-
-Avoid installing your language with a package manager
-
-::: notes
-You want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are not consistently effective Other software that you install with your package manager may expect that package manager to be running the latest Idiosyncracies of your language will be better understood by a dedicated tool
-:::
 
 ## language managers
 
@@ -1243,6 +1242,16 @@ language managers for other languages:
 ::: notes
 -   many language managers are often written in some language other than the one they are responsible for managing
 :::
+
+## :warning:
+
+Avoid installing your language with a package manager
+
+::: notes
+You want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are not consistently effective Other software that you install with your package manager may expect that package manager to be running the latest Idiosyncracies of your language will be better understood by a dedicated tool
+:::
+
+:x: `brew install r`
 
 ## switching R versions {{< fa brands windows >}} {visibility="hidden"}
 
