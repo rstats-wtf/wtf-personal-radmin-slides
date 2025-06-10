@@ -2,8 +2,8 @@
 author: "E. David Aja"
 footer:  "[Personal R Administration](https://github.com/rstats-wtf/wtf-personal-radmin-slides)"
 logo: "img/wtf-logo-square-transparent.png"
-format: 
-  revealjs: 
+format:
+  revealjs:
     theme: [night, slides.scss]
     highlight-style: a11y
     transition: fade
@@ -16,16 +16,17 @@ execute:
   freeze: auto
 from: markdown+emoji
 title: personal radmin
-subtitle: throw your computer into the ocean with confidence
+subtitle: it works ~~on my machine~~
 ---
 
-## Course material
+# about
 
-::: r-fit-text
-[posit-conf-2024/wtf](https://github.com/posit-conf-2024/wtf)
-:::
+## this course:
 
-## a brief personal history:
+- [rstats.wtf](https://rstats.wtf)
+- [github.com/rstats-wtf](https://github.com/rstats-wtf)
+
+## me
 
 ::: {.columns .scrollable}
 ::: {.column .fragment width="33%"}
@@ -35,10 +36,10 @@ subtitle: throw your computer into the ocean with confidence
 -   personal laptop {{< fa brands windows >}}
 -   RStudio in Citrix {{< fa brands windows >}}
 -   airgapped Posit Workbench {{< fa brands linux >}}
--   airgapped Shiny Server Pro {{< fa brands linux >}}
--   Special Issue Individual Laptop {{< fa brands windows >}} {{< fa brands linux >}}
--   Special Issue Individual Desktop {{< fa brands windows >}}
--   Special Issue Team Desktop {{< fa brands windows >}}
+-   airgapped Shiny Server {{< fa brands linux >}}
+-   work laptop {{< fa brands windows >}} {{< fa brands linux >}}
+-   work desktop {{< fa brands windows >}}
+-   work desktop ii {{< fa brands windows >}}
 :::
 :::
 
@@ -54,7 +55,7 @@ subtitle: throw your computer into the ocean with confidence
 :::
 
 ::: {.column .fragment width="33%"}
-### Solutions Engineer
+### @posit
 
 ::: r-fit-text
 -   personal laptop {{< fa brands windows >}}
@@ -67,26 +68,71 @@ subtitle: throw your computer into the ocean with confidence
 :::
 
 ::: notes
-this is intended to provide context on my priorities / habits of thought: 
-- it needs to work across operating systems 
-- You can't depend on having pro features 
+this is intended to provide context on my priorities / habits of thought:
+- it needs to work across operating systems
+- You can't depend on having pro features
 - avoid admin where possible
 - as portable as practical
 - audit context means I need to be able to reproduce exactly
 - "run this command" preferable to a confluence page of screenshots
 :::
 
-## How do I...
+## our objectives
 
-::: incremental
+How do I:
+
 -   upgrade the version of R I'm using for this project?
 -   track which package versions I'm using for this project?
 -   move this project from one machine to another?
-:::
+-   use credentials for this project without exposing them?
 
 ::: notes
 We're extending the lessons from Day 1 to think about what it means to work with R projects over time.\
 That means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts. Working on an old project on a new computer is a lot like trying to put an app into production.
+:::
+
+
+# [project-oriented prerequisites](https://rstats-wtf.github.io/wtf-project-oriented-workflow-slides/#/title-slide)
+
+## embrace the blank slate
+
+```{.r code-line-numbers="false"}
+usethis::use_rstudio_preferences(
+  save_workspace = "never",
+  load_workspace = FALSE,
+  auto_append_newline = TRUE
+)
+```
+
+## restart often
+
+<br/>
+
+{{< fa brands windows >}} CTRL + SHIFT + F10
+
+{{< fa brands linux >}} CTRL + SHIFT + F10
+
+{{< fa brands apple >}} CMD + SHIFT + 0
+
+## :bear: 🫵🏾 only you
+
+[can prevent computer fires](https://x.com/hadleywickham/status/940021008764846080/)
+
+<br/>
+
+:x: `rm(list = ls())`
+
+:x: `setwd("it/works/on/my/machine")`
+
+:white_check_mark: `here::here()`
+
+
+# the onion
+
+## layers
+
+::: r-stack
+![](img/project-onion-base.svg)
 :::
 
 # warmup
@@ -137,14 +183,22 @@ All installed packages
 ## explore your package library
 
 ```{.r}
-usethis::use_course("rstats-wtf/wtf-explore-libraries")
-# use_course("rstats-wtf/wtf-explore-libraries", destdir = "my/new/location")
-usethis::proj_activate("/path/to/my/new/location")
+use_course(
+  "rstats-wtf/wtf-explore-libraries",
+  destdir = "project/path" # wherever you usually keep projects
+  )
+usethis::proj_activate("project/path")
 ```
 
 {{< countdown "7:30" >}}
 
 # starting R
+
+## starting R
+
+::: {style="text-align: center;"}
+![](img/project-onion-starting-r.svg)
+:::
 
 ## why?
 
@@ -152,7 +206,7 @@ Sometimes we want to change the way our code behaves *without* having to change 
 
 ::: notes
 behaves might mean
-- "what computer do I think I'm on" 
+- "what computer do I think I'm on"
 - "is this dev or prod"?
 :::
 
@@ -166,20 +220,6 @@ behaves might mean
 
 ::: r-stack
 ![](img/r-startup-focus.svg)
-:::
-
-## :warning: Use a newline
-
-::: columns
-::: column
-startup files **must** end in a newline. <br/> <br/>
-
-R may silently throw away the last line if you don't do this.
-:::
-
-::: column
-![](img/insert-newline-end-highlight.png)
-:::
 :::
 
 ## `.Renviron`
@@ -196,9 +236,14 @@ environment variables
 
 ## Editing `.Renviron`
 
-::: {.r .r-fit-text}
-`usethis::edit_r_environ(scope = ?)`
+<br/>
+
+::: {.r-fit-text}
+```{.r}
+usethis::edit_r_environ(scope = ?)
+```
 :::
+<br/>
 
 ::: columns
 ::: {.column width="40%"}
@@ -220,7 +265,6 @@ environment variables
 PATH="${RTOOLS40_HOME}\usr\bin;${PATH}" # windows users
 CONNECT_API_KEY=DaYK2hBUriSBYUEGIAiyXsRJHSjTYJN3
 R_HISTSIZE=100000
-RETICULATE_PYTHON=.venv/bin/python
 DB_USER=elephant
 DB_PASS=p0stgr3s
 ```
@@ -240,7 +284,7 @@ DB_PASS=p0stgr3s
     `CTRL + SHIFT + F10`\
     `CMD  + SHIFT + 0`
 4.  Retrieve the value of WTF_USER `Sys.getenv("WTF_USER")`
-  
+
 {{< countdown "2:00" >}}
 
 ## edit your project `.Renviron` {.smaller}
@@ -333,6 +377,13 @@ library(devtools)
 https://github.com/search?q=.Rprofile
 :::
 
+{{< fa brands github >}} [csgillespie/rprofile](https://github.com/csgillespie/rprofile)
+
+{{< fa brands github >}} [klmr/rprofile](https://github.com/klmr/rprofile)
+
+{{< fa brands github >}} [HenrikBengtsson/dotfiles-for-R](https://github.com/HenrikBengtsson/dotfiles-for-R)
+
+
 ## activity
 
 ::: panel-tabset
@@ -383,27 +434,28 @@ if it exists, your user `.Rprofile` will not be evaluated
 Environment variables are inherited by child processes, so setting them early in the startup process is valuable Hosting providers trying to deal with secrets will often let you supply environment variables
 :::
 
-# installing R packages
-
-## why
+# installing packages
 
 ::: r-stack
 ![](img/slacking-tidyverse.png)
 :::
 
-::: notes
-having a reason to slack off is fun but being able to get your work done quickly is more fun
+
+## installing packages
+
+::: {style="text-align: center;"}
+![](img/project-onion-installing-packages.svg)
 :::
 
 ## states of R packages
 
 ```{mermaid}
-%%{init: {"theme": "dark" } }%%
+%%{init: {"theme": "dark", "look": "handDrawn" } }%%
 graph TD
 Source -- "devtools::build()" --> Bundled
-Bundled -- "devtools::build(binary = TRUE)"--> Binary 
-Binary --"install.packages()"--> Installed 
-Installed --"library()"--> Loaded 
+Bundled -- "devtools::build(binary=T)" --> Binary
+Binary --"install.packages()"--> Installed
+Installed --"library()"--> Loaded
 ```
 
 ::: aside
@@ -413,17 +465,17 @@ Installed --"library()"--> Loaded
 ## states of R packages
 
 ```{mermaid}
-%%{init: {"theme": "dark" } }%%
+%%{init: {"theme": "dark", "look": "handDrawn" } }%%
 flowchart TD
 subgraph dev
   direction LR
 Source -- "devtools::build()" --> Bundled
-Bundled -- "devtools::build(binary = TRUE)"--> Binary 
+Bundled -- "devtools::build(binary=T)" --> Binary
 end
 subgraph use
 direction LR
-Binary --"install.packages()"--> Installed 
-Installed --"library()"--> Loaded 
+Binary --"install.packages()"--> Installed
+Installed --"library()"--> Loaded
 end
 ```
 
@@ -496,27 +548,27 @@ downloaded 121 KB
 *** installing help indices
   converting help for package 'parallelly'
     finding HTML links ... done
-    as.cluster                              html  
-    autoStopCluster                         html  
-    availableConnections                    html  
-    availableCores                          html  
-    availableWorkers                        html  
-    canPortBeUsed                           html  
-    cpuLoad                                 html  
-    find_rshcmd                             html  
-    freeCores                               html  
-    freePort                                html  
-    getOption2                              html  
-    isConnectionValid                       html  
-    isForkedChild                           html  
-    isForkedNode                            html  
-    isLocalhostNode                         html  
-    isNodeAlive                             html  
-    makeClusterMPI                          html  
-    makeClusterPSOCK                        html  
-    parallelly.options                      html  
-    pid_exists                              html  
-    supportsMulticore                       html  
+    as.cluster                              html
+    autoStopCluster                         html
+    availableConnections                    html
+    availableCores                          html
+    availableWorkers                        html
+    canPortBeUsed                           html
+    cpuLoad                                 html
+    find_rshcmd                             html
+    freeCores                               html
+    freePort                                html
+    getOption2                              html
+    isConnectionValid                       html
+    isForkedChild                           html
+    isForkedNode                            html
+    isLocalhostNode                         html
+    isNodeAlive                             html
+    makeClusterMPI                          html
+    makeClusterPSOCK                        html
+    parallelly.options                      html
+    pid_exists                              html
+    supportsMulticore                       html
 *** copying figures
 ** building package indices
 ** testing if installed package can be loaded from temporary location
@@ -605,7 +657,7 @@ Moving fs [1.5.2] into the cache ...
 ## pop quiz, hotshot
 
 ::: question
-Does [Posit Public Package Manager](https://p3m.dev) serve a binary of `dplyr` for R 3.6?
+Does [Posit Public Package Manager](https://p3m.dev) serve a binary of `RPostgreSQL` for R 4.3?
 :::
 
 {{< countdown "2:00" >}}
@@ -810,9 +862,7 @@ In install.packages("sf") :
 
 :::
 
-## bonus complication
-
-runtime dependencies
+## runtime dependencies
 
 ::: panel-tabset
 
@@ -826,8 +876,6 @@ Linking to GEOS 3.12.2, GDAL 3.9.1, PROJ 9.4.1; sf_use_s2() is TRUE
 ### :x:
 
 ```{.r}
-The downloaded source packages are in
-	‘/tmp/RtmpIvTerY/downloaded_packages’
 > library(sf)
 Error: package or namespace load failed for ‘sf’ in dyn.load(file, DLLpath = DLLpath, ...):
  unable to load shared object '/usr/local/lib/R/site-library/units/libs/units.so':
@@ -838,6 +886,27 @@ Error: package or namespace load failed for ‘sf’ in dyn.load(file, DLLpath =
 ## which sysdeps?
 
 ![](img/p3m-sysdeps.png)
+
+## ~~manylinux binaries~~ reels
+
+:test_tube: [currently in preview](https://posit.co/blog/introducing-portable-linux-r-binary-packages/)
+
+```{.r}
+❯ docker run --rm -it posit/r-base:4.3-jammy \
+  R -e "install.packages(
+    'sf',
+    repos='https://p3m.dev/cran/__linux__/manylinux_2_28/latest'
+    );
+    library(sf)"
+...
+* DONE (sf)
+
+The downloaded source packages are in
+        '/tmp/RtmpVUxFy1/downloaded_packages'
+Updating HTML index of packages in '.Library'
+Making 'packages.html' ... done
+Linking to GEOS 3.7.2, GDAL 3.0.4, PROJ 6.3.2; sf_use_s2() is TRUE
+```
 
 ## activity
 
@@ -856,7 +925,6 @@ install a package from r-universe
     ``` {.r code-line-numbers="false"}
     options(repos = c(
       ropensci = "https://ropensci.r-universe.dev",
-      CRAN = "https://cloud.r-project.org", # macOS
       P3M = "https://p3m.dev/cran/latest" # windows
     ))
     ```
@@ -877,80 +945,18 @@ install a package from r-universe
 
 binaries are usually preferred, but for development versions of packages, you may need to install from source.
 
-# creating reproducible environments
+# reproducible environments
 
-## why?
+## reproducible environments
 
-put some science in ["data science"](https://www.getdbt.com/coalesce-2021/down-with-data-science)
+::: {style="text-align: center;"}
+![](img/project-onion-reproducible-environments.svg)
+:::
 
-## [reproducibility strategies](https://environments.rstudio.com/reproduce)
+## [reproducibility strategies](https://solutions.posit.co/envs-pkgs/environments/)
 
-```{r}
-library(ggplot2)
-library(tibble)
-library(ggrepel)
-mm <- tribble(
-  ~x, ~y, ~label, ~Description, ~status,
-  0.1, 0.1, 'Validated', 'Admins test and approve \n a subset of CRAN', TRUE,
-  0.5, 0.5, 'Shared Baseline', 'All or most of CRAN, \n updated with R versions, \n tied to a system library', TRUE,
-  0.5, 0.75, 'Wild West', 'Open access, \n not reproducible, \n how we learn', FALSE,
-  0.8,0.8, 'Snapshot', 'Open access, user or system \n records per-project dependencies', TRUE,
-  0.75, 0.2, 'Blocked', 'Backdoor package access, \n offline systems without a strategy', FALSE,
-  0.2, 0.8, 'Ticket System', 'Admins involved, \n no testing, \n slow updates, \n high risk of breakage', FALSE
-)
-bad1 <- tribble(
-  ~x, ~y, ~label, ~Description, ~status,
-  0, 0.2, NA, NA, NA,
-  0, 1,NA, NA, NA,
-  0.8, 1, NA, NA, NA
-)
-bad2 <- tribble(
-  ~x, ~y, ~label, ~Description, ~status,
-  0.2, 0, NA, NA, NA,
-  1, 0,NA, NA, NA,
-  1, 0.8, NA, NA, NA
-)
-good <- tribble(
-  ~x, ~y, ~label, ~Description, ~status,
-  0, -0.2,NA, NA, NA,
-  1, 0.8, NA, NA, NA,
-  0.8, 1, NA, NA, NA,
-  0, 0.2, NA, NA, NA
-)
-good2 <- tribble(
-  ~x, ~y, ~label, ~Description, ~status,
-  0, 0,NA, NA, NA,
-  0, 0.2, NA, NA, NA,
-  1, 0.8, NA, NA, NA,
-  0.2, 0, NA, NA, NA
-)
-p <- ggplot(mm, aes(x, y)) + 
-  geom_abline(slope = 1, intercept = 0.2, alpha = 0.2) + 
-  geom_polygon(aes(x,y, text = Description), fill = "red", data=bad1, alpha = 0.1) + 
-  geom_polygon(aes(x,y, text = Description), fill = "green", data=good, alpha = 0.1) + 
-  geom_polygon(aes(x,y, text = NULL), fill = "green", data=good2, alpha = 0.1) + 
-  geom_polygon(aes(x,y, text = Description), fill = "red", data=bad2, alpha = 0.1) +
-  geom_abline(slope = 1, intercept = -0.2, alpha = 0.2) + 
-  geom_point(aes(x, y, color = status, text = Description)) + 
-  geom_text(aes(x, y, label = label), nudge_y = 0.025, nudge_x  = 0.025) + 
-  scale_x_continuous(limits = c(0,1), breaks = seq(0,1,0.25), labels = c("Admins","", "", "", "Users")) +
-  scale_y_continuous(limits = c(0,1), breaks = seq(0,1,0.25), labels =  c("Locked Down","", "", "", "Open")) +
-  theme_minimal() + 
-  scale_color_manual(breaks = NULL, values = c("#ff0000","#a3c586")) + 
-  labs(
-    x = "Who is Responsible for Reproducing the Environment?",
-    y = "Package Access",
-    color = NULL,
-    title = "Reproducing Environments: Strategies and Danger Zones"
-  )
-p
-```
+![](https://solutions.posit.co/envs-pkgs/environments/reproduce/reproducibility-strategies-and-danger-zones.png)
 
-## [reproducibility strategies](https://environments.rstudio.com/reproduce) {transition="none"}
-
-```{r}
-p + annotate("rect", xmin = .75, xmax = .95, ymin = .75, ymax = .95, alpha = .2)
-```
 
 ::: notes
 we're focused in particular on systems where we have both access and responsibility
@@ -977,10 +983,10 @@ we're focused in particular on systems where we have both access and responsibil
 :::
 
 ::: notes
-renv has a number of tools that are helpful for adopting a project-based workflow: 
-- lockfile records what packages you use and where you instaled them from 
+renv has a number of tools that are helpful for adopting a project-based workflow:
+- lockfile records what packages you use and where you instaled them from
 - `renv::install()` can handle installation from remote sources, local sources, package versions, bioconductor, rspm
-- per-project library isolation with global package cache 
+- per-project library isolation with global package cache
 - makes it easy to install experimental versions of packages and then roll back to a stable release if it doesn't work out
 :::
 
@@ -1025,7 +1031,11 @@ what version of dplyr did you install?
 
 - remove the repository configuration from your project `.Rprofile`
 - restart R
-- reinstall whatever versions of dplyr you were using before
+- reinstall whatever version of dplyr you were using before, e.g.:
+
+  ```{.r code-line-numbers="false"}
+  remotes::install_vesion("dplyr", "1.0.10")
+  ```
 
 if that process seems silly, :sparkles: [you should use `renv`](https://github.com/edavidaja/you-should-use-renv) :sparkles:
 
@@ -1039,7 +1049,7 @@ if that process seems silly, :sparkles: [you should use `renv`](https://github.c
 
 ::: {data-id="env"}
 ```{mermaid}
-%%{init: {"theme": "dark" } }%%
+%%{init: {"theme": "dark", "look": "handDrawn" } }%%
 graph
 L --- P1
 L --- P2
@@ -1059,6 +1069,8 @@ P3(project3)
 
 <br/>
 
+## shared project environment
+
 ### `.libPaths()`
 
 ``` {.r code-line-numbers="false"}
@@ -1071,7 +1083,7 @@ P3(project3)
 
 ::: {data-id="env"}
 ```{mermaid}
-%%{init: {"theme": "dark" } }%%
+%%{init: {"theme": "dark", "look": "handDrawn" } }%%
 graph
 C --- L1
 C --- L2
@@ -1089,14 +1101,14 @@ C(global cache)
 ```
 :::
 
-<br/>
+## isolated project environments
 
 ### `.libPaths()`
 
 ``` {.r code-line-numbers="false"}
 - Project '~/sample-project' loaded. [renv 1.0.7]
 > .libPaths()
-[1] "C:/Users/edavi/Documents/sample-project/renv/library/windows/R-4.4/x86_64-w64-mingw32"        
+[1] "C:/Users/edavi/Documents/sample-project/renv/library/windows/R-4.4/x86_64-w64-mingw32"
 [2] "C:/Users/edavi/AppData/Local/R/cache/R/renv/sandbox/windows/R-4.4/x86_64-w64-mingw32/88765555"
 ```
 
@@ -1113,7 +1125,7 @@ create an isolated project library
 :::
 
 ```{.r}
-usethis::create_project("wtf-2024")
+usethis::create_project("~/wtf-renv") # or wherever you typically put projects
 install.packages("renv")
 renv::init()
 renv::status()
@@ -1126,7 +1138,7 @@ renv::status()
 manage dependencies
 :::
 
-add `library(parallelly)` to any file in the `wtf-2024/R` directory
+add `library(parallelly)` to any file in the `wtf-renv/R` directory
 
 ```{.r}
 renv::status()
@@ -1218,24 +1230,12 @@ for reprexes, tweets, and other ephemera:
 I use `renv` for everything, and have one junk project into which I install things without regard for stability or reproducibility
 :::
 
-# installing / upgrading R
+# installing R
 
-## why
+## installing / upgrading R
 
-::: r-stack
-![](img/project-oyster-greyed.svg){.r-stretch}
-:::
-
-## why
-
-::: r-stack
-![](img/project-oyster.svg)
-:::
-
-## bigger context
-
-::: r-stack
-![](img/r-project-oyster.svg)
+::: {style="text-align: center;"}
+![](img/project-onion-installing-R.svg)
 :::
 
 ## practice makes perfect
@@ -1247,7 +1247,7 @@ I use `renv` for everything, and have one junk project into which I install thin
 
 ### macOS
 
-[tart](https://tart.run/)  
+[tart](https://tart.run/)
 [utm](https://mac.getutm.app/)
 
 
@@ -1280,13 +1280,6 @@ software whose job it is to install other software
 | {{< fa brands apple >}} macOS     | [homebrew](https://brew.sh/)                   |
 | {{< fa brands linux >}} linux     | [homebrew](https://brew.sh/), apt, yum, zypper |
 
-## :warning:
-
-Avoid installing your language with a package manager
-
-::: notes
-You want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are not consistently effective Other software that you install with your package manager may expect that package manager to be running the latest Idiosyncracies of your language will be better understood by a dedicated tool
-:::
 
 ## language managers
 
@@ -1310,16 +1303,27 @@ brew install --cask rig
 ::: small
 language managers for other languages:
 
-{{< fa brands python >}} [pyenv](https://github.com/pyenv/pyenv)  
-{{< fa brands node-js >}} [nvm](https://github.com/nvm-sh/nvm)  
-{{< fa brands rust >}} [rustup](https://rustup.rs/)  
-{{< fa globe >}} [asdf](https://asdf-vm.com/)  
+{{< fa brands python >}} [uv](https://docs.astral.sh/uv/)
+{{< fa brands node-js >}} [nvm](https://github.com/nvm-sh/nvm)
+{{< fa brands rust >}} [rustup](https://rustup.rs/)
+{{< fa globe >}} [asdf](https://asdf-vm.com/)
 {{< fa globe >}} [mise-en-place](https://mise.jdx.dev/)
 :::
 
 ::: notes
 -   many language managers are often written in some language other than the one they are responsible for managing
 :::
+
+## :warning:
+
+Avoid installing your language with a package manager
+
+:x: `brew install r`
+
+::: notes
+You want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are not consistently effective Other software that you install with your package manager may expect that package manager to be running the latest Idiosyncracies of your language will be better understood by a dedicated tool
+:::
+
 
 ## switching R versions {{< fa brands windows >}} {visibility="hidden"}
 
