@@ -16,18 +16,18 @@ execute:
   freeze: auto
 from: markdown+emoji
 title: personal radmin
-subtitle: throw your computer into the ocean with confidence
+subtitle: it works ~~on my machine~~
 ---
 
 # about
 
-## links:
+## this course:
 
-- [slides](https://rstats-wtf.github.io/wtf-personal-radmin-slides/)
-- [book](https://rstats.wtf)
+- [rstats.wtf](https://rstats.wtf)
+- [github.com/rstats-wtf](https://github.com/rstats-wtf)
 
 
-## a brief personal history:
+## me
 
 ::: {.columns .scrollable}
 ::: {.column .fragment width="33%"}
@@ -37,10 +37,10 @@ subtitle: throw your computer into the ocean with confidence
 -   personal laptop {{< fa brands windows >}}
 -   RStudio in Citrix {{< fa brands windows >}}
 -   airgapped Posit Workbench {{< fa brands linux >}}
--   airgapped Shiny Server Pro {{< fa brands linux >}}
--   Special Issue Individual Laptop {{< fa brands windows >}} {{< fa brands linux >}}
--   Special Issue Individual Desktop {{< fa brands windows >}}
--   Special Issue Team Desktop {{< fa brands windows >}}
+-   airgapped Shiny Server {{< fa brands linux >}}
+-   work laptop {{< fa brands windows >}} {{< fa brands linux >}}
+-   work desktop {{< fa brands windows >}}
+-   work desktop ii {{< fa brands windows >}}
 :::
 :::
 
@@ -56,7 +56,7 @@ subtitle: throw your computer into the ocean with confidence
 :::
 
 ::: {.column .fragment width="33%"}
-### Solutions Engineer
+### @posit
 
 ::: r-fit-text
 -   personal laptop {{< fa brands windows >}}
@@ -78,23 +78,62 @@ this is intended to provide context on my priorities / habits of thought:
 - "run this command" preferable to a confluence page of screenshots
 :::
 
-## How do I...
+## our objectives
 
-::: incremental
+How do I:
+
 -   upgrade the version of R I'm using for this project?
 -   track which package versions I'm using for this project?
 -   move this project from one machine to another?
-:::
+-   use credentials for this project without exposing them?
 
 ::: notes
 We're extending the lessons from Day 1 to think about what it means to work with R projects over time.\
 That means that in addition to wanting our individual projects to flow smoothly, we also want to strategize about how to manage different versions of the language, different package versions, and different execution contexts. Working on an old project on a new computer is a lot like trying to put an app into production.
 :::
 
-## the project onion
+
+# [project-oriented prerequisites](https://rstats-wtf.github.io/wtf-project-oriented-workflow-slides/#/title-slide)
+
+## embrace the blank slate
+
+```{.r code-line-numbers="false"}
+usethis::use_rstudio_preferences(
+  save_workspace = "never",
+  load_workspace = FALSE,
+  auto_append_newline = TRUE
+)
+```
+
+## restart often
+
+<br/>
+
+{{< fa brands windows >}} CTRL + SHIFT + F10
+
+{{< fa brands linux >}} CTRL + SHIFT + F10
+
+{{< fa brands apple >}} CMD + SHIFT + 0
+
+## :bear: 🫵🏾 only you
+
+[can prevent computer fires](https://x.com/hadleywickham/status/940021008764846080/)
+
+<br/>
+
+:x: `rm(list = ls())`
+
+:x: `setwd("it/works/on/my/machine")`
+
+:white_check_mark: `here::here()`
+
+
+# the onion
+
+## layers
 
 ::: r-stack
-![](img/project-oyster.svg)
+![](img/project-onion-base.svg)
 :::
 
 # warmup
@@ -154,6 +193,12 @@ usethis::proj_activate("/path/to/my/new/location")
 
 # starting R
 
+## starting R
+
+::: {style="text-align: center;"}
+![](img/project-onion-starting-r.svg)
+:::
+
 ## why?
 
 Sometimes we want to change the way our code behaves *without* having to change the code.
@@ -176,20 +221,6 @@ behaves might mean
 ![](img/r-startup-focus.svg)
 :::
 
-## :warning: Use a newline
-
-::: columns
-::: column
-startup files **must** end in a newline. <br/> <br/>
-
-R may silently throw away the last line if you don't do this.
-:::
-
-::: column
-![](img/insert-newline-end-highlight.png)
-:::
-:::
-
 ## `.Renviron`
 
 environment variables
@@ -204,9 +235,14 @@ environment variables
 
 ## Editing `.Renviron`
 
-::: {.r .r-fit-text}
-`usethis::edit_r_environ(scope = ?)`
+<br/>
+
+::: {.r-fit-text}
+```{.r}
+usethis::edit_r_environ(scope = ?)
+```
 :::
+<br/>
 
 ::: columns
 ::: {.column width="40%"}
@@ -340,6 +376,13 @@ library(devtools)
 https://github.com/search?q=.Rprofile
 :::
 
+{{< fa brands github >}} [csgillespie/rprofile](https://github.com/csgillespie/rprofile)
+
+{{< fa brands github >}} [klmr/rprofile](https://github.com/klmr/rprofile)
+
+{{< fa brands github >}} [HenrikBengtsson/dotfiles-for-R](https://github.com/HenrikBengtsson/dotfiles-for-R)
+
+
 ## activity
 
 ::: panel-tabset
@@ -390,25 +433,26 @@ if it exists, your user `.Rprofile` will not be evaluated
 Environment variables are inherited by child processes, so setting them early in the startup process is valuable Hosting providers trying to deal with secrets will often let you supply environment variables
 :::
 
-# installing R packages
-
-## why
+# installing packages
 
 ::: r-stack
 ![](img/slacking-tidyverse.png)
 :::
 
-::: notes
-having a reason to slack off is fun but being able to get your work done quickly is more fun
+
+## installing packages
+
+::: {style="text-align: center;"}
+![](img/project-onion-installing-packages.svg)
 :::
 
 ## states of R packages
 
 ```{mermaid}
-%%{init: {"theme": "dark" } }%%
+%%{init: {"theme": "dark", "look": "handDrawn" } }%%
 graph TD
 Source -- "devtools::build()" --> Bundled
-Bundled -- "devtools::build(binary = TRUE)"--> Binary
+Bundled -- "devtools::build(binary=T)" --> Binary
 Binary --"install.packages()"--> Installed
 Installed --"library()"--> Loaded
 ```
@@ -420,12 +464,12 @@ Installed --"library()"--> Loaded
 ## states of R packages
 
 ```{mermaid}
-%%{init: {"theme": "dark" } }%%
+%%{init: {"theme": "dark", "look": "handDrawn" } }%%
 flowchart TD
 subgraph dev
   direction LR
 Source -- "devtools::build()" --> Bundled
-Bundled -- "devtools::build(binary = TRUE)"--> Binary
+Bundled -- "devtools::build(binary=T)" --> Binary
 end
 subgraph use
 direction LR
@@ -817,9 +861,7 @@ In install.packages("sf") :
 
 :::
 
-## bonus complication
-
-runtime dependencies
+## runtime dependencies
 
 ::: panel-tabset
 
@@ -844,6 +886,27 @@ Error: package or namespace load failed for ‘sf’ in dyn.load(file, DLLpath =
 
 ![](img/p3m-sysdeps.png)
 
+## ~~manylinux binaries~~ reels
+
+:test_tube: [currently in preview](https://posit.co/blog/introducing-portable-linux-r-binary-packages/)
+
+```{.r}
+❯ docker run --rm -it posit/r-base:4.3-jammy \
+  R -e "install.packages(
+    'sf',
+    repos='https://p3m.dev/cran/__linux__/manylinux_2_28/latest'
+    );
+    library(sf)"
+...
+* DONE (sf)
+
+The downloaded source packages are in
+        '/tmp/RtmpVUxFy1/downloaded_packages'
+Updating HTML index of packages in '.Library'
+Making 'packages.html' ... done
+Linking to GEOS 3.7.2, GDAL 3.0.4, PROJ 6.3.2; sf_use_s2() is TRUE
+```
+
 ## activity
 
 ::: question
@@ -861,7 +924,6 @@ install a package from r-universe
     ``` {.r code-line-numbers="false"}
     options(repos = c(
       ropensci = "https://ropensci.r-universe.dev",
-      CRAN = "https://cloud.r-project.org", # macOS
       P3M = "https://p3m.dev/cran/latest" # windows
     ))
     ```
@@ -882,11 +944,13 @@ install a package from r-universe
 
 binaries are usually preferred, but for development versions of packages, you may need to install from source.
 
-# creating reproducible environments
+# reproducible environments
 
-## why?
+## reproducible environments
 
-put some science in ["data science"](https://www.getdbt.com/coalesce-2021/down-with-data-science)
+::: {style="text-align: center;"}
+![](img/project-onion-reproducible-environments.svg)
+:::
 
 ## [reproducibility strategies](https://solutions.posit.co/envs-pkgs/environments/)
 
@@ -984,7 +1048,7 @@ if that process seems silly, :sparkles: [you should use `renv`](https://github.c
 
 ::: {data-id="env"}
 ```{mermaid}
-%%{init: {"theme": "dark" } }%%
+%%{init: {"theme": "dark", "look": "handDrawn" } }%%
 graph
 L --- P1
 L --- P2
@@ -1018,7 +1082,7 @@ P3(project3)
 
 ::: {data-id="env"}
 ```{mermaid}
-%%{init: {"theme": "dark" } }%%
+%%{init: {"theme": "dark", "look": "handDrawn" } }%%
 graph
 C --- L1
 C --- L2
@@ -1060,7 +1124,7 @@ create an isolated project library
 :::
 
 ```{.r}
-usethis::create_project("wtf-2024")
+usethis::create_project("~/wtf-renv") # or wherever you typically put projects
 install.packages("renv")
 renv::init()
 renv::status()
@@ -1073,7 +1137,7 @@ renv::status()
 manage dependencies
 :::
 
-add `library(parallelly)` to any file in the `wtf-2024/R` directory
+add `library(parallelly)` to any file in the `wtf-renv/R` directory
 
 ```{.r}
 renv::status()
@@ -1165,7 +1229,13 @@ for reprexes, tweets, and other ephemera:
 I use `renv` for everything, and have one junk project into which I install things without regard for stability or reproducibility
 :::
 
-# installing / upgrading R
+# installing R
+
+## installing / upgrading R
+
+::: {style="text-align: center;"}
+![](img/project-onion-installing-R.svg)
+:::
 
 ## practice makes perfect
 
@@ -1232,7 +1302,7 @@ brew install --cask rig
 ::: small
 language managers for other languages:
 
-{{< fa brands python >}} [pyenv](https://github.com/pyenv/pyenv)
+{{< fa brands python >}} [uv](https://docs.astral.sh/uv/)
 {{< fa brands node-js >}} [nvm](https://github.com/nvm-sh/nvm)
 {{< fa brands rust >}} [rustup](https://rustup.rs/)
 {{< fa globe >}} [asdf](https://asdf-vm.com/)
@@ -1247,11 +1317,12 @@ language managers for other languages:
 
 Avoid installing your language with a package manager
 
+:x: `brew install r`
+
 ::: notes
 You want to avoid having the language version your projects are using changed out from you unexpectedly Tools for freezing installations with your package manager are not consistently effective Other software that you install with your package manager may expect that package manager to be running the latest Idiosyncracies of your language will be better understood by a dedicated tool
 :::
 
-:x: `brew install r`
 
 ## switching R versions {{< fa brands windows >}} {visibility="hidden"}
 

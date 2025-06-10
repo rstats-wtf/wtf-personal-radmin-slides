@@ -1,0 +1,25 @@
+<mxfile host="65bd71144e">
+    <diagram id="3228e29e-7158-1315-38df-8450db1d8a1d" name="Page-1">
+        <mxGraphModel dx="957" dy="718" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="21640" value="&lt;div style=&quot;text-align: center; font-size: 16px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;font color=&quot;#e6e6e6&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center; font-size: 16px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;font color=&quot;#e6e6e6&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center; font-size: 16px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;font color=&quot;#e6e6e6&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center; font-size: 16px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;font color=&quot;#e6e6e6&quot;&gt;package&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center; font-size: 16px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;font color=&quot;#e6e6e6&quot;&gt;manager&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;strokeColor=none;strokeWidth=1;fillColor=#808080;gradientColor=none;fontFamily=Helvetica;fontSize=16;fontColor=#2F5B7C;align=center;opacity=50;verticalAlign=bottom;spacingBottom=15;spacing=15;" parent="1" vertex="1">
+                    <mxGeometry x="200.5" y="43" width="485" height="485" as="geometry"/>
+                </mxCell>
+                <mxCell id="k-grjPTpSFvJhMa7YIzA-21654" value="&lt;font color=&quot;#e6e6e6&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;language&lt;br&gt;manager&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=16;fillColor=#808080;strokeColor=none;opacity=60;" parent="1" vertex="1">
+                    <mxGeometry x="238" y="43" width="410" height="410" as="geometry"/>
+                </mxCell>
+                <mxCell id="k-grjPTpSFvJhMa7YIzA-21653" value="&lt;font color=&quot;#333333&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;language&lt;br&gt;versions&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=none;gradientColor=none;opacity=70;" parent="1" vertex="1">
+                    <mxGeometry x="285.5" y="43" width="315" height="315" as="geometry"/>
+                </mxCell>
+                <mxCell id="21639" value="&lt;font color=&quot;#333333&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;package&lt;br&gt;environment&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;strokeColor=none;strokeWidth=1;fillColor=#dce0dc;gradientColor=none;fontFamily=Helvetica;fontSize=16;fontColor=#2F5B7C;align=center;opacity=80;spacing=15;" parent="1" vertex="1">
+                    <mxGeometry x="330.5" y="44" width="225" height="225" as="geometry"/>
+                </mxCell>
+                <mxCell id="k-grjPTpSFvJhMa7YIzA-21652" value="&lt;font color=&quot;#333333&quot;&gt;&lt;br&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;session&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e3eaf3;strokeColor=none;opacity=80;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="44" width="146" height="146" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
