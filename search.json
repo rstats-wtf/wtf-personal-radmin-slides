@@ -245,11 +245,11 @@
     "text": "states of R packages\n\n\n\n\n\n\n\n\n\n\n\nuse\n\n\n\n\n\n\n\ndev\n\n\n\n\n\n\n\ndevtools::build()\n\n\n\n\n\n\n\ndevtools::build(binary=T)\n\n\n\n\n\n\n\ninstall.packages()\n\n\n\n\n\n\n\nlibrary()\n\n\n\n\n\n\n\nSource\n\n\n\n\n\n\n\nBundled\n\n\n\n\n\n\n\nBinary\n\n\n\n\n\n\n\nInstalled\n\n\n\n\n\n\n\nLoaded\n\n\n\n\n\n\n\n\n\n\n\n\n\nshow how to set options for different environment managers\nInstall package from github\nDevelop your own packages\n\n\n\nR Packages – Structure"
   },
   {
-    "objectID": "index.html#binary",
-    "href": "index.html#binary",
+    "objectID": "index.html#binary-r-package",
+    "href": "index.html#binary-r-package",
     "title": "personal radmin",
-    "section": "Binary",
-    "text": "Binary\n\ncompiled ahead of time\neasiest / fastest to install\n\n\nyou may particularly care about installation speed if you’re being billed by the minute for compute time, or if you need computations to finish before a timeout"
+    "section": "binary R package",
+    "text": "binary R package\n(  |  |  ) X  version X  version X  arch\n\ncompiled ahead of time\neasiest / fastest to install"
   },
   {
     "objectID": "index.html#where-to-get-binaries",
