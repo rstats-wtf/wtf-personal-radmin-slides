@@ -26,7 +26,6 @@ subtitle: it works ~~on my machine~~
 - [rstats.wtf](https://rstats.wtf)
 - [github.com/rstats-wtf](https://github.com/rstats-wtf)
 
-
 ## me
 
 ::: {.columns .scrollable}
@@ -184,9 +183,11 @@ All installed packages
 ## explore your package library
 
 ```{.r}
-usethis::use_course("rstats-wtf/wtf-explore-libraries")
-# use_course("rstats-wtf/wtf-explore-libraries", destdir = "my/new/location")
-usethis::proj_activate("/path/to/my/new/location")
+use_course(
+  "rstats-wtf/wtf-explore-libraries",
+  destdir = "project/path" # wherever you usually keep projects
+  )
+usethis::proj_activate("project/path")
 ```
 
 {{< countdown "7:30" >}}
