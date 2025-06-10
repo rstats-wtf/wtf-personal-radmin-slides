@@ -489,14 +489,20 @@ end
 -   Develop your own packages
 :::
 
-## Binary
+## binary R package
+
+( {{< fa brands windows >}} | {{< fa brands apple >}} | {{< fa brands linux >}} )
+X
+{{< fa brands r-project >}} version
+X
+{{< fa cube >}} version
+X
+{{< fa microchip >}} arch
+
 
 -   compiled ahead of time
 -   easiest / fastest to install
 
-::: notes
-you may particularly care about installation speed if you're being billed by the minute for compute time, or if you need computations to finish before a timeout
-:::
 
 ## where to get binaries
 
