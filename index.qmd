@@ -350,7 +350,6 @@ If it matters for code you share, it **should not** be in `.Rprofile`
 ## why shouldn't these go in `.Rprofile`?
 
 ::: incremental
--   `options(stringsAsFactors = FALSE)`
 -   `library(tidyverse)`
 -   `f <- dplyr::filter`
 -   `theme_set(theme_bw())`
@@ -1022,7 +1021,7 @@ time travel!
 3.  update your project `.Rprofile` with a date-based snapshot of CRAN
 
     ``` {.r code-line-numbers="false"}
-    options(repos = c(RSPM = "https://p3m.dev/cran/2022-12-31"))
+    options(repos = c(P3M = "https://p3m.dev/cran/2023-12-31"))
     ```
 
 4.  Restart R
@@ -1040,7 +1039,7 @@ what version of dplyr did you install?
 - reinstall whatever version of dplyr you were using before, e.g.:
 
   ```{.r code-line-numbers="false"}
-  remotes::install_vesion("dplyr", "1.0.10")
+  remotes::install_version("dplyr", "1.0.10")
   ```
 
 if that process seems silly, :sparkles: [you should use `renv`](https://github.com/edavidaja/you-should-use-renv) :sparkles:
@@ -1129,6 +1128,8 @@ C(global cache)
 ::: question
 create an isolated project library
 :::
+
+`CMD|CTRL + SHIFT + P > Close Current Project`
 
 ```{.r}
 usethis::create_project("~/wtf-renv") # or wherever you typically put projects
