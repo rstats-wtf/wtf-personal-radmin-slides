@@ -508,7 +508,7 @@ X
 |                                   |        CRAN        | Posit Public Package Manager (p3m) |
 |-----------------------------------|:------------------:|:----------------------------------:|
 | {{< fa brands windows >}} windows | :white_check_mark: |         :white_check_mark:         |
-| {{< fa brands apple >}} mac OS    | :white_check_mark: |         :white_check_mark:         |
+| {{< fa brands apple >}} macOS     | :white_check_mark: |         :white_check_mark:         |
 | {{< fa brands linux >}} linux     |        :x:         |         :white_check_mark:         |
 
 ## are binaries available?
